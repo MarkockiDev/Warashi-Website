@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Troubleshooting · Docs · Warashi</title>
-<meta name="description" content="Fixes for a hidden menu bar item, the island, unavailable readings, system processes and open at login.">
+<title>Troubleshooting · Help · Warashi</title>
+<meta name="description" content="Fixes for common Warashi problems: a missing menu bar item, unavailable values, system processes, notifications, updates and uninstalling.">
 <link rel="canonical" href="https://warashi.app/docs/troubleshooting/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Warashi">
-<meta property="og:title" content="Troubleshooting · Docs · Warashi">
-<meta property="og:description" content="Fixes for a hidden menu bar item, the island, unavailable readings, system processes and open at login.">
+<meta property="og:title" content="Troubleshooting · Help · Warashi">
+<meta property="og:description" content="Fixes for common Warashi problems: a missing menu bar item, unavailable values, system processes, notifications, updates and uninstalling.">
 <meta property="og:url" content="https://warashi.app/docs/troubleshooting/">
 <meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Warashi: the flight recorder for your Mac. The spirit icon beside the Warashi window and popover.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Troubleshooting · Docs · Warashi">
-<meta name="twitter:description" content="Fixes for a hidden menu bar item, the island, unavailable readings, system processes and open at login.">
+<meta name="twitter:title" content="Troubleshooting · Help · Warashi">
+<meta name="twitter:description" content="Fixes for common Warashi problems: a missing menu bar item, unavailable values, system processes, notifications, updates and uninstalling.">
 <meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
 <meta name="twitter:image:alt" content="Warashi: the flight recorder for your Mac. The spirit icon beside the Warashi window and popover.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
@@ -36,7 +36,7 @@ posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
 });
 posthog.register({ surface: "website" });
 </script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Docs", "item": "https://warashi.app/docs/"}, {"@type": "ListItem", "position": 2, "name": "Troubleshooting", "item": "https://warashi.app/docs/troubleshooting/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Help", "item": "https://warashi.app/docs/"}, {"@type": "ListItem", "position": 2, "name": "Troubleshooting", "item": "https://warashi.app/docs/troubleshooting/"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -45,33 +45,40 @@ posthog.register({ surface: "website" });
   <div class="pill">
     <div class="row">
       <a class="brand" href="../../index.html"><img src="../../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
-      <nav class="nav" aria-label="Main"><a href="../../index.html#glance">Features</a><a href="../../docs/" aria-current="page">Docs</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&A</a><a href="../../changelog/">Changelog</a></nav>
+      <nav class="nav" aria-label="Main"><a href="../../index.html#glance">Features</a><a href="../../docs/" aria-current="page">Help</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&A</a><a href="../../changelog/">Changelog</a></nav>
       <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">Download</a>
       <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
     </div>
-    <div class="sheet" id="sheet"><div><nav aria-label="Main"><a href="../../index.html#glance">Features</a><a href="../../docs/" aria-current="page">Docs</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&A</a><a href="../../changelog/">Changelog</a></nav></div></div>
+    <div class="sheet" id="sheet"><div><nav aria-label="Main"><a href="../../index.html#glance">Features</a><a href="../../docs/" aria-current="page">Help</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&A</a><a href="../../changelog/">Changelog</a></nav></div></div>
   </div>
 </header>
 <main id="main">
 
 <div class="wrap">
-  <div class="page-head"><div class="crumbs"><a href="../../docs/">Docs</a> / Troubleshooting</div><h1>Troubleshooting</h1><p class="lead">Fixes for a hidden menu bar item, the island, unavailable readings, system processes and open at login.</p></div>
+  <div class="page-head"><div class="crumbs"><a href="../../docs/">Help</a> / Troubleshooting</div><h1>Troubleshooting</h1><p class="lead">Fixes for common Warashi problems: a missing menu bar item, unavailable values, system processes, notifications, updates and uninstalling.</p></div>
   <div class="doc">
-    <details class="side" open><summary>Docs menu</summary><nav aria-label="Docs"><h4>Docs</h4><a href="../../docs/">Getting started</a><a href="../../docs/menu-bar/">Menu bar & popover</a><a href="../../docs/notch-and-island/">Notch & island</a><a href="../../docs/window/">Overview, Apps & History</a><a href="../../docs/upgrade-advisor/">Upgrade Advisor</a><a href="../../docs/time-and-cost/">Time × Cost</a><a href="../../docs/alerts/">Alerts</a><a href="../../docs/system-processes/">System processes</a><a href="../../docs/settings/">Settings</a><a href="../../docs/privacy-and-data/">Privacy & your data</a><a href="../../docs/troubleshooting/" aria-current="page">Troubleshooting</a><h4>Guides</h4><a href="../../guides/why-is-my-mac-slow/">Why is my Mac slow</a><a href="../../guides/how-much-ram-do-i-need/">How much RAM do I need on a Mac</a><a href="../../guides/whats-draining-my-macbook-battery/">What's draining my MacBook battery</a></nav></details>
+    <details class="side" open><summary>Help menu</summary><nav aria-label="Help"><h4>Get started</h4><a href="../../docs/">Help home</a><a href="../../docs/install/">Download &amp; install</a><a href="../../docs/welcome-tour/">The welcome tour</a><a href="../../docs/first-day/">Your first day</a><h4>Using Warashi</h4><a href="../../docs/menu-bar/">Menu bar &amp; popover</a><a href="../../docs/notch-and-island/">Notch &amp; island</a><a href="../../docs/window/">The window &amp; Overview</a><a href="../../docs/apps/">Apps</a><a href="../../docs/history/">History</a><a href="../../docs/time-and-cost/">Time × Cost</a><a href="../../docs/upgrade-advisor/">Upgrade Advisor</a><a href="../../docs/alerts/">Alerts</a><a href="../../docs/system-processes/">System processes</a><h4>Settings & more</h4><a href="../../docs/settings/">Settings</a><a href="../../docs/updates/">Updates</a><a href="../../docs/beta/">The beta &amp; licences</a><a href="../../docs/privacy-and-data/">Privacy &amp; your data</a><a href="../../docs/troubleshooting/" aria-current="page">Troubleshooting</a><h4>Guides</h4><a href="../../guides/why-is-my-mac-slow/">Why is my Mac slow</a><a href="../../guides/how-much-ram-do-i-need/">How much RAM do I need on a Mac</a><a href="../../guides/whats-draining-my-macbook-battery/">What's draining my MacBook battery</a></nav></details>
     <article class="prose">
-<h2>I can't see Warashi in the menu bar</h2>
-<p>A crowded menu bar can hide items behind the notch. Quit an app or two you don't need in the menu bar, or hold <kbd>⌘</kbd> and drag the Warashi item further right. You can also open Warashi from Applications at any time: it opens its window.</p>
-<h2>The island covers something on my external display</h2>
-<p>Turn it off in Settings › Notch › Island on other displays.</p>
+<p>Find your problem below and follow the steps. Still stuck? Email <a href="mailto:adam@warashi.app">adam@warashi.app</a> with your Mac model and macOS version.</p>
+<h2 id="menu-bar">I can't see Warashi in the menu bar</h2>
+<ol class="steps"><li><span class="step-title">Check it's running</span><p>Open Warashi from Applications. If it's running, its window opens.</p></li><li><span class="step-title">Make room</span><p>On a MacBook with a notch, a crowded menu bar hides items behind the notch. Quit an app or two you don't need in the menu bar, or hold <kbd>⌘</kbd> and drag the spirit further right.</p></li><li><span class="step-title">Use the notch instead</span><p>Turn on Settings › Notch › <b>Glance beside the notch</b>: the numbers there are never hidden.</p></li></ol>
 <h2>Some numbers say “unavailable”</h2>
-<p>Warashi never invents a value. If macOS doesn't offer a reading on your Mac (for example temperatures on some models), it says so instead of guessing.</p>
+<p>Warashi never invents a value. If macOS doesn't offer a reading on your Mac (for example some temperatures or the fan on Macs without one), Warashi says so instead of guessing.</p>
 <h2>System processes aren't shown</h2>
-<p>They need the optional helper: see <a href="../../docs/system-processes/">System processes</a>. If you turned it on, check System Settings › General › Login Items › Allow in the Background.</p>
+<p>They need the optional helper. Follow <a href="../../docs/system-processes/">System processes</a>, and check that Warashi is allowed under System Settings › General › Login Items › Allow in the Background.</p>
+<h2>I don't get alert notifications</h2>
+<ol class="steps"><li><span class="step-title">Check the alert is on</span><p>Settings › Alerts: the switch for that alert must be on.</p></li><li><span class="step-title">Allow notifications</span><p>System Settings › Notifications › Warashi › turn on <b>Allow notifications</b>.</p></li></ol>
 <h2>Open at login doesn't stick</h2>
-<p>macOS may need your approval in System Settings › General › Login Items. Warashi shows a button that takes you there.</p>
-<h2>Still stuck?</h2>
-<p>Email <a href="mailto:adam@warashi.app">adam@warashi.app</a> with your Mac model and macOS version.</p>
-<div class="next"><a href="../../docs/privacy-and-data/"><small>Previous</small>Privacy & your data</a><span></span></div></article>
+<p>macOS may need your approval: open System Settings › General › Login Items and allow Warashi.</p>
+<h2>The island covers something on my external display</h2>
+<p>Turn off Settings › Notch › <b>Island on displays without a notch</b>.</p>
+<h2>I want to update right now</h2>
+<p>Settings › Updates › <b>Check Now</b>. You can also download the newest version from warashi.app and drag it over the old one in Applications; your history stays.</p>
+<h2>See the welcome tour again</h2>
+<p>Settings › General › <b>Show Welcome Again</b>.</p>
+<h2>Uninstall Warashi</h2>
+<ol class="steps"><li><span class="step-title">Remove the helper (if you installed it)</span><p>Settings › System › turn off <b>Show system processes</b>.</p></li><li><span class="step-title">Quit Warashi</span><p>Click the spirit, then the power button at the bottom right of the popover.</p></li><li><span class="step-title">Move it to the Bin</span><p>Drag Warashi from Applications to the Bin.</p></li><li><span class="step-title">Remove your history (optional)</span><p>In Finder choose Go › Go to Folder…, enter <code>~/Library/Application Support/Warashi</code> and move that folder to the Bin.</p></li></ol>
+<div class="next"><a href="../../docs/privacy-and-data/"><small>Previous</small>Privacy &amp; your data</a></div></article>
   </div>
 </div>
 </main>
@@ -79,7 +86,7 @@ posthog.register({ surface: "website" });
   <div class="wrap">
     <div class="row">
       <a class="brand" href="../../index.html"><img src="../../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
-      <nav aria-label="Footer"><a href="../../docs/">Docs</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&amp;A</a><a href="../../changelog/">Changelog</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a><a href="../../refunds/">Refunds</a><a href="mailto:adam@warashi.app">Contact</a></nav>
+      <nav aria-label="Footer"><a href="../../docs/">Help</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&amp;A</a><a href="../../changelog/">Changelog</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a><a href="../../refunds/">Refunds</a><a href="mailto:adam@warashi.app">Contact</a></nav>
     </div>
     <p class="fine">© 2026 Adam Markocki. Made with care in Poland. Warashi is not affiliated with Apple; Mac, macOS and Apple silicon are trademarks of Apple Inc.</p>
   </div>

@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>System processes · Docs · Warashi</title>
-<meta name="description" content="Include WindowServer, kernel_task and other system services with a small, read-only helper you can remove at any time.">
+<title>System processes · Help · Warashi</title>
+<meta name="description" content="Install the optional helper so Warashi can include WindowServer, kernel_task and other system processes, and approve it in System Settings.">
 <link rel="canonical" href="https://warashi.app/docs/system-processes/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Warashi">
-<meta property="og:title" content="System processes · Docs · Warashi">
-<meta property="og:description" content="Include WindowServer, kernel_task and other system services with a small, read-only helper you can remove at any time.">
+<meta property="og:title" content="System processes · Help · Warashi">
+<meta property="og:description" content="Install the optional helper so Warashi can include WindowServer, kernel_task and other system processes, and approve it in System Settings.">
 <meta property="og:url" content="https://warashi.app/docs/system-processes/">
 <meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Warashi: the flight recorder for your Mac. The spirit icon beside the Warashi window and popover.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="System processes · Docs · Warashi">
-<meta name="twitter:description" content="Include WindowServer, kernel_task and other system services with a small, read-only helper you can remove at any time.">
+<meta name="twitter:title" content="System processes · Help · Warashi">
+<meta name="twitter:description" content="Install the optional helper so Warashi can include WindowServer, kernel_task and other system processes, and approve it in System Settings.">
 <meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
 <meta name="twitter:image:alt" content="Warashi: the flight recorder for your Mac. The spirit icon beside the Warashi window and popover.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
@@ -36,7 +36,7 @@ posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
 });
 posthog.register({ surface: "website" });
 </script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Docs", "item": "https://warashi.app/docs/"}, {"@type": "ListItem", "position": 2, "name": "System processes", "item": "https://warashi.app/docs/system-processes/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Help", "item": "https://warashi.app/docs/"}, {"@type": "ListItem", "position": 2, "name": "System processes", "item": "https://warashi.app/docs/system-processes/"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -45,24 +45,27 @@ posthog.register({ surface: "website" });
   <div class="pill">
     <div class="row">
       <a class="brand" href="../../index.html"><img src="../../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
-      <nav class="nav" aria-label="Main"><a href="../../index.html#glance">Features</a><a href="../../docs/" aria-current="page">Docs</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&A</a><a href="../../changelog/">Changelog</a></nav>
+      <nav class="nav" aria-label="Main"><a href="../../index.html#glance">Features</a><a href="../../docs/" aria-current="page">Help</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&A</a><a href="../../changelog/">Changelog</a></nav>
       <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">Download</a>
       <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
     </div>
-    <div class="sheet" id="sheet"><div><nav aria-label="Main"><a href="../../index.html#glance">Features</a><a href="../../docs/" aria-current="page">Docs</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&A</a><a href="../../changelog/">Changelog</a></nav></div></div>
+    <div class="sheet" id="sheet"><div><nav aria-label="Main"><a href="../../index.html#glance">Features</a><a href="../../docs/" aria-current="page">Help</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&A</a><a href="../../changelog/">Changelog</a></nav></div></div>
   </div>
 </header>
 <main id="main">
 
 <div class="wrap">
-  <div class="page-head"><div class="crumbs"><a href="../../docs/">Docs</a> / System processes</div><h1>System processes</h1><p class="lead">Include WindowServer, kernel_task and other system services with a small, read-only helper you can remove at any time.</p></div>
+  <div class="page-head"><div class="crumbs"><a href="../../docs/">Help</a> / System processes</div><h1>System processes</h1><p class="lead">Install the optional helper so Warashi can include WindowServer, kernel_task and other system processes, and approve it in System Settings.</p></div>
   <div class="doc">
-    <details class="side" open><summary>Docs menu</summary><nav aria-label="Docs"><h4>Docs</h4><a href="../../docs/">Getting started</a><a href="../../docs/menu-bar/">Menu bar & popover</a><a href="../../docs/notch-and-island/">Notch & island</a><a href="../../docs/window/">Overview, Apps & History</a><a href="../../docs/upgrade-advisor/">Upgrade Advisor</a><a href="../../docs/time-and-cost/">Time × Cost</a><a href="../../docs/alerts/">Alerts</a><a href="../../docs/system-processes/" aria-current="page">System processes</a><a href="../../docs/settings/">Settings</a><a href="../../docs/privacy-and-data/">Privacy & your data</a><a href="../../docs/troubleshooting/">Troubleshooting</a><h4>Guides</h4><a href="../../guides/why-is-my-mac-slow/">Why is my Mac slow</a><a href="../../guides/how-much-ram-do-i-need/">How much RAM do I need on a Mac</a><a href="../../guides/whats-draining-my-macbook-battery/">What's draining my MacBook battery</a></nav></details>
+    <details class="side" open><summary>Help menu</summary><nav aria-label="Help"><h4>Get started</h4><a href="../../docs/">Help home</a><a href="../../docs/install/">Download &amp; install</a><a href="../../docs/welcome-tour/">The welcome tour</a><a href="../../docs/first-day/">Your first day</a><h4>Using Warashi</h4><a href="../../docs/menu-bar/">Menu bar &amp; popover</a><a href="../../docs/notch-and-island/">Notch &amp; island</a><a href="../../docs/window/">The window &amp; Overview</a><a href="../../docs/apps/">Apps</a><a href="../../docs/history/">History</a><a href="../../docs/time-and-cost/">Time × Cost</a><a href="../../docs/upgrade-advisor/">Upgrade Advisor</a><a href="../../docs/alerts/">Alerts</a><a href="../../docs/system-processes/" aria-current="page">System processes</a><h4>Settings & more</h4><a href="../../docs/settings/">Settings</a><a href="../../docs/updates/">Updates</a><a href="../../docs/beta/">The beta &amp; licences</a><a href="../../docs/privacy-and-data/">Privacy &amp; your data</a><a href="../../docs/troubleshooting/">Troubleshooting</a><h4>Guides</h4><a href="../../guides/why-is-my-mac-slow/">Why is my Mac slow</a><a href="../../guides/how-much-ram-do-i-need/">How much RAM do I need on a Mac</a><a href="../../guides/whats-draining-my-macbook-battery/">What's draining my MacBook battery</a></nav></details>
     <article class="prose">
-<p>macOS doesn't let ordinary apps read the details of system processes such as WindowServer, kernel_task or mds. Without help, Warashi shows them as “system processes not included”.</p>
-<h2>The optional helper</h2>
-<p>Turn on <b>Show system processes</b> in Settings › System. Warashi installs a small helper that runs in the background with the rights to read process counters, and macOS asks you to approve it under System Settings › General › Login Items › Allow in the Background.</p>
-<ul><li>It can only read process counters (CPU time, memory, disk, energy).</li><li>It takes no commands, no paths and no arguments, and only answers Warashi (both sides check each other's code signature).</li><li>Turn the switch off to remove it.</li></ul>
+<p>macOS doesn't let ordinary apps read system processes such as WindowServer, kernel_task or mds. An optional helper lets Warashi include them.</p>
+<ol class="steps"><li><span class="step-title">Open Settings › System</span><p>Press <kbd>⌘,</kbd> and choose the <b>System</b> tab.</p><figure class="shot"><img src="../../assets/img/help/settings-systemProcesses.webp" alt="Settings, System tab with the Show system processes switch" width="800" height="519" loading="lazy" decoding="async"></figure></li><li><span class="step-title">Turn on Show system processes</span><p>Warashi installs a small helper. macOS then asks for your approval.</p></li><li><span class="step-title">Approve it in System Settings</span><p>Click <b>Open Login Items Settings</b> in Warashi, or open System Settings › General › Login Items. Under <b>Allow in the Background</b>, turn on <b>Warashi</b>. macOS may ask for your password.</p></li><li><span class="step-title">Check it worked</span><p>Back in Warashi, system processes now appear in Apps, the top apps and History.</p></li></ol>
+<h2>What the helper can and can't do</h2>
+<ul><li>It can only read process counters: CPU time, memory, disk and energy.</li>
+<li>It takes no commands, no paths and no arguments, and answers only Warashi (both sides check each other's signature).</li>
+<li>Turn the switch off to remove it.</li></ul>
+<div class="help-box"><h3>If something's not right</h3><ul><li><b>Still no system processes:</b> check that Warashi is on under System Settings › General › Login Items › Allow in the Background, then turn the switch off and on again.</li></ul><p style="margin-top:8px">More in <a href="../../docs/troubleshooting/">Troubleshooting</a>, or email <a href="mailto:adam@warashi.app">adam@warashi.app</a>.</p></div>
 <div class="next"><a href="../../docs/alerts/"><small>Previous</small>Alerts</a><a href="../../docs/settings/" style="text-align:right"><small>Next</small>Settings</a></div></article>
   </div>
 </div>
@@ -71,7 +74,7 @@ posthog.register({ surface: "website" });
   <div class="wrap">
     <div class="row">
       <a class="brand" href="../../index.html"><img src="../../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
-      <nav aria-label="Footer"><a href="../../docs/">Docs</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&amp;A</a><a href="../../changelog/">Changelog</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a><a href="../../refunds/">Refunds</a><a href="mailto:adam@warashi.app">Contact</a></nav>
+      <nav aria-label="Footer"><a href="../../docs/">Help</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&amp;A</a><a href="../../changelog/">Changelog</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a><a href="../../refunds/">Refunds</a><a href="mailto:adam@warashi.app">Contact</a></nav>
     </div>
     <p class="fine">© 2026 Adam Markocki. Made with care in Poland. Warashi is not affiliated with Apple; Mac, macOS and Apple silicon are trademarks of Apple Inc.</p>
   </div>

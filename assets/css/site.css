@@ -283,6 +283,34 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 .prose table { border-collapse: collapse; width: 100%; font-size: 16px; }
 .prose th, .prose td { text-align: left; padding: 11px 12px 11px 0; border-bottom: .5px solid var(--rule); vertical-align: top; }
 .prose th { font: italic 400 15px var(--serif); color: var(--faint); }
+/* Help: numbered steps, each followed by the screenshot it describes */
+.prose ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 30px 0; }
+.prose ol.steps > li { counter-increment: step; position: relative; padding: 0 0 30px 50px; margin: 0; }
+.prose ol.steps > li::before { content: counter(step); position: absolute; left: 0; top: 2px; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center; font: 600 14px var(--mono); color: var(--clay); background: color-mix(in srgb, var(--clay) 15%, transparent); }
+.prose ol.steps > li::after { content: ""; position: absolute; left: 15px; top: 40px; bottom: 8px; width: 1px; background: var(--rule); }
+.prose ol.steps > li:last-child { padding-bottom: 4px; }
+.prose ol.steps > li:last-child::after { display: none; }
+.prose ol.steps .step-title { display: block; font-weight: 600; color: var(--ink); }
+.prose figure.shot { margin: 18px 0 4px; }
+.prose figure.shot img { display: block; width: 100%; height: auto; margin: 0; border-radius: 12px; background: #141210; }
+.prose figure.shot.narrow img { max-width: 340px; }
+.prose figure.shot.strip img { width: auto; max-width: 100%; border-radius: 8px; }
+.prose figure.shot figcaption { font-size: 14px; line-height: 1.5; color: var(--faint); margin-top: 10px; }
+.prose .help-box { border-radius: 16px; padding: 18px 22px; margin: 34px 0 0; background: color-mix(in srgb, var(--ink) 5%, transparent);
+  box-shadow: inset 0 0 0 .5px var(--rule); font-size: 16.5px; }
+.prose .help-box h3 { margin: 0 0 6px; font-size: 17px; }
+.prose .help-box p { margin: 0; color: var(--sub); }
+.prose .help-box ul { margin: 6px 0 0; color: var(--sub); }
+.help-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: 12px; margin: 22px 0 8px; }
+.help-cards a { display: block; text-decoration: none; color: var(--ink); padding: 16px 18px; border-radius: 16px;
+  background: color-mix(in srgb, var(--ink) 5%, transparent); box-shadow: inset 0 0 0 .5px var(--rule); transition: background .2s; touch-action: manipulation; }
+.help-cards a b { display: block; font-weight: 600; font-size: 16.5px; }
+.help-cards a span { display: block; color: var(--sub); font-size: 14.5px; line-height: 1.45; margin-top: 4px; }
+.help-cards a:active { transform: scale(.98); }
+@media (hover: hover) and (pointer: fine) { .help-cards a:hover { background: color-mix(in srgb, var(--ink) 9%, transparent); } }
+@media (max-width: 560px) { .prose ol.steps > li { padding-left: 42px; } }
+
 .next { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 56px; padding-top: 22px; border-top: .5px solid var(--rule); }
 .next a { text-decoration: none; color: var(--ink); font-weight: 500; touch-action: manipulation; }
 .next a:last-child { text-align: right; }
