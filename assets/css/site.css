@@ -10,6 +10,7 @@
   --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
   --max: 1120px; --gutter: clamp(20px, 5vw, 32px);
   --ease: cubic-bezier(.2, .8, .2, 1);
+  --spring: var(--ease);
   --z-nav: 40; --z-grain: 60;
   color-scheme: light dark;
 }
@@ -137,6 +138,11 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
   .waitlist .btn { width: 100%; padding: 14px; }
 }
 
+/* A soft spring (a little overshoot, then settles) where the browser can draw one. */
+@supports (transition-timing-function: linear(0, 1)) {
+  :root { --spring: linear(0, .009, .035 2.1%, .141 4.4%, .723 12.9%, .938 16.7%, 1.017 19.4%, 1.067, 1.077 24.5%, 1.064 27.2%, 1.018 33.7%, 1.001 38%, .993 42.8%, 1.001 58.5%, 1); }
+}
+
 /* the desk: a slice of a Mac screen, alive */
 .desk { position: relative; aspect-ratio: 16 / 11.5; width: 100%; border-radius: clamp(14px, 2vw, 22px); overflow: hidden;
   background: radial-gradient(120% 90% at 70% 0%, #2b3a4c, #151b23 55%, #0f1216); container-type: inline-size;
@@ -147,13 +153,18 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 .mb-item { display: inline-flex; align-items: center; gap: 5px; padding: 2px 6px; border-radius: 5px; color: #EDE7DB; transition: background .3s; font-variant-numeric: tabular-nums; }
 .mb-item img { width: 1.15em; height: 1.15em; filter: invert(1); }
 .mb-item.on { background: rgba(255, 255, 255, .18); }
-.notch { position: absolute; top: 0; left: 40%; transform: translateX(-50%); background: #000; color: #EDE7DB; width: 33cqw; height: 6.2cqw; min-height: 24px; max-height: 30px;
-  border-radius: 0 0 2.6cqw 2.6cqw; overflow: hidden; z-index: 3; transition: width .3s var(--ease), height .3s var(--ease), border-radius .3s var(--ease); }
+.notch { position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: #000; color: #EDE7DB; width: 33cqw; height: 6.2cqw; min-height: 24px; max-height: 30px;
+  border-radius: 0 0 2.6cqw 2.6cqw; overflow: hidden; z-index: 3;
+  /* closing: quick and settled; opening (below): a spring that grows evenly to both sides, like the app */
+  transition: width .3s var(--ease), height .3s var(--ease), border-radius .3s var(--ease); }
 .notch .glance { display: flex; justify-content: space-between; align-items: center; height: min(max(6.2cqw, 24px), 30px); padding: 0 2.4cqw; font: 500 clamp(9px, 2.1cqw, 12px) var(--mono); }
 .notch .glance i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin: 0 4px; vertical-align: 1px; }
-.notch .dash { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4cqw; padding: .6cqw 2cqw 2cqw; opacity: 0; transition: opacity .16s .08s; }
-.notch.open { width: 66cqw; height: 30cqw; border-radius: 0 0 4.5cqw 4.5cqw; }
-.notch.open .dash { opacity: 1; }
+.notch .dash { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4cqw; padding: .6cqw 2cqw 2cqw; }
+.notch.open { width: 66cqw; height: calc(min(max(6.2cqw, 24px), 30px) + 17cqw); max-height: none; border-radius: 0 0 4.5cqw 4.5cqw;
+  transition: width .55s var(--spring), height .55s var(--spring), border-radius .55s var(--spring); }
+.notch .tile { opacity: 0; transform: translateY(-1cqw) scale(.97); transition: opacity .12s, transform .12s; }
+.notch.open .tile { opacity: 1; transform: none;
+  transition: opacity .25s calc(.14s + var(--i) * .05s), transform .5s var(--spring) calc(.14s + var(--i) * .05s); }
 .tile { background: #161513; box-shadow: inset 0 0 0 .5px rgba(255, 255, 255, .08); border-radius: 1.8cqw; padding: 1.5cqw 1.7cqw; }
 .tile .cap { font: 600 clamp(6px, 1.6cqw, 8.5px) var(--sans); letter-spacing: .08em; text-transform: uppercase; color: #A8A296; }
 .tile .num { font: 500 clamp(11px, 3.4cqw, 18px) var(--mono); margin-top: 2px; }
@@ -161,9 +172,12 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 .tile svg { width: 100%; height: 4cqw; margin-top: .6cqw; display: block; }
 .desk .peek { position: absolute; left: 5%; bottom: -7%; width: 82%; border-radius: 1.6cqw; box-shadow: 0 24px 60px rgba(0, 0, 0, .6), 0 0 0 .5px rgba(255, 240, 220, .12); }
 .desk .pop { position: absolute; right: 2.5cqw; top: 7.5cqw; width: 44%; z-index: 4; border-radius: 2.4cqw; box-shadow: 0 30px 60px rgba(0, 0, 0, .6), 0 0 0 .5px rgba(255, 240, 220, .15);
-  transform-origin: 85% 0; transition: opacity .3s, transform .4s var(--ease); }
-.desk .pop.hidden { opacity: 0; transform: scale(.95) translateY(-1.5cqw); }
-.cursor { position: absolute; width: max(14px, 3.2cqw); z-index: 5; transition: left .8s cubic-bezier(.45, 0, .2, 1), top .8s cubic-bezier(.45, 0, .2, 1); pointer-events: none; }
+  transform-origin: 82% 0; transition: opacity .18s, transform .5s var(--spring); }
+.desk .pop.hidden { opacity: 0; transform: scale(.94) translateY(-1cqw); transition: opacity .2s, transform .2s var(--ease); }
+/* Different curves on x and y bend the path into a gentle arc, like a hand on a trackpad. */
+.cursor { position: absolute; width: max(14px, 3.2cqw); z-index: 5; pointer-events: none; transform-origin: 20% 10%;
+  transition: left .9s cubic-bezier(.45, 0, .2, 1), top .9s cubic-bezier(.3, 0, .3, 1), transform .12s var(--ease); }
+.cursor.press { transform: scale(.82); }
 
 /* ---------- home: chapters ---------- */
 .chapter { padding: clamp(80px, 12vw, 150px) 0; position: relative; }

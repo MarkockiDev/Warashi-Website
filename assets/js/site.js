@@ -89,14 +89,29 @@ function tick() {
   series.cpu.push(values.cpu); series.cpu.shift();
   series.mem.push(values.mem / 32 * 100); series.mem.shift();
   series.pwr.push(values.pwr); series.pwr.shift();
-  document.querySelectorAll("[data-live]").forEach((el) => {
-    const v = values[el.dataset.live];
-    el.firstChild.nodeValue = el.dataset.live === "cpu" ? Math.round(v) : v.toFixed(1);
-  });
+  countTo(values);
   for (const [key, max] of [["cpu", 100], ["mem", 100], ["pwr", 40]]) {
     document.querySelectorAll(`[data-spark="${key}"]`).forEach((path) =>
       path.setAttribute("points", series[key].map((v, i) => `${(i / 23 * 100).toFixed(1)},${(21 - v / max * 19).toFixed(1)}`).join(" ")));
   }
+}
+
+// Numbers count to their new value (like the app) instead of jumping: half a second, ease-out.
+const shown = { ...values };
+let counting;
+function countTo(target) {
+  const from = { ...shown }, start = performance.now();
+  cancelAnimationFrame(counting);
+  const frame = (now) => {
+    const t = Math.min(1, (now - start) / 500), e = 1 - (1 - t) ** 3;
+    for (const key in target) shown[key] = from[key] + (target[key] - from[key]) * e;
+    document.querySelectorAll("[data-live]").forEach((el) => {
+      const v = shown[el.dataset.live];
+      el.firstChild.nodeValue = el.dataset.live === "cpu" ? Math.round(v) : v.toFixed(1);
+    });
+    if (t < 1) counting = requestAnimationFrame(frame);
+  };
+  counting = requestAnimationFrame(frame);
 }
 tick();
 
@@ -111,27 +126,51 @@ if (!reduceMotion) {
   whileVisible(document.querySelector(".hero"), () => { ticker ??= setInterval(tick, 1100); }, () => {});
 }
 
-// The hero desk: the pointer visits the notch, then clicks the menu bar item.
+// The hero desk, a short story on a loop: the pointer rests on the window, drifts up to the notch, which springs
+// open into the mini dashboard and closes when the pointer leaves; then it clicks the menu bar item, the popover
+// opens, and a click on the desktop puts it away. Each beat gets its own time, and the story pauses off screen.
 const desk = document.querySelector(".desk");
 if (desk) {
   const notch = desk.querySelector(".notch"), cursor = desk.querySelector(".cursor"), pop = desk.querySelector(".pop"), item = desk.querySelector(".mb-item");
   const at = (x, y) => { cursor.style.left = x + "%"; cursor.style.top = y + "%"; };
-  const scenes = [
-    () => { at(58, 66); notch.classList.remove("open"); pop.classList.add("hidden"); item.classList.remove("on"); },
-    () => at(39, 1.5),
-    () => notch.classList.add("open"),
-    () => {},
-    () => { notch.classList.remove("open"); at(80, 1.5); },
-    () => { item.classList.add("on"); pop.classList.remove("hidden"); },
-    () => {},
-    () => {},
-  ];
+  let onScreen = false, resume = null, playing = false;
+  const sleep = (ms) => new Promise((done) => setTimeout(done, ms));
+  // Waits, then holds until the desk is back on screen.
+  const wait = async (ms) => { await sleep(ms); while (!onScreen) await new Promise((go) => { resume = go; }); };
+  const click = async () => { cursor.classList.add("press"); await sleep(130); cursor.classList.remove("press"); };
+  const story = async () => {
+    await wait(1100);
+    at(50, 1.6);                       // up to the notch
+    await wait(1050);                  // arrive, and a short hover dwell like the app's
+    notch.classList.add("open");
+    await wait(3000);                  // the numbers tick in the mini dashboard
+    at(64, 42);                        // the pointer leaves...
+    await wait(220);
+    notch.classList.remove("open");    // ...and the notch closes behind it
+    await wait(700);
+    at(81, 1.6);                       // over to the menu bar item
+    await wait(1000);
+    await click();
+    item.classList.add("on");
+    pop.classList.remove("hidden");
+    await wait(3400);
+    at(30, 62);                        // a click on the desktop puts the popover away
+    await wait(950);
+    await click();
+    item.classList.remove("on");
+    pop.classList.add("hidden");
+    await wait(600);
+    at(62, 64);                        // and back to rest
+  };
   if (reduceMotion) { notch.classList.add("open"); }
   else {
-    let scene = 0, timer;
-    scenes[0]();
-    whileVisible(desk, () => { timer ??= setInterval(() => { scene = (scene + 1) % scenes.length; scenes[scene](); }, 1300); },
-                       () => { clearInterval(timer); timer = undefined; });
+    whileVisible(desk, async () => {
+      onScreen = true;
+      resume?.(); resume = null;
+      if (playing) return;
+      playing = true;
+      for (;;) await story();
+    }, () => { onScreen = false; });
   }
 }
 
