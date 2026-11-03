@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Warashi: the flight recorder for your Mac</title>
+<meta name="description" content="Warashi is the flight recorder for your Mac: a calm menu bar monitor for Apple silicon that remembers what your Mac did, which app is behind it, and what your next Mac needs.">
+<link rel="canonical" href="https://warashi.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Warashi">
+<meta property="og:title" content="Warashi: the flight recorder for your Mac">
+<meta property="og:description" content="Warashi is the flight recorder for your Mac: a calm menu bar monitor for Apple silicon that remembers what your Mac did, which app is behind it, and what your next Mac needs.">
+<meta property="og:url" content="https://warashi.app/">
+<meta property="og:image" content="https://warashi.app/assets/img/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Warashi: the flight recorder for your Mac">
+<meta name="twitter:description" content="Warashi is the flight recorder for your Mac: a calm menu bar monitor for Apple silicon that remembers what your Mac did, which app is behind it, and what your next Mac needs.">
+<meta name="twitter:image" content="https://warashi.app/assets/img/og.png">
+<meta name="theme-color" content="#13110F">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+// Website analytics: cookieless (nothing stored in the browser), EU servers, no person profiles, Do Not Track respected.
+posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
+  api_host: "https://eu.i.posthog.com", ui_host: "https://eu.posthog.com",
+  persistence: "memory", person_profiles: "identified_only", respect_dnt: true,
+  capture_pageview: true, capture_pageleave: true, disable_session_recording: true,
+});
+posthog.register({ surface: "website" });
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Warashi", "applicationCategory": "UtilitiesApplication", "operatingSystem": "macOS 26 or later (Apple silicon)", "description": "A native macOS menu bar system monitor that records your Mac's history: CPU, memory, GPU, power, temperature, network, disk, battery and per-app usage, with an Upgrade Advisor.", "url": "https://warashi.app/", "image": "https://warashi.app/assets/img/app-icon.png", "author": {"@type": "Person", "name": "Adam Markocki"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Warashi", "url": "https://warashi.app/"}</script>
+</head>
+<body class="lacquer">
+<a class="skip" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="pill">
+    <div class="row">
+      <a class="brand" href="index.html"><img src="assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
+      <nav class="nav" aria-label="Main"><a href="index.html#glance" aria-current="page">Features</a><a href="docs/">Docs</a><a href="guides/">Guides</a><a href="faq/">Q&A</a><a href="changelog/">Changelog</a></nav>
+      <a class="btn cta" href="index.html#waitlist">Join the waitlist</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+    <div class="sheet" id="sheet"><div><nav aria-label="Main"><a href="index.html#glance" aria-current="page">Features</a><a href="docs/">Docs</a><a href="guides/">Guides</a><a href="faq/">Q&A</a><a href="changelog/">Changelog</a></nav></div></div>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="status reveal">Arriving soon · for Apple silicon Macs on macOS 26</p>
+    <h1 class="reveal d1">The flight recorder for your <em>Mac</em>.</h1>
+    <div class="split">
+      <div>
+        <p class="lead reveal d2">Warashi watches quietly from your menu bar and remembers. What slowed your Mac down, which app drained the battery, and what your next Mac really needs.</p>
+        <div id="waitlist" class="reveal d3" style="margin-top:30px"><div>
+<form class="waitlist" aria-label="Join the waitlist">
+  <label class="sr" for="email1">Email</label>
+  <input id="email1" type="email" name="email" placeholder="Your email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="send" required>
+  <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <button class="btn" type="submit">Join the waitlist</button>
+</form>
+<p class="waitlist-note" role="status">One email when Warashi is out. Nothing else.</p>
+</div></div>
+      </div>
+      <div class="desk reveal d2" role="img" aria-label="Animated preview: the notch opening into a mini dashboard, then the menu bar item opening Warashi's popover">
+        <div class="bar"><b style="font-weight:700">&#63743;</b><span>Finder</span><span>File</span>
+          <span class="right"><span class="mb-item"><img src="assets/img/glyph.svg" alt=""><span data-live="cpu">23</span>%</span><span>14:32</span></span></div>
+        <div class="notch">
+          <div class="glance"><span><i style="background:#E08A5E"></i><span data-live="cpu">23</span>%</span><span><span data-live="mem">24.8</span>G<i style="background:#8FAAD0"></i></span></div>
+          <div class="dash">
+            <div class="tile"><div class="cap">CPU</div><div class="num"><span data-live="cpu">23</span><small>%</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="cpu" fill="none" stroke="#E08A5E" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
+            <div class="tile"><div class="cap">Memory</div><div class="num"><span data-live="mem">24.8</span><small>GB</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="mem" fill="none" stroke="#8FAAD0" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
+            <div class="tile"><div class="cap">Power</div><div class="num"><span data-live="pwr">14.2</span><small>W</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="pwr" fill="none" stroke="#D9AE55" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
+          </div>
+        </div>
+        <img class="peek" src="assets/img/overview.webp" alt="" width="1080" height="700">
+        <img class="pop hidden" src="assets/img/popover.webp" alt="" width="360" height="733">
+        <svg class="cursor" viewBox="0 0 24 24" style="left:58%; top:66%" aria-hidden="true"><path d="M4 2l15 9-7 1.6L8.5 20z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="glance">
+  <div class="wrap zig">
+    <div>
+      <div class="marker reveal"><b>01</b>The glance</div>
+      <h2 class="reveal d1">One spirit. One number. Nothing in your way.</h2>
+      <p class="lead reveal d2">Warashi keeps a single small item in your menu bar. The rest is one click away, and it speaks up only when something needs you.</p>
+      <ul class="points reveal d3">
+        <li><b>The menu bar</b>The spirit and the number you care about: CPU, memory, power, temperature, and more.</li>
+        <li><b>The notch, put to work</b>CPU and memory hug the notch. Hover, and it opens into a mini dashboard.</li>
+        <li><b>Any display</b>On screens without a notch, a small island does the same.</li>
+      </ul>
+    </div>
+    <div class="glance-stage reveal d1" aria-label="Warashi's menu bar item and island">
+      <div class="zoom-bar"><span>Wi‑Fi</span><span class="mb-item"><img src="assets/img/glyph.svg" alt=""><span class="label">23%</span></span><span>14:32</span></div>
+      <div class="island"><span><i style="background:#E08A5E"></i><span data-live="cpu">23</span>%</span><img src="assets/img/glyph.svg" alt=""><span><span data-live="mem">24.8</span>G<i style="background:#8FAAD0"></i></span></div>
+      <p class="stage-caption">When memory runs short, the number becomes the warning.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter showcase">
+  <div class="wrap">
+    <div class="head">
+      <div class="marker reveal"><b>02</b>The window</div>
+      <h2 class="reveal d1">Not just this second. The whole story.</h2>
+      <p class="lead reveal d2">One calm window that shows what happened while you weren't looking: the last minute, the last day, the last year.</p>
+    </div>
+    <div class="segmented reveal" role="tablist" aria-label="Sections of the window">
+      <button role="tab" data-caption="Overview: how your Mac is right now, in plain words and four live instruments, with the last 24 hours and the apps costing you most.">Overview</button>
+      <button role="tab" data-caption="Apps: the busiest apps first, then every app in a fast list. Open one for its processes, how they were started, and who signed them.">Apps</button>
+      <button role="tab" data-caption="History: one big chart you can scrub like a stock chart, with average, p95, peak and how it compares with the range before.">History</button>
+      <button role="tab" data-caption="Time × Cost: how long you used each app today, and what it cost in energy, in front and in the background.">Time × Cost</button>
+      <button role="tab" data-caption="Upgrade Advisor: after 30 days, how much memory, storage and chip your next Mac needs, with the evidence.">Upgrade Advisor</button>
+    </div>
+    <div class="screen reveal">
+      <img src="assets/img/overview.webp" alt="Warashi Overview: All calm; CPU, memory, GPU and power; the last 24 hours" width="1080" height="700">
+      <img src="assets/img/apps.webp" alt="Warashi Apps: the busiest apps as cards and a list of every app" width="1080" height="700" loading="lazy">
+      <img src="assets/img/history.webp" alt="Warashi History: one large chart with metric chips and a comparison" width="1080" height="700" loading="lazy">
+      <img src="assets/img/timeCost.webp" alt="Warashi Time × Cost: time in front and energy per app" width="1080" height="700" loading="lazy">
+      <img src="assets/img/advisor.webp" alt="Warashi Upgrade Advisor: day 1 of 30" width="1080" height="700" loading="lazy">
+    </div>
+    <p class="caption" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap">
+    <div class="head">
+      <div class="marker reveal"><b>03</b>The answers</div>
+      <h2 class="reveal d1">The questions you actually have.</h2>
+    </div>
+    <div class="answers">
+      <div class="answer reveal"><h3>Do I need a new Mac? Which one?</h3><p>The Upgrade Advisor watches memory pressure, swap, storage growth and how often the chip runs flat out. After 30 days it says how much memory and storage your next Mac needs, and whether a faster chip would help, with the evidence. <a class="tag link-arrow" href="docs/upgrade-advisor/">How it decides</a></p></div>
+      <div class="answer reveal"><h3>What does each app really cost me?</h3><p>Time in front, joined with energy: what an app costs per hour you use it, and what drained the battery from apps you never even opened. <a class="tag link-arrow" href="docs/time-and-cost/">Time × Cost</a></p></div>
+      <div class="answer reveal"><h3>Why was it slow ten minutes ago?</h3><p>A year of history, every few seconds for the last day. Scroll back to the moment it happened and see the app behind it. <a class="tag link-arrow" href="guides/why-is-my-mac-slow/">Read the guide</a></p></div>
+      <div class="answer reveal"><h3>Tell me when it matters. Only then.</h3><p>A runaway app, memory growing fast, a nearly full disk, heat, battery health. Once per problem, with the evidence. <a class="tag link-arrow" href="docs/alerts/">Alerts</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap">
+    <div class="head">
+      <div class="marker reveal"><b>04</b>The weight</div>
+      <h2 class="reveal d1">A monitor that doesn't cost you.</h2>
+      <p class="lead reveal d2">Native Swift, built for Apple silicon. Warashi measures its own cost the same way it measures every other app, and shows it to you.</p>
+    </div>
+    <div class="figures reveal">
+      <div class="figure"><div class="big" data-count="0.16">0.16<small>%</small></div><p>of one core, in the background</p></div>
+      <div class="figure"><div class="big" data-count="25">25<small>MB</small></div><p>of memory, typically</p></div>
+      <div class="figure"><div class="big">0<small>accounts</small></div><p>Download, open, done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap zig flip">
+    <div>
+      <div class="marker reveal"><b>05</b>The promise</div>
+      <h2 class="reveal d1">Your Mac's story stays on your Mac.</h2>
+      <p class="lead reveal d2">History, app names and activity live in a small database on your Mac and never leave it. No account. No screen recording, no keystrokes, no file access.</p>
+      <p class="reveal d3" style="color:var(--sub)">Warashi sends anonymous usage statistics (version, macOS, chip family, which features are used) to help improve it. Never app names, files or history. <a class="link-arrow" href="docs/privacy-and-data/">Exactly what's sent</a></p>
+    </div>
+    <img class="shot reveal d1" src="assets/img/onboarding.webp" alt="Warashi's welcome: Meet Warashi" width="720" height="520" loading="lazy">
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap">
+    <div class="head"><div class="marker reveal"><b>06</b>Questions</div><h2 class="reveal d1">Good questions.</h2></div>
+    <div class="qa reveal"><h3>When can I get Warashi?</h3><p>Soon. Join the waitlist and you'll get one email when it's out.</p></div>
+    <div class="qa reveal"><h3>Which Macs does it run on?</h3><p>Macs with Apple silicon (M1 and later) running macOS 26 or newer.</p></div>
+    <div class="qa reveal"><h3>Is it free?</h3><p>There's a free version for everyday monitoring. Warashi Pro, a one-time purchase with no subscription, adds alerts, Time × Cost, the inspector, 12 months of history and an always up-to-date Upgrade Advisor.</p></div>
+    <div class="qa reveal"><h3>How is it different from Activity Monitor?</h3><p>Activity Monitor shows this second. Warashi remembers: what happened while you weren't looking, which app was behind it, what it cost, and what that means for your next Mac.</p></div>
+    <p class="reveal" style="margin-top:28px"><a class="link-arrow" href="faq/">All questions</a></p>
+  </div>
+</section>
+
+<section class="finale">
+  <div class="wrap">
+    <img class="icon reveal" src="assets/img/app-icon.png" alt="" width="120" height="120">
+    <h2 class="reveal d1">Let a quiet spirit<br>look after your Mac.</h2>
+    <p class="lead reveal d2" style="margin:0 auto">Be the first to know when Warashi is out.</p>
+    <div class="reveal d3"><div>
+<form class="waitlist" aria-label="Join the waitlist">
+  <label class="sr" for="email2">Email</label>
+  <input id="email2" type="email" name="email" placeholder="Your email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="send" required>
+  <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <button class="btn" type="submit">Join the waitlist</button>
+</form>
+<p class="waitlist-note" role="status">One email when Warashi is out. Nothing else.</p>
+</div></div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="index.html"><img src="assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
+      <nav aria-label="Footer"><a href="docs/">Docs</a><a href="guides/">Guides</a><a href="faq/">Q&amp;A</a><a href="changelog/">Changelog</a><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="refunds/">Refunds</a><a href="mailto:hello@warashi.app">Contact</a></nav>
+    </div>
+    <p class="fine">© 2026 Adam Markocki. Made with care in Poland. Warashi is not affiliated with Apple; Mac, macOS and Apple silicon are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

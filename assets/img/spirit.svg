@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Warashi spirit (A1, 2026-11-03): blunt-fringe bob zashiki-warashi peeking in from the lower-left.
+       Two character colours (sumi hair/eyes/mouth, porcelain face/body) on muted kaki clay; the cheeks reuse the clay. -->
+  <rect width="1024" height="1024" fill="#C47A57"/>
+  <!-- bob: one big rounded dome that wraps the face, running off the left edge -->
+  <path fill="#262422" d="M-60 860 L-60 480 C-60 300 110 212 345 212 C590 212 740 320 740 520 L740 640
+    C740 810 670 892 540 892 L300 892 Z"/>
+  <!-- face: under a straight fringe that tilts gently down to the right, round chin -->
+  <path fill="#F4E6D2" d="M96 516 L572 590
+    C584 700 560 790 470 840 C380 880 230 870 150 820 C80 776 70 690 82 600 Z"/>
+  <!-- tiny parting in the fringe -->
+  <path fill="#F4E6D2" d="M296 548 L306 506 C309 497 320 497 321 506 L330 553 Z"/>
+  <!-- cheeks (background clay), eyes, smile -->
+  <circle cx="140" cy="705" r="42" fill="#C47A57"/>
+  <circle cx="478" cy="776" r="42" fill="#C47A57"/>
+  <ellipse cx="194" cy="640" rx="33" ry="37" fill="#262422"/>
+  <ellipse cx="460" cy="702" rx="33" ry="37" fill="#262422"/>
+  <path fill="#262422" d="M290 708 C304 748 352 752 370 716 Z"/>
+  <!-- shoulders and a raised hand, rising from the bottom-left corner -->
+  <ellipse cx="110" cy="1030" rx="330" ry="215" fill="#F4E6D2"/>
+  <ellipse cx="330" cy="985" rx="120" ry="140" fill="#F4E6D2"/>
+</svg>

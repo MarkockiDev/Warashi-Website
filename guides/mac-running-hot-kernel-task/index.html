@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mac running hot? kernel_task and thermal throttling explained · Warashi</title>
+<meta name="description" content="Why kernel_task suddenly uses lots of CPU, what thermal throttling is, and what you can do about it.">
+<link rel="canonical" href="https://warashi.app/guides/mac-running-hot-kernel-task/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Warashi">
+<meta property="og:title" content="Mac running hot? kernel_task and thermal throttling explained · Warashi">
+<meta property="og:description" content="Why kernel_task suddenly uses lots of CPU, what thermal throttling is, and what you can do about it.">
+<meta property="og:url" content="https://warashi.app/guides/mac-running-hot-kernel-task/">
+<meta property="og:image" content="https://warashi.app/assets/img/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mac running hot? kernel_task and thermal throttling explained · Warashi">
+<meta name="twitter:description" content="Why kernel_task suddenly uses lots of CPU, what thermal throttling is, and what you can do about it.">
+<meta name="twitter:image" content="https://warashi.app/assets/img/og.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+// Website analytics: cookieless (nothing stored in the browser), EU servers, no person profiles, Do Not Track respected.
+posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
+  api_host: "https://eu.i.posthog.com", ui_host: "https://eu.posthog.com",
+  persistence: "memory", person_profiles: "identified_only", respect_dnt: true,
+  capture_pageview: true, capture_pageleave: true, disable_session_recording: true,
+});
+posthog.register({ surface: "website" });
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Mac running hot? kernel_task and thermal throttling explained", "description": "Why kernel_task suddenly uses lots of CPU, what thermal throttling is, and what you can do about it.", "author": {"@type": "Person", "name": "Adam Markocki"}, "publisher": {"@type": "Organization", "name": "Warashi"}, "datePublished": "2026-11-03", "dateModified": "2026-11-03", "mainEntityOfPage": "https://warashi.app/guides/mac-running-hot-kernel-task/"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="pill">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
+      <nav class="nav" aria-label="Main"><a href="../../index.html#glance">Features</a><a href="../../docs/">Docs</a><a href="../../guides/" aria-current="page">Guides</a><a href="../../faq/">Q&A</a><a href="../../changelog/">Changelog</a></nav>
+      <a class="btn cta" href="../../index.html#waitlist">Join the waitlist</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+    <div class="sheet" id="sheet"><div><nav aria-label="Main"><a href="../../index.html#glance">Features</a><a href="../../docs/">Docs</a><a href="../../guides/" aria-current="page">Guides</a><a href="../../faq/">Q&A</a><a href="../../changelog/">Changelog</a></nav></div></div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap" style="max-width:800px">
+  <div class="page-head"><div class="crumbs"><a href="../../guides/">Guides</a></div><h1>Mac running hot? kernel_task and thermal throttling explained</h1>
+    <p class="lead">Why kernel_task suddenly uses lots of CPU, what thermal throttling is, and what you can do about it.</p><p class="meta">4 min read · Updated 3 November 2026</p></div>
+  <article class="prose" style="padding-bottom:40px">
+<p>If your Mac's fans spin up, the bottom gets warm and <code>kernel_task</code> suddenly uses lots of CPU, your Mac is protecting itself from heat.</p>
+<h2>What kernel_task is doing</h2>
+<p><code>kernel_task</code> is macOS itself. When the chip gets too hot, macOS makes kernel_task appear busy so other apps get less CPU time, and the chip cools down. It isn't the cause; it's the brake. Quitting it isn't possible, and isn't what you want.</p>
+<h2>Thermal throttling</h2>
+<p>Throttling means macOS lowers the chip's speed to stay within safe temperatures. On fanless MacBook Airs it happens sooner under long, heavy work like exports, builds or games; Macs with fans can usually sustain full speed longer.</p>
+<h2>What you can do</h2>
+<ul><li>Find the app that's actually working hard (sort by CPU and GPU), and pause or quit it.</li><li>Keep vents clear; avoid soft surfaces under the Mac.</li><li>For long heavy work on a MacBook Air, a cooler room or a stand helps.</li><li>If it happens daily, consider whether your work needs a Mac with a fan.</li></ul>
+<h2>Know how often it happens</h2>
+<p>Warashi records the minutes your Mac spent slowed down by heat. Its <a href="../../docs/alerts/">Mac running hot</a> alert tells you when it starts, and the <a href="../../docs/upgrade-advisor/">Upgrade Advisor</a> counts throttled minutes per week when it recommends a chip.</p>
+
+    <div class="tip" style="margin-top:44px"><b>Warashi does this for you.</b> It records your Mac's history in the background, so you can look back at what happened instead of trying to catch it live. <a href="../../index.html#waitlist">Join the waitlist →</a></div>
+    <h2>More guides</h2><ul><li><a href="../../guides/why-is-my-mac-slow/">Why is my Mac slow? Find the app behind it</a></li><li><a href="../../guides/how-much-ram-do-i-need/">How much RAM do I need on a Mac?</a></li><li><a href="../../guides/whats-draining-my-macbook-battery/">What's draining my MacBook battery?</a></li><li><a href="../../guides/should-i-upgrade-my-mac/">Should I upgrade my Mac? Let your own data decide</a></li></ul>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
+      <nav aria-label="Footer"><a href="../../docs/">Docs</a><a href="../../guides/">Guides</a><a href="../../faq/">Q&amp;A</a><a href="../../changelog/">Changelog</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a><a href="../../refunds/">Refunds</a><a href="mailto:hello@warashi.app">Contact</a></nav>
+    </div>
+    <p class="fine">© 2026 Adam Markocki. Made with care in Poland. Warashi is not affiliated with Apple; Mac, macOS and Apple silicon are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+<script src="../../assets/js/site.js" defer></script>
+</body>
+</html>
