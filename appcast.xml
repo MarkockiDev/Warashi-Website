@@ -3,12 +3,12 @@
     <channel>
         <title>Warashi</title>
         <item>
-            <title>0.3.6</title>
-            <pubDate>Tue, 03 Nov 2026 23:03:48 +0100</pubDate>
-            <sparkle:version>27</sparkle:version>
-            <sparkle:shortVersionString>0.3.6</sparkle:shortVersionString>
+            <title>0.3.7</title>
+            <pubDate>Tue, 03 Nov 2026 23:15:25 +0100</pubDate>
+            <sparkle:version>28</sparkle:version>
+            <sparkle:shortVersionString>0.3.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/MarkockiAdam/warashi-releases/releases/download/v0.3.6/Warashi-0.3.6.dmg" length="8626900" type="application/octet-stream" sparkle:edSignature="6MNTaJ6AXRcBw0KS7YJMvsJI5BrUVywk3U+sIrRVurXCli0UZxMExV8O3N4jX2b9JaCI4iDJse5XLfVzTVOaCQ=="/>
+            <enclosure url="https://github.com/MarkockiAdam/warashi-releases/releases/download/v0.3.7/Warashi-0.3.7.dmg" length="8648389" type="application/octet-stream" sparkle:edSignature="obhkS5wQpO4e0YAeTdRuURSoVHVyKhQObKBvoZL7JcWPx6ReE1x8+2jiPzJQt+pJqfS5p2TEPvFdkOGxbpHwCw=="/>
         </item>
     </channel>
 </rss>

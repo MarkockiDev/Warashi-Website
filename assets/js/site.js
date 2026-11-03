@@ -169,3 +169,8 @@ if (showcase) {
   whileVisible(showcase, () => { timer ??= setInterval(() => { if (auto) show((index + 1) % tabs.length); }, 4500); },
                          () => { clearInterval(timer); timer = undefined; });
 }
+
+// Download buttons: count clicks by place (never anything about the visitor).
+document.querySelectorAll("a[data-download]").forEach((link) => {
+  link.addEventListener("click", () => window.posthog?.capture("download_clicked", { place: link.dataset.download }));
+});
