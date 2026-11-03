@@ -1,9 +1,9 @@
 // Warashi website: small, dependency-free behaviours. The page works without JavaScript,
 // and all motion stops with "Reduce motion".
 
-// Where waitlist sign-ups go. Empty until a form service is chosen: the form then offers email instead.
-const WAITLIST_ENDPOINT = "";
-const CONTACT_EMAIL = "hello@warashi.app";
+// Where waitlist sign-ups go: Web3Forms emails each one to adam@warashi.app (the access key is in the form).
+const WAITLIST_ENDPOINT = "https://api.web3forms.com/submit";
+const CONTACT_EMAIL = "adam@warashi.app";
 
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 document.documentElement.classList.remove("no-js");
@@ -54,7 +54,7 @@ document.querySelectorAll("form.waitlist").forEach((form) => {
   const note = form.parentElement.querySelector(".waitlist-note");
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    if (form.company?.value) return; // honeypot: bots fill hidden fields
+    if (form.botcheck?.checked) return; // honeypot: bots tick hidden boxes
     const email = form.email.value.trim();
     window.posthog?.capture("waitlist_submitted", { connected: Boolean(WAITLIST_ENDPOINT) }); // never the email
     if (!WAITLIST_ENDPOINT) {
@@ -66,7 +66,8 @@ document.querySelectorAll("form.waitlist").forEach((form) => {
     note.textContent = "Adding you…";
     try {
       const response = await fetch(WAITLIST_ENDPOINT, { method: "POST", headers: { Accept: "application/json" }, body: new FormData(form) });
-      if (!response.ok) throw new Error(String(response.status));
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.success === false) throw new Error(result.message || String(response.status));
       note.className = "waitlist-note ok";
       note.textContent = "You're on the list. One email when Warashi is out.";
       window.posthog?.capture("waitlist_joined", { form: form.id || form.closest("section")?.className || "" }); // never the email

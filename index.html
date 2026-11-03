@@ -62,7 +62,11 @@ posthog.register({ surface: "website" });
 <form class="waitlist" aria-label="Join the waitlist">
   <label class="sr" for="email1">Email</label>
   <input id="email1" type="email" name="email" placeholder="Your email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="send" required>
-  <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <input type="hidden" name="access_key" value="308f9587-7c5b-49e3-9fb6-db14750b240d">
+  <input type="hidden" name="subject" value="New Warashi waitlist signup">
+  <input type="hidden" name="from_name" value="Warashi website">
+  <input type="hidden" name="form" value="top of the home page">
+  <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
   <button class="btn" type="submit">Join the waitlist</button>
 </form>
 <p class="waitlist-note" role="status">One email when Warashi is out. Nothing else.</p>
@@ -194,7 +198,11 @@ posthog.register({ surface: "website" });
 <form class="waitlist" aria-label="Join the waitlist">
   <label class="sr" for="email2">Email</label>
   <input id="email2" type="email" name="email" placeholder="Your email" autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="send" required>
-  <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <input type="hidden" name="access_key" value="308f9587-7c5b-49e3-9fb6-db14750b240d">
+  <input type="hidden" name="subject" value="New Warashi waitlist signup">
+  <input type="hidden" name="from_name" value="Warashi website">
+  <input type="hidden" name="form" value="bottom of the home page">
+  <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
   <button class="btn" type="submit">Join the waitlist</button>
 </form>
 <p class="waitlist-note" role="status">One email when Warashi is out. Nothing else.</p>
@@ -207,7 +215,7 @@ posthog.register({ surface: "website" });
   <div class="wrap">
     <div class="row">
       <a class="brand" href="index.html"><img src="assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
-      <nav aria-label="Footer"><a href="docs/">Docs</a><a href="guides/">Guides</a><a href="faq/">Q&amp;A</a><a href="changelog/">Changelog</a><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="refunds/">Refunds</a><a href="mailto:hello@warashi.app">Contact</a></nav>
+      <nav aria-label="Footer"><a href="docs/">Docs</a><a href="guides/">Guides</a><a href="faq/">Q&amp;A</a><a href="changelog/">Changelog</a><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="refunds/">Refunds</a><a href="mailto:adam@warashi.app">Contact</a></nav>
     </div>
     <p class="fine">© 2026 Adam Markocki. Made with care in Poland. Warashi is not affiliated with Apple; Mac, macOS and Apple silicon are trademarks of Apple Inc.</p>
   </div>
