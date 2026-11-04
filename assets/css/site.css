@@ -311,6 +311,15 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 @media (hover: hover) and (pointer: fine) { .help-cards a:hover { background: color-mix(in srgb, var(--ink) 9%, transparent); } }
 @media (max-width: 560px) { .prose ol.steps > li { padding-left: 42px; } }
 
+/* Press kit */
+.press-logos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 12px; margin: 18px 0; }
+.press-logo { display: flex; flex-direction: column; gap: 10px; align-items: center; justify-content: center; padding: 18px 14px; border-radius: 16px;
+  background: #1b1916; text-decoration: none; color: #A8A296; font-size: 14px; text-align: center; touch-action: manipulation; }
+.press-logo.light { background: #F3EEE4; color: #6F675C; }
+.prose .press-logo img { margin: 0; box-shadow: none; border-radius: 0; max-width: 100%; height: 64px; width: auto; object-fit: contain; }
+.press-shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 12px; margin: 18px 0; }
+.prose .press-shot img { margin: 0; width: 100%; height: auto; display: block; }
+
 .next { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 56px; padding-top: 22px; border-top: .5px solid var(--rule); }
 .next a { text-decoration: none; color: var(--ink); font-weight: 500; touch-action: manipulation; }
 .next a:last-child { text-align: right; }
