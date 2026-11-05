@@ -1,5 +1,5 @@
 /* Warashi website: the app's "Wabi" design for the web.
-   Every page has washi paper (light) and lacquer (dark): it follows the system, or the visitor's choice in the menu
+   Every page has washi paper (light) and lacquer (dark): it follows the system until the visitor flips the switch in the menu
    (data-theme on <html>, saved in localStorage). Mac "screens" (the desk, the glance stage) stay dark in both.
    One accent: kaki clay. */
 
@@ -91,7 +91,7 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 @media (hover: hover) and (pointer: fine) { .nav a:hover { color: var(--ink); } }
 .pill .cta { margin-left: auto; }
 .theme-toggle + .cta { margin-left: 0; }
-/* Theme switch: Auto → Light → Dark, remembered on this browser. */
+/* Theme switch: light ⇄ dark, remembered on this browser. */
 .theme-toggle { flex: none; width: 40px; height: 40px; margin-left: auto; margin-right: 6px; border: 0; border-radius: 12px; background: transparent; color: var(--sub);
   display: grid; place-items: center; cursor: pointer; touch-action: manipulation; transition: background .2s, color .2s; }
 .theme-toggle svg { width: 20px; height: 20px; }
