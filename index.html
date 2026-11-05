@@ -20,8 +20,10 @@
 <meta name="twitter:description" content="Warashi is the flight recorder for your Mac: a calm menu bar monitor for Apple silicon that remembers what your Mac did, which app is behind it, and what your next Mac needs.">
 <meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
 <meta name="twitter:image:alt" content="Warashi: the flight recorder for your Mac. The spirit icon beside the Warashi window and popover.">
-<meta name="theme-color" content="#13110F">
-<meta name="color-scheme" content="dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="icon" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/site.css">
@@ -38,7 +40,7 @@ posthog.register({ surface: "website" });
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Warashi", "applicationCategory": "UtilitiesApplication", "operatingSystem": "macOS 26 or later (Apple silicon)", "description": "A native macOS menu bar system monitor that records your Mac's history: CPU, memory, GPU, power, temperature, network, disk, battery and per-app usage, with an Upgrade Advisor.", "url": "https://warashi.app/", "image": "https://warashi.app/assets/img/app-icon.png", "author": {"@type": "Person", "name": "Adam Markocki", "url": "https://markockiadam.com"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Warashi", "url": "https://warashi.app/"}</script>
 </head>
-<body class="lacquer">
+<body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="grain" aria-hidden="true"></div>
 <header class="site-header">

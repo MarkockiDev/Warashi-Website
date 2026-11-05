@@ -1,6 +1,7 @@
 /* Warashi website: the app's "Wabi" design for the web.
-   Washi paper and sumi ink for reading (docs, guides; follows light/dark), urushi lacquer for the product story
-   (the home page is always lacquer, like the app window). One accent: kaki clay. */
+   Every page has washi paper (light) and lacquer (dark): it follows the system, or the visitor's choice in the menu
+   (data-theme on <html>, saved in localStorage). Mac "screens" (the desk, the glance stage) stay dark in both.
+   One accent: kaki clay. */
 
 :root {
   --paper: #F3EEE4; --face: #FBF8F1; --ink: #2A2825; --sub: #615C53; --faint: #8A8377; --rule: #E2DACB;
@@ -14,10 +15,14 @@
   --z-nav: 40; --z-grain: 60;
   color-scheme: light dark;
 }
+/* Dark: when the visitor's system is dark (unless they picked Light in the menu), or when they picked Dark. */
 @media (prefers-color-scheme: dark) {
-  :root { --paper: #171614; --face: #201E1B; --ink: #EDE7DB; --sub: #A8A296; --faint: #7A746B; --rule: #34302B;
+  :root:not([data-theme="light"]) { --paper: #171614; --face: #201E1B; --ink: #EDE7DB; --sub: #A8A296; --faint: #7A746B; --rule: #34302B;
           --clay: #E08A5E; --indigo: #8FAAD0; --matcha: #A3B86A; --ochre: #D9AE55; --beni: #E8806F; }
 }
+:root[data-theme="dark"] { --paper: #171614; --face: #201E1B; --ink: #EDE7DB; --sub: #A8A296; --faint: #7A746B; --rule: #34302B;
+          --clay: #E08A5E; --indigo: #8FAAD0; --matcha: #A3B86A; --ochre: #D9AE55; --beni: #E8806F; color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
 /* The lacquer surface: always dark, warm-tinted, never pure black. */
 .lacquer { --paper: #13110F; --face: #1C1A17; --ink: #EDE7DB; --sub: #A8A296; --faint: #7A746B; --rule: #2E2A26;
            --clay: #E08A5E; --indigo: #8FAAD0; --matcha: #A3B86A; --ochre: #D9AE55; --beni: #E8806F;
@@ -58,7 +63,8 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
   transition: transform .16s var(--ease), background .2s, box-shadow .2s; }
 /* On lacquer and in dark mode the clay is lighter: ink-dark text reads better on it. */
 .lacquer .btn { color: #1B120D; }
-@media (prefers-color-scheme: dark) { .btn { color: #1B120D; } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn { color: #1B120D; } }
+:root[data-theme="dark"] .btn { color: #1B120D; }
 .btn:active { transform: scale(.97); }
 .btn.quiet { background: color-mix(in srgb, var(--ink) 8%, transparent); color: var(--ink); }
 .link-arrow { font-weight: 500; text-decoration: none; white-space: nowrap; }
@@ -84,6 +90,13 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 .nav a[aria-current="page"] { color: var(--ink); background: color-mix(in srgb, var(--ink) 8%, transparent); }
 @media (hover: hover) and (pointer: fine) { .nav a:hover { color: var(--ink); } }
 .pill .cta { margin-left: auto; }
+.theme-toggle + .cta { margin-left: 0; }
+/* Theme switch: Auto → Light → Dark, remembered on this browser. */
+.theme-toggle { flex: none; width: 40px; height: 40px; margin-left: auto; margin-right: 6px; border: 0; border-radius: 12px; background: transparent; color: var(--sub);
+  display: grid; place-items: center; cursor: pointer; touch-action: manipulation; transition: background .2s, color .2s; }
+.theme-toggle svg { width: 20px; height: 20px; }
+.theme-toggle:active { transform: scale(.94); }
+@media (hover: hover) and (pointer: fine) { .theme-toggle:hover { background: color-mix(in srgb, var(--ink) 8%, transparent); color: var(--ink); } }
 .menu-toggle { display: none; width: 44px; height: 44px; margin-left: 4px; border: 0; border-radius: 14px; background: transparent; color: var(--ink); cursor: pointer; touch-action: manipulation; }
 .menu-toggle span { display: block; width: 18px; height: 1.5px; margin: 5px auto; background: currentColor; border-radius: 2px; transition: transform .3s var(--ease); }
 .pill.open .menu-toggle span:first-child { transform: translateY(3.25px) rotate(45deg); }

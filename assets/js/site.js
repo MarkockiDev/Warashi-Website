@@ -213,3 +213,35 @@ if (showcase) {
 document.querySelectorAll("a[data-download]").forEach((link) => {
   link.addEventListener("click", () => window.posthog?.capture("download_clicked", { place: link.dataset.download }));
 });
+
+// Theme switch in the menu: Auto (follows the system) → Light → Dark, remembered on this browser.
+(() => {
+  const row = document.querySelector(".pill .row");
+  if (!row) return;
+  const icons = {
+    auto: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor" stroke="none"/></svg>',
+    light: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>',
+    dark: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>',
+  };
+  const names = { auto: "Auto", light: "Light", dark: "Dark" };
+  const next = { auto: "light", light: "dark", dark: "auto" };
+  let mode = document.documentElement.dataset.theme || "auto";
+  const button = document.createElement("button");
+  button.className = "theme-toggle";
+  button.type = "button";
+  const show = () => {
+    button.innerHTML = icons[mode];
+    button.setAttribute("aria-label", `Theme: ${names[mode]}. Switch to ${names[next[mode]]}`);
+    button.title = `Theme: ${names[mode]}`;
+  };
+  button.addEventListener("click", () => {
+    mode = next[mode];
+    if (mode === "auto") delete document.documentElement.dataset.theme;
+    else document.documentElement.dataset.theme = mode;
+    try { mode === "auto" ? localStorage.removeItem("theme") : localStorage.setItem("theme", mode); } catch {}
+    show();
+    window.posthog?.capture("theme_changed", { theme: mode });
+  });
+  show();
+  row.insertBefore(button, row.querySelector(".cta"));
+})();
