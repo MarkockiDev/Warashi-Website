@@ -192,7 +192,7 @@ if (zoomItem && !reduceMotion) {
 // The window: segmented control over real screenshots (advances by itself until the visitor picks).
 const showcase = document.querySelector(".showcase");
 if (showcase) {
-  const tabs = [...showcase.querySelectorAll(".segmented button")], shots = [...showcase.querySelectorAll(".screen img")], caption = showcase.querySelector(".caption");
+  const tabs = [...showcase.querySelectorAll(".segmented button")], shots = [...showcase.querySelectorAll(".screen > .themed")], caption = showcase.querySelector(".caption");
   let index = 0, auto = !reduceMotion, timer;
   const show = (i) => {
     index = i;
@@ -208,6 +208,12 @@ if (showcase) {
   whileVisible(showcase, () => { timer ??= setInterval(() => { if (auto) show((index + 1) % tabs.length); }, 4500); },
                          () => { clearInterval(timer); timer = undefined; });
 }
+
+// Power Flow's moving light rests when it can't be seen, and for anyone who asked for less motion.
+document.querySelectorAll(".flow-live").forEach((svg) => {
+  if (reduceMotion) { svg.pauseAnimations(); return; }
+  whileVisible(svg, () => svg.unpauseAnimations(), () => svg.pauseAnimations());
+});
 
 // Download buttons: count clicks by place (never anything about the visitor).
 document.querySelectorAll("a[data-download]").forEach((link) => {
@@ -238,6 +244,8 @@ document.querySelectorAll("a[data-download]").forEach((link) => {
     const theme = current() === "dark" ? "light" : "dark";
     document.documentElement.dataset.theme = theme;
     try { localStorage.setItem("theme", theme); } catch {}
+    // The browser's own chrome follows too.
+    document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.setAttribute("content", theme === "dark" ? "#171614" : "#F3EEE4"));
     show();
     window.posthog?.capture("theme_changed", { theme });
   });

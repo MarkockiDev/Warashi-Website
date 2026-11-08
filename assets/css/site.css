@@ -1,6 +1,6 @@
 /* Warashi website: the app's "Wabi" design for the web.
    Every page has washi paper (light) and lacquer (dark): it follows the system until the visitor flips the switch in the menu
-   (data-theme on <html>, saved in localStorage). Mac "screens" (the desk, the glance stage) stay dark in both.
+   (data-theme on <html>, saved in localStorage). Everything drawn from the app (the desk, the glance stage, screenshots, Power Flow) follows the same theme; only the notch and island stay black, like the hardware.
    One accent: kaki clay. */
 
 :root {
@@ -23,6 +23,17 @@
 :root[data-theme="dark"] { --paper: #171614; --face: #201E1B; --ink: #EDE7DB; --sub: #A8A296; --faint: #7A746B; --rule: #34302B;
           --clay: #E08A5E; --indigo: #8FAAD0; --matcha: #A3B86A; --ochre: #D9AE55; --beni: #E8806F; color-scheme: dark; }
 :root[data-theme="light"] { color-scheme: light; }
+/* The Mac on the page follows the theme. Light first, dark overrides beside it. */
+:root { --wall: radial-gradient(120% 90% at 70% 0%, #FBEFDF, #EADCCA 55%, #DCCFBE); --stage: radial-gradient(100% 80% at 30% 0%, #FBF1E3, #E9DDCC 70%);
+  --mac-bar: rgba(255, 255, 255, .5); --mac-ink: rgba(42, 40, 37, .86); --mac-ink-quiet: rgba(42, 40, 37, .62); --mac-item-on: rgba(42, 40, 37, .12); --glyph: none;
+  --zoom-bar: rgba(255, 255, 255, .55); --alert: #8A6514; --edge: rgba(42, 40, 37, .14); --sheen: rgba(255, 255, 255, .62); --hub: #FBF8F1; --term: #FBF8F1; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --wall: radial-gradient(120% 90% at 70% 0%, #2b3a4c, #151b23 55%, #0f1216); --stage: radial-gradient(100% 80% at 30% 0%, #26313f, #12161c 70%);
+  --mac-bar: rgba(0, 0, 0, .28); --mac-ink: rgba(237, 231, 219, .82); --mac-ink-quiet: rgba(237, 231, 219, .7); --mac-item-on: rgba(255, 255, 255, .18); --glyph: invert(1);
+  --zoom-bar: rgba(0, 0, 0, .32); --alert: #F0C873; --edge: rgba(255, 240, 220, .12); --sheen: rgba(255, 245, 230, .42); --hub: #121110; --term: #121110; } }
+:root[data-theme="dark"] { --wall: radial-gradient(120% 90% at 70% 0%, #2b3a4c, #151b23 55%, #0f1216); --stage: radial-gradient(100% 80% at 30% 0%, #26313f, #12161c 70%);
+  --mac-bar: rgba(0, 0, 0, .28); --mac-ink: rgba(237, 231, 219, .82); --mac-ink-quiet: rgba(237, 231, 219, .7); --mac-item-on: rgba(255, 255, 255, .18); --glyph: invert(1);
+  --zoom-bar: rgba(0, 0, 0, .32); --alert: #F0C873; --edge: rgba(255, 240, 220, .12); --sheen: rgba(255, 245, 230, .42); --hub: #121110; --term: #121110; }
+.desk, .glance-stage, .zoom-bar, .desk .bar, .mb-item { transition: background .45s ease, color .45s ease; }
 /* The lacquer surface: always dark, warm-tinted, never pure black. */
 .lacquer { --paper: #13110F; --face: #1C1A17; --ink: #EDE7DB; --sub: #A8A296; --faint: #7A746B; --rule: #2E2A26;
            --clay: #E08A5E; --indigo: #8FAAD0; --matcha: #A3B86A; --ochre: #D9AE55; --beni: #E8806F;
@@ -158,14 +169,14 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 
 /* the desk: a slice of a Mac screen, alive */
 .desk { position: relative; aspect-ratio: 16 / 11.5; width: 100%; border-radius: clamp(14px, 2vw, 22px); overflow: hidden;
-  background: radial-gradient(120% 90% at 70% 0%, #2b3a4c, #151b23 55%, #0f1216); container-type: inline-size;
+  background: var(--wall); container-type: inline-size;
   box-shadow: 0 50px 100px -30px rgba(0, 0, 0, .7), inset 0 0 0 .5px rgba(255, 240, 220, .12); }
 .desk .bar { position: absolute; inset: 0 0 auto; height: 6.2cqw; min-height: 24px; max-height: 30px; display: flex; align-items: center; gap: 2.6cqw; padding: 0 2.6cqw;
-  font: 500 clamp(9px, 2.2cqw, 12.5px) var(--sans); color: rgba(237, 231, 219, .82); background: rgba(0, 0, 0, .3); }
+  font: 500 clamp(9px, 2.2cqw, 12.5px) var(--sans); color: var(--mac-ink); background: var(--mac-bar); }
 .desk .bar .right { margin-left: auto; display: flex; gap: 2.4cqw; align-items: center; }
-.mb-item { display: inline-flex; align-items: center; gap: 5px; padding: 2px 6px; border-radius: 5px; color: #EDE7DB; transition: background .3s; font-variant-numeric: tabular-nums; }
-.mb-item img { width: 1.15em; height: 1.15em; filter: invert(1); }
-.mb-item.on { background: rgba(255, 255, 255, .18); }
+.mb-item { display: inline-flex; align-items: center; gap: 5px; padding: 2px 6px; border-radius: 5px; color: var(--mac-ink); font-variant-numeric: tabular-nums; }
+.mb-item img { width: 1.15em; height: 1.15em; filter: var(--glyph); }
+.mb-item.on { background: var(--mac-item-on); }
 .notch { position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: #000; color: #EDE7DB; width: 33cqw; height: 6.2cqw; min-height: 24px; max-height: 30px;
   border-radius: 0 0 2.6cqw 2.6cqw; overflow: hidden; z-index: 3;
   /* closing: quick and settled; opening (below): a spring that grows evenly to both sides, like the app */
@@ -205,12 +216,12 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 .points li b { display: block; color: var(--ink); font-weight: 600; margin-bottom: 2px; }
 
 /* The glance: a zoomed menu bar and the island, alive */
-.glance-stage { border-radius: 22px; padding: clamp(28px, 5vw, 48px) clamp(18px, 4vw, 40px); background: radial-gradient(100% 80% at 30% 0%, #26313f, #12161c 70%);
+.glance-stage { border-radius: 22px; padding: clamp(28px, 5vw, 48px) clamp(18px, 4vw, 40px); background: var(--stage);
   box-shadow: inset 0 0 0 .5px rgba(255, 240, 220, .1); display: grid; gap: clamp(26px, 4vw, 40px); justify-items: center; overflow: hidden; }
-.zoom-bar { display: flex; align-items: center; gap: clamp(14px, 3vw, 26px); padding: 12px clamp(16px, 4vw, 26px); border-radius: 14px; background: rgba(0, 0, 0, .32);
-  font: 500 clamp(15px, 3.6vw, 21px) var(--sans); color: rgba(237, 231, 219, .7); }
+.zoom-bar { display: flex; align-items: center; gap: clamp(14px, 3vw, 26px); padding: 12px clamp(16px, 4vw, 26px); border-radius: 14px; background: var(--zoom-bar);
+  font: 500 clamp(15px, 3.6vw, 21px) var(--sans); color: var(--mac-ink-quiet); }
 .zoom-bar .mb-item { font-size: clamp(16px, 4vw, 23px); padding: 4px 10px; border-radius: 9px; gap: 9px; min-width: 6.2em; }
-.zoom-bar .mb-item.alert { color: #F0C873; }
+.zoom-bar .mb-item.alert { color: var(--alert); }
 .island { display: flex; align-items: center; justify-content: space-between; gap: 18px; width: min(320px, 82%); height: 46px; padding: 0 20px; background: #000; border-radius: 999px;
   color: #EDE7DB; font: 500 16px var(--mono); box-shadow: 0 18px 40px rgba(0, 0, 0, .5); }
 .island i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin: 0 7px; vertical-align: 1px; }
@@ -226,9 +237,9 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 .segmented button[aria-selected="true"] { background: color-mix(in srgb, var(--ink) 12%, transparent); color: var(--ink); }
 .screen { position: relative; aspect-ratio: 1080 / 700; border-radius: clamp(10px, 1.4vw, 16px); overflow: hidden;
   box-shadow: 0 60px 120px -40px rgba(0, 0, 0, .8), inset 0 0 0 .5px rgba(255, 240, 220, .12); background: #121110; }
-.screen img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right top; opacity: 0; transform: scale(1.015);
-  transition: opacity .6s ease, transform 1.2s var(--ease); }
-.screen img.on { opacity: 1; transform: none; }
+.screen > .themed { position: absolute; inset: 0; opacity: 0; transform: scale(1.015); transition: opacity .6s ease, transform 1.2s var(--ease); }
+.screen > .themed.on { opacity: 1; transform: none; }
+.screen > .themed img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right top; }
 .caption { color: var(--sub); max-width: 40em; margin: 22px 0 0; min-height: 3.2em; }
 /* On phones the sidebar would make everything tiny: show the content area, larger. */
 @media (max-width: 700px) { .screen { aspect-ratio: 880 / 700; } }
@@ -375,3 +386,46 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
   box-shadow: 0 40px 80px -30px rgba(0, 0, 0, .7), 0 0 0 .5px rgba(255, 240, 220, .14); }
 .maker .zig { align-items: center; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 @media (max-width: 900px) { .maker .zig { grid-template-columns: minmax(0, 1fr); } }
+
+/* Pictures of the app: one for each theme, stacked, cross-fading when the theme changes. */
+.themed { display: block; position: relative; overflow: hidden; }
+.themed img { display: block; width: 100%; height: auto; border-radius: inherit; transition: opacity .45s ease; }
+.themed .t-dark { position: absolute; inset: 0; height: 100%; opacity: 0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .themed .t-dark { opacity: 1; } :root:not([data-theme="light"]) .themed .t-light { opacity: 0; } }
+:root[data-theme="dark"] .themed .t-dark { opacity: 1; }
+:root[data-theme="dark"] .themed .t-light { opacity: 0; }
+
+.new { display: inline-block; font: 700 11px var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--paper); background: var(--clay); padding: 2px 8px; border-radius: 999px; }
+.marker .new { align-self: center; font-style: normal; }
+.segmented { flex-wrap: nowrap; overflow-x: auto; }
+
+/* Power Flow, drawn live. */
+.flow-stage { border-radius: clamp(14px, 2vw, 22px); padding: clamp(18px, 3vw, 36px); background: var(--face); box-shadow: 0 50px 100px -50px rgba(0, 0, 0, .45), inset 0 0 0 .5px var(--edge); }
+.flow-live { display: block; width: 100%; height: auto; font-family: var(--sans); }
+.flow-live text { fill: var(--ink); }
+.flow-live .label { font-size: 16px; font-weight: 600; }
+.flow-live .watts { font: 500 21px var(--mono); }
+.flow-live .note { font-size: 13px; fill: var(--sub); }
+.flow-live .big { font: 500 30px var(--mono); }
+.flow-live .icon { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.flow-shot { display: none; }
+.flow-notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 4vw, 44px); margin-top: clamp(28px, 4vw, 44px); }
+.flow-notes h3 { font-size: 21px; margin: 0 0 6px; }
+.flow-notes p { color: var(--sub); margin: 0; }
+@media (max-width: 720px) { .flow-live { display: none; } .flow-shot { display: block; } .flow-stage { padding: 0; overflow: hidden; } .flow-notes { grid-template-columns: 1fr; } }
+
+/* The command line and AI card. */
+.term { margin-top: 26px; border-radius: 14px; background: var(--term); box-shadow: inset 0 0 0 .5px var(--edge), 0 30px 60px -36px rgba(0, 0, 0, .55); overflow: hidden; }
+.term pre { margin: 0; padding: 18px 20px; font: 13.5px/1.65 var(--mono); color: var(--ink); overflow-x: auto; }
+.term b { color: var(--clay); font-weight: 500; }
+.term i { font-style: normal; color: var(--sub); }
+
+/* Everything it does. */
+.everything { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 0 clamp(28px, 5vw, 64px); }
+.everything section { padding: 26px 0; border-top: .5px solid var(--rule); }
+.everything h3 { font: italic 400 22px var(--serif); margin: 0 0 12px; }
+.everything ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; color: var(--sub); }
+.everything li b { color: var(--ink); font-weight: 600; }
+.sample-note { color: var(--faint); font-size: 14px; margin: 6px 0 0; }
+@media (min-width: 901px) { .zig.wide { grid-template-columns: minmax(0, .72fr) minmax(0, 1.5fr); gap: clamp(32px, 4vw, 56px); } .zig.wide.flip { grid-template-columns: minmax(0, 1.5fr) minmax(0, .72fr); } }
+.term code { background: none; padding: 0; border-radius: 0; font: inherit; color: inherit; }
