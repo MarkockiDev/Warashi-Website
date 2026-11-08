@@ -429,3 +429,5 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 .sample-note { color: var(--faint); font-size: 14px; margin: 6px 0 0; }
 @media (min-width: 901px) { .zig.wide { grid-template-columns: minmax(0, .72fr) minmax(0, 1.5fr); gap: clamp(32px, 4vw, 56px); } .zig.wide.flip { grid-template-columns: minmax(0, 1.5fr) minmax(0, .72fr); } }
 .term code { background: none; padding: 0; border-radius: 0; font: inherit; color: inherit; }
+.prose figure.shot .themed { border-radius: 12px; }
+.prose figure.shot .themed img { background: none; }
