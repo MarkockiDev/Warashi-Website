@@ -58,7 +58,7 @@ posthog.register({ surface: "website" });
 
 <section class="hero">
   <div class="wrap">
-    <p class="status reveal"><span>Free public beta · for Apple silicon Macs on macOS 26 · <a href="changelog/">new: Power Flow, Developer, light mode</a></span></p>
+    <p class="status reveal"><span>Free public beta · for Apple silicon Macs on macOS 26 · <a href="changelog/">new: Power Flow, Storage, Speed Test, light mode</a></span></p>
     <h1 class="reveal d1">The flight recorder for your <em>Mac</em>.</h1>
     <div class="split">
       <div>
@@ -96,6 +96,7 @@ posthog.register({ surface: "website" });
         <li><b>The menu bar</b>The spirit and the number you care about: CPU, memory, power, temperature, and more.</li>
         <li><b>The notch, put to work</b>CPU and memory hug the notch. Hover, and it opens into a mini dashboard.</li>
         <li><b>Any display</b>On screens without a notch, a small island does the same.</li>
+        <li><b>Yours to arrange</b>Choose what the menu bar window shows, and put it in the order you like.</li>
       </ul>
     </div>
     <div class="glance-stage reveal d1" aria-label="Warashi's menu bar item and island">
@@ -122,6 +123,8 @@ posthog.register({ surface: "website" });
       <button role="tab" data-caption="Developer: what’s on each port by project, and what every AI coding agent is costing this Mac.">Developer</button>
       <button role="tab" data-caption="Alerts: told once, with the evidence, and only when you’ve asked for that alert.">Alerts</button>
       <button role="tab" data-caption="Upgrade Advisor: after 30 days, how much memory, storage and chip your next Mac needs, with the evidence.">Upgrade Advisor</button>
+      <button role="tab" data-caption="Storage: what's filling your disk, from applications to downloads, and the biggest things in each. Measured only when you ask.">Storage</button>
+      <button role="tab" data-caption="Speed Test: your download and upload speed, and how well the connection holds up while busy.">Speed Test</button>
       <button role="tab" data-caption="Settings: light or dark, the menu bar, the notch, alerts and what Warashi itself costs, all in one place.">Settings</button>
     </div>
     <div class="screen reveal">
@@ -133,6 +136,8 @@ posthog.register({ surface: "website" });
       <span class="themed"><img class="t-light" src="assets/img/app/developer-light.webp" alt="Warashi Developer: dev servers by project and AI agents" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/developer-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
       <span class="themed"><img class="t-light" src="assets/img/app/alerts-light.webp" alt="Warashi Alerts: alerts fired, with their evidence" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/alerts-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
       <span class="themed"><img class="t-light" src="assets/img/app/advisor-light.webp" alt="Warashi Upgrade Advisor: a report for your next Mac" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/advisor-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="assets/img/app/storage-light.webp" alt="Warashi Storage: a bar of the whole disk and categories by size" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/storage-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="assets/img/app/speed-light.webp" alt="Warashi Speed Test: download, upload, responsiveness and earlier tests" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/speed-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
       <span class="themed"><img class="t-light" src="assets/img/app/settings-light.webp" alt="Warashi Settings" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/settings-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
     </div>
     <p class="caption" aria-live="polite"></p>
@@ -209,15 +214,30 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
 </section>
 
 <section class="chapter">
+  <div class="wrap zig wide flip">
+    <div>
+      <div class="marker reveal"><b>07</b>Your disk and connection<span class="new">New</span></div>
+      <h2 class="reveal d1">What's filling your disk? How fast is your internet?</h2>
+      <p class="lead reveal d2">See your whole disk as one bar, from applications and downloads to Xcode and Simulators, with the biggest things in each. It only looks: nothing gets deleted.</p>
+      <ul class="points reveal d3">
+        <li><b>You stay in charge</b>It measures only when you ask, and macOS asks before it can look in Desktop, Documents or Downloads.</li>
+        <li><b>A real speed test</b>Download, upload and how well the connection holds up while busy, using Apple's own test.</li>
+      </ul>
+    </div>
+    <div class="reveal d1"><span class="themed shot"><img class="t-light" src="assets/img/app/storage-light.webp" alt="Warashi Storage: a bar of the whole disk and categories by size" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/storage-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
+  </div>
+</section>
+
+<section class="chapter">
   <div class="wrap">
     <div class="head">
-      <div class="marker reveal"><b>07</b>Everything</div>
+      <div class="marker reveal"><b>08</b>Everything</div>
       <h2 class="reveal d1">All of it, in one small app.</h2>
     </div>
     <div class="everything reveal">
-      <section><h3>Always there</h3><ul><li><b>Menu bar:</b> the spirit and one number you pick</li><li><b>Notch and island:</b> a glance that opens into a mini dashboard</li><li><b>Popover:</b> every reading, one click away</li><li><b>Connected devices:</b> AirPods, mice and external drives</li></ul></section>
-      <section><h3>Live readings</h3><ul><li><b>CPU</b> by core type, <b>GPU</b> and <b>memory</b> pressure with swap</li><li><b>Power</b> and <b>Power Flow</b></li><li><b>Temperature</b> and fans</li><li><b>Network, disk</b> and <b>battery</b> health and cycles</li></ul></section>
-      <section><h3>What happened</h3><ul><li><b>History</b> up to 12 months, every few seconds for a day</li><li><b>What happened here?</b> for any moment</li><li><b>Time × Cost</b> by day and week</li><li><b>Sleep report</b> and <b>weekly summary</b></li></ul></section>
+      <section><h3>Always there</h3><ul><li><b>Menu bar:</b> the spirit and one number you pick</li><li><b>Notch and island:</b> a glance that opens into a mini dashboard</li><li><b>Popover:</b> every reading, one click away, arranged your way</li><li><b>Connected devices:</b> AirPods, mice and external drives</li></ul></section>
+      <section><h3>Live readings</h3><ul><li><b>CPU</b> by core type, <b>GPU</b> and <b>memory</b> pressure with swap</li><li><b>Power</b> and <b>Power Flow</b></li><li><b>Temperature</b> and fans</li><li><b>Network, disk</b> and <b>battery</b> health and cycles</li><li><b>Speed Test</b> for your connection</li></ul></section>
+      <section><h3>What happened</h3><ul><li><b>History</b> up to 12 months, every few seconds for a day</li><li><b>What happened here?</b> for any moment</li><li><b>Time × Cost</b> by day and week</li><li><b>Sleep report</b> and <b>weekly summary</b></li><li><b>Storage:</b> what fills your disk</li></ul></section>
       <section><h3>What to do</h3><ul><li><b>Alerts:</b> runaway apps, memory, disk, heat, battery health</li><li><b>Forecasts</b> for a filling disk and long memory shortage</li><li><b>Quit</b> an app, or <b>show it in Finder</b>, and see what it would save</li><li><b>Upgrade Advisor</b> for your next Mac</li></ul></section>
       <section><h3>For developers</h3><ul><li><b>Ports</b> by project, with Open and Copy</li><li><b>AI agents</b> and what they cost</li><li><b>Process inspector:</b> command line, parent, signature</li><li><b>warashi</b> command and <b>MCP</b> for AI apps</li></ul></section>
       <section><h3>Yours</h3><ul><li><b>Light and dark,</b> or follow your Mac</li><li><b>Export</b> everything as CSV</li><li><b>Updates</b> itself, and tells you when there's a new version</li><li><b>No account.</b> Your history stays on your Mac</li></ul></section>
@@ -228,7 +248,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
 <section class="chapter">
   <div class="wrap">
     <div class="head">
-      <div class="marker reveal"><b>08</b>The answers</div>
+      <div class="marker reveal"><b>09</b>The answers</div>
       <h2 class="reveal d1">The questions you actually have.</h2>
     </div>
     <div class="answers">
@@ -243,7 +263,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
 <section class="chapter">
   <div class="wrap">
     <div class="head">
-      <div class="marker reveal"><b>09</b>The weight</div>
+      <div class="marker reveal"><b>10</b>The weight</div>
       <h2 class="reveal d1">A monitor that doesn't cost you.</h2>
       <p class="lead reveal d2">Native Swift, built for Apple silicon. Warashi measures its own cost the same way it measures every other app, and shows it to you.</p>
     </div>
@@ -258,7 +278,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
 <section class="chapter">
   <div class="wrap zig flip">
     <div>
-      <div class="marker reveal"><b>10</b>The promise</div>
+      <div class="marker reveal"><b>11</b>The promise</div>
       <h2 class="reveal d1">Your Mac's story stays on your Mac.</h2>
       <p class="lead reveal d2">History, app names and activity live in a small database on your Mac. They only ever leave it if you choose to connect an AI app. No account. No screen recording, no keystrokes, no file access.</p>
       <p class="reveal d3" style="color:var(--sub)">Warashi sends anonymous usage statistics (version, macOS, chip family, which features are used) to help improve it. Never app names, files or history. <a class="link-arrow" href="docs/privacy-and-data/">Exactly what's sent</a></p>
@@ -269,7 +289,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
 
 <section class="chapter">
   <div class="wrap">
-    <div class="head"><div class="marker reveal"><b>11</b>Questions</div><h2 class="reveal d1">Good questions.</h2></div>
+    <div class="head"><div class="marker reveal"><b>12</b>Questions</div><h2 class="reveal d1">Good questions.</h2></div>
     <div class="qa reveal"><h3>When can I get Warashi?</h3><p>Now. The beta is free to download and updates itself. When Warashi 1.0 arrives, the beta stops and asks you to update and buy a licence.</p></div>
     <div class="qa reveal"><h3>Which Macs does it run on?</h3><p>Macs with Apple silicon (M1 and later) running macOS 26 or newer.</p></div>
     <div class="qa reveal"><h3>Is it free?</h3><p>Free during the beta. Warashi 1.0 will be a one-time purchase, with no subscription.</p></div>
@@ -281,7 +301,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
 <section class="chapter maker">
   <div class="wrap">
     <div class="head">
-      <div class="marker reveal"><b>12</b>The maker</div>
+      <div class="marker reveal"><b>13</b>The maker</div>
       <h2 class="reveal d1">Made by one person, with care.</h2>
     </div>
     <div class="zig">
@@ -307,6 +327,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
     <div class="reveal d3"><div>
 <a class="btn" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="finale">Download the free beta</a>
 </div></div>
+    <a class="ph-badge reveal d3" href="https://www.producthunt.com/products/warashi/reviews/new?utm_source=badge-product_review&amp;utm_medium=badge&amp;utm_source=badge-warashi" target="_blank" rel="noopener"><span class="themed"><img class="t-light" src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1366176&amp;theme=light" alt="Warashi - The flight recorder for your Mac | Product Hunt" width="250" height="54" loading="lazy"><img class="t-dark" src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1366176&amp;theme=dark" alt="" width="250" height="54" loading="lazy"></span></a>
   </div>
 </section>
 
