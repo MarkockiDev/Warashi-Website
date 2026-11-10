@@ -21,7 +21,7 @@ document.querySelectorAll(".sheet a").forEach((a) => a.addEventListener("click",
 }));
 
 // 11 November, Polish Independence Day: a greeting above the navigation for the whole day in Poland
-// (Europe/Warsaw, midnight to midnight). "?pl11" in the address shows it on any day, for checking.
+// (Europe/Warsaw, midnight to midnight); it can't be closed. "?pl11" in the address shows it on any day, for checking.
 const HOLIDAY = {
   en: ["11 November:", "Happy Independence Day, Poland! Warashi is made with care in Poland.", "Close", "Learn more"],
   pl: ["11 listopada:", "Wszystkiego dobrego w Narodowe Święto Niepodległości! Warashi powstaje w Polsce, z sercem.", "Zamknij", "Dowiedz się więcej"],
@@ -34,30 +34,25 @@ const HOLIDAY = {
 (() => {
   const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Warsaw", month: "2-digit", day: "2-digit" }).format(new Date());
   if (today !== "11-11" && !location.search.includes("pl11")) return;
-  try { if (sessionStorage.getItem("holidayClosed") === "1") return; } catch {}
   const header = document.querySelector(".site-header");
   if (!header) return;
   const lang = document.documentElement.lang;
-  const [when, text, close, more] = HOLIDAY[lang] || HOLIDAY.en;
+  const [when, text, , more] = HOLIDAY[lang] || HOLIDAY.en;
   const note = document.createElement("div");
   note.className = "holiday";
   note.setAttribute("role", "note");
-  note.innerHTML = '<span class="flag" aria-hidden="true"></span><p><b></b> <span></span> <a rel="noopener" target="_blank"></a></p><button type="button">\u00d7</button>';
+  note.innerHTML = '<span class="flag" aria-hidden="true"></span><p><b></b> <span></span> <a class="more" rel="noopener" target="_blank"><span></span><i aria-hidden="true">\u2192</i></a></p>';
   note.querySelector("b").textContent = when;
   note.querySelector("p span").textContent = text;
   const link = note.querySelector("a");
-  link.textContent = more;
+  link.querySelector("span").textContent = more;
   link.href = lang === "pl" ? "https://pl.wikipedia.org/wiki/Narodowe_%C5%9Awi%C4%99to_Niepodleg%C5%82o%C5%9Bci"
                             : "https://en.wikipedia.org/wiki/National_Independence_Day_(Poland)";
-  const button = note.querySelector("button");
-  button.setAttribute("aria-label", close);
-  button.addEventListener("click", () => { note.remove(); try { sessionStorage.setItem("holidayClosed", "1"); } catch {} });
   header.prepend(note);
   // The header floats over the page: move the page down by the greeting's height while it shows.
   const room = () => document.documentElement.style.setProperty("--holiday", note.isConnected ? `${note.offsetHeight + 8}px` : "0px");
   room();
   addEventListener("resize", room);
-  button.addEventListener("click", room);
 })();
 
 // Docs menu: open on wide screens, folded on phones.

@@ -480,15 +480,31 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 
 /* 11 November, Polish Independence Day: a small greeting above the navigation, that day only (site.js). */
 .holiday { pointer-events: auto; max-width: 1080px; margin: 0 auto 8px; display: flex; align-items: center; gap: 12px;
-  padding: 9px 10px 9px 16px; border-radius: 16px; font-size: 15px; line-height: 1.35; color: var(--ink);
+  padding: 9px 12px 9px 16px; border-radius: 16px; font-size: 15px; line-height: 1.35; color: var(--ink);
   background: color-mix(in srgb, var(--paper) 78%, transparent); backdrop-filter: saturate(170%) blur(22px); -webkit-backdrop-filter: saturate(170%) blur(22px);
   box-shadow: inset 0 0 0 .5px color-mix(in srgb, var(--ink) 14%, transparent), 0 10px 40px -12px rgba(20, 14, 8, .35); }
 .holiday .flag { flex: 0 0 auto; width: 26px; height: 17px; border-radius: 3px; overflow: hidden; box-shadow: inset 0 0 0 .5px rgba(0,0,0,.25);
   background: linear-gradient(#FFFFFF 50%, #DC143C 50%); }
 .holiday p { flex: 1; margin: 0; }
 .holiday b { font-weight: 600; }
-.holiday button { flex: 0 0 auto; width: 32px; height: 32px; border: 0; border-radius: 10px; background: transparent; color: var(--sub); font-size: 18px; cursor: pointer; }
-.holiday button:hover { background: color-mix(in srgb, var(--ink) 7%, transparent); }
 @media (max-width: 600px) { .holiday { font-size: 13.5px; padding: 8px 6px 8px 12px; } }
 main { margin-top: var(--holiday, 0px); }
-.holiday a { color: var(--clay); text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+/* "Learn more": a little white-and-red pill that lifts, shines and points the way. */
+.holiday .more { position: relative; display: inline-flex; align-items: center; gap: 6px; margin-left: 6px; padding: 4px 12px 4px 13px;
+  border-radius: 999px; overflow: hidden; vertical-align: 1px; white-space: nowrap; text-decoration: none;
+  font-weight: 600; font-size: .92em; color: #FFFFFF; background: linear-gradient(180deg, #F0405E, #C8102E);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 4px 14px -4px rgba(200,16,46,.55);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
+.holiday .more::before { content: ""; position: absolute; inset: 0; transform: translateX(-120%);
+  background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,.55) 50%, transparent 70%); }
+.holiday .more i { font-style: normal; display: inline-block; transition: transform .25s var(--ease); }
+.holiday .more:hover, .holiday .more:focus-visible { transform: translateY(-1.5px) scale(1.04);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 8px 22px -6px rgba(200,16,46,.7); }
+.holiday .more:hover::before, .holiday .more:focus-visible::before { transform: translateX(120%); transition: transform .7s var(--ease); }
+.holiday .more:hover i, .holiday .more:focus-visible i { transform: translateX(3px); }
+.holiday .more:active { transform: scale(.96); transition-duration: .08s; }
+.holiday .more:focus-visible { outline: 2px solid #C8102E; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .holiday .more, .holiday .more i, .holiday .more::before { transition: none !important; }
+  .holiday .more::before { display: none; }
+}
