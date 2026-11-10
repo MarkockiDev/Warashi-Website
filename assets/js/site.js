@@ -20,6 +20,41 @@ document.querySelectorAll(".sheet a").forEach((a) => a.addEventListener("click",
   toggle?.setAttribute("aria-expanded", "false");
 }));
 
+// 11 November, Polish Independence Day: a greeting above the navigation for the whole day in Poland
+// (Europe/Warsaw, midnight to midnight). "?pl11" in the address shows it on any day, for checking.
+const HOLIDAY = {
+  en: ["11 November:", "Happy Independence Day, Poland! Warashi is made with care in Poland.", "Close"],
+  pl: ["11 listopada:", "Wszystkiego dobrego w Narodowe Święto Niepodległości! Warashi powstaje w Polsce, z sercem.", "Zamknij"],
+  fr: ["11 novembre :", "bonne fête de l’Indépendance à la Pologne ! Warashi est fait avec soin en Pologne.", "Fermer"],
+  es: ["11 de noviembre:", "¡feliz Día de la Independencia, Polonia! Warashi está hecho con cariño en Polonia.", "Cerrar"],
+  "pt-BR": ["11 de novembro:", "feliz Dia da Independência, Polônia! O Warashi é feito com carinho na Polônia.", "Fechar"],
+  ja: ["11月11日：", "ポーランド独立記念日おめでとう！ Warashiはポーランドで心を込めて作られています。", "閉じる"],
+  "zh-Hans": ["11 月 11 日：", "祝波兰独立日快乐！Warashi 在波兰用心打造。", "关闭"],
+};
+(() => {
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Warsaw", month: "2-digit", day: "2-digit" }).format(new Date());
+  if (today !== "11-11" && !location.search.includes("pl11")) return;
+  try { if (sessionStorage.getItem("holidayClosed") === "1") return; } catch {}
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+  const [when, text, close] = HOLIDAY[document.documentElement.lang] || HOLIDAY.en;
+  const note = document.createElement("div");
+  note.className = "holiday";
+  note.setAttribute("role", "note");
+  note.innerHTML = '<span class="flag" aria-hidden="true"></span><p><b></b> <span></span></p><button type="button">\u00d7</button>';
+  note.querySelector("b").textContent = when;
+  note.querySelector("p span").textContent = text;
+  const button = note.querySelector("button");
+  button.setAttribute("aria-label", close);
+  button.addEventListener("click", () => { note.remove(); try { sessionStorage.setItem("holidayClosed", "1"); } catch {} });
+  header.prepend(note);
+  // The header floats over the page: move the page down by the greeting's height while it shows.
+  const room = () => document.documentElement.style.setProperty("--holiday", note.isConnected ? `${note.offsetHeight + 8}px` : "0px");
+  room();
+  addEventListener("resize", room);
+  button.addEventListener("click", room);
+})();
+
 // Docs menu: open on wide screens, folded on phones.
 const side = document.querySelector("details.side");
 if (side && matchMedia("(max-width: 860px)").matches) side.open = false;
