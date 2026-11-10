@@ -44,6 +44,7 @@ posthog.register({ surface: "website" });
 
 
 
+
 <!--i18n-head--><link rel="alternate" hreflang="en" href="https://warashi.app/"><link rel="alternate" hreflang="x-default" href="https://warashi.app/"><link rel="alternate" hreflang="pl" href="https://warashi.app/pl/"><link rel="alternate" hreflang="fr" href="https://warashi.app/fr/"><link rel="alternate" hreflang="es" href="https://warashi.app/es/"><link rel="alternate" hreflang="pt-BR" href="https://warashi.app/pt-br/"><link rel="alternate" hreflang="ja" href="https://warashi.app/ja/"><link rel="alternate" hreflang="zh-Hans" href="https://warashi.app/zh-hans/"><!--/i18n-head-->
 </head>
 <body>
@@ -66,7 +67,7 @@ posthog.register({ surface: "website" });
 
 <section class="hero">
   <div class="wrap">
-    <p class="status reveal"><span>免费公开 Beta 测试 · 适用于运行 macOS 26 的 Apple 芯片 Mac · <a href="../changelog/">新：温润的全新外观，以及可自行排列的刘海</a></span></p>
+    <p class="status reveal"><span>免费公开 Beta 测试 · 适用于运行 macOS 26 的 Apple 芯片 Mac · <a href="../changelog/">新：焕然一新的外观、健康度、工具、休息和保持唤醒</a></span></p>
     <h1 class="reveal d1">你的 <em>Mac</em> 的飞行记录仪。</h1>
     <div class="split">
       <div>
@@ -86,8 +87,8 @@ posthog.register({ surface: "website" });
             <div class="tile" style="--i:2"><div class="cap">功率</div><div class="num"><span data-live="pwr">14.2</span><small>W</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="pwr" fill="none" stroke="#D9AE55" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
           </div>
         </div>
-        <span class="themed peek"><img class="t-light" src="../assets/img/app/overview-light.webp" alt="" width="2160" height="1400"><img class="t-dark" src="../assets/img/app/overview-dark.webp" alt="" width="2160" height="1400"></span>
-        <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1402"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1402"></span>
+        <span class="themed peek"><img class="t-light" src="../assets/img/app/now-light.webp" alt="" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
+        <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1222"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1222"></span>
         <svg class="cursor" viewBox="0 0 24 24" style="left:62%; top:64%" aria-hidden="true"><path d="M4 2l15 9-7 1.6L8.5 20z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg>
       </div>
     </div>
@@ -102,9 +103,9 @@ posthog.register({ surface: "website" });
       <p class="lead reveal d2">Warashi 在你的菜单栏中只占一个小项目。其余内容只需点按一下，只有在有事需要你处理时它才会出声。</p>
       <ul class="points reveal d3">
         <li><b>菜单栏</b>精灵和你关心的数字：CPU、内存、功率、温度等。</li>
-        <li><b>让刘海派上用场</b>两个数字紧贴刘海。将指针悬停其上，它就会展开成一个由你自己排列的实时仪表盘。</li>
-        <li><b>任意显示器</b>在没有刘海的屏幕上，小岛也有同样的功能。</li>
-        <li><b>由你来排列</b>选择菜单栏窗口和刘海显示的内容，并把任意内容拖移到你想要的位置。</li>
+        <li><b>只需点按一下</b>菜单栏窗口：最近一分钟的圆环、你的读数，以及一键操作：保持 Mac 唤醒、休息一下、测试网速或立即充满电。</li>
+        <li><b>让刘海派上用场</b>两个数字紧贴刘海。悬停时，它会展开成实时仪表盘。在其他显示器上，一个小岛也能做到同样的事。</li>
+        <li><b>由你来排列</b>在同一处选择菜单栏、刘海和菜单栏窗口显示的内容，并把任意内容拖移到你想要的位置。</li>
       </ul>
     </div>
     <div class="glance-stage reveal d1" aria-label="Warashi 的菜单栏项目和小岛">
@@ -119,34 +120,34 @@ posthog.register({ surface: "website" });
   <div class="wrap">
     <div class="head">
       <div class="marker reveal"><b>02</b>窗口</div>
-      <h2 class="reveal d1">不只是此刻，而是完整的故事。</h2>
-      <p class="lead reveal d2">一个沉稳的窗口，浅色或深色皆可，显示你没留意时发生了什么：最近一分钟、最近一天、最近一年。</p>
+      <h2 class="reveal d1">六个位置。点按三下即可到达任何地方。</h2>
+      <p class="lead reveal d2">一个安静的窗口，浅色或深色，按你想做的事分组：现在、App、历史记录、健康度和工具。按下 ⌘K 即可查找任何页面或操作。</p>
     </div>
     <div class="segmented reveal" role="tablist" aria-label="窗口的各个部分">
-      <button role="tab" data-caption="概览：用平实的语言和四个实时仪表说明你的 Mac 当前的状况，并附有过去 24 小时和消耗最多的 App。">概览</button>
-      <button role="tab" data-caption="App：最繁忙的 App 排在最前，然后是包含所有 App 的快速列表。打开某个 App 可查看它的进程和签名者，可以退出它或在访达中显示它，并查看退出它能为电池多争取多少时间。">App</button>
-      <button role="tab" data-caption="历史记录：每项指标一张大图表，最长回溯 12 个月。线条清晰易读，并保留真实的峰值，还能看到与前一个时间范围的对比。">历史记录</button>
-      <button role="tab" data-caption="时间 × 消耗：你使用每个 App 的时长，以及它在前台和后台消耗的能量。">时间 × 消耗</button>
-      <button role="tab" data-caption="你的一周：一个平实的标题、Mac 资源预算、出现内存压力的天数、磁盘、警报和电池，并与前一周对比。">每周</button>
-      <button role="tab" data-caption="开发者：按项目列出各端口上运行的内容，以及每个 AI 编程智能体对这台 Mac 的消耗。">开发者</button>
-      <button role="tab" data-caption="警报：只通知一次，并附上依据，而且只在你开启了该警报时才会发出。">警报</button>
-      <button role="tab" data-caption="升级顾问：30 天后告诉你下一台 Mac 需要多少内存、储存空间以及什么芯片，并附上依据。">升级顾问</button>
+      <button role="tab" data-caption="现在：用简单的话说明你的 Mac 此刻的状况，显示过去一天的 CPU 和内存，每项实时读数点按一下即可深入查看。">现在</button>
+      <button role="tab" data-caption="App：最繁忙的 App 排在前面，然后是所有 App 的快速列表。打开某个 App 可查看它的进程和签名者，也可以退出它或在访达中显示。">App</button>
+      <button role="tab" data-caption="历史记录：每项指标一张大图表，最长可回看 12 个月。点按任意时刻，Warashi 就会告诉你发生了什么。">历史记录</button>
+      <button role="tab" data-caption="飞行日志：按天记录你的 Mac 做了什么。睡眠和唤醒、启动、macOS 更新、崩溃和离线时间。">飞行日志</button>
+      <button role="tab" data-caption="体检：你的 Mac 状态好吗？根据过去一周给出一个答案，涵盖电池、储存空间、内存、温度和磁盘健康。">体检</button>
+      <button role="tab" data-caption="电池：在你选择的电量停止充电，仅这一次充满电，并查看随时间变化的健康度和历史。">电池</button>
       <button role="tab" data-caption="储存空间：磁盘被什么占用，从应用程序到下载，以及每个类别中最大的项目。只读取大小，从不打开你的文件。">储存空间</button>
-      <button role="tab" data-caption="网速测试：实时查看你的下载和上传速度，再看连接在繁忙时的表现。">网速测试</button>
-      <button role="tab" data-caption="设置：浅色或深色、菜单栏、刘海、警报以及 Warashi 自身的消耗，全部集中在一处。">设置</button>
+      <button role="tab" data-caption="工具：休息、保持唤醒、网速和磁盘速度、Wi-Fi 质量、充电上限、全部推出和 Mac 报告，都只在你要求时运行。">工具</button>
+      <button role="tab" data-caption="时间 × 消耗：你使用每个 App 的时长，以及它在前台和后台消耗的能量。">时间 × 消耗</button>
+      <button role="tab" data-caption="开发者：按项目查看每个端口上在运行什么，以及每个 AI 编程智能体让这台 Mac 消耗了多少。">开发者</button>
+      <button role="tab" data-caption="自定：始终显示的内容、菜单栏窗口显示的内容，以及展开的刘海显示的内容，集中在一处。">自定</button>
     </div>
     <div class="screen reveal">
-      <span class="themed"><img class="t-light" src="../assets/img/app/overview-light.webp" alt="Warashi 概览：四个实时仪表和过去 24 小时" width="2160" height="1400"><img class="t-dark" src="../assets/img/app/overview-dark.webp" alt="" width="2160" height="1400"></span>
-      <span class="themed"><img class="t-light" src="../assets/img/app/apps-light.webp" alt="Warashi App：App 卡片、所有 App 的列表，以及在详情面板中打开的一个 App" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/apps-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/now-light.webp" alt="Warashi 现在：没有需要你处理的事项，附带 CPU 和内存圆环以及实时图块" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/apps-light.webp" alt="Warashi App：App 卡片和所有 App 的列表" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/apps-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
       <span class="themed"><img class="t-light" src="../assets/img/app/history-light.webp" alt="Warashi 历史记录：一张大图表，带有指标选择标签和对比" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/history-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/flightlog-light.webp" alt="Warashi 飞行日志：昨晚的睡眠和事件时间线" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/flightlog-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/checkup-light.webp" alt="Warashi 体检：你的 Mac 状态良好，附带电池、储存空间和各项生命体征" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/checkup-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/battery-light.webp" alt="Warashi 电池：充电上限 80%，附带电池详情和图表" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/battery-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/storage-light.webp" alt="Warashi 储存空间：整个磁盘的圆环图，按大小显示各个类别" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/storage-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/tools-light.webp" alt="Warashi 工具：一个工具网格" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/tools-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
       <span class="themed"><img class="t-light" src="../assets/img/app/timecost-light.webp" alt="Warashi 时间 × 消耗：各 App 的前台时长和能耗" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/timecost-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
-      <span class="themed"><img class="t-light" src="../assets/img/app/weekly-light.webp" alt="Warashi 每周摘要：标题、资源预算和用数据呈现的这一周" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/weekly-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
       <span class="themed"><img class="t-light" src="../assets/img/app/developer-light.webp" alt="Warashi 开发者：按项目分组的开发服务器和 AI 智能体" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/developer-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
-      <span class="themed"><img class="t-light" src="../assets/img/app/alerts-light.webp" alt="Warashi 警报：已触发的警报及其依据" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/alerts-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
-      <span class="themed"><img class="t-light" src="../assets/img/app/advisor-light.webp" alt="Warashi 升级顾问：针对你的下一台 Mac 的报告" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/advisor-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
-      <span class="themed"><img class="t-light" src="../assets/img/app/storage-light.webp" alt="Warashi 储存空间：整个磁盘的圆环图，按大小排列各个类别，外圈是其中最大的文件夹" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/storage-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
-      <span class="themed"><img class="t-light" src="../assets/img/app/speed-light.webp" alt="Warashi 网速测试：表盘实时显示下载速度，并带有测试至今的图表" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/speed-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
-      <span class="themed"><img class="t-light" src="../assets/img/app/settings-light.webp" alt="Warashi 设置" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/settings-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/customize-light.webp" alt="Warashi 设置，自定：实时显示的菜单栏窗口，旁边是它的列表" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/customize-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
     </div>
     <p class="caption" aria-live="polite"></p>
     <p class="sample-note reveal">本页面中的 App 画面使用的是示例数据。</p>
@@ -156,14 +157,14 @@ posthog.register({ surface: "website" });
 <section class="chapter" id="power-flow">
   <div class="wrap">
     <div class="head">
-      <div class="marker reveal"><b>03</b>电力流向<span class="new">新</span></div>
+      <div class="marker reveal"><b>03</b>电力流向</div>
       <h2 class="reveal d1">查看每一瓦电力去了哪里。</h2>
       <p class="lead reveal d2">从充电器和电池出发，经过你的 Mac，到达芯片、你的 USB 设备和其他部分。充电时，流向电池的那部分有自己的单独路径，因此 Mac 的数字只是 Mac 自身使用的电力。</p>
     </div>
     <div class="flow-stage reveal"><svg class="flow-live" viewBox="0 0 1000 430" role="img" aria-label="充电时的电力流向：充电器输出 44 瓦，其中 28 瓦直接进入电池，16 瓦供给 Mac，Mac 将其用于芯片和内存、USB 设备以及其他部分"><defs><linearGradient id="fb-chgb" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="385" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--matcha)"/></linearGradient><linearGradient id="fl-chgb" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="247.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-138 0" to="275 0" dur="3.6s" begin="-0.0s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-chgm" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="385" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--ochre)"/></linearGradient><linearGradient id="fl-chgm" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="247.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-138 0" to="275 0" dur="3.2s" begin="-0.7s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-chip" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="700" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--clay)"/></linearGradient><linearGradient id="fl-chip" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="627.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-72 0" to="145 0" dur="4.2s" begin="-1.4s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-usb" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="700" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--indigo)"/></linearGradient><linearGradient id="fl-usb" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="627.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-72 0" to="145 0" dur="5s" begin="-2.1s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-rest" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="700" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--sub)"/></linearGradient><linearGradient id="fl-rest" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="627.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-72 0" to="145 0" dur="3.8s" begin="-2.8s" repeatCount="indefinite"/></linearGradient></defs><path d="M110 196 C247 196 247 53 385 53 L385 83 C247 83 247 224 110 224 Z" fill="url(#fb-chgb)" fill-opacity=".52"/><path d="M110 196 C247 196 247 53 385 53 L385 83 C247 83 247 224 110 224 Z" fill="url(#fl-chgb)"/><path d="M110 226 C247 226 247 248 385 248 L385 292 C247 292 247 244 110 244 Z" fill="url(#fb-chgm)" fill-opacity=".52"/><path d="M110 226 C247 226 247 248 385 248 L385 292 C247 292 247 244 110 244 Z" fill="url(#fl-chgm)"/><path d="M555 245 C627 245 627 142 700 142 L700 158 C627 158 627 261 555 261 Z" fill="url(#fb-chip)" fill-opacity=".52"/><path d="M555 245 C627 245 627 142 700 142 L700 158 C627 158 627 261 555 261 Z" fill="url(#fl-chip)"/><path d="M555 264 C627 264 627 256 700 256 L700 264 C627 264 627 272 555 272 Z" fill="url(#fb-usb)" fill-opacity=".52"/><path d="M555 264 C627 264 627 256 700 256 L700 264 C627 264 627 272 555 272 Z" fill="url(#fl-usb)"/><path d="M555 275 C627 275 627 360 700 360 L700 380 C627 380 627 295 555 295 Z" fill="url(#fb-rest)" fill-opacity=".52"/><path d="M555 275 C627 275 627 360 700 360 L700 380 C627 380 627 295 555 295 Z" fill="url(#fl-rest)"/>
 <g style="color:var(--ochre)"><rect x="30" y="178" width="80" height="80" rx="22" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(47.6 195.6) scale(1.867)"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0V8zM12 18v4"/></g></g><text class="label" x="70" y="288" text-anchor="middle">充电器</text><text class="watts" x="70" y="316" text-anchor="middle">44.0 W</text><text class="note" x="70" y="337" text-anchor="middle">额定 96 W</text>
 <g style="color:var(--matcha)"><rect x="385" y="40" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(397.3 52.3) scale(1.307)"><rect x="2" y="7" width="18" height="10" rx="3"/><path d="M22.5 11v2M12 8.8l-3 3.8h3l-1 3 3-3.8h-3z"/></g></g><text class="label" x="454" y="56">电池</text><text class="watts" x="454" y="80">28.0 W</text><text class="note" x="454" y="99">充电中 · 79%</text>
-<rect x="385" y="185" width="170" height="170" rx="44" style="fill:var(--hub);stroke:var(--edge)"/><g style="color:var(--ink)"><g class="icon" transform="translate(442 200) scale(2.35)"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19.5h20"/></g></g><text class="big" x="470" y="302" text-anchor="middle">16.0 W</text><text class="note" x="470" y="328" text-anchor="middle">这台 Mac</text><g style="color:var(--clay)"><rect x="700" y="122" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 134.3) scale(1.307)"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></g></g><text class="label" x="770" y="156">芯片和内存</text><text class="watts" x="992" y="157" text-anchor="end">6.0 W</text><g style="color:var(--indigo)"><rect x="700" y="232" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 244.3) scale(1.307)"><path d="M12 22v-5M8 9h8v6a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9zM10 9V3h4v6"/></g></g><text class="label" x="770" y="266">USB 设备</text><text class="watts" x="992" y="267" text-anchor="end">3.0 W</text><g style="color:var(--sub)"><rect x="700" y="342" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 354.3) scale(1.307)"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></g></g><text class="label" x="770" y="367">其他</text><text class="note" x="770" y="387">屏幕、Wi-Fi</text><text class="watts" x="992" y="377" text-anchor="end">7.0 W</text></svg><span class="themed flow-shot"><img class="t-light" src="../assets/img/app/flow-light.webp" alt="充电时的 Warashi 电力流向，充电器分出两路，分别通向电池和 Mac" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/flow-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
+<rect x="385" y="185" width="170" height="170" rx="44" style="fill:var(--hub);stroke:var(--edge)"/><g style="color:var(--ink)"><g class="icon" transform="translate(442 200) scale(2.35)"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19.5h20"/></g></g><text class="big" x="470" y="302" text-anchor="middle">16.0 W</text><text class="note" x="470" y="328" text-anchor="middle">这台 Mac</text><g style="color:var(--clay)"><rect x="700" y="122" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 134.3) scale(1.307)"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></g></g><text class="label" x="770" y="156">芯片和内存</text><text class="watts" x="992" y="157" text-anchor="end">6.0 W</text><g style="color:var(--indigo)"><rect x="700" y="232" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 244.3) scale(1.307)"><path d="M12 22v-5M8 9h8v6a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9zM10 9V3h4v6"/></g></g><text class="label" x="770" y="266">USB 设备</text><text class="watts" x="992" y="267" text-anchor="end">3.0 W</text><g style="color:var(--sub)"><rect x="700" y="342" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 354.3) scale(1.307)"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></g></g><text class="label" x="770" y="367">其他</text><text class="note" x="770" y="387">屏幕、Wi-Fi</text><text class="watts" x="992" y="377" text-anchor="end">7.0 W</text></svg><span class="themed flow-shot"><img class="t-light" src="../assets/img/app/flow-light.webp" alt="Warashi 电力流向：从充电器和电池经由 Mac 流向芯片、USB 设备及其他一切" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/flow-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
     <div class="flow-notes reveal">
       <div><h3>充电器和电池</h3><p>充电器当前输出的功率占其额定功率的多少，以及电池是在充电、保持不变还是在协助供电。</p></div>
       <div><h3>你的设备</h3><p>通过 USB 输出的电力，以及 AirPods 和鼠标的电池电量，还有可以推出的外置磁盘。</p></div>
@@ -175,7 +176,7 @@ posthog.register({ surface: "website" });
 <section class="chapter">
   <div class="wrap zig wide">
     <div>
-      <div class="marker reveal"><b>04</b>这里发生了什么？<span class="new">新</span></div>
+      <div class="marker reveal"><b>04</b>这里发生了什么？</div>
       <h2 class="reveal d1">点按任意时刻，了解来龙去脉。</h2>
       <p class="lead reveal d2">将指针移到图表上的某个峰值，Warashi 就会用平实的语言告诉你当时发生了什么，并列出当时正在运行的 App 及其通常的表现。如果没有异常，它会如实说明。</p>
       <ul class="points reveal d3">
@@ -190,7 +191,7 @@ posthog.register({ surface: "website" });
 <section class="chapter">
   <div class="wrap zig wide flip">
     <div>
-      <div class="marker reveal"><b>05</b>面向开发者<span class="new">新</span></div>
+      <div class="marker reveal"><b>05</b>面向开发者</div>
       <h2 class="reveal d1">那个端口上运行的是什么？那个智能体消耗了多少？</h2>
       <p class="lead reveal d2">按项目分组的开发服务器，并在某个服务器对你的网络开放时给出提示。每个 AI 编程智能体，以及它和它启动的工具所占用的 CPU 和内存。</p>
       <div class="term reveal d3"><pre><code><b>$</b> warashi explain 14:30
@@ -202,37 +203,37 @@ Xcode    CPU 37m 35s   memory 9.4 GB
 Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
       <p class="reveal d3" style="color:var(--sub);margin-top:18px"><code>warashi</code> 命令和一个可选的只读连接，可让 Claude、Cursor 及其他 AI App 根据你的 Mac 的历史记录来回答问题。除非你自己添加，否则不会共享任何内容。</p>
     </div>
-    <div class="reveal d1"><span class="themed shot"><img class="t-light" src="../assets/img/app/developer-light.webp" alt="Warashi 开发者部分，显示开发服务器和 AI 智能体" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/developer-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
+    <div class="reveal d1"><span class="themed shot"><img class="t-light" src="../assets/img/app/developer-light.webp" alt="Warashi 开发者，显示开发服务器和 AI 智能体" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/developer-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
   </div>
 </section>
 
 <section class="chapter">
   <div class="wrap zig wide">
     <div>
-      <div class="marker reveal"><b>06</b>你的一周<span class="new">新</span></div>
-      <h2 class="reveal d1">周一早上，一句话说清。</h2>
-      <p class="lead reveal d2">一条关于上一周的简短说明：负载是否更重、内存是否不足、你的 App 消耗了多少，以及磁盘用掉了多少。</p>
+      <div class="marker reveal"><b>06</b>健康度<span class="new">新</span></div>
+      <h2 class="reveal d1">我的 Mac 状态好吗？</h2>
+      <p class="lead reveal d2">体检根据一周的测量结果，用一句话给出答案：电池、储存空间、内存、温度，以及你的 SSD 和外置磁盘已用掉了多少寿命。另外还列出所有随 Mac 启动的项目及其消耗。</p>
       <ul class="points reveal d3">
-        <li><b>在出问题之前提醒你</b>“你的启动磁盘可能在大约 40 天后快满”，以及内存长时间不足时的提醒。</li>
-        <li><b>睡眠情况一目了然</b>一夜之间损失的电量、唤醒的次数，以及当前让你的 Mac 保持唤醒的内容。</li>
+        <li><b>在 80% 停止充电</b>让大部分时间接着电源的电池更长久地保持健康。出门前仅这一次充满电，或者安排在早上充满。</li>
+        <li><b>在出问题之前提醒你</b>“你的启动磁盘大约 40 天后可能会快满”、电池温度偏高、网络连接断开，或 VPN 悄悄停止了工作。</li>
       </ul>
     </div>
-    <div class="reveal d1"><span class="themed shot"><img class="t-light" src="../assets/img/app/weekly-light.webp" alt="Warashi 每周摘要" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/weekly-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
+    <div class="reveal d1"><span class="themed shot"><img class="t-light" src="../assets/img/app/checkup-light.webp" alt="Warashi 体检：你的 Mac 状态良好" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/checkup-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
   </div>
 </section>
 
 <section class="chapter">
   <div class="wrap zig wide flip">
     <div>
-      <div class="marker reveal"><b>07</b>你的磁盘和网络<span class="new">新</span></div>
-      <h2 class="reveal d1">磁盘被什么占满了？你的网速有多快？</h2>
-      <p class="lead reveal d2">以一个圆环图查看你的整个磁盘，从应用程序、下载到 Xcode 和模拟器，并列出每个类别中最大的项目。它只查看：不会删除任何内容。</p>
+      <div class="marker reveal"><b>07</b>工具<span class="new">新</span></div>
+      <h2 class="reveal d1">贴心的小工具，随叫随到。</h2>
+      <p class="lead reveal d2">温和的眼睛休息提醒，在你通话时会耐心等待。保持唤醒，适合下载、构建或演示，即使合上盖子也行。还有一些小工具：网速和磁盘速度、Wi-Fi 质量、全部推出，以及可粘贴到客服对话中的 Mac 报告。</p>
       <ul class="points reveal d3">
-        <li><b>一切由你掌控</b>完全磁盘访问权限是可选的，只用于统计大小。没有它时，Warashi 不会触碰受保护的文件夹，因此 macOS 不会反复询问。</li>
-        <li><b>真正的网速测试</b>使用 Apple 自己的测试，在表盘上实时查看下载和上传速度，再看连接在繁忙时的表现。</li>
+        <li><b>尊重你的休息提醒</b>每 20 分钟一次柔和的模糊和倒计时；摄像头或麦克风开启时，或正在播放视频时，会暂缓提醒。</li>
+        <li><b>随你心意保持唤醒</b>持续一小时、直到工作完成，或在某个 App 打开期间。在菜单栏中点按一下，或使用键盘快捷键。</li>
       </ul>
     </div>
-    <div class="reveal d1"><span class="themed shot"><img class="t-light" src="../assets/img/app/storage-light.webp" alt="Warashi 储存空间：整个磁盘的圆环图，按大小排列各个类别，外圈是其中最大的文件夹" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/storage-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
+    <div class="reveal d1"><span class="themed shot"><img class="t-light" src="../assets/img/app/tools-light.webp" alt="Warashi 工具：休息、保持唤醒、网速测试、Wi-Fi 等" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/tools-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
   </div>
 </section>
 
@@ -243,12 +244,14 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
       <h2 class="reveal d1">全部功能，尽在一个小小的 App 中。</h2>
     </div>
     <div class="everything reveal">
-      <section><h3>始终在场</h3><ul><li><b>菜单栏：</b>精灵和你选定的一个数字</li><li><b>刘海和小岛：</b>一目了然，并可展开成迷你仪表盘</li><li><b>菜单栏窗口：</b>所有读数只需点按一下，按你的方式排列</li><li><b>已连接设备：</b>AirPods、鼠标和外置磁盘</li></ul></section>
-      <section><h3>实时读数</h3><ul><li>按核心类型区分的 <b>CPU</b>、<b>GPU</b>，以及带交换信息的<b>内存</b>压力</li><li><b>功率</b>和<b>电力流向</b></li><li><b>温度</b>和风扇</li><li><b>网络、磁盘</b>以及<b>电池</b>健康度和循环次数</li><li>测试你的网络连接的<b>网速测试</b></li></ul></section>
-      <section><h3>发生了什么</h3><ul><li>最长 12 个月的<b>历史记录</b>，一天内每隔几秒记录一次</li><li>针对任意时刻的<b>这里发生了什么？</b></li><li>按日和周统计的<b>时间 × 消耗</b></li><li><b>睡眠报告</b>和<b>每周摘要</b></li><li><b>储存空间：</b>磁盘被什么占用</li></ul></section>
-      <section><h3>该怎么办</h3><ul><li><b>警报：</b>失控的 App、内存、磁盘、发热、电池健康度</li><li>磁盘逐渐占满和内存长期不足的<b>预测</b></li><li><b>退出</b> App 或<b>在访达中显示</b>，并查看这样能节省多少</li><li>为你的下一台 Mac 提供建议的<b>升级顾问</b></li></ul></section>
+      <section><h3>始终在场</h3><ul><li><b>菜单栏：</b>精灵和你选定的一个数字</li><li><b>菜单栏窗口：</b>所有读数和一键操作</li><li><b>刘海和小岛：</b>一目了然，并可展开成迷你仪表盘</li><li><b>自定</b>三者，集中在一处</li></ul></section>
+      <section><h3>实时读数</h3><ul><li>按核心类型区分的 <b>CPU</b>、<b>GPU</b>，以及带交换信息的<b>内存</b>压力</li><li><b>功率</b>和<b>电力流向</b></li><li><b>温度</b>和风扇</li><li><b>网络、磁盘</b>和<b>电池</b></li><li><b>已连接设备：</b>AirPods、鼠标和磁盘</li></ul></section>
+      <section><h3>发生了什么</h3><ul><li>最长 12 个月的<b>历史记录</b>，一天内每隔几秒记录一次</li><li>针对任意时刻的<b>这里发生了什么？</b></li><li><b>飞行日志：</b>睡眠、崩溃、更新、离线</li><li><b>时间 × 消耗</b>和<b>每周摘要</b></li></ul></section>
+      <section><h3>健康度</h3><ul><li><b>体检：</b>根据一周的数据给出一个结论</li><li><b>充电上限、</b>立即充满电和定时安排</li><li><b>SSD 和外置磁盘</b>健康状况</li><li><b>储存空间：</b>磁盘被什么占用</li><li>为你的下一台 Mac 提供建议的<b>升级顾问</b></li></ul></section>
+      <section><h3>工具</h3><ul><li><b>休息</b>，照顾眼睛和坐姿</li><li><b>保持唤醒，</b>即使合上盖子</li><li><b>网速</b>和<b>磁盘速度</b>、<b>Wi-Fi</b> 质量</li><li><b>全部推出</b>、<b>废纸篓</b>和 <b>Mac 报告</b></li><li>按 ⌘K <b>查找任何内容</b></li></ul></section>
       <section><h3>面向开发者</h3><ul><li>按项目分组的<b>端口</b>，带有“打开”和“拷贝”</li><li><b>AI 智能体</b>及其消耗</li><li><b>进程检查器：</b>命令行、父进程、签名</li><li>面向 AI App 的 <b>warashi</b> 命令和 <b>MCP</b></li></ul></section>
-      <section><h3>属于你</h3><ul><li><b>浅色和深色，</b>或跟随你的 Mac</li><li>将所有内容<b>导出</b>为 CSV</li><li><b>自动更新</b>，有新版本时会通知你</li><li><b>无需账户。</b>你的历史记录保留在你的 Mac 上</li></ul></section>
+      <section><h3>该怎么办</h3><ul><li><b>警报：</b>失控的 App、内存、磁盘、温度、电池、网络连接和公网 IP</li><li><b>退出</b> App 或<b>在访达中显示</b>，并查看这样能节省多少</li></ul></section>
+      <section><h3>属于你</h3><ul><li><b>浅色和深色，</b>或跟随你的 Mac</li><li><b>七种语言</b></li><li>将所有内容<b>导出</b>为 CSV</li><li><b>无需账户。</b>你的历史记录保留在你的 Mac 上</li></ul></section>
     </div>
   </div>
 </section>
@@ -276,8 +279,8 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
       <p class="lead reveal d2">原生 Swift，专为 Apple 芯片打造。Warashi 用测量其他 App 的同样方式测量自身的消耗，并展示给你看。</p>
     </div>
     <div class="figures reveal">
-      <div class="figure"><div class="big" data-count="0.16">0.16<small>%</small></div><p>单个核心的占用，后台运行时</p></div>
-      <div class="figure"><div class="big" data-count="25">25<small>MB</small></div><p>内存占用，通常情况下</p></div>
+      <div class="figure"><div class="big" data-count="0.2">0.2<small>%</small></div><p>单个核心的占用，后台运行时</p></div>
+      <div class="figure"><div class="big" data-count="70">70<small>MB</small></div><p>内存占用，通常情况下</p></div>
       <div class="figure"><div class="big">0<small>个账户</small></div><p>下载，打开，完成。</p></div>
     </div>
   </div>
@@ -288,7 +291,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
     <div>
       <div class="marker reveal"><b>11</b>承诺</div>
       <h2 class="reveal d1">你的 Mac 的故事留在你的 Mac 上。</h2>
-      <p class="lead reveal d2">历史记录、App 名称和活动数据保存在你的 Mac 上的一个小型数据库中。只有在你选择连接 AI App 时，它们才会离开你的 Mac。无需账户。不录屏、不记录按键、不访问文件。</p>
+      <p class="lead reveal d2">历史记录、App 名称和活动都保存在你的 Mac 上的一个小型数据库中。只有在你选择连接 AI App 时，它们才会离开你的 Mac。无需账户。不录制屏幕，不记录按键，不读取文件内容。</p>
       <p class="reveal d3" style="color:var(--sub)">Warashi 会发送匿名使用统计（版本、macOS、芯片系列、使用了哪些功能）以帮助改进。绝不包含 App 名称、文件或历史记录。<a class="link-arrow" href="docs/privacy-and-data/">确切发送的内容</a></p>
     </div>
     <img class="shot reveal d1" src="../assets/img/onboarding.webp" alt="Warashi 的欢迎页面：认识一下 Warashi" width="720" height="520" loading="lazy">

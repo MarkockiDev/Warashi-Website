@@ -42,6 +42,7 @@ posthog.register({ surface: "website" });
 
 
 
+
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -61,13 +62,13 @@ posthog.register({ surface: "website" });
 </header>
 <main id="main">
 <div class="wrap"><div class="page-head"><div class="crumbs">Legal</div>
-      <h1>Privacy policy</h1><p class="meta">Last updated 9 November 2026</p></div>
+      <h1>Privacy policy</h1><p class="meta">Last updated 10 November 2026</p></div>
       <article class="prose" style="padding-bottom:clamp(80px,10vw,120px)">
 <p>Warashi is made by Adam Markocki, Poland (“we”). This policy explains what the Warashi app and this website collect. Contact: <a href="mailto:adam@warashi.app">adam@warashi.app</a>.</p>
 <h2>The short version</h2>
-<p>Your Mac's history stays on your Mac. The app sends update checks, licence checks and anonymous usage statistics. This website uses no cookies and measures visits anonymously.</p>
+<p>Your Mac's history stays on your Mac. The app sends update checks, licence checks and anonymous usage statistics, and contacts Apple or Cloudflare only for features you start yourself. This website uses no cookies and measures visits anonymously.</p>
 <h2>Data that stays on your Mac</h2>
-<p>All measurements, history, app and process names, paths, command lines, signatures, alerts and (if you turn it on) activity records are stored only in a database on your Mac. We never receive them. The same goes for the Storage page's disk breakdown, which reads file sizes only and never opens your files. If you choose to switch on Full Disk Access for it, that is still all it does with it.</p>
+<p>All measurements, history, app and process names, paths, command lines, signatures, alerts, the Flight Log and (if you turn it on) activity records are stored only in a database on your Mac. We never receive them. The same goes for the Storage page's disk breakdown, which reads file sizes only and never opens your files. If you choose to switch on Full Disk Access for it, that is still all it does with it.</p>
 <p>If you choose to add Warashi to an AI app (the optional MCP connection, off until you set it up), that app and its service can read app names and usage history when it asks for them. It never receives activity records or file paths, and it goes to that app, not to us.</p>
 <h2>Data the app sends</h2>
 <h3>Anonymous usage statistics</h3>
@@ -76,6 +77,10 @@ posthog.register({ surface: "website" });
 <p>The app downloads an update feed from warashi.app (hosted on GitHub Pages) once a day if update checks are on. GitHub may log the request's IP address as part of operating its service.</p>
 <h3>Speed test</h3>
 <p>Only when you press the button in Speed Test, the app runs Apple's network test, which sends and receives test data with Apple's servers. Apple sees your IP address, as with any connection to it. The results stay on your Mac. A test can use 2 GB of data or more on a fast connection.</p>
+<h3>Public IP alert</h3>
+<p>Only while you have the Public IP alert turned on, the app asks Cloudflare (Cloudflare, Inc.) for your public IPv4 address, at <code>1.1.1.1</code>, every 10 minutes and shortly after your network changes. The request carries no identifier and no information about you or your Mac; Cloudflare sees your IP address, as with any connection to it. The address is kept on your Mac to notice a change, and forgotten when you turn the alert off.</p>
+<h3>Breaks and on-device writing</h3>
+<p>When a break is due, the app checks on your Mac whether the microphone or camera is in use and records nothing. Where Apple Intelligence is available, the app may ask Apple's on-device model to word a sentence from figures it already has; this runs on your Mac and nothing is sent.</p>
 <h3>Licence checks</h3>
 <p>If you buy a Warashi licence, the app sends your licence key and a random activation identifier to Polar (Polar Software Inc.), our merchant of record, to activate and validate the licence. Polar processes your purchase (name, email, payment and tax details) under its own privacy policy.</p>
 <h2>This website</h2>

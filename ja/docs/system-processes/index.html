@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>システムプロセス · ヘルプ · Warashi</title>
-<meta name="description" content="オプションのヘルパーをインストールすると、WarashiがWindowServer、kernel_taskなどのシステムプロセスを含められるようになります。システム設定で許可してください。">
+<title>システムヘルパー · ヘルプ · Warashi</title>
+<meta name="description" content="オプションのシステムヘルパーをインストールすると、WindowServerなどのシステムプロセスを含めたり、80%未満の充電上限を設定したり、蓋を閉じたままMacをスリープさせないようにしたりできます。">
 <link rel="canonical" href="https://warashi.app/ja/docs/system-processes/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Warashi">
-<meta property="og:title" content="システムプロセス · ヘルプ · Warashi">
-<meta property="og:description" content="オプションのヘルパーをインストールすると、WarashiがWindowServer、kernel_taskなどのシステムプロセスを含められるようになります。システム設定で許可してください。">
+<meta property="og:title" content="システムヘルパー · ヘルプ · Warashi">
+<meta property="og:description" content="オプションのシステムヘルパーをインストールすると、WindowServerなどのシステムプロセスを含めたり、80%未満の充電上限を設定したり、蓋を閉じたままMacをスリープさせないようにしたりできます。">
 <meta property="og:url" content="https://warashi.app/ja/docs/system-processes/">
 <meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Warashi：Macのフライトレコーダー。Warashiのウインドウとポップオーバーの横にいるわらしのアイコン。">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="システムプロセス · ヘルプ · Warashi">
-<meta name="twitter:description" content="オプションのヘルパーをインストールすると、WarashiがWindowServer、kernel_taskなどのシステムプロセスを含められるようになります。システム設定で許可してください。">
+<meta name="twitter:title" content="システムヘルパー · ヘルプ · Warashi">
+<meta name="twitter:description" content="オプションのシステムヘルパーをインストールすると、WindowServerなどのシステムプロセスを含めたり、80%未満の充電上限を設定したり、蓋を閉じたままMacをスリープさせないようにしたりできます。">
 <meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
 <meta name="twitter:image:alt" content="Warashi：Macのフライトレコーダー。Warashiのウインドウとポップオーバーの横にいるわらしのアイコン。">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
@@ -37,11 +37,7 @@ posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
 });
 posthog.register({ surface: "website" });
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ヘルプ","item":"https://warashi.app/docs/"},{"@type":"ListItem","position":2,"name":"システムプロセス","item":"https://warashi.app/docs/system-processes/"}]}</script>
-
-
-
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ヘルプ","item":"https://warashi.app/docs/"},{"@type":"ListItem","position":2,"name":"システムヘルパー","item":"https://warashi.app/docs/system-processes/"}]}</script>
 
 <!--i18n-head--><link rel="alternate" hreflang="en" href="https://warashi.app/docs/system-processes/"><link rel="alternate" hreflang="x-default" href="https://warashi.app/docs/system-processes/"><link rel="alternate" hreflang="pl" href="https://warashi.app/pl/docs/system-processes/"><link rel="alternate" hreflang="fr" href="https://warashi.app/fr/docs/system-processes/"><link rel="alternate" hreflang="es" href="https://warashi.app/es/docs/system-processes/"><link rel="alternate" hreflang="pt-BR" href="https://warashi.app/pt-br/docs/system-processes/"><link rel="alternate" hreflang="ja" href="https://warashi.app/ja/docs/system-processes/"><link rel="alternate" hreflang="zh-Hans" href="https://warashi.app/zh-hans/docs/system-processes/"><!--/i18n-head-->
 </head>
@@ -64,18 +60,22 @@ posthog.register({ surface: "website" });
 <main id="main">
 
 <div class="wrap">
-  <div class="page-head"><div class="crumbs"><a href="../../docs/">ヘルプ</a> / システムプロセス</div><h1>システムプロセス</h1><p class="lead">オプションのヘルパーをインストールすると、WarashiがWindowServer、kernel_taskなどのシステムプロセスを含められるようになります。システム設定で許可してください。</p></div>
+  <div class="page-head"><div class="crumbs"><a href="../../docs/">ヘルプ</a> / システムヘルパー</div><h1>システムヘルパー</h1><p class="lead">オプションのシステムヘルパーをインストールすると、WindowServerなどのシステムプロセスを含めたり、80%未満の充電上限を設定したり、蓋を閉じたままMacをスリープさせないようにしたりできます。</p></div>
   <div class="doc">
-    <details class="side" open><summary>ヘルプメニュー</summary><nav aria-label="ヘルプ"><h4>はじめに</h4><a href="../../docs/">ヘルプホーム</a><a href="../../docs/install/">ダウンロードとインストール</a><a href="../../docs/welcome-tour/">ようこそツアー</a><a href="../../docs/first-day/">最初の一日</a><h4>Warashiの使い方</h4><a href="../../docs/menu-bar/">メニューバーとポップオーバー</a><a href="../../docs/notch-and-island/">ノッチとアイランド</a><a href="../../docs/customize/">ポップオーバーとノッチの配置</a><a href="../../docs/window/">ウインドウと概要</a><a href="../../docs/apps/">アプリ</a><a href="../../docs/history/">履歴</a><a href="../../docs/time-and-cost/">時間 × コスト</a><a href="../../docs/power-flow/">電力フロー</a><a href="../../docs/developer/">デベロッパ</a><a href="../../docs/storage/">ストレージ</a><a href="../../docs/speed-test/">スピードテスト</a><a href="../../docs/weekly-summary/">週間サマリー</a><a href="../../docs/upgrade-advisor/">アップグレードアドバイザー</a><a href="../../docs/alerts/">アラート</a><a href="../../docs/system-processes/" aria-current="page">システムプロセス</a><h4>設定ほか</h4><a href="../../docs/settings/">設定</a><a href="../../docs/updates/">アップデート</a><a href="../../docs/command-line-and-ai/">コマンドラインとAIアプリ</a><a href="../../docs/beta/">ベータ版とライセンス</a><a href="../../docs/privacy-and-data/">プライバシーとデータ</a><a href="../../docs/troubleshooting/">トラブルシューティング</a><h4>ガイド</h4><a href="../../guides/why-is-my-mac-slow/">Macが遅い原因</a><a href="../../guides/how-much-ram-do-i-need/">Macに必要なRAM容量</a><a href="../../guides/whats-draining-my-macbook-battery/">MacBookのバッテリーを消耗させているもの</a><a href="../../guides/whats-taking-up-space-on-my-mac/">Macのストレージを占めているもの</a><a href="../../guides/test-internet-speed-on-mac/">Macでインターネット速度をテストする</a></nav></details>
+    <details class="side" open><summary>ヘルプメニュー</summary><nav aria-label="ヘルプ"><h4>はじめに</h4><a href="../../docs/">ヘルプホーム</a><a href="../../docs/install/">ダウンロードとインストール</a><a href="../../docs/welcome-tour/">ようこそツアー</a><a href="../../docs/first-day/">最初の一日</a><h4>いつもそこに</h4><a href="../../docs/menu-bar/">メニューバーとメニューバーウインドウ</a><a href="../../docs/notch-and-island/">ノッチとアイランド</a><a href="../../docs/customize/">カスタマイズ</a><h4>ウインドウ</h4><a href="../../docs/window/">使い方の基本</a><a href="../../docs/power-flow/">現在と電力フロー</a><a href="../../docs/apps/">アプリ</a><a href="../../docs/time-and-cost/">時間 × コスト</a><a href="../../docs/developer/">デベロッパ</a><a href="../../docs/history/">履歴</a><a href="../../docs/flight-log/">フライトログ</a><a href="../../docs/alerts/">アラート</a><a href="../../docs/checkup/">チェックアップ</a><a href="../../docs/battery/">バッテリーと充電上限</a><a href="../../docs/storage/">ストレージ</a><a href="../../docs/upgrade-advisor/">アップグレードアドバイザー</a><a href="../../docs/tools/">ツール</a><a href="../../docs/breaks/">休憩</a><a href="../../docs/keep-awake/">スリープさせない</a><a href="../../docs/speed-test/">スピードテスト</a><a href="../../docs/weekly-summary/">週間サマリー</a><h4>設定ほか</h4><a href="../../docs/settings/">設定</a><a href="../../docs/system-processes/" aria-current="page">システムヘルパー</a><a href="../../docs/updates/">アップデート</a><a href="../../docs/command-line-and-ai/">コマンドラインとAIアプリ</a><a href="../../docs/beta/">ベータ版とライセンス</a><a href="../../docs/privacy-and-data/">プライバシーとデータ</a><a href="../../docs/troubleshooting/">トラブルシューティング</a><h4>ガイド</h4><a href="../../guides/why-is-my-mac-slow/">Macが遅い原因</a><a href="../../guides/how-much-ram-do-i-need/">Macに必要なRAM容量</a><a href="../../guides/whats-draining-my-macbook-battery/">MacBookのバッテリーを消耗させているもの</a><a href="../../guides/whats-taking-up-space-on-my-mac/">Macのストレージを占めているもの</a><a href="../../guides/test-internet-speed-on-mac/">Macでインターネット速度をテストする</a></nav></details>
     <article class="prose">
-<p>macOSでは、通常のアプリはWindowServer、kernel_task、mdsなどのシステムプロセスを読み取れません。オプションのヘルパーを使うと、Warashiがそれらを含められます。</p>
-<ol class="steps"><li><span class="step-title">設定 › システムを開く</span><p><kbd>⌘,</kbd>を押して、<b>システム</b>タブを選びます。</p><figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/settings-systemProcesses-light.webp" alt="設定のシステムタブ：「システムプロセスを表示」のスイッチ" width="800" height="519" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/settings-systemProcesses-dark.webp" alt="" width="800" height="519" loading="lazy" decoding="async"></span></figure></li><li><span class="step-title">「システムプロセスを表示」をオンにする</span><p>Warashiが小さなヘルパーをインストールします。その後、macOSが承認を求めます。</p></li><li><span class="step-title">システム設定で許可する</span><p>Warashiで<b>ログイン項目の設定を開く</b>をクリックするか、システム設定 › 一般 › ログイン項目と機能拡張を開きます。<b>バックグラウンドでの実行を許可</b>の下で<b>Warashi</b>をオンにします。macOSがパスワードを求めることがあります。</p></li><li><span class="step-title">動作を確認する</span><p>Warashiに戻ると、システムプロセスがアプリ、上位アプリ、履歴に表示されています。</p></li></ol>
+<p>ふつうのアプリより少しだけ多くのアクセスが必要なこともあります。オプションの<b>システムヘルパー</b>は、そのうちちょうど3つだけを担い、それ以外は何もしません：</p>
+<ul><li><b>システムプロセス：</b> WindowServer、kernel_task、mdsなどを、アプリ、負荷の高いアプリ、履歴に表示。</li>
+<li><b>80%未満の充電上限</b>（<a href="../../docs/battery/">バッテリーと充電上限</a>）。</li>
+<li><b>蓋を閉じたままスリープさせない</b>（<a href="../../docs/keep-awake/">スリープさせない</a>）。</li></ul>
+<ol class="steps"><li><span class="step-title">設定 › システムを開く</span><p><kbd>⌘,</kbd>を押して<b>システム</b>を選びます。ヘルパーが必要な機能を初めて選んだときにも、Warashiが<b>オンにする</b>を表示します。</p><figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/s-system-light.webp" alt="設定、システム：「システムプロセスを表示」のスイッチ" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/s-system-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure></li><li><span class="step-title">「システムプロセスを表示」をオンにする</span><p>Warashiが小さなヘルパーをインストールします。その後、macOSが承認を求めます。</p></li><li><span class="step-title">システム設定で許可する</span><p>Warashiで<b>ログイン項目の設定を開く</b>をクリックするか、システム設定 › 一般 › ログイン項目と機能拡張を開きます。<b>バックグラウンドでの実行を許可</b>の下で<b>Warashi</b>をオンにします。macOSがパスワードを求めることがあります。</p></li></ol>
 <h2>ヘルパーにできることとできないこと</h2>
-<ul><li>ヘルパーが読み取れるのは、プロセスのカウンタ（CPU時間、メモリ、ディスク、エネルギー）だけです。</li>
-<li>コマンド、パス、引数は一切受け付けず、Warashiにのみ応答します（双方が相手の署名を確認します）。</li>
+<ul><li>プロセスのカウンタを読み取ります：CPU時間、メモリ、ディスク、エネルギー。</li>
+<li>頼まれたときだけ、ヘルパー自身が確認したうえで20%〜75%の充電レベルをひとつ設定するか、3分間の期限つきで蓋を閉じたままMacをスリープさせないようにします。Warashiが期限の更新をやめると、ヘルパーが自分で終了します。</li>
+<li>ほかのコマンド、パス、引数は一切受け付けず、Warashiにしか応答しません（双方がお互いの署名を確認します）。</li>
 <li>スイッチをオフにすると削除されます。</li></ul>
 <div class="help-box"><h3>うまくいかないときは</h3><ul><li><b>それでもシステムプロセスが表示されない：</b> システム設定 › 一般 › ログイン項目と機能拡張 › バックグラウンドでの実行を許可でWarashiがオンになっていることを確認し、スイッチをオフにしてからもう一度オンにしてください。</li></ul><p style="margin-top:8px">詳しくは<a href="../../docs/troubleshooting/">トラブルシューティング</a>をご覧いただくか、<a href="mailto:adam@warashi.app">adam@warashi.app</a>までメールでお問い合わせください。</p></div>
-<div class="next"><a href="../../docs/alerts/"><small>前へ</small>アラート</a><a href="../../docs/settings/" style="text-align:right"><small>次へ</small>設定</a></div></article>
+<div class="next"><a href="../../docs/settings/"><small>前へ</small>設定</a><a href="../../docs/updates/" style="text-align:right"><small>次へ</small>アップデート</a></div></article>
   </div>
 </div>
 </main>
