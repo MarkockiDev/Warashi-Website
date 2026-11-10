@@ -491,3 +491,4 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 .holiday button:hover { background: color-mix(in srgb, var(--ink) 7%, transparent); }
 @media (max-width: 600px) { .holiday { font-size: 13.5px; padding: 8px 6px 8px 12px; } }
 main { margin-top: var(--holiday, 0px); }
+.holiday a { color: var(--clay); text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }

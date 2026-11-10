@@ -23,13 +23,13 @@ document.querySelectorAll(".sheet a").forEach((a) => a.addEventListener("click",
 // 11 November, Polish Independence Day: a greeting above the navigation for the whole day in Poland
 // (Europe/Warsaw, midnight to midnight). "?pl11" in the address shows it on any day, for checking.
 const HOLIDAY = {
-  en: ["11 November:", "Happy Independence Day, Poland! Warashi is made with care in Poland.", "Close"],
-  pl: ["11 listopada:", "Wszystkiego dobrego w Narodowe Święto Niepodległości! Warashi powstaje w Polsce, z sercem.", "Zamknij"],
-  fr: ["11 novembre :", "bonne fête de l’Indépendance à la Pologne ! Warashi est fait avec soin en Pologne.", "Fermer"],
-  es: ["11 de noviembre:", "¡feliz Día de la Independencia, Polonia! Warashi está hecho con cariño en Polonia.", "Cerrar"],
-  "pt-BR": ["11 de novembro:", "feliz Dia da Independência, Polônia! O Warashi é feito com carinho na Polônia.", "Fechar"],
-  ja: ["11月11日：", "ポーランド独立記念日おめでとう！ Warashiはポーランドで心を込めて作られています。", "閉じる"],
-  "zh-Hans": ["11 月 11 日：", "祝波兰独立日快乐！Warashi 在波兰用心打造。", "关闭"],
+  en: ["11 November:", "Happy Independence Day, Poland! Warashi is made with care in Poland.", "Close", "Learn more"],
+  pl: ["11 listopada:", "Wszystkiego dobrego w Narodowe Święto Niepodległości! Warashi powstaje w Polsce, z sercem.", "Zamknij", "Dowiedz się więcej"],
+  fr: ["11 novembre :", "bonne fête de l’Indépendance à la Pologne ! Warashi est fait avec soin en Pologne.", "Fermer", "En savoir plus"],
+  es: ["11 de noviembre:", "¡feliz Día de la Independencia, Polonia! Warashi está hecho con cariño en Polonia.", "Cerrar", "Más información"],
+  "pt-BR": ["11 de novembro:", "feliz Dia da Independência, Polônia! O Warashi é feito com carinho na Polônia.", "Fechar", "Saiba mais"],
+  ja: ["11月11日：", "ポーランド独立記念日おめでとう！ Warashiはポーランドで心を込めて作られています。", "閉じる", "詳しく見る"],
+  "zh-Hans": ["11 月 11 日：", "祝波兰独立日快乐！Warashi 在波兰用心打造。", "关闭", "了解更多"],
 };
 (() => {
   const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Warsaw", month: "2-digit", day: "2-digit" }).format(new Date());
@@ -37,13 +37,18 @@ const HOLIDAY = {
   try { if (sessionStorage.getItem("holidayClosed") === "1") return; } catch {}
   const header = document.querySelector(".site-header");
   if (!header) return;
-  const [when, text, close] = HOLIDAY[document.documentElement.lang] || HOLIDAY.en;
+  const lang = document.documentElement.lang;
+  const [when, text, close, more] = HOLIDAY[lang] || HOLIDAY.en;
   const note = document.createElement("div");
   note.className = "holiday";
   note.setAttribute("role", "note");
-  note.innerHTML = '<span class="flag" aria-hidden="true"></span><p><b></b> <span></span></p><button type="button">\u00d7</button>';
+  note.innerHTML = '<span class="flag" aria-hidden="true"></span><p><b></b> <span></span> <a rel="noopener" target="_blank"></a></p><button type="button">\u00d7</button>';
   note.querySelector("b").textContent = when;
   note.querySelector("p span").textContent = text;
+  const link = note.querySelector("a");
+  link.textContent = more;
+  link.href = lang === "pl" ? "https://pl.wikipedia.org/wiki/Narodowe_%C5%9Awi%C4%99to_Niepodleg%C5%82o%C5%9Bci"
+                            : "https://en.wikipedia.org/wiki/National_Independence_Day_(Poland)";
   const button = note.querySelector("button");
   button.setAttribute("aria-label", close);
   button.addEventListener("click", () => { note.remove(); try { sessionStorage.setItem("holidayClosed", "1"); } catch {} });
