@@ -470,3 +470,10 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
   .sheet-lang a { min-height: 44px; padding: 4px 12px; line-height: 1.2; border-radius: 12px; font-size: 15px; background: color-mix(in srgb, var(--ink) 5%, transparent); }
   .sheet-lang a[aria-current] { background: color-mix(in srgb, var(--clay) 12%, transparent); }
 }
+
+/* The films on the home page: the Keynote large, the day beside it; stacked on phones. */
+.films { display: grid; grid-template-columns: 1.7fr 1fr; gap: 22px; align-items: start; margin-top: 8px; }
+.films figure { margin: 0; }
+.films video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 18px; background: #120D0B; box-shadow: 0 30px 70px rgba(0,0,0,.35); }
+.films figcaption { margin-top: 10px; font-size: 15px; color: var(--sub); }
+@media (max-width: 800px) { .films { grid-template-columns: 1fr; } }
