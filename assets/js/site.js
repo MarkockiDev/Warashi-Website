@@ -32,29 +32,38 @@ const HOLIDAY = {
   "zh-Hans": ["11 月 11 日 · 波兰独立日", "今天，波兰庆祝独立。", "Warashi 在这里用心打造。", "11 月 11 日的故事"],
 };
 (() => {
-  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Warsaw", month: "2-digit", day: "2-digit" }).format(new Date());
-  if (today !== "11-11" && !location.search.includes("pl11")) return;
+  const isTheDay = () => location.search.includes("pl11")
+    || new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Warsaw", month: "2-digit", day: "2-digit" }).format(new Date()) === "11-11";
   const main = document.querySelector("main");
   if (!main) return;
-  const lang = document.documentElement.lang;
-  const [eyebrow, title, made, more] = HOLIDAY[lang] || HOLIDAY.en;
-  const card = document.createElement("aside");
-  card.className = "celebrate";
-  card.setAttribute("aria-label", eyebrow);
-  card.innerHTML = '<div class="rosette" aria-hidden="true"><svg class="tails" viewBox="0 0 60 66">'
-    + '<path d="M22 0 L30 4 L19 66 L12 57 L4 63 Z" fill="#F4F1EC" stroke="rgba(0,0,0,.12)" stroke-width=".6"/>'
-    + '<path d="M38 0 L30 4 L41 66 L48 57 L56 63 Z" fill="#C8102E" stroke="rgba(60,0,10,.3)" stroke-width=".6"/></svg>'
-    + '<span class="kotylion"></span></div><p class="eyebrow"></p><h2></h2><p class="made"></p>'
-    + '<a class="more" rel="noopener" target="_blank"><span></span><i aria-hidden="true">\u203a</i></a>';
-  card.querySelector(".eyebrow").textContent = eyebrow;
-  card.querySelector("h2").textContent = title;
-  card.querySelector(".made").textContent = made;
-  const link = card.querySelector(".more");
-  link.querySelector("span").textContent = more;
-  link.href = lang === "pl" ? "https://pl.wikipedia.org/wiki/Narodowe_%C5%9Awi%C4%99to_Niepodleg%C5%82o%C5%9Bci"
-                            : "https://en.wikipedia.org/wiki/National_Independence_Day_(Poland)";
-  main.prepend(card);
-  document.documentElement.classList.add("celebrating");
+  let card = null;
+  const show = () => {
+    const lang = document.documentElement.lang;
+    const [eyebrow, title, made, more] = HOLIDAY[lang] || HOLIDAY.en;
+    card = document.createElement("aside");
+    card.className = "celebrate";
+    card.setAttribute("aria-label", eyebrow);
+    card.innerHTML = '<div class="rosette" aria-hidden="true"><svg class="tails" viewBox="0 0 60 66">'
+      + '<path d="M22 0 L30 4 L19 66 L12 57 L4 63 Z" fill="#F4F1EC" stroke="rgba(0,0,0,.12)" stroke-width=".6"/>'
+      + '<path d="M38 0 L30 4 L41 66 L48 57 L56 63 Z" fill="#C8102E" stroke="rgba(60,0,10,.3)" stroke-width=".6"/></svg>'
+      + '<span class="kotylion"></span></div><p class="eyebrow"></p><h2></h2><p class="made"></p>'
+      + '<a class="more" rel="noopener" target="_blank"><span></span><i aria-hidden="true">\u203a</i></a>';
+    card.querySelector(".eyebrow").textContent = eyebrow;
+    card.querySelector("h2").textContent = title;
+    card.querySelector(".made").textContent = made;
+    const link = card.querySelector(".more");
+    link.querySelector("span").textContent = more;
+    link.href = lang === "pl" ? "https://pl.wikipedia.org/wiki/Narodowe_%C5%9Awi%C4%99to_Niepodleg%C5%82o%C5%9Bci"
+                              : "https://en.wikipedia.org/wiki/National_Independence_Day_(Poland)";
+    main.prepend(card);
+    document.documentElement.classList.add("celebrating");
+  };
+  const hide = () => { card?.remove(); card = null; document.documentElement.classList.remove("celebrating"); };
+  // Checked on load, every minute, and whenever the tab comes back: a page left open at midnight follows the day.
+  const sync = () => { if (isTheDay() && !card) show(); else if (!isTheDay() && card) hide(); };
+  sync();
+  setInterval(sync, 60000);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) sync(); });
 })();
 
 // Docs menu: open on wide screens, folded on phones.
