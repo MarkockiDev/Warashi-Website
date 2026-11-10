@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hans" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>命令行和 AI App · 帮助 · Warashi</title>
+<meta name="description" content="在终端中使用 warashi 命令，并让 Claude、Cursor 及其他 AI App 通过 MCP 读取你的 Mac 的历史记录。">
+<link rel="canonical" href="https://warashi.app/zh-hans/docs/command-line-and-ai/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Warashi">
+<meta property="og:title" content="命令行和 AI App · 帮助 · Warashi">
+<meta property="og:description" content="在终端中使用 warashi 命令，并让 Claude、Cursor 及其他 AI App 通过 MCP 读取你的 Mac 的历史记录。">
+<meta property="og:url" content="https://warashi.app/zh-hans/docs/command-line-and-ai/">
+<meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Warashi：你的 Mac 的飞行记录仪。Warashi 窗口和菜单栏窗口旁的精灵图标。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="命令行和 AI App · 帮助 · Warashi">
+<meta name="twitter:description" content="在终端中使用 warashi 命令，并让 Claude、Cursor 及其他 AI App 通过 MCP 读取你的 Mac 的历史记录。">
+<meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="Warashi：你的 Mac 的飞行记录仪。Warashi 窗口和菜单栏窗口旁的精灵图标。">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+// Website analytics: cookieless (nothing stored in the browser), EU servers, no person profiles, Do Not Track respected.
+posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
+  api_host: "https://eu.i.posthog.com", ui_host: "https://eu.posthog.com",
+  persistence: "memory", person_profiles: "identified_only", respect_dnt: true,
+  capture_pageview: true, capture_pageleave: true, disable_session_recording: true,
+});
+posthog.register({ surface: "website" });
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"帮助","item":"https://warashi.app/docs/"},{"@type":"ListItem","position":2,"name":"命令行和 AI App","item":"https://warashi.app/docs/command-line-and-ai/"}]}</script>
+
+
+
+
+<!--i18n-head--><link rel="alternate" hreflang="en" href="https://warashi.app/docs/command-line-and-ai/"><link rel="alternate" hreflang="x-default" href="https://warashi.app/docs/command-line-and-ai/"><link rel="alternate" hreflang="pl" href="https://warashi.app/pl/docs/command-line-and-ai/"><link rel="alternate" hreflang="fr" href="https://warashi.app/fr/docs/command-line-and-ai/"><link rel="alternate" hreflang="es" href="https://warashi.app/es/docs/command-line-and-ai/"><link rel="alternate" hreflang="pt-BR" href="https://warashi.app/pt-br/docs/command-line-and-ai/"><link rel="alternate" hreflang="ja" href="https://warashi.app/ja/docs/command-line-and-ai/"><link rel="alternate" hreflang="zh-Hans" href="https://warashi.app/zh-hans/docs/command-line-and-ai/"><!--/i18n-head-->
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="pill">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
+      <nav class="nav" aria-label="主要内容"><a href="../../index.html#glance">功能</a><a href="../../docs/" aria-current="page">帮助</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a><a href="../../../changelog/">更新日志</a></nav>
+      
+      <!--i18n-lang--><details class="lang"><summary aria-label="Language"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><ellipse cx="8" cy="8" rx="2.8" ry="6.4"/><path d="M1.8 6h12.4M1.8 10h12.4"/></svg><span>ZH</span></summary><div class="lang-menu"><a lang="en" hreflang="en" href="../../../docs/command-line-and-ai/">English</a><a lang="pl" hreflang="pl" href="../../../pl/docs/command-line-and-ai/">Polski</a><a lang="fr" hreflang="fr" href="../../../fr/docs/command-line-and-ai/">Français</a><a lang="es" hreflang="es" href="../../../es/docs/command-line-and-ai/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="../../../pt-br/docs/command-line-and-ai/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="../../../ja/docs/command-line-and-ai/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="./" aria-current="true">简体中文</a></div></details><!--/i18n-lang-->
+      <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">下载</a>
+      <button class="menu-toggle" aria-label="菜单" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+    <div class="sheet" id="sheet"><div><nav aria-label="主要内容"><a href="../../index.html#glance">功能</a><a href="../../docs/" aria-current="page">帮助</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a><a href="../../../changelog/">更新日志</a></nav></div></div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap">
+  <div class="page-head"><div class="crumbs"><a href="../../docs/">帮助</a> / 命令行和 AI App</div><h1>命令行和 AI App</h1><p class="lead">在终端中使用 warashi 命令，并让 Claude、Cursor 及其他 AI App 通过 MCP 读取你的 Mac 的历史记录。</p></div>
+  <div class="doc">
+    <details class="side" open><summary>帮助菜单</summary><nav aria-label="帮助"><h4>开始使用</h4><a href="../../docs/">帮助首页</a><a href="../../docs/install/">下载与安装</a><a href="../../docs/welcome-tour/">欢迎导览</a><a href="../../docs/first-day/">使用的第一天</a><h4>使用 Warashi</h4><a href="../../docs/menu-bar/">菜单栏和菜单栏窗口</a><a href="../../docs/notch-and-island/">刘海和小岛</a><a href="../../docs/customize/">排列菜单栏窗口和刘海</a><a href="../../docs/window/">窗口和概览</a><a href="../../docs/apps/">App</a><a href="../../docs/history/">历史记录</a><a href="../../docs/time-and-cost/">时间 × 消耗</a><a href="../../docs/power-flow/">电力流向</a><a href="../../docs/developer/">开发者</a><a href="../../docs/storage/">储存空间</a><a href="../../docs/speed-test/">网速测试</a><a href="../../docs/weekly-summary/">每周摘要</a><a href="../../docs/upgrade-advisor/">升级顾问</a><a href="../../docs/alerts/">警报</a><a href="../../docs/system-processes/">系统进程</a><h4>设置与更多</h4><a href="../../docs/settings/">设置</a><a href="../../docs/updates/">更新</a><a href="../../docs/command-line-and-ai/" aria-current="page">命令行和 AI App</a><a href="../../docs/beta/">Beta 测试和许可证</a><a href="../../docs/privacy-and-data/">隐私和你的数据</a><a href="../../docs/troubleshooting/">疑难解答</a><h4>指南</h4><a href="../../guides/why-is-my-mac-slow/">Mac 为什么变慢</a><a href="../../guides/how-much-ram-do-i-need/">Mac 内存多大够用</a><a href="../../guides/whats-draining-my-macbook-battery/">是什么在消耗 MacBook 的电量</a><a href="../../guides/whats-taking-up-space-on-my-mac/">Mac 的储存空间被什么占用了</a><a href="../../guides/test-internet-speed-on-mac/">在 Mac 上测试网速</a></nav></details>
+    <article class="prose">
+<p>两者都是可选的，且只读：它们只读取 Warashi 已保存的内容，无法更改任何内容。</p>
+<h2>warashi 命令</h2>
+<ol class="steps"><li><span class="step-title">安装</span><p>设置 › 通用 › 命令行和 AI › <b>安装…</b>。macOS 会请你输入一次密码。</p></li><li><span class="step-title">在终端中使用</span><p>输入 <code>warashi</code> 即可查看各条命令。</p></li></ol>
+<div class="table"><table><tr><th>命令</th><th>显示内容</th></tr>
+<tr><td><code>warashi now</code></td><td>最新读数，最多延迟约一分钟</td></tr>
+<tr><td><code>warashi apps --hours 3</code></td><td>CPU 占用最多的 App</td></tr>
+<tr><td><code>warashi history cpu --hours 24</code></td><td>单项指标随时间的变化</td></tr>
+<tr><td><code>warashi explain 14:30</code></td><td>某个时刻发生了什么（也可用 <code>30m</code>、<code>2h</code>）</td></tr>
+<tr><td><code>warashi sleep --days 7</code></td><td>睡眠和电量损失</td></tr></table></div>
+<p>在任一命令后加上 <code>--json</code>，即可得到脚本可读取的输出。</p>
+<h2>连接 AI App</h2>
+<ol class="steps"><li><span class="step-title">拷贝配置</span><p>设置 › 通用 › 命令行和 AI › <b>拷贝配置</b>。</p></li><li><span class="step-title">粘贴到你的 AI App 中</span><p>将它添加到 Claude、Cursor 或其他支持 MCP 的 App 的 MCP 设置中，然后提问，例如“我的 Mac 下午 3 点为什么很慢？”。</p></li></ol>
+<div class="tip"><b>补充说明：</b>除非你将 Warashi 添加到某个 AI App，否则不会共享任何内容。添加后，该 App 及其服务会收到它请求的内容：App 名称和使用历史，绝不包括活动记录或文件路径。如要停止，请在该 App 的设置中移除。</div>
+<div class="help-box"><h3>如果出现问题</h3><ul><li><b>找不到 <code>warashi</code>：</b>请打开一个新的终端窗口；如果你移动过 Warashi，请再次点按“安装…”。</li></ul><p style="margin-top:8px">更多内容见<a href="../../docs/troubleshooting/">疑难解答</a>，或发送电子邮件至 <a href="mailto:adam@warashi.app">adam@warashi.app</a>。</p></div>
+<div class="next"><a href="../../docs/updates/"><small>上一页</small>更新</a><a href="../../docs/beta/" style="text-align:right"><small>下一页</small>Beta 测试和许可证</a></div></article>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
+      <nav aria-label="页脚"><a href="../../docs/">帮助</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a><a href="../../../changelog/">更新日志</a><a href="../../../press/">媒体</a><a href="../../../privacy/">隐私</a><a href="../../../terms/">条款</a><a href="../../../refunds/">退款</a><a href="mailto:adam@warashi.app">联系</a></nav>
+    </div>
+    <p class="fine">© 2026 Adam Markocki。在波兰用心制作。Warashi 与 Apple 无关联；Mac、macOS 和 Apple silicon 是 Apple Inc. 的商标。</p>
+  </div>
+</footer>
+<script src="../../../assets/js/site.js" defer></script>
+</body>
+</html>

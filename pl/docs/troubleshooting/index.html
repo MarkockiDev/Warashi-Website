@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pl" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rozwiązywanie problemów · Pomoc · Warashi</title>
+<meta name="description" content="Rozwiązania typowych problemów z Warashi: brakujący element na pasku menu, niedostępne wartości, procesy systemowe, powiadomienia, uaktualnienia i odinstalowanie.">
+<link rel="canonical" href="https://warashi.app/pl/docs/troubleshooting/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Warashi">
+<meta property="og:title" content="Rozwiązywanie problemów · Pomoc · Warashi">
+<meta property="og:description" content="Rozwiązania typowych problemów z Warashi: brakujący element na pasku menu, niedostępne wartości, procesy systemowe, powiadomienia, uaktualnienia i odinstalowanie.">
+<meta property="og:url" content="https://warashi.app/pl/docs/troubleshooting/">
+<meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Warashi: czarna skrzynka Twojego Maca. Ikona duszka obok okna Warashi i okna paska menu.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rozwiązywanie problemów · Pomoc · Warashi">
+<meta name="twitter:description" content="Rozwiązania typowych problemów z Warashi: brakujący element na pasku menu, niedostępne wartości, procesy systemowe, powiadomienia, uaktualnienia i odinstalowanie.">
+<meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="Warashi: czarna skrzynka Twojego Maca. Ikona duszka obok okna Warashi i okna paska menu.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+// Website analytics: cookieless (nothing stored in the browser), EU servers, no person profiles, Do Not Track respected.
+posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
+  api_host: "https://eu.i.posthog.com", ui_host: "https://eu.posthog.com",
+  persistence: "memory", person_profiles: "identified_only", respect_dnt: true,
+  capture_pageview: true, capture_pageleave: true, disable_session_recording: true,
+});
+posthog.register({ surface: "website" });
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Pomoc","item":"https://warashi.app/docs/"},{"@type":"ListItem","position":2,"name":"Rozwiązywanie problemów","item":"https://warashi.app/docs/troubleshooting/"}]}</script>
+
+
+
+
+<!--i18n-head--><link rel="alternate" hreflang="en" href="https://warashi.app/docs/troubleshooting/"><link rel="alternate" hreflang="x-default" href="https://warashi.app/docs/troubleshooting/"><link rel="alternate" hreflang="pl" href="https://warashi.app/pl/docs/troubleshooting/"><link rel="alternate" hreflang="fr" href="https://warashi.app/fr/docs/troubleshooting/"><link rel="alternate" hreflang="es" href="https://warashi.app/es/docs/troubleshooting/"><link rel="alternate" hreflang="pt-BR" href="https://warashi.app/pt-br/docs/troubleshooting/"><link rel="alternate" hreflang="ja" href="https://warashi.app/ja/docs/troubleshooting/"><link rel="alternate" hreflang="zh-Hans" href="https://warashi.app/zh-hans/docs/troubleshooting/"><!--/i18n-head-->
+</head>
+<body>
+<a class="skip" href="#main">Przejdź do treści</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="pill">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
+      <nav class="nav" aria-label="Treść główna"><a href="../../index.html#glance">Funkcje</a><a href="../../docs/" aria-current="page">Pomoc</a><a href="../../guides/">Poradniki</a><a href="../../faq/">Pytania i odpowiedzi</a><a href="../../../changelog/">Historia zmian</a></nav>
+      
+      <!--i18n-lang--><details class="lang"><summary aria-label="Language"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><ellipse cx="8" cy="8" rx="2.8" ry="6.4"/><path d="M1.8 6h12.4M1.8 10h12.4"/></svg><span>PL</span></summary><div class="lang-menu"><a lang="en" hreflang="en" href="../../../docs/troubleshooting/">English</a><a lang="pl" hreflang="pl" href="./" aria-current="true">Polski</a><a lang="fr" hreflang="fr" href="../../../fr/docs/troubleshooting/">Français</a><a lang="es" hreflang="es" href="../../../es/docs/troubleshooting/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="../../../pt-br/docs/troubleshooting/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="../../../ja/docs/troubleshooting/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="../../../zh-hans/docs/troubleshooting/">简体中文</a></div></details><!--/i18n-lang-->
+      <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">Pobierz</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+    <div class="sheet" id="sheet"><div><nav aria-label="Treść główna"><a href="../../index.html#glance">Funkcje</a><a href="../../docs/" aria-current="page">Pomoc</a><a href="../../guides/">Poradniki</a><a href="../../faq/">Pytania i odpowiedzi</a><a href="../../../changelog/">Historia zmian</a></nav></div></div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap">
+  <div class="page-head"><div class="crumbs"><a href="../../docs/">Pomoc</a> / Rozwiązywanie problemów</div><h1>Rozwiązywanie problemów</h1><p class="lead">Rozwiązania typowych problemów z Warashi: brakujący element na pasku menu, niedostępne wartości, procesy systemowe, powiadomienia, uaktualnienia i odinstalowanie.</p></div>
+  <div class="doc">
+    <details class="side" open><summary>Menu pomocy</summary><nav aria-label="Pomoc"><h4>Pierwsze kroki</h4><a href="../../docs/">Strona główna pomocy</a><a href="../../docs/install/">Pobieranie i instalacja</a><a href="../../docs/welcome-tour/">Prezentacja powitalna</a><a href="../../docs/first-day/">Twój pierwszy dzień</a><h4>Korzystanie z Warashi</h4><a href="../../docs/menu-bar/">Pasek menu i okno paska menu</a><a href="../../docs/notch-and-island/">Wycięcie i wyspa</a><a href="../../docs/customize/">Układ okna paska menu i wycięcia</a><a href="../../docs/window/">Okno i Przegląd</a><a href="../../docs/apps/">Aplikacje</a><a href="../../docs/history/">Historia</a><a href="../../docs/time-and-cost/">Czas × koszt</a><a href="../../docs/power-flow/">Przepływ energii</a><a href="../../docs/developer/">Programista</a><a href="../../docs/storage/">Miejsce na dysku</a><a href="../../docs/speed-test/">Test szybkości</a><a href="../../docs/weekly-summary/">Podsumowanie tygodnia</a><a href="../../docs/upgrade-advisor/">Doradca zakupu</a><a href="../../docs/alerts/">Alerty</a><a href="../../docs/system-processes/">Procesy systemowe</a><h4>Ustawienia i więcej</h4><a href="../../docs/settings/">Ustawienia</a><a href="../../docs/updates/">Uaktualnienia</a><a href="../../docs/command-line-and-ai/">Wiersz poleceń i aplikacje AI</a><a href="../../docs/beta/">Beta i licencje</a><a href="../../docs/privacy-and-data/">Prywatność i Twoje dane</a><a href="../../docs/troubleshooting/" aria-current="page">Rozwiązywanie problemów</a><h4>Poradniki</h4><a href="../../guides/why-is-my-mac-slow/">Dlaczego mój Mac działa wolno</a><a href="../../guides/how-much-ram-do-i-need/">Ile pamięci RAM potrzebuje Mac</a><a href="../../guides/whats-draining-my-macbook-battery/">Co rozładowuje baterię mojego MacBooka</a><a href="../../guides/whats-taking-up-space-on-my-mac/">Co zajmuje miejsce na moim Macu</a><a href="../../guides/test-internet-speed-on-mac/">Jak sprawdzić szybkość internetu na Macu</a></nav></details>
+    <article class="prose">
+<p>Znajdź swój problem poniżej i wykonaj kroki. Nadal nie działa? Napisz na <a href="mailto:adam@warashi.app">adam@warashi.app</a>, podając model Maca i wersję macOS.</p>
+<h2 id="menu-bar">Nie widzę Warashi na pasku menu</h2>
+<ol class="steps"><li><span class="step-title">Sprawdź, czy działa</span><p>Otwórz Warashi z Aplikacji. Jeśli działa, otworzy się jego okno.</p></li><li><span class="step-title">Zrób miejsce</span><p>Na MacBooku z wycięciem zatłoczony pasek menu ukrywa elementy za wycięciem. Zakończ jedną lub dwie aplikacje, których nie potrzebujesz na pasku menu, albo przytrzymaj <kbd>⌘</kbd> i przeciągnij duszka bardziej w prawo.</p></li><li><span class="step-title">Użyj zamiast tego wycięcia</span><p>Włącz Ustawienia › Wycięcie › <b>Podgląd obok wycięcia</b>: liczby tam nigdy nie są ukrywane.</p></li></ol>
+<h2>Niektóre liczby pokazują „niedostępne”</h2>
+<p>Warashi nigdy nie wymyśla wartości. Jeśli macOS nie udostępnia odczytu na Twoim Macu (na przykład niektórych temperatur lub wentylatora w Makach, które go nie mają), Warashi mówi o tym zamiast zgadywać.</p>
+<h2>Procesy systemowe nie są widoczne</h2>
+<p>Wymagają opcjonalnego narzędzia pomocniczego. Wykonaj kroki z sekcji <a href="../../docs/system-processes/">Procesy systemowe</a> i sprawdź, czy Warashi jest dozwolone w Ustawieniach systemowych › Ogólne › Rzeczy i rozszerzenia otwierane podczas logowania › Pozwalaj w tle.</p>
+<h2>Nie dostaję powiadomień o alertach</h2>
+<ol class="steps"><li><span class="step-title">Sprawdź, czy alert jest włączony</span><p>Ustawienia › Alerty: przełącznik tego alertu musi być włączony.</p></li><li><span class="step-title">Zezwalaj na powiadomienia</span><p>Ustawienia systemowe › Powiadomienia › Warashi › włącz <b>Zezwalaj na powiadomienia</b>.</p></li></ol>
+<h2>Otwieranie podczas logowania się nie utrzymuje</h2>
+<p>macOS może wymagać Twojego zatwierdzenia: otwórz Ustawienia systemowe › Ogólne › Rzeczy i rozszerzenia otwierane podczas logowania i zezwól Warashi.</p>
+<h2>Wyspa zasłania coś na moim monitorze zewnętrznym</h2>
+<p>Wyłącz Ustawienia › Wycięcie › <b>Wyspa na monitorach bez wycięcia</b>.</p>
+<h2>Chcę uaktualnić od razu</h2>
+<p>Ustawienia › Uaktualnienia › <b>Sprawdź teraz</b>. Możesz też pobrać najnowszą wersję z warashi.app i przeciągnąć ją na starą w Aplikacjach; historia zostaje.</p>
+<h2>Dysk nie chce się wysunąć</h2>
+<p>macOS odmawia, dopóki coś używa dysku, a Warashi o tym informuje. Zamknij to, co go używa, i spróbuj ponownie.</p>
+<h2>macOS wciąż prosi Warashi o dostęp do folderów</h2>
+<p>Uaktualnij do najnowszej wersji w Ustawieniach › Uaktualnienia. Miejsce na dysku omija teraz chronione foldery, chyba że jednorazowo włączysz Pełny dostęp do dysku, więc macOS nie ma o co pytać. Zobacz <a href="../../docs/storage/">Miejsce na dysku</a>.</p>
+<h2>Zmieniłem okno paska menu lub wycięcie i chcę przywrócić poprzedni układ</h2>
+<p>Otwórz Ustawienia › <b>Pasek menu</b> lub <b>Wycięcie</b> i naciśnij <b>Resetuj</b>. Zobacz <a href="../../docs/customize/">Układ okna paska menu i wycięcia</a>.</p>
+<h2>Test szybkości nadal trwa po opuszczeniu strony</h2>
+<p>To celowe: test kończy się w mniej niż minutę, a pasek boczny informuje, kiedy jest gotowy. Aby go zatrzymać, wróć do Testu szybkości i naciśnij <b>Anuluj</b>.</p>
+<h2>Nie znaleziono polecenia <code>warashi</code></h2>
+<p>Otwórz nowe okno Terminala. Jeśli to nie pomoże, ponownie naciśnij Ustawienia › Ogólne › Wiersz poleceń i AI › <b>Instaluj…</b>.</p>
+<h2>Zobacz prezentację powitalną ponownie</h2>
+<p>Ustawienia › Ogólne › <b>Pokaż powitanie ponownie</b>.</p>
+<h2>Odinstalowanie Warashi</h2>
+<ol class="steps"><li><span class="step-title">Usuń narzędzie pomocnicze (jeśli zainstalowano)</span><p>Ustawienia › System › wyłącz <b>Pokazuj procesy systemowe</b>.</p></li><li><span class="step-title">Zakończ Warashi</span><p>Kliknij duszka, a potem przycisk zasilania w prawym dolnym rogu okna paska menu.</p></li><li><span class="step-title">Przenieś do Kosza</span><p>Przeciągnij Warashi z Aplikacji do Kosza.</p></li><li><span class="step-title">Usuń historię (opcjonalnie)</span><p>W Finderze wybierz Idź › Idź do folderu…, wpisz <code>~/Library/Application Support/Warashi</code> i przenieś ten folder do Kosza.</p></li></ol>
+<div class="next"><a href="../../docs/privacy-and-data/"><small>Poprzednia</small>Prywatność i Twoje dane</a></div></article>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
+      <nav aria-label="Stopka"><a href="../../docs/">Pomoc</a><a href="../../guides/">Poradniki</a><a href="../../faq/">Pytania i odpowiedzi</a><a href="../../../changelog/">Historia zmian</a><a href="../../../press/">Dla prasy</a><a href="../../../privacy/">Prywatność</a><a href="../../../terms/">Warunki</a><a href="../../../refunds/">Zwroty</a><a href="mailto:adam@warashi.app">Kontakt</a></nav>
+    </div>
+    <p class="fine">© 2026 Adam Markocki. Wykonane z troską w Polsce. Warashi nie jest powiązane z firmą Apple; Mac, macOS i Apple silicon są znakami towarowymi Apple Inc.</p>
+  </div>
+</footer>
+<script src="../../../assets/js/site.js" defer></script>
+</body>
+</html>

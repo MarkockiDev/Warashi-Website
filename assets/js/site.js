@@ -253,3 +253,10 @@ document.querySelectorAll("a[data-download]").forEach((link) => {
   show();
   row.insertBefore(button, row.querySelector(".cta"));
 })();
+
+// The language menu closes on Escape or a click anywhere else.
+{
+  const open = () => document.querySelector("details.lang[open]");
+  document.addEventListener("click", (event) => { if (open() && !open().contains(event.target)) open().removeAttribute("open"); });
+  document.addEventListener("keydown", (event) => { if (event.key === "Escape" && open()) open().removeAttribute("open"); });
+}

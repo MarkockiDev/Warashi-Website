@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Macが高温？ kernel_taskとサーマルスロットリングを解説 · Warashi</title>
+<meta name="description" content="kernel_taskが突然CPUを大量に使う理由、サーマルスロットリングとは何か、どう対処できるか。">
+<link rel="canonical" href="https://warashi.app/ja/guides/mac-running-hot-kernel-task/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Warashi">
+<meta property="og:title" content="Macが高温？ kernel_taskとサーマルスロットリングを解説 · Warashi">
+<meta property="og:description" content="kernel_taskが突然CPUを大量に使う理由、サーマルスロットリングとは何か、どう対処できるか。">
+<meta property="og:url" content="https://warashi.app/ja/guides/mac-running-hot-kernel-task/">
+<meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Warashi：Macのフライトレコーダー。Warashiのウインドウとポップオーバーの横にいるわらしのアイコン。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Macが高温？ kernel_taskとサーマルスロットリングを解説 · Warashi">
+<meta name="twitter:description" content="kernel_taskが突然CPUを大量に使う理由、サーマルスロットリングとは何か、どう対処できるか。">
+<meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="Warashi：Macのフライトレコーダー。Warashiのウインドウとポップオーバーの横にいるわらしのアイコン。">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+// Website analytics: cookieless (nothing stored in the browser), EU servers, no person profiles, Do Not Track respected.
+posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
+  api_host: "https://eu.i.posthog.com", ui_host: "https://eu.posthog.com",
+  persistence: "memory", person_profiles: "identified_only", respect_dnt: true,
+  capture_pageview: true, capture_pageleave: true, disable_session_recording: true,
+});
+posthog.register({ surface: "website" });
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Macが高温？ kernel_taskとサーマルスロットリングを解説","description":"kernel_taskが突然CPUを大量に使う理由、サーマルスロットリングとは何か、どう対処できるか。","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-03","dateModified":"2026-11-03","mainEntityOfPage":"https://warashi.app/guides/mac-running-hot-kernel-task/"}</script>
+
+
+
+
+<!--i18n-head--><link rel="alternate" hreflang="en" href="https://warashi.app/guides/mac-running-hot-kernel-task/"><link rel="alternate" hreflang="x-default" href="https://warashi.app/guides/mac-running-hot-kernel-task/"><link rel="alternate" hreflang="pl" href="https://warashi.app/pl/guides/mac-running-hot-kernel-task/"><link rel="alternate" hreflang="fr" href="https://warashi.app/fr/guides/mac-running-hot-kernel-task/"><link rel="alternate" hreflang="es" href="https://warashi.app/es/guides/mac-running-hot-kernel-task/"><link rel="alternate" hreflang="pt-BR" href="https://warashi.app/pt-br/guides/mac-running-hot-kernel-task/"><link rel="alternate" hreflang="ja" href="https://warashi.app/ja/guides/mac-running-hot-kernel-task/"><link rel="alternate" hreflang="zh-Hans" href="https://warashi.app/zh-hans/guides/mac-running-hot-kernel-task/"><!--/i18n-head-->
+</head>
+<body>
+<a class="skip" href="#main">コンテンツへスキップ</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="pill">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
+      <nav class="nav" aria-label="メイン"><a href="../../index.html#glance">機能</a><a href="../../docs/">ヘルプ</a><a href="../../guides/" aria-current="page">ガイド</a><a href="../../faq/">Q&amp;A</a><a href="../../../changelog/">変更履歴</a></nav>
+      
+      <!--i18n-lang--><details class="lang"><summary aria-label="Language"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><ellipse cx="8" cy="8" rx="2.8" ry="6.4"/><path d="M1.8 6h12.4M1.8 10h12.4"/></svg><span>JA</span></summary><div class="lang-menu"><a lang="en" hreflang="en" href="../../../guides/mac-running-hot-kernel-task/">English</a><a lang="pl" hreflang="pl" href="../../../pl/guides/mac-running-hot-kernel-task/">Polski</a><a lang="fr" hreflang="fr" href="../../../fr/guides/mac-running-hot-kernel-task/">Français</a><a lang="es" hreflang="es" href="../../../es/guides/mac-running-hot-kernel-task/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="../../../pt-br/guides/mac-running-hot-kernel-task/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="./" aria-current="true">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="../../../zh-hans/guides/mac-running-hot-kernel-task/">简体中文</a></div></details><!--/i18n-lang-->
+      <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">ダウンロード</a>
+      <button class="menu-toggle" aria-label="メニュー" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+    <div class="sheet" id="sheet"><div><nav aria-label="メイン"><a href="../../index.html#glance">機能</a><a href="../../docs/">ヘルプ</a><a href="../../guides/" aria-current="page">ガイド</a><a href="../../faq/">Q&amp;A</a><a href="../../../changelog/">変更履歴</a></nav></div></div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap" style="max-width:800px">
+  <div class="page-head"><div class="crumbs"><a href="../../guides/">ガイド</a></div><h1>Macが高温？ kernel_taskとサーマルスロットリングを解説</h1>
+    <p class="lead">kernel_taskが突然CPUを大量に使う理由、サーマルスロットリングとは何か、どう対処できるか。</p><p class="meta">読了4分 · 2026年11月9日更新</p></div>
+  <article class="prose" style="padding-bottom:40px">
+<p>Macのファンが回り始め、底面が熱くなり、<code>kernel_task</code>が突然CPUを大量に使うなら、Macは熱から自分を守っています。</p>
+<h2>kernel_taskの働き</h2>
+<p><code>kernel_task</code>はmacOS自身です。チップが熱くなりすぎると、macOSがkernel_taskを忙しく見せかけて、ほかのアプリに割り当てるCPU時間を減らし、チップを冷まします。原因ではなく、ブレーキです。終了することはできず、終了させたいものでもありません。</p>
+<h2>サーマルスロットリング</h2>
+<p>スロットリングとは、安全な温度を保つために、macOSがチップの速度を下げることです。ファンのないMacBook Airでは、書き出し、ビルド、ゲームのような長く重い作業で早めに起こります。ファン搭載のMacは、たいていフルスピードをより長く維持できます。</p>
+<h2>できること</h2>
+<ul><li>実際に負荷をかけているアプリを見つけて（CPUとGPUで並べ替え）、一時停止するか終了します。</li><li>通気口をふさがず、Macの下に柔らかいものを敷かないでください。</li><li>MacBook Airで長時間の重い作業をするときは、涼しい部屋やスタンドが役立ちます。</li><li>毎日起こるなら、作業にファン搭載のMacが必要かどうかを検討しましょう。</li></ul>
+<h2>どれくらいの頻度で起きるかを把握する</h2>
+<p>Warashiは、Macが熱で速度を落としていた時間を分単位で記録します。<a href="../../docs/alerts/">Macの高温</a>アラートは開始時にお知らせし、<a href="../../docs/upgrade-advisor/">アップグレードアドバイザー</a>はチップをおすすめするときに、1週間あたりのスロットリング時間を集計します。</p>
+
+    <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/history-temp-light.webp" alt="Warashiの履歴：24時間のCPU温度" width="800" height="519" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/history-temp-dark.webp" alt="" width="800" height="519" loading="lazy" decoding="async"></span><figcaption>Warashiの履歴に表示された1日分の温度。熱が出た時間帯と、そのとき忙しかったアプリがわかります。</figcaption></figure>
+    <div class="tip" style="margin-top:44px"><b>Warashiが代わりに記録します。</b> バックグラウンドでMacの履歴を記録するので、リアルタイムで捕まえようとしなくても、何が起きたかをあとから振り返れます。<a href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="guide">無料ベータ版をダウンロード →</a></div>
+    <h2>そのほかのガイド</h2><ul><li><a href="../../guides/why-is-my-mac-slow/">Macが遅い原因は？ 犯人のアプリを見つけよう</a></li><li><a href="../../guides/how-much-ram-do-i-need/">Macに必要なRAMの容量は？</a></li><li><a href="../../guides/whats-draining-my-macbook-battery/">MacBookのバッテリーを消耗させているものは？</a></li><li><a href="../../guides/should-i-upgrade-my-mac/">Macのアップグレードは必要？ 自分のデータで判断しよう</a></li><li><a href="../../guides/whats-taking-up-space-on-my-mac/">Macのストレージを占めているものは？</a></li><li><a href="../../guides/test-internet-speed-on-mac/">Macでインターネット速度をテストする</a></li></ul>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
+      <nav aria-label="フッター"><a href="../../docs/">ヘルプ</a><a href="../../guides/">ガイド</a><a href="../../faq/">Q&amp;A</a><a href="../../../changelog/">変更履歴</a><a href="../../../press/">プレス</a><a href="../../../privacy/">プライバシー</a><a href="../../../terms/">利用規約</a><a href="../../../refunds/">返金</a><a href="mailto:adam@warashi.app">お問い合わせ</a></nav>
+    </div>
+    <p class="fine">© 2026 Adam Markocki. ポーランドで心を込めて作っています。WarashiはAppleとは提携していません。Mac、macOS、Apple siliconはApple Inc.の商標です。</p>
+  </div>
+</footer>
+<script src="../../../assets/js/site.js" defer></script>
+</body>
+</html>

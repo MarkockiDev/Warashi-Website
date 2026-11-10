@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-Hans" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mac 为什么变慢？找出背后的 App · Warashi</title>
+<meta name="description" content="一套从容、循序渐进的方法，找出是什么拖慢了你的 Mac：CPU、内存压力、发热和磁盘。">
+<link rel="canonical" href="https://warashi.app/zh-hans/guides/why-is-my-mac-slow/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Warashi">
+<meta property="og:title" content="Mac 为什么变慢？找出背后的 App · Warashi">
+<meta property="og:description" content="一套从容、循序渐进的方法，找出是什么拖慢了你的 Mac：CPU、内存压力、发热和磁盘。">
+<meta property="og:url" content="https://warashi.app/zh-hans/guides/why-is-my-mac-slow/">
+<meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Warashi：你的 Mac 的飞行记录仪。Warashi 窗口和菜单栏窗口旁的精灵图标。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mac 为什么变慢？找出背后的 App · Warashi">
+<meta name="twitter:description" content="一套从容、循序渐进的方法，找出是什么拖慢了你的 Mac：CPU、内存压力、发热和磁盘。">
+<meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="Warashi：你的 Mac 的飞行记录仪。Warashi 窗口和菜单栏窗口旁的精灵图标。">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+// Website analytics: cookieless (nothing stored in the browser), EU servers, no person profiles, Do Not Track respected.
+posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
+  api_host: "https://eu.i.posthog.com", ui_host: "https://eu.posthog.com",
+  persistence: "memory", person_profiles: "identified_only", respect_dnt: true,
+  capture_pageview: true, capture_pageleave: true, disable_session_recording: true,
+});
+posthog.register({ surface: "website" });
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Mac 为什么变慢？找出背后的 App","description":"一套从容、循序渐进的方法，找出是什么拖慢了你的 Mac：CPU、内存压力、发热和磁盘。","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-03","dateModified":"2026-11-03","mainEntityOfPage":"https://warashi.app/guides/why-is-my-mac-slow/"}</script>
+
+
+
+
+<!--i18n-head--><link rel="alternate" hreflang="en" href="https://warashi.app/guides/why-is-my-mac-slow/"><link rel="alternate" hreflang="x-default" href="https://warashi.app/guides/why-is-my-mac-slow/"><link rel="alternate" hreflang="pl" href="https://warashi.app/pl/guides/why-is-my-mac-slow/"><link rel="alternate" hreflang="fr" href="https://warashi.app/fr/guides/why-is-my-mac-slow/"><link rel="alternate" hreflang="es" href="https://warashi.app/es/guides/why-is-my-mac-slow/"><link rel="alternate" hreflang="pt-BR" href="https://warashi.app/pt-br/guides/why-is-my-mac-slow/"><link rel="alternate" hreflang="ja" href="https://warashi.app/ja/guides/why-is-my-mac-slow/"><link rel="alternate" hreflang="zh-Hans" href="https://warashi.app/zh-hans/guides/why-is-my-mac-slow/"><!--/i18n-head-->
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="pill">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
+      <nav class="nav" aria-label="主要内容"><a href="../../index.html#glance">功能</a><a href="../../docs/">帮助</a><a href="../../guides/" aria-current="page">指南</a><a href="../../faq/">问答</a><a href="../../../changelog/">更新日志</a></nav>
+      
+      <!--i18n-lang--><details class="lang"><summary aria-label="Language"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><ellipse cx="8" cy="8" rx="2.8" ry="6.4"/><path d="M1.8 6h12.4M1.8 10h12.4"/></svg><span>ZH</span></summary><div class="lang-menu"><a lang="en" hreflang="en" href="../../../guides/why-is-my-mac-slow/">English</a><a lang="pl" hreflang="pl" href="../../../pl/guides/why-is-my-mac-slow/">Polski</a><a lang="fr" hreflang="fr" href="../../../fr/guides/why-is-my-mac-slow/">Français</a><a lang="es" hreflang="es" href="../../../es/guides/why-is-my-mac-slow/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="../../../pt-br/guides/why-is-my-mac-slow/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="../../../ja/guides/why-is-my-mac-slow/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="./" aria-current="true">简体中文</a></div></details><!--/i18n-lang-->
+      <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">下载</a>
+      <button class="menu-toggle" aria-label="菜单" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+    <div class="sheet" id="sheet"><div><nav aria-label="主要内容"><a href="../../index.html#glance">功能</a><a href="../../docs/">帮助</a><a href="../../guides/" aria-current="page">指南</a><a href="../../faq/">问答</a><a href="../../../changelog/">更新日志</a></nav></div></div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap" style="max-width:800px">
+  <div class="page-head"><div class="crumbs"><a href="../../guides/">指南</a></div><h1>Mac 为什么变慢？找出背后的 App</h1>
+    <p class="lead">一套从容、循序渐进的方法，找出是什么拖慢了你的 Mac：CPU、内存压力、发热和磁盘。</p><p class="meta">阅读约 5 分钟 · 更新于 2026 年 11 月 9 日</p></div>
+  <article class="prose" style="padding-bottom:40px">
+<p>Mac 变慢通常出于四种原因之一：某个 App 占用了过多的 <b>CPU</b>、<b>内存</b>不足、<b>发热</b>，或是<b>磁盘</b>快满了。下面按这个顺序介绍如何判断是哪一种。</p>
+<h2>1. 是不是某个 App 占用了 CPU？</h2>
+<p>打开活动监视器（应用程序 › 实用工具），选择 CPU 标签页，并按 <b>% CPU</b> 排序。在 Apple 芯片上，100% 表示占满一个核心，因此单个 App 可能显示超过 100%。浏览器标签页、卡住的辅助进程或索引服务（mds、mediaanalysisd）都是常见的原因。如果某个进程在你没有使用时连续几分钟排在最前面，请退出它或关闭它的标签页。</p>
+<h2>2. 内存是否面临压力？</h2>
+<p>切换到“内存”标签页，看底部的<b>内存压力</b>图，而不是“已用内存”。macOS 会有意用缓存填满空闲内存。绿色表示正常。黄色表示 macOS 正在压缩内存并开始使用交换。红色表示正在大量使用交换，这时一切都会变得迟钝。见 <a href="../../guides/how-much-ram-do-i-need/">Mac 内存多大够用？</a></p>
+<h2>3. Mac 是不是太热了？</h2>
+<p>Mac 发热时，macOS 会降低芯片的速度以降温。其中一个迹象是 <code>kernel_task</code> 突然占用大量 CPU：它是在腾出空间，让芯片温度降下来。请阅读 <a href="../../guides/mac-running-hot-kernel-task/">Mac 发烫？</a></p>
+<h2>4. 启动磁盘是不是快满了？</h2>
+<p>macOS 需要可用空间来存放交换文件、更新和缓存。可用空间低于大约 10–15% 时，系统会变慢。请查看 › 系统设置 › 通用 › 储存空间。见 <a href="../../guides/whats-taking-up-space-on-my-mac/">Mac 的储存空间被什么占用了？</a></p>
+<h2>难点：十分钟前很卡，现在又好了</h2>
+<p>活动监视器只显示此刻的情况。如果卡顿已经过去，证据也就没了。这正是记录仪要解决的问题：有了历史记录，你可以回到事情发生的那一刻，看看是哪个 App 造成的。</p>
+
+    <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/history-moment-light.webp" alt="Warashi 历史记录，标出了某个时刻，并附有对 Mac 当时状态的平实解释" width="800" height="519" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/history-moment-dark.webp" alt="" width="800" height="519" loading="lazy" decoding="async"></span><figcaption>在 Warashi 中，点按图表上的任意时刻，它就会告诉你当时发生了什么。</figcaption></figure>
+    <div class="tip" style="margin-top:44px"><b>Warashi 可以替你完成这件事。</b>它在后台记录你的 Mac 的历史，让你可以回头查看当时发生了什么，而不必现场去捕捉。点按图表上的任意时刻，它就会解释当时发生了什么。<a href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="guide">下载免费 Beta 版 →</a></div>
+    <h2>更多指南</h2><ul><li><a href="../../guides/how-much-ram-do-i-need/">Mac 内存多大够用？</a></li><li><a href="../../guides/whats-draining-my-macbook-battery/">是什么在消耗 MacBook 的电量？</a></li><li><a href="../../guides/mac-running-hot-kernel-task/">Mac 发烫？kernel_task 与温控降频详解</a></li><li><a href="../../guides/should-i-upgrade-my-mac/">该升级 Mac 吗？让你自己的数据来决定</a></li><li><a href="../../guides/whats-taking-up-space-on-my-mac/">Mac 的储存空间被什么占用了？</a></li><li><a href="../../guides/test-internet-speed-on-mac/">在 Mac 上测试网速</a></li></ul>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
+      <nav aria-label="页脚"><a href="../../docs/">帮助</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a><a href="../../../changelog/">更新日志</a><a href="../../../press/">媒体</a><a href="../../../privacy/">隐私</a><a href="../../../terms/">条款</a><a href="../../../refunds/">退款</a><a href="mailto:adam@warashi.app">联系</a></nav>
+    </div>
+    <p class="fine">© 2026 Adam Markocki。在波兰用心制作。Warashi 与 Apple 无关联；Mac、macOS 和 Apple silicon 是 Apple Inc. 的商标。</p>
+  </div>
+</footer>
+<script src="../../../assets/js/site.js" defer></script>
+</body>
+</html>

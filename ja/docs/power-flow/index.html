@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>電力フロー · ヘルプ · Warashi</title>
+<meta name="description" content="充電器とバッテリーの供給電力、その電力の行き先、充電中にバッテリーに入る電力を確認できます。">
+<link rel="canonical" href="https://warashi.app/ja/docs/power-flow/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Warashi">
+<meta property="og:title" content="電力フロー · ヘルプ · Warashi">
+<meta property="og:description" content="充電器とバッテリーの供給電力、その電力の行き先、充電中にバッテリーに入る電力を確認できます。">
+<meta property="og:url" content="https://warashi.app/ja/docs/power-flow/">
+<meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Warashi：Macのフライトレコーダー。Warashiのウインドウとポップオーバーの横にいるわらしのアイコン。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="電力フロー · ヘルプ · Warashi">
+<meta name="twitter:description" content="充電器とバッテリーの供給電力、その電力の行き先、充電中にバッテリーに入る電力を確認できます。">
+<meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="Warashi：Macのフライトレコーダー。Warashiのウインドウとポップオーバーの横にいるわらしのアイコン。">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+// Website analytics: cookieless (nothing stored in the browser), EU servers, no person profiles, Do Not Track respected.
+posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
+  api_host: "https://eu.i.posthog.com", ui_host: "https://eu.posthog.com",
+  persistence: "memory", person_profiles: "identified_only", respect_dnt: true,
+  capture_pageview: true, capture_pageleave: true, disable_session_recording: true,
+});
+posthog.register({ surface: "website" });
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ヘルプ","item":"https://warashi.app/docs/"},{"@type":"ListItem","position":2,"name":"電力フロー","item":"https://warashi.app/docs/power-flow/"}]}</script>
+
+
+
+
+<!--i18n-head--><link rel="alternate" hreflang="en" href="https://warashi.app/docs/power-flow/"><link rel="alternate" hreflang="x-default" href="https://warashi.app/docs/power-flow/"><link rel="alternate" hreflang="pl" href="https://warashi.app/pl/docs/power-flow/"><link rel="alternate" hreflang="fr" href="https://warashi.app/fr/docs/power-flow/"><link rel="alternate" hreflang="es" href="https://warashi.app/es/docs/power-flow/"><link rel="alternate" hreflang="pt-BR" href="https://warashi.app/pt-br/docs/power-flow/"><link rel="alternate" hreflang="ja" href="https://warashi.app/ja/docs/power-flow/"><link rel="alternate" hreflang="zh-Hans" href="https://warashi.app/zh-hans/docs/power-flow/"><!--/i18n-head-->
+</head>
+<body>
+<a class="skip" href="#main">コンテンツへスキップ</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="pill">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
+      <nav class="nav" aria-label="メイン"><a href="../../index.html#glance">機能</a><a href="../../docs/" aria-current="page">ヘルプ</a><a href="../../guides/">ガイド</a><a href="../../faq/">Q&amp;A</a><a href="../../../changelog/">変更履歴</a></nav>
+      
+      <!--i18n-lang--><details class="lang"><summary aria-label="Language"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><ellipse cx="8" cy="8" rx="2.8" ry="6.4"/><path d="M1.8 6h12.4M1.8 10h12.4"/></svg><span>JA</span></summary><div class="lang-menu"><a lang="en" hreflang="en" href="../../../docs/power-flow/">English</a><a lang="pl" hreflang="pl" href="../../../pl/docs/power-flow/">Polski</a><a lang="fr" hreflang="fr" href="../../../fr/docs/power-flow/">Français</a><a lang="es" hreflang="es" href="../../../es/docs/power-flow/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="../../../pt-br/docs/power-flow/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="./" aria-current="true">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="../../../zh-hans/docs/power-flow/">简体中文</a></div></details><!--/i18n-lang-->
+      <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">ダウンロード</a>
+      <button class="menu-toggle" aria-label="メニュー" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+    <div class="sheet" id="sheet"><div><nav aria-label="メイン"><a href="../../index.html#glance">機能</a><a href="../../docs/" aria-current="page">ヘルプ</a><a href="../../guides/">ガイド</a><a href="../../faq/">Q&amp;A</a><a href="../../../changelog/">変更履歴</a></nav></div></div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap">
+  <div class="page-head"><div class="crumbs"><a href="../../docs/">ヘルプ</a> / 電力フロー</div><h1>電力フロー</h1><p class="lead">充電器とバッテリーの供給電力、その電力の行き先、充電中にバッテリーに入る電力を確認できます。</p></div>
+  <div class="doc">
+    <details class="side" open><summary>ヘルプメニュー</summary><nav aria-label="ヘルプ"><h4>はじめに</h4><a href="../../docs/">ヘルプホーム</a><a href="../../docs/install/">ダウンロードとインストール</a><a href="../../docs/welcome-tour/">ようこそツアー</a><a href="../../docs/first-day/">最初の一日</a><h4>Warashiの使い方</h4><a href="../../docs/menu-bar/">メニューバーとポップオーバー</a><a href="../../docs/notch-and-island/">ノッチとアイランド</a><a href="../../docs/customize/">ポップオーバーとノッチの配置</a><a href="../../docs/window/">ウインドウと概要</a><a href="../../docs/apps/">アプリ</a><a href="../../docs/history/">履歴</a><a href="../../docs/time-and-cost/">時間 × コスト</a><a href="../../docs/power-flow/" aria-current="page">電力フロー</a><a href="../../docs/developer/">デベロッパ</a><a href="../../docs/storage/">ストレージ</a><a href="../../docs/speed-test/">スピードテスト</a><a href="../../docs/weekly-summary/">週間サマリー</a><a href="../../docs/upgrade-advisor/">アップグレードアドバイザー</a><a href="../../docs/alerts/">アラート</a><a href="../../docs/system-processes/">システムプロセス</a><h4>設定ほか</h4><a href="../../docs/settings/">設定</a><a href="../../docs/updates/">アップデート</a><a href="../../docs/command-line-and-ai/">コマンドラインとAIアプリ</a><a href="../../docs/beta/">ベータ版とライセンス</a><a href="../../docs/privacy-and-data/">プライバシーとデータ</a><a href="../../docs/troubleshooting/">トラブルシューティング</a><h4>ガイド</h4><a href="../../guides/why-is-my-mac-slow/">Macが遅い原因</a><a href="../../guides/how-much-ram-do-i-need/">Macに必要なRAM容量</a><a href="../../guides/whats-draining-my-macbook-battery/">MacBookのバッテリーを消耗させているもの</a><a href="../../guides/whats-taking-up-space-on-my-mac/">Macのストレージを占めているもの</a><a href="../../guides/test-internet-speed-on-mac/">Macでインターネット速度をテストする</a></nav></details>
+    <article class="prose">
+<p>電力フローは、Macの電力がどこから来て、どこへ行っているかを、現在の状態で表示します。</p>
+<ol class="steps"><li><span class="step-title">開く</span><p>概要の電力タイルにある<b>電力フロー</b>ボタンを押します。ポップオーバーでは<b>電力</b>を押します。ポップオーバーに電力フローの小型版を追加することもできます。<b>概要</b>（右上）で戻れます。</p><figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/power-flow-light.webp" alt="充電中の電力フロー：充電器がバッテリーと「このMac」に分岐し、「このMac」はチップとRAM、USBデバイス、その他すべてに分かれます" width="800" height="519" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/power-flow-dark.webp" alt="" width="800" height="519" loading="lazy" decoding="async"></span></figure></li><li><span class="step-title">左から右へ読む</span><p>電力は<b>充電器</b>または<b>バッテリー</b>から始まり、<b>このMac</b>を通って、<b>チップとRAM</b>、<b>USBデバイス</b>、画面やWi-Fiなどの<b>その他すべて</b>に届きます。太い経路ほど多くの電力が流れています。</p></li><li><span class="step-title">充電中は</span><p>充電器の経路は2つに分かれ、1つは<b>バッテリー</b>へ、もう1つは<b>このMac</b>へ直接向かいます。そのため、「このMac」の数値はMac自身が使用している分だけです。</p></li><li><span class="step-title">1つの経路に注目する</span><p>供給元や行き先にポインタを合わせると、ほかが薄くなります。</p></li></ol>
+<h2>表示される内容</h2>
+<div class="table"><table><tr><th>上部の1行の意味</th><th>状況</th></tr>
+<tr><td>充電器で動作中。バッテリーは維持されています</td><td>充電器でMacを動作させていて、バッテリーは充電も消費もされていません。</td></tr>
+<tr><td>充電器でこのMacを動作させながら、バッテリーを充電しています</td><td>両方から。バッテリーへは別の枝があります。</td></tr>
+<tr><td>バッテリーで動作中</td><td>バッテリーが唯一の供給元です。</td></tr>
+<tr><td>充電器の電力が足りません</td><td>バッテリーが、充電器の供給電力を補っています。</td></tr></table></div>
+<p>図の下に、過去15分間にエネルギーを最も多く使用したアプリ、充電器とバッテリーの詳細、接続中のものが表示されます。</p>
+<div class="tip"><b>補足：</b> これらは別々のセンサーによる推定値を数秒間平均したものなので、両側が完全に一致しないことがあります。USBデバイスの更新は約1分ごとです。充電器とUSBの電力も記録されます。履歴の充電器チャートをご覧ください。</div>
+<div class="help-box"><h3>うまくいかないときは</h3><ul><li><b>「利用不可」と表示される：</b> 電力フローにはバッテリーと充電器の測定値が必要なため、デスクトップMacでは利用できません。</li><li><b>光の動きが止まった：</b> 視差効果を減らす設定、低電力モード、または設定 › 一般 › 動きのある表示がオフのときは、光は動きません。</li></ul><p style="margin-top:8px">詳しくは<a href="../../docs/troubleshooting/">トラブルシューティング</a>をご覧いただくか、<a href="mailto:adam@warashi.app">adam@warashi.app</a>までメールでお問い合わせください。</p></div>
+<div class="next"><a href="../../docs/time-and-cost/"><small>前へ</small>時間 × コスト</a><a href="../../docs/developer/" style="text-align:right"><small>次へ</small>デベロッパ</a></div></article>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
+      <nav aria-label="フッター"><a href="../../docs/">ヘルプ</a><a href="../../guides/">ガイド</a><a href="../../faq/">Q&amp;A</a><a href="../../../changelog/">変更履歴</a><a href="../../../press/">プレス</a><a href="../../../privacy/">プライバシー</a><a href="../../../terms/">利用規約</a><a href="../../../refunds/">返金</a><a href="mailto:adam@warashi.app">お問い合わせ</a></nav>
+    </div>
+    <p class="fine">© 2026 Adam Markocki. ポーランドで心を込めて作っています。WarashiはAppleとは提携していません。Mac、macOS、Apple siliconはApple Inc.の商標です。</p>
+  </div>
+</footer>
+<script src="../../../assets/js/site.js" defer></script>
+</body>
+</html>

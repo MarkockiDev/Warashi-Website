@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Warashi: a caixa-preta do seu Mac</title>
+<meta name="description" content="O Warashi é a caixa-preta do seu Mac: um monitor tranquilo de barra de menus para Apple silicon que lembra o que seu Mac fez, qual app estava por trás e do que seu próximo Mac precisa.">
+<link rel="canonical" href="https://warashi.app/pt-br/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Warashi">
+<meta property="og:title" content="Warashi: a caixa-preta do seu Mac">
+<meta property="og:description" content="O Warashi é a caixa-preta do seu Mac: um monitor tranquilo de barra de menus para Apple silicon que lembra o que seu Mac fez, qual app estava por trás e do que seu próximo Mac precisa.">
+<meta property="og:url" content="https://warashi.app/pt-br/">
+<meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Warashi: a caixa-preta do seu Mac. O ícone do espírito ao lado da janela do Warashi e da janela da barra de menus.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Warashi: a caixa-preta do seu Mac">
+<meta name="twitter:description" content="O Warashi é a caixa-preta do seu Mac: um monitor tranquilo de barra de menus para Apple silicon que lembra o que seu Mac fez, qual app estava por trás e do que seu próximo Mac precisa.">
+<meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="Warashi: a caixa-preta do seu Mac. O ícone do espírito ao lado da janela do Warashi e da janela da barra de menus.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+// Website analytics: cookieless (nothing stored in the browser), EU servers, no person profiles, Do Not Track respected.
+posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
+  api_host: "https://eu.i.posthog.com", ui_host: "https://eu.posthog.com",
+  persistence: "memory", person_profiles: "identified_only", respect_dnt: true,
+  capture_pageview: true, capture_pageleave: true, disable_session_recording: true,
+});
+posthog.register({ surface: "website" });
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Warashi","applicationCategory":"UtilitiesApplication","operatingSystem":"macOS 26 or later (Apple silicon)","description":"Um monitor de sistema nativo do macOS na barra de menus que registra o histórico do seu Mac: CPU, memória, GPU, potência, temperatura, rede, disco, bateria e uso por app, com um Consultor de Upgrade.","url":"https://warashi.app/","image":"https://warashi.app/assets/img/app-icon.png","author":{"@type":"Person","name":"Adam Markocki","url":"https://markockiadam.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Warashi","url":"https://warashi.app/"}</script>
+
+
+
+
+<!--i18n-head--><link rel="alternate" hreflang="en" href="https://warashi.app/"><link rel="alternate" hreflang="x-default" href="https://warashi.app/"><link rel="alternate" hreflang="pl" href="https://warashi.app/pl/"><link rel="alternate" hreflang="fr" href="https://warashi.app/fr/"><link rel="alternate" hreflang="es" href="https://warashi.app/es/"><link rel="alternate" hreflang="pt-BR" href="https://warashi.app/pt-br/"><link rel="alternate" hreflang="ja" href="https://warashi.app/ja/"><link rel="alternate" hreflang="zh-Hans" href="https://warashi.app/zh-hans/"><!--/i18n-head-->
+</head>
+<body>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="pill">
+    <div class="row">
+      <a class="brand" href="index.html"><img src="../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
+      <nav class="nav" aria-label="Principal"><a href="index.html#glance" aria-current="page">Recursos</a><a href="docs/">Ajuda</a><a href="guides/">Guias</a><a href="faq/">Perguntas e respostas</a><a href="../changelog/">Novidades</a></nav>
+      
+      <!--i18n-lang--><details class="lang"><summary aria-label="Language"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><ellipse cx="8" cy="8" rx="2.8" ry="6.4"/><path d="M1.8 6h12.4M1.8 10h12.4"/></svg><span>PT</span></summary><div class="lang-menu"><a lang="en" hreflang="en" href="../">English</a><a lang="pl" hreflang="pl" href="../pl/">Polski</a><a lang="fr" hreflang="fr" href="../fr/">Français</a><a lang="es" hreflang="es" href="../es/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="./" aria-current="true">Português (Brasil)</a><a lang="ja" hreflang="ja" href="../ja/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-hans/">简体中文</a></div></details><!--/i18n-lang-->
+      <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">Download</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+    <div class="sheet" id="sheet"><div><nav aria-label="Principal"><a href="index.html#glance" aria-current="page">Recursos</a><a href="docs/">Ajuda</a><a href="guides/">Guias</a><a href="faq/">Perguntas e respostas</a><a href="../changelog/">Novidades</a></nav></div></div>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="status reveal"><span>Beta público gratuito · para Macs com Apple silicon no macOS 26 · <a href="../changelog/">novidade: um visual novo e acolhedor e um entalhe que você pode organizar</a></span></p>
+    <h1 class="reveal d1">A caixa-preta do seu <em>Mac</em>.</h1>
+    <div class="split">
+      <div>
+        <p class="lead reveal d2">O Warashi observa em silêncio da sua barra de menus e lembra. O que deixou seu Mac lento, qual app drenou a bateria e do que seu próximo Mac realmente precisa.</p>
+        <div id="download" class="reveal d3" style="margin-top:30px"><div>
+<a class="btn" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="hero">Baixe o beta gratuito</a>
+</div></div>
+      </div>
+      <div class="desk reveal d2" role="img" aria-label="Prévia animada: o entalhe se abrindo em um mini painel e depois o item da barra de menus abrindo a janela do Warashi">
+        <div class="bar"><b style="font-weight:700">&#63743;</b><span>Finder</span><span>Arquivo</span>
+          <span class="right"><span class="mb-item"><img src="../assets/img/glyph.svg" alt=""><span><span data-live="cpu">23</span>%</span></span><span>14:32</span></span></div>
+        <div class="notch">
+          <div class="glance"><span><i style="background:#E08A5E"></i><span data-live="cpu">23</span>%</span><span><span data-live="mem">24.8</span>G<i style="background:#8FAAD0"></i></span></div>
+          <div class="dash">
+            <div class="tile" style="--i:0"><div class="cap">CPU</div><div class="num"><span data-live="cpu">23</span><small>%</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="cpu" fill="none" stroke="#E08A5E" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
+            <div class="tile" style="--i:1"><div class="cap">Memória</div><div class="num"><span data-live="mem">24,8</span><small>GB</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="mem" fill="none" stroke="#8FAAD0" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
+            <div class="tile" style="--i:2"><div class="cap">Potência</div><div class="num"><span data-live="pwr">14.2</span><small>W</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="pwr" fill="none" stroke="#D9AE55" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
+          </div>
+        </div>
+        <span class="themed peek"><img class="t-light" src="../assets/img/app/overview-light.webp" alt="" width="2160" height="1400"><img class="t-dark" src="../assets/img/app/overview-dark.webp" alt="" width="2160" height="1400"></span>
+        <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1402"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1402"></span>
+        <svg class="cursor" viewBox="0 0 24 24" style="left:62%; top:64%" aria-hidden="true"><path d="M4 2l15 9-7 1.6L8.5 20z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="glance">
+  <div class="wrap zig">
+    <div>
+      <div class="marker reveal"><b>01</b>A visão rápida</div>
+      <h2 class="reveal d1">Um espírito. Um número. Nada no seu caminho.</h2>
+      <p class="lead reveal d2">O Warashi mantém um único item pequeno na sua barra de menus. O resto está a um clique, e ele só se manifesta quando algo precisa de você.</p>
+      <ul class="points reveal d3">
+        <li><b>A barra de menus</b>O espírito e o número que importa para você: CPU, memória, potência, temperatura e mais.</li>
+        <li><b>O entalhe, trabalhando para você</b>Dois números ficam ao lado do entalhe. Passe o ponteiro e ele se abre em um painel ao vivo que você mesmo organiza.</li>
+        <li><b>Qualquer tela</b>Em telas sem entalhe, uma pequena ilha faz o mesmo.</li>
+        <li><b>Você organiza</b>Escolha o que a janela da barra de menus e o entalhe mostram e arraste tudo para onde quiser.</li>
+      </ul>
+    </div>
+    <div class="glance-stage reveal d1" aria-label="O item de barra de menus e a ilha do Warashi">
+      <div class="zoom-bar"><span>Wi‑Fi</span><span class="mb-item"><img src="../assets/img/glyph.svg" alt=""><span class="label">23%</span></span><span>14:32</span></div>
+      <div class="island"><span><i style="background:#E08A5E"></i><span data-live="cpu">23</span>%</span><img src="../assets/img/glyph.svg" alt=""><span><span data-live="mem">24.8</span>G<i style="background:#8FAAD0"></i></span></div>
+      <p class="stage-caption">Quando a memória fica curta, o número vira o aviso.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter showcase">
+  <div class="wrap">
+    <div class="head">
+      <div class="marker reveal"><b>02</b>A janela</div>
+      <h2 class="reveal d1">Não só este segundo. A história toda.</h2>
+      <p class="lead reveal d2">Uma janela tranquila, em claro ou escuro, que mostra o que aconteceu enquanto você não olhava: o último minuto, o último dia, o último ano.</p>
+    </div>
+    <div class="segmented reveal" role="tablist" aria-label="Seções da janela">
+      <button role="tab" data-caption="Visão Geral: como seu Mac está agora, em palavras simples e quatro instrumentos ao vivo, com as últimas 24 horas e os apps que mais custam a você.">Visão Geral</button>
+      <button role="tab" data-caption="Apps: os apps mais ativos primeiro e depois todos os apps em uma lista rápida. Abra um para ver os processos e quem o assinou, encerre-o ou mostre-o no Finder e veja quanto tempo a mais de bateria você ganharia ao encerrá-lo.">Apps</button>
+      <button role="tab" data-caption="Histórico: um gráfico grande para cada medida, até 12 meses atrás. Linhas limpas que dá para ler, com os picos reais preservados, e como o período se compara ao anterior.">Histórico</button>
+      <button role="tab" data-caption="Tempo × Custo: por quanto tempo você usou cada app e quanto ele custou em energia, em primeiro e em segundo plano.">Tempo × Custo</button>
+      <button role="tab" data-caption="Sua semana: um título simples, o orçamento do seu Mac, os dias sob pressão de memória, disco, alertas e bateria, em comparação com a semana anterior.">Semanal</button>
+      <button role="tab" data-caption="Desenvolvedor: o que há em cada porta, por projeto, e quanto cada agente de código com IA está custando a este Mac.">Desenvolvedor</button>
+      <button role="tab" data-caption="Alertas: avisados uma vez, com as evidências, e somente quando você pediu aquele alerta.">Alertas</button>
+      <button role="tab" data-caption="Consultor de Upgrade: após 30 dias, de quanta memória, armazenamento e chip seu próximo Mac precisa, com as evidências.">Consultor de Upgrade</button>
+      <button role="tab" data-caption="Armazenamento: o que está enchendo seu disco, de aplicativos a downloads, e as maiores coisas de cada um. Só tamanhos, e ele nunca abre seus arquivos.">Armazenamento</button>
+      <button role="tab" data-caption="Teste de Velocidade: acompanhe sua velocidade de download e upload ao vivo e veja como a conexão se sai quando está ocupada.">Teste de Velocidade</button>
+      <button role="tab" data-caption="Ajustes: claro ou escuro, a barra de menus, o entalhe, os alertas e o custo do próprio Warashi, tudo em um só lugar.">Ajustes</button>
+    </div>
+    <div class="screen reveal">
+      <span class="themed"><img class="t-light" src="../assets/img/app/overview-light.webp" alt="Visão Geral do Warashi: quatro instrumentos ao vivo e as últimas 24 horas" width="2160" height="1400"><img class="t-dark" src="../assets/img/app/overview-dark.webp" alt="" width="2160" height="1400"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/apps-light.webp" alt="Apps do Warashi: cartões de apps, uma lista de todos os apps e um app aberto em um painel" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/apps-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/history-light.webp" alt="Histórico do Warashi: um gráfico grande com seletores de métrica e uma comparação" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/history-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/timecost-light.webp" alt="Tempo × Custo do Warashi: tempo em primeiro plano e energia por app" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/timecost-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/weekly-light.webp" alt="Resumo semanal do Warashi: título, orçamento e a semana em números" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/weekly-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/developer-light.webp" alt="Desenvolvedor do Warashi: servidores dev por projeto e agentes de IA" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/developer-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/alerts-light.webp" alt="Alertas do Warashi: alertas disparados, com as evidências" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/alerts-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/advisor-light.webp" alt="Consultor de Upgrade do Warashi: um relatório para o seu próximo Mac" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/advisor-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/storage-light.webp" alt="Armazenamento do Warashi: um anel do disco inteiro, com categorias por tamanho e as maiores pastas ao redor" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/storage-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/speed-light.webp" alt="Teste de Velocidade do Warashi: um mostrador com a velocidade de download ao vivo, com um gráfico do teste até agora" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/speed-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+      <span class="themed"><img class="t-light" src="../assets/img/app/settings-light.webp" alt="Ajustes do Warashi" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/settings-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+    </div>
+    <p class="caption" aria-live="polite"></p>
+    <p class="sample-note reveal">As telas de apps desta página usam dados de exemplo.</p>
+  </div>
+</section>
+
+<section class="chapter" id="power-flow">
+  <div class="wrap">
+    <div class="head">
+      <div class="marker reveal"><b>03</b>Fluxo de Energia<span class="new">Novo</span></div>
+      <h2 class="reveal d1">Veja para onde vai cada watt.</h2>
+      <p class="lead reveal d2">Do carregador e da bateria, passando pelo seu Mac, até o chip, os dispositivos USB e todo o resto. Durante a carga, a parte que vai para a bateria tem um caminho próprio, então o número do Mac é só o que o Mac está usando.</p>
+    </div>
+    <div class="flow-stage reveal"><svg class="flow-live" viewBox="0 0 1000 430" role="img" aria-label="Fluxo de Energia durante a carga: o carregador fornece 44 watts, 28 vão direto para a bateria e 16 para o Mac, que os usa no chip e na memória, nos dispositivos USB e em todo o resto"><defs><linearGradient id="fb-chgb" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="385" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--matcha)"/></linearGradient><linearGradient id="fl-chgb" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="247.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-138 0" to="275 0" dur="3.6s" begin="-0.0s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-chgm" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="385" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--ochre)"/></linearGradient><linearGradient id="fl-chgm" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="247.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-138 0" to="275 0" dur="3.2s" begin="-0.7s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-chip" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="700" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--clay)"/></linearGradient><linearGradient id="fl-chip" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="627.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-72 0" to="145 0" dur="4.2s" begin="-1.4s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-usb" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="700" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--indigo)"/></linearGradient><linearGradient id="fl-usb" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="627.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-72 0" to="145 0" dur="5s" begin="-2.1s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-rest" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="700" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--sub)"/></linearGradient><linearGradient id="fl-rest" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="627.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-72 0" to="145 0" dur="3.8s" begin="-2.8s" repeatCount="indefinite"/></linearGradient></defs><path d="M110 196 C247 196 247 53 385 53 L385 83 C247 83 247 224 110 224 Z" fill="url(#fb-chgb)" fill-opacity=".52"/><path d="M110 196 C247 196 247 53 385 53 L385 83 C247 83 247 224 110 224 Z" fill="url(#fl-chgb)"/><path d="M110 226 C247 226 247 248 385 248 L385 292 C247 292 247 244 110 244 Z" fill="url(#fb-chgm)" fill-opacity=".52"/><path d="M110 226 C247 226 247 248 385 248 L385 292 C247 292 247 244 110 244 Z" fill="url(#fl-chgm)"/><path d="M555 245 C627 245 627 142 700 142 L700 158 C627 158 627 261 555 261 Z" fill="url(#fb-chip)" fill-opacity=".52"/><path d="M555 245 C627 245 627 142 700 142 L700 158 C627 158 627 261 555 261 Z" fill="url(#fl-chip)"/><path d="M555 264 C627 264 627 256 700 256 L700 264 C627 264 627 272 555 272 Z" fill="url(#fb-usb)" fill-opacity=".52"/><path d="M555 264 C627 264 627 256 700 256 L700 264 C627 264 627 272 555 272 Z" fill="url(#fl-usb)"/><path d="M555 275 C627 275 627 360 700 360 L700 380 C627 380 627 295 555 295 Z" fill="url(#fb-rest)" fill-opacity=".52"/><path d="M555 275 C627 275 627 360 700 360 L700 380 C627 380 627 295 555 295 Z" fill="url(#fl-rest)"/>
+<g style="color:var(--ochre)"><rect x="30" y="178" width="80" height="80" rx="22" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(47.6 195.6) scale(1.867)"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0V8zM12 18v4"/></g></g><text class="label" x="70" y="288" text-anchor="middle">Carregador</text><text class="watts" x="70" y="316" text-anchor="middle">44.0 W</text><text class="note" x="70" y="337" text-anchor="middle">de 96 W</text>
+<g style="color:var(--matcha)"><rect x="385" y="40" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(397.3 52.3) scale(1.307)"><rect x="2" y="7" width="18" height="10" rx="3"/><path d="M22.5 11v2M12 8.8l-3 3.8h3l-1 3 3-3.8h-3z"/></g></g><text class="label" x="454" y="56">Bateria</text><text class="watts" x="454" y="80">28.0 W</text><text class="note" x="454" y="99">carregando · 79%</text>
+<rect x="385" y="185" width="170" height="170" rx="44" style="fill:var(--hub);stroke:var(--edge)"/><g style="color:var(--ink)"><g class="icon" transform="translate(442 200) scale(2.35)"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19.5h20"/></g></g><text class="big" x="470" y="302" text-anchor="middle">16.0 W</text><text class="note" x="470" y="328" text-anchor="middle">Este Mac</text><g style="color:var(--clay)"><rect x="700" y="122" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 134.3) scale(1.307)"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></g></g><text class="label" x="770" y="156">Chip e RAM</text><text class="watts" x="992" y="157" text-anchor="end">6.0 W</text><g style="color:var(--indigo)"><rect x="700" y="232" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 244.3) scale(1.307)"><path d="M12 22v-5M8 9h8v6a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9zM10 9V3h4v6"/></g></g><text class="label" x="770" y="266">Dispositivos USB</text><text class="watts" x="992" y="267" text-anchor="end">3.0 W</text><g style="color:var(--sub)"><rect x="700" y="342" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 354.3) scale(1.307)"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></g></g><text class="label" x="770" y="367">Todo o resto</text><text class="note" x="770" y="387">tela, Wi-Fi</text><text class="watts" x="992" y="377" text-anchor="end">7.0 W</text></svg><span class="themed flow-shot"><img class="t-light" src="../assets/img/app/flow-light.webp" alt="Fluxo de Energia do Warashi durante a carga, com o carregador se dividindo entre a bateria e o Mac" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/flow-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
+    <div class="flow-notes reveal">
+      <div><h3>Carregador e bateria</h3><p>O que o carregador está fornecendo em relação à potência nominal dele e se a bateria está carregando, mantida ou ajudando.</p></div>
+      <div><h3>Seus dispositivos</h3><p>A energia que sai pelo USB, além das baterias de AirPods e mouses e dos discos externos que você pode ejetar.</p></div>
+      <div><h3>Ele lembra</h3><p>A potência do carregador e do USB entra no seu histórico, para você ver o que estava consumindo energia às 15h.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap zig wide">
+    <div>
+      <div class="marker reveal"><b>04</b>O que aconteceu aqui?<span class="new">Novo</span></div>
+      <h2 class="reveal d1">Clique em qualquer momento. Entenda o que houve.</h2>
+      <p class="lead reveal d2">Aponte para um pico em um gráfico e o Warashi diz o que estava acontecendo, em palavras simples, com os apps que estavam em execução e o que eles costumam fazer. Se nada de incomum aconteceu, ele diz isso.</p>
+      <ul class="points reveal d3">
+        <li><b>Evidências, não palpites</b>Swap, pressão de memória, calor, CPU e disco, a partir do que foi realmente registrado.</li>
+        <li><b>Direto ao app</b>Abra o app responsável e encerre-o ou mostre-o no Finder.</li>
+      </ul>
+    </div>
+    <div class="reveal d1"><span class="themed shot"><img class="t-light" src="../assets/img/app/moment-light.webp" alt="Histórico do Warashi com um momento marcado e a explicação dele" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/moment-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap zig wide flip">
+    <div>
+      <div class="marker reveal"><b>05</b>Para desenvolvedores<span class="new">Novo</span></div>
+      <h2 class="reveal d1">O que há naquela porta? Quanto aquele agente está custando?</h2>
+      <p class="lead reveal d2">Servidores dev agrupados por projeto, com um aviso quando um está aberto para a sua rede. Cada agente de código com IA, com a CPU e a memória que ele e as ferramentas dele usaram.</p>
+      <div class="term reveal d3"><pre><code><b>$</b> warashi explain 14:30
+Memory ran short
+<i>Swap rose from 1.2 GB to 8.6 GB.</i>
+
+<b>$</b> warashi apps --hours 3
+Xcode    CPU 37m 35s   memory 9.4 GB
+Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
+      <p class="reveal d3" style="color:var(--sub);margin-top:18px">O comando <code>warashi</code> e uma conexão opcional, somente leitura, deixam o Claude, o Cursor e outros apps de IA responderem a perguntas a partir do histórico do seu Mac. Nada é compartilhado a menos que você o adicione.</p>
+    </div>
+    <div class="reveal d1"><span class="themed shot"><img class="t-light" src="../assets/img/app/developer-light.webp" alt="Seção Desenvolvedor do Warashi com servidores dev e agentes de IA" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/developer-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap zig wide">
+    <div>
+      <div class="marker reveal"><b>06</b>Sua semana<span class="new">Novo</span></div>
+      <h2 class="reveal d1">Segunda-feira de manhã, em uma linha.</h2>
+      <p class="lead reveal d2">Um breve aviso sobre a semana anterior: foi mais pesada, faltou memória, quanto seus apps custaram e quanto do seu disco foi usado.</p>
+      <ul class="points reveal d3">
+        <li><b>Avisos antes de doer</b>“Seu disco de inicialização pode ficar quase cheio em cerca de 40 dias”, e um alerta quando a memória fica curta por muito tempo.</li>
+        <li><b>Repouso, explicado</b>A bateria perdida durante a noite, quantas vezes o Mac despertou e o que o mantém ativo agora.</li>
+      </ul>
+    </div>
+    <div class="reveal d1"><span class="themed shot"><img class="t-light" src="../assets/img/app/weekly-light.webp" alt="Resumo semanal do Warashi" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/weekly-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap zig wide flip">
+    <div>
+      <div class="marker reveal"><b>07</b>Seu disco e sua conexão<span class="new">Novo</span></div>
+      <h2 class="reveal d1">O que está enchendo seu disco? Qual é a velocidade da sua internet?</h2>
+      <p class="lead reveal d2">Veja seu disco inteiro como um único anel, de aplicativos e downloads ao Xcode e aos Simuladores, com as maiores coisas de cada um. Ele só olha: nada é apagado.</p>
+      <ul class="points reveal d3">
+        <li><b>Você continua no controle</b>O Acesso Total ao Disco é opcional e só soma tamanhos. Sem ele, o Warashi deixa as pastas protegidas em paz, então o macOS nunca fica pedindo.</li>
+        <li><b>Um teste de velocidade de verdade</b>Veja o download e o upload ao vivo em um mostrador e depois confira como a conexão se sai quando está ocupada, usando o próprio teste da Apple.</li>
+      </ul>
+    </div>
+    <div class="reveal d1"><span class="themed shot"><img class="t-light" src="../assets/img/app/storage-light.webp" alt="Armazenamento do Warashi: um anel do disco inteiro, com categorias por tamanho e as maiores pastas ao redor" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/storage-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap">
+    <div class="head">
+      <div class="marker reveal"><b>08</b>Tudo</div>
+      <h2 class="reveal d1">Tudo isso, em um app pequeno.</h2>
+    </div>
+    <div class="everything reveal">
+      <section><h3>Sempre presente</h3><ul><li><b>Barra de menus:</b> o espírito e um número que você escolhe</li><li><b>Entalhe e ilha:</b> uma visão rápida que se abre em um mini painel</li><li><b>Janela da barra de menus:</b> todas as leituras a um clique, organizadas do seu jeito</li><li><b>Dispositivos conectados:</b> AirPods, mouses e discos externos</li></ul></section>
+      <section><h3>Leituras ao vivo</h3><ul><li><b>CPU</b> por tipo de núcleo, <b>GPU</b> e pressão de <b>memória</b> com swap</li><li><b>Potência</b> e <b>Fluxo de Energia</b></li><li><b>Temperatura</b> e ventiladores</li><li><b>Rede, disco</b> e <b>bateria</b>, com saúde e ciclos</li><li><b>Teste de Velocidade</b> para sua conexão</li></ul></section>
+      <section><h3>O que aconteceu</h3><ul><li><b>Histórico</b> de até 12 meses, a cada poucos segundos durante um dia</li><li><b>O que aconteceu aqui?</b> para qualquer momento</li><li><b>Tempo × Custo</b> por dia e por semana</li><li><b>Relatório de repouso</b> e <b>resumo semanal</b></li><li><b>Armazenamento:</b> o que enche seu disco</li></ul></section>
+      <section><h3>O que fazer</h3><ul><li><b>Alertas:</b> apps descontrolados, memória, disco, calor, saúde da bateria</li><li><b>Previsões</b> para disco enchendo e falta prolongada de memória</li><li><b>Encerre</b> um app, ou <b>mostre-o no Finder</b>, e veja quanto isso economizaria</li><li><b>Consultor de Upgrade</b> para o seu próximo Mac</li></ul></section>
+      <section><h3>Para desenvolvedores</h3><ul><li><b>Portas</b> por projeto, com Abrir e Copiar</li><li><b>Agentes de IA</b> e quanto eles custam</li><li><b>Inspetor de processos:</b> linha de comando, processo pai, assinatura</li><li>Comando <b>warashi</b> e <b>MCP</b> para apps de IA</li></ul></section>
+      <section><h3>Seu</h3><ul><li><b>Claro e escuro,</b> ou siga o seu Mac</li><li><b>Exporte</b> tudo como CSV</li><li><b>Atualiza-se</b> sozinho e avisa quando há uma nova versão</li><li><b>Sem conta.</b> Seu histórico fica no seu Mac</li></ul></section>
+    </div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap">
+    <div class="head">
+      <div class="marker reveal"><b>09</b>As respostas</div>
+      <h2 class="reveal d1">As perguntas que você realmente tem.</h2>
+    </div>
+    <div class="answers">
+      <div class="answer reveal"><h3>Preciso de um Mac novo? Qual?</h3><p>O Consultor de Upgrade observa a pressão de memória, o swap, o crescimento do armazenamento e com que frequência o chip trabalha no limite. Após 30 dias, ele diz de quanta memória e armazenamento seu próximo Mac precisa, e se um chip mais rápido ajudaria, com as evidências. <a class="tag link-arrow" href="docs/upgrade-advisor/">Como ele decide</a></p></div>
+      <div class="answer reveal"><h3>Quanto cada app realmente me custa?</h3><p>Tempo em primeiro plano, unido à energia: quanto um app custa por hora de uso e o que drenou a bateria de apps que você nem chegou a abrir. <a class="tag link-arrow" href="docs/time-and-cost/">Tempo × Custo</a></p></div>
+      <div class="answer reveal"><h3>Por que estava lento há dez minutos?</h3><p>Um ano de histórico, a cada poucos segundos no último dia. Clique no momento em que aconteceu e o Warashi explica, com o app responsável. <a class="tag link-arrow" href="guides/why-is-my-mac-slow/">Leia o guia</a></p></div>
+      <div class="answer reveal"><h3>Avise quando importar. Só então.</h3><p>Um app descontrolado, memória crescendo rápido, um disco enchendo, calor, saúde da bateria. Uma vez por problema, com as evidências. <a class="tag link-arrow" href="docs/alerts/">Alertas</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap">
+    <div class="head">
+      <div class="marker reveal"><b>10</b>O peso</div>
+      <h2 class="reveal d1">Um monitor que não pesa no seu Mac.</h2>
+      <p class="lead reveal d2">Swift nativo, feito para Apple silicon. O Warashi mede o próprio custo do mesmo jeito que mede qualquer outro app e mostra para você.</p>
+    </div>
+    <div class="figures reveal">
+      <div class="figure"><div class="big" data-count="0.16">0.16<small>%</small></div><p>de um núcleo, em segundo plano</p></div>
+      <div class="figure"><div class="big" data-count="25">25<small>MB</small></div><p>de memória, normalmente</p></div>
+      <div class="figure"><div class="big">0<small>contas</small></div><p>Baixe, abra, pronto.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap zig flip">
+    <div>
+      <div class="marker reveal"><b>11</b>A promessa</div>
+      <h2 class="reveal d1">A história do seu Mac fica no seu Mac.</h2>
+      <p class="lead reveal d2">O histórico, os nomes de apps e a atividade ficam em um pequeno banco de dados no seu Mac. Eles só saem de lá se você escolher conectar um app de IA. Sem conta. Sem gravação de tela, sem teclas digitadas, sem acesso a arquivos.</p>
+      <p class="reveal d3" style="color:var(--sub)">O Warashi envia estatísticas de uso anônimas (versão, macOS, família do chip, quais recursos são usados) para ajudar a melhorá-lo. Nunca nomes de apps, arquivos ou histórico. <a class="link-arrow" href="docs/privacy-and-data/">Exatamente o que é enviado</a></p>
+    </div>
+    <img class="shot reveal d1" src="../assets/img/onboarding.webp" alt="Boas-vindas do Warashi: Conheça o Warashi" width="720" height="520" loading="lazy">
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="wrap">
+    <div class="head"><div class="marker reveal"><b>12</b>Perguntas</div><h2 class="reveal d1">Boas perguntas.</h2></div>
+    <div class="qa reveal"><h3>Quando posso ter o Warashi?</h3><p>Agora. O beta é gratuito para baixar e se atualiza sozinho. Quando o Warashi 1.0 chegar, o beta para e pede que você atualize e compre uma licença.</p></div>
+    <div class="qa reveal"><h3>Em quais Macs ele funciona?</h3><p>Macs com Apple silicon (M1 e posteriores) com macOS 26 ou mais recente.</p></div>
+    <div class="qa reveal"><h3>É gratuito?</h3><p>Gratuito durante o beta. O Warashi 1.0 será uma compra única, sem assinatura.</p></div>
+    <div class="qa reveal"><h3>Qual é a diferença em relação ao Monitor de Atividade?</h3><p>O Monitor de Atividade mostra este segundo. O Warashi lembra: o que aconteceu enquanto você não olhava, qual app estava por trás, quanto custou e o que isso significa para o seu próximo Mac.</p></div>
+    <p class="reveal" style="margin-top:28px"><a class="link-arrow" href="faq/">Todas as perguntas</a></p>
+  </div>
+</section>
+
+<section class="chapter maker">
+  <div class="wrap">
+    <div class="head">
+      <div class="marker reveal"><b>13</b>Quem faz</div>
+      <h2 class="reveal d1">Feito por uma pessoa, com carinho.</h2>
+    </div>
+    <div class="zig">
+      <img class="portrait reveal" src="../assets/img/adam.webp" alt="Retrato ilustrado do Adam, sorrindo de braços cruzados, sob um arco-íris pintado em um parque verde" width="960" height="723" loading="lazy">
+      <div class="reveal d1">
+        <p class="lead" style="color:var(--ink)">Oi, sou o Adam, um desenvolvedor independente. O Warashi é um projeto meu: o app, o design dele e este site.</p>
+        <p class="lead">Quero que ele seja o tipo de app para Mac que eu mesmo adoraria usar: calmo, honesto com os números e leve para o seu Mac. Se você tiver uma ideia, ou se algo não estiver certo, escreva para mim. Quero ouvir.</p>
+        <p class="signature">Adam</p>
+        <p style="display:flex; flex-wrap:wrap; gap:10px 26px; margin:22px 0 0">
+          <a class="link-arrow" href="https://markockiadam.com" rel="me">markockiadam.com</a> <a class="link-arrow" href="mailto:adam@warashi.app">adam@warashi.app</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="finale">
+  <div class="wrap">
+    <img class="icon reveal" src="../assets/img/app-icon.png" alt="" width="120" height="120">
+    <h2 class="reveal d1">Deixe um espírito tranquilo<br>cuidar do seu Mac.</h2>
+    <p class="lead reveal d2" style="margin:0 auto">Experimente de graça enquanto o Warashi está em beta.</p>
+    <div class="reveal d3"><div>
+<a class="btn" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="finale">Baixe o beta gratuito</a>
+</div></div>
+    <a class="ph-badge reveal d3" href="https://www.producthunt.com/products/warashi/reviews/new?utm_source=badge-product_review&amp;utm_medium=badge&amp;utm_source=badge-warashi" target="_blank" rel="noopener"><span class="themed"><img class="t-light" src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1366176&amp;theme=light" alt="Warashi - A caixa-preta do seu Mac | Product Hunt" width="250" height="54" loading="lazy"><img class="t-dark" src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1366176&amp;theme=dark" alt="" width="250" height="54" loading="lazy"></span></a>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="index.html"><img src="../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
+      <nav aria-label="Rodapé"><a href="docs/">Ajuda</a><a href="guides/">Guias</a><a href="faq/">Perguntas e respostas</a><a href="../changelog/">Novidades</a><a href="../press/">Imprensa</a><a href="../privacy/">Privacidade</a><a href="../terms/">Termos</a><a href="../refunds/">Reembolsos</a><a href="mailto:adam@warashi.app">Contato</a></nav>
+    </div>
+    <p class="fine">© 2026 Adam Markocki. Feito com carinho na Polônia. O Warashi não é afiliado à Apple; Mac, macOS e Apple silicon são marcas registradas da Apple Inc.</p>
+  </div>
+</footer>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Comment tester son débit Internet sur un Mac · Warashi</title>
+<meta name="description" content="Mesurez votre connexion avec l’outil intégré à macOS, comprenez les chiffres, et obtenez un résultat fiable.">
+<link rel="canonical" href="https://warashi.app/fr/guides/test-internet-speed-on-mac/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Warashi">
+<meta property="og:title" content="Comment tester son débit Internet sur un Mac · Warashi">
+<meta property="og:description" content="Mesurez votre connexion avec l’outil intégré à macOS, comprenez les chiffres, et obtenez un résultat fiable.">
+<meta property="og:url" content="https://warashi.app/fr/guides/test-internet-speed-on-mac/">
+<meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Warashi : la boîte noire de votre Mac. L’icône de l’esprit à côté de la fenêtre Warashi et de la fenêtre de la barre des menus.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Comment tester son débit Internet sur un Mac · Warashi">
+<meta name="twitter:description" content="Mesurez votre connexion avec l’outil intégré à macOS, comprenez les chiffres, et obtenez un résultat fiable.">
+<meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="Warashi : la boîte noire de votre Mac. L’icône de l’esprit à côté de la fenêtre Warashi et de la fenêtre de la barre des menus.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+// Website analytics: cookieless (nothing stored in the browser), EU servers, no person profiles, Do Not Track respected.
+posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
+  api_host: "https://eu.i.posthog.com", ui_host: "https://eu.posthog.com",
+  persistence: "memory", person_profiles: "identified_only", respect_dnt: true,
+  capture_pageview: true, capture_pageleave: true, disable_session_recording: true,
+});
+posthog.register({ surface: "website" });
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Comment tester son débit Internet sur un Mac","description":"Mesurez votre connexion avec l’outil intégré à macOS, comprenez les chiffres, et obtenez un résultat fiable.","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-09","dateModified":"2026-11-09","mainEntityOfPage":"https://warashi.app/guides/test-internet-speed-on-mac/"}</script>
+
+
+
+
+<!--i18n-head--><link rel="alternate" hreflang="en" href="https://warashi.app/guides/test-internet-speed-on-mac/"><link rel="alternate" hreflang="x-default" href="https://warashi.app/guides/test-internet-speed-on-mac/"><link rel="alternate" hreflang="pl" href="https://warashi.app/pl/guides/test-internet-speed-on-mac/"><link rel="alternate" hreflang="fr" href="https://warashi.app/fr/guides/test-internet-speed-on-mac/"><link rel="alternate" hreflang="es" href="https://warashi.app/es/guides/test-internet-speed-on-mac/"><link rel="alternate" hreflang="pt-BR" href="https://warashi.app/pt-br/guides/test-internet-speed-on-mac/"><link rel="alternate" hreflang="ja" href="https://warashi.app/ja/guides/test-internet-speed-on-mac/"><link rel="alternate" hreflang="zh-Hans" href="https://warashi.app/zh-hans/guides/test-internet-speed-on-mac/"><!--/i18n-head-->
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="pill">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
+      <nav class="nav" aria-label="Principal"><a href="../../index.html#glance">Fonctionnalités</a><a href="../../docs/">Aide</a><a href="../../guides/" aria-current="page">Guides</a><a href="../../faq/">FAQ</a><a href="../../../changelog/">Journal des modifications</a></nav>
+      
+      <!--i18n-lang--><details class="lang"><summary aria-label="Language"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><ellipse cx="8" cy="8" rx="2.8" ry="6.4"/><path d="M1.8 6h12.4M1.8 10h12.4"/></svg><span>FR</span></summary><div class="lang-menu"><a lang="en" hreflang="en" href="../../../guides/test-internet-speed-on-mac/">English</a><a lang="pl" hreflang="pl" href="../../../pl/guides/test-internet-speed-on-mac/">Polski</a><a lang="fr" hreflang="fr" href="./" aria-current="true">Français</a><a lang="es" hreflang="es" href="../../../es/guides/test-internet-speed-on-mac/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="../../../pt-br/guides/test-internet-speed-on-mac/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="../../../ja/guides/test-internet-speed-on-mac/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="../../../zh-hans/guides/test-internet-speed-on-mac/">简体中文</a></div></details><!--/i18n-lang-->
+      <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">Télécharger</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+    <div class="sheet" id="sheet"><div><nav aria-label="Principal"><a href="../../index.html#glance">Fonctionnalités</a><a href="../../docs/">Aide</a><a href="../../guides/" aria-current="page">Guides</a><a href="../../faq/">FAQ</a><a href="../../../changelog/">Journal des modifications</a></nav></div></div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap" style="max-width:800px">
+  <div class="page-head"><div class="crumbs"><a href="../../guides/">Guides</a></div><h1>Comment tester son débit Internet sur un Mac</h1>
+    <p class="lead">Mesurez votre connexion avec l’outil intégré à macOS, comprenez les chiffres, et obtenez un résultat fiable.</p><p class="meta">3 min de lecture · Mis à jour le 9 novembre 2026</p></div>
+  <article class="prose" style="padding-bottom:40px">
+<p>Votre Mac intègre un bon test de débit, conçu par Apple. Voici comment l’utiliser, et ce que les résultats signifient vraiment.</p>
+<h2>1. Lancer le test d’Apple</h2>
+<p>Ouvrez Terminal (Applications › Utilitaires), saisissez <code>networkQuality</code> et appuyez sur Retour. Cela prend environ une minute, puis affiche les capacités montante et descendante et la réactivité de votre connexion.</p>
+<h2>2. Ce que signifient les chiffres</h2>
+<ul><li><b>Descendant et montant</b> indiquent ce que votre connexion peut transférer chaque seconde, en mégabits. Le débit descendant compte pour le streaming et les pages web ; le débit montant compte pour les appels vidéo et les sauvegardes.</li>
+<li><b>La réactivité</b> correspond au nombre d’allers-retours que votre connexion gère en une minute lorsqu’elle est chargée. Plus c’est haut, mieux c’est. Une connexion rapide avec une faible réactivité explique pourquoi un appel vidéo peut saccader pendant que quelqu’un télécharge.</li>
+<li><b>La latence au repos</b> est le temps qu’une réponse met à arriver quand rien d’autre ne se passe.</li></ul>
+<h2>3. Obtenir un résultat fiable</h2>
+<ul><li>Mettez d’abord en pause les gros téléchargements, les sauvegardes dans le cloud et le streaming.</li>
+<li>Un VPN réduit généralement le résultat : désactivez-le pour tester la connexion elle-même.</li>
+<li>En Wi-Fi, testez près de votre routeur, puis depuis l’endroit où vous êtes habituellement : la différence vous indique si le problème vient de votre Wi-Fi ou de votre connexion Internet.</li>
+<li>Lancez-le deux ou trois fois. Un seul résultat n’est qu’un instant.</li></ul>
+<h2>4. Surveiller vos données</h2>
+<p>Un test de débit transfère de vraies données, qui peuvent atteindre 2 Go ou plus sur une connexion rapide. Évitez de le lancer en partage de connexion ou avec un forfait limité.</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/speed-test-live-light.webp" alt="Un test de débit dans Warashi : un cadran affichant le débit descendant en direct, avec un graphique du test jusqu’ici" width="800" height="519" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/speed-test-live-dark.webp" alt="" width="800" height="519" loading="lazy" decoding="async"></span><figcaption>Warashi lance le test d’Apple et affiche votre débit en direct pendant la mesure.</figcaption></figure><figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/speed-test-light.webp" alt="Un test de débit terminé dans Warashi : descendant, montant, réactivité, latence au repos et données utilisées" width="800" height="519" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/speed-test-dark.webp" alt="" width="800" height="519" loading="lazy" decoding="async"></span><figcaption>Le résultat, avec la réactivité, la latence au repos et les données utilisées par le test.</figcaption></figure>
+    <div class="tip" style="margin-top:44px"><b>Warashi le fait pour vous.</b> Test de débit lance le test d’Apple en un clic et affiche votre débit en direct sur un cadran. Vous pouvez quitter la page pendant le test, et il garde vos derniers résultats pour les comparer. <a href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="guide">Télécharger la bêta gratuite →</a></div>
+    <h2>Autres guides</h2><ul><li><a href="../../guides/why-is-my-mac-slow/">Pourquoi mon Mac est-il lent ?</a></li><li><a href="../../guides/how-much-ram-do-i-need/">De combien de RAM ai-je besoin sur un Mac ?</a></li><li><a href="../../guides/whats-draining-my-macbook-battery/">Qu’est-ce qui vide la batterie de mon MacBook ?</a></li><li><a href="../../guides/mac-running-hot-kernel-task/">Mac qui chauffe ? kernel_task et limitation thermique expliqués</a></li><li><a href="../../guides/should-i-upgrade-my-mac/">Faut-il changer de Mac ? Laissez vos propres données décider</a></li><li><a href="../../guides/whats-taking-up-space-on-my-mac/">Qu’est-ce qui occupe de l’espace sur mon Mac ?</a></li></ul>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
+      <nav aria-label="Pied de page"><a href="../../docs/">Aide</a><a href="../../guides/">Guides</a><a href="../../faq/">FAQ</a><a href="../../../changelog/">Journal des modifications</a><a href="../../../press/">Presse</a><a href="../../../privacy/">Confidentialité</a><a href="../../../terms/">Conditions</a><a href="../../../refunds/">Remboursements</a><a href="mailto:adam@warashi.app">Contact</a></nav>
+    </div>
+    <p class="fine">© 2026 Adam Markocki. Conçu avec soin en Pologne. Warashi n’est pas affilié à Apple ; Mac, macOS et Apple silicon sont des marques d’Apple Inc.</p>
+  </div>
+</footer>
+<script src="../../../assets/js/site.js" defer></script>
+</body>
+</html>

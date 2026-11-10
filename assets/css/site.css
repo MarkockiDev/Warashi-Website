@@ -436,3 +436,22 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 .ph-badge:hover { opacity: 1; transform: translateY(-1px); }
 .ph-badge:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
 .ph-badge .themed { width: 250px; height: 54px; border-radius: 12px; }
+
+/* Language switcher: built into every page by scripts/i18n/site_i18n.py */
+.pill:has(details.lang[open]) { overflow: visible; }
+.pill .lang { position: relative; margin-left: auto; }
+.pill:has(.lang) .cta { margin-left: 0; }
+.lang summary { display: flex; align-items: center; gap: 5px; padding: 8px 9px; border-radius: 12px; font-size: 13px; font-weight: 600; color: var(--ink); cursor: pointer; list-style: none; user-select: none; }
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary:hover, .lang[open] summary { background: color-mix(in srgb, var(--rule) 70%, transparent); }
+.lang-menu { position: absolute; top: calc(100% + 12px); right: 0; min-width: 196px; padding: 6px; background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; box-shadow: 0 18px 44px rgba(0, 0, 0, .18); }
+.lang-menu a { display: block; padding: 8px 12px; border-radius: 10px; font-size: 15px; color: var(--ink); text-decoration: none; white-space: nowrap; }
+.lang-menu a:hover { background: color-mix(in srgb, var(--rule) 70%, transparent); }
+.lang-menu a[aria-current] { font-weight: 600; }
+@media (max-width: 1000px) { .lang summary span { display: none; } .nav a { white-space: nowrap; } }
+@media (max-width: 560px) {
+  .pill { position: relative; }
+  .pill .lang { position: static; }
+  .lang-menu { top: 68px; right: 10px; }
+  .pill:has(.lang) .brand { font-size: 0; }
+}
