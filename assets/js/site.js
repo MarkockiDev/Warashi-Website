@@ -20,39 +20,41 @@ document.querySelectorAll(".sheet a").forEach((a) => a.addEventListener("click",
   toggle?.setAttribute("aria-expanded", "false");
 }));
 
-// 11 November, Polish Independence Day: a greeting above the navigation for the whole day in Poland
-// (Europe/Warsaw, midnight to midnight); it can't be closed. "?pl11" in the address shows it on any day, for checking.
+// 11 November, Polish Independence Day: a celebration card under the navigation, for the whole day in Poland
+// (Europe/Warsaw, midnight to midnight). It can't be closed. "?pl11" in the address shows it on any day, for checking.
 const HOLIDAY = {
-  en: ["11 November", "Happy Independence Day, Poland! Warashi is made with care in Poland.", "Learn more"],
-  pl: ["11 listopada", "Wszystkiego dobrego w Narodowe Święto Niepodległości! Warashi powstaje w Polsce, z sercem.", "Dowiedz się więcej"],
-  fr: ["11 novembre", "Bonne fête de l’Indépendance à la Pologne ! Warashi est fait avec soin en Pologne.", "En savoir plus"],
-  es: ["11 de noviembre", "¡Feliz Día de la Independencia, Polonia! Warashi está hecho con cariño en Polonia.", "Más información"],
-  "pt-BR": ["11 de novembro", "Feliz Dia da Independência, Polônia! O Warashi é feito com carinho na Polônia.", "Saiba mais"],
-  ja: ["11月11日", "ポーランド独立記念日おめでとう！ Warashiはポーランドで心を込めて作られています。", "詳しく見る"],
-  "zh-Hans": ["11 月 11 日", "祝波兰独立日快乐！Warashi 在波兰用心打造。", "了解更多"],
+  en: ["11 November · National Independence Day", "Today, Poland celebrates its independence.", "Warashi is made here, with care.", "The story of 11 November"],
+  pl: ["11 listopada · Narodowe Święto Niepodległości", "Dziś Polska świętuje odzyskanie niepodległości.", "Warashi powstaje tutaj, z sercem.", "Historia 11 listopada"],
+  fr: ["11 novembre · Fête de l’Indépendance", "Aujourd’hui, la Pologne fête son indépendance.", "Warashi est fait ici, avec soin.", "L’histoire du 11 novembre"],
+  es: ["11 de noviembre · Día de la Independencia", "Hoy, Polonia celebra su independencia.", "Warashi se hace aquí, con cariño.", "La historia del 11 de noviembre"],
+  "pt-BR": ["11 de novembro · Dia da Independência", "Hoje, a Polônia celebra sua independência.", "O Warashi é feito aqui, com carinho.", "A história do 11 de novembro"],
+  ja: ["11月11日 · ポーランド独立記念日", "今日、ポーランドは独立を祝います。", "Warashiはここポーランドで、心を込めて作られています。", "11月11日の物語"],
+  "zh-Hans": ["11 月 11 日 · 波兰独立日", "今天，波兰庆祝独立。", "Warashi 在这里用心打造。", "11 月 11 日的故事"],
 };
 (() => {
   const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Warsaw", month: "2-digit", day: "2-digit" }).format(new Date());
   if (today !== "11-11" && !location.search.includes("pl11")) return;
-  const header = document.querySelector(".site-header");
-  if (!header) return;
+  const main = document.querySelector("main");
+  if (!main) return;
   const lang = document.documentElement.lang;
-  const [when, text, more] = HOLIDAY[lang] || HOLIDAY.en;
-  const note = document.createElement("div");
-  note.className = "holiday";
-  note.setAttribute("role", "note");
-  note.innerHTML = '<span class="kotylion" aria-hidden="true"></span><p><b class="when"></b><span></span> <a class="more" rel="noopener" target="_blank"><span></span><i aria-hidden="true">\u203a</i></a></p>';
-  note.querySelector("b").textContent = when;
-  note.querySelector("p > span").textContent = text;
-  const link = note.querySelector("a");
+  const [eyebrow, title, made, more] = HOLIDAY[lang] || HOLIDAY.en;
+  const card = document.createElement("aside");
+  card.className = "celebrate";
+  card.setAttribute("aria-label", eyebrow);
+  card.innerHTML = '<div class="rosette" aria-hidden="true"><svg class="tails" viewBox="0 0 60 66">'
+    + '<path d="M22 0 L30 4 L19 66 L12 57 L4 63 Z" fill="#F4F1EC" stroke="rgba(0,0,0,.12)" stroke-width=".6"/>'
+    + '<path d="M38 0 L30 4 L41 66 L48 57 L56 63 Z" fill="#C8102E" stroke="rgba(60,0,10,.3)" stroke-width=".6"/></svg>'
+    + '<span class="kotylion"></span></div><p class="eyebrow"></p><h2></h2><p class="made"></p>'
+    + '<a class="more" rel="noopener" target="_blank"><span></span><i aria-hidden="true">\u203a</i></a>';
+  card.querySelector(".eyebrow").textContent = eyebrow;
+  card.querySelector("h2").textContent = title;
+  card.querySelector(".made").textContent = made;
+  const link = card.querySelector(".more");
   link.querySelector("span").textContent = more;
   link.href = lang === "pl" ? "https://pl.wikipedia.org/wiki/Narodowe_%C5%9Awi%C4%99to_Niepodleg%C5%82o%C5%9Bci"
                             : "https://en.wikipedia.org/wiki/National_Independence_Day_(Poland)";
-  header.prepend(note);
-  // The header floats over the page: move the page down by the greeting's height while it shows.
-  const room = () => document.documentElement.style.setProperty("--holiday", note.isConnected ? `${note.offsetHeight + 8}px` : "0px");
-  room();
-  addEventListener("resize", room);
+  main.prepend(card);
+  document.documentElement.classList.add("celebrating");
 })();
 
 // Docs menu: open on wide screens, folded on phones.
