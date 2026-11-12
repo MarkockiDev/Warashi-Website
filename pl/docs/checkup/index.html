@@ -67,7 +67,7 @@ posthog.register({ surface: "website" });
 <p>Kontrola to pierwsza karta w <b>Kondycji</b> (<kbd>⌘4</kbd>). Analizuje ostatni tydzień i odpowiada na jedno pytanie: czy Twój Mac jest w dobrej formie?</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-checkup-light.webp" alt="Kontrola: Twój Mac jest w dobrej formie, bateria z limitem ładowania, miejsce na dysku, pamięć, temperatura, kondycja dysków i to, co uruchamia się razem z Makiem" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-checkup-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <h2>Ocena</h2>
-<p>U góry: <b>Twój Mac jest w dobrej formie.</b> albo to, czemu warto się przyjrzeć, prostymi słowami. Ocena powstaje na podstawie tego, co Warashi zmierzyło w ostatnim tygodniu, i odświeża się co kilka minut.</p>
+<p>U góry: <b>Twój Mac jest w dobrej formie.</b> albo to, na co warto spojrzeć, prostymi słowami. Obok pierścień z jednym odcinkiem dla każdej sprawdzanej rzeczy, każdy w swoim kolorze: zielony, gdy jest dobrze, bursztynowy, gdy warto zerknąć, szary, gdy nie można tego odczytać. Wynik opiera się na tym, co Warashi mierzyło przez ostatni tydzień, i odświeża się co kilka minut.</p>
 <h2>Co analizuje</h2>
 <div class="table"><table><tr><th>Karta</th><th>Co pokazuje</th><th>Gdy prosi, byś spojrzał w dal</th></tr>
 <tr><td>Bateria</td><td>Naładowanie, kondycja, cykle i stan, a tuż obok <a href="../../docs/battery/">limit ładowania</a></td><td>Kondycja poniżej 85%; działaj poniżej 80%</td></tr>
@@ -77,6 +77,27 @@ posthog.register({ surface: "website" });
 <tr><td>Kondycja dysku</td><td>Jaka część deklarowanej żywotności SSD została zużyta</td><td>70% lub więcej albo jakiekolwiek błędy</td></tr>
 <tr><td>Dyski zewnętrzne</td><td>To samo dla każdego podłączonego dysku, który podaje swoją kondycję</td><td>70% lub więcej albo jakiekolwiek błędy</td></tr></table></div>
 <p>Naciśnij Pamięć, by zobaczyć stojące za nią aplikacje, Temperaturę, by zobaczyć jej historię, albo <b>Otwórz</b> na Miejscu na dysku.</p>
+<h2>Dlaczego mój Mac zwalnia?</h2>
+<p>Tydzień może wyglądać dobrze, a mimo to teraz Mac zwalnia. Naciśnij <b>Mac zwalnia?</b> obok oceny albo wpisz „zwalnia” w Znajdź cokolwiek, a potem rób dalej to, co szło wolno. Warashi obserwuje przez dziesięć sekund, porównuje to z Twoim zwykłym tygodniem na Macu i wskazuje najbardziej prawdopodobną przyczynę, z liczbami i jedną rzeczą do zrobienia:</p>
+<ul><li><b>Ciepło:</b> macOS spowalnia Maca, żeby go ochłodzić.</li>
+<li><b>Pamięć:</b> Macowi brakuje pamięci i przenosi ją na dysk; Warashi pokazuje aplikacje, które zajmują jej najwięcej.</li>
+<li><b>Jedna aplikacja:</b> pojedyncza aplikacja zużywa większość procesora, ponad swój zwykły poziom. <b>Pokaż w Aplikacjach</b> ją otwiera.</li>
+<li><b>Własna praca macOS:</b> indeksowanie Spotlight, kopia Time Machine, analiza biblioteki w Zdjęciach lub przygotowywanie uaktualnienia. Kończą się same.</li>
+<li><b>Wiele aplikacji naraz</b>, <b>prawie pełny dysk</b> lub <b>tryb niskiego zużycia energii</b>.</li>
+<li><b>Nic:</b> jeśli nic się nie wyróżnia, mówi o tym, razem z liczbami, które zobaczyło. Wolna strona internetowa to raczej wina połączenia, więc proponuje test szybkości.</li></ul>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-slow-light.webp" alt="Dlaczego mój Mac zwalnia?: Xcode zużywa większość procesora, z jego liczbami na tle zwykłych, Pokaż w Aplikacjach i to, na co patrzył Warashi" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<p>Pod odpowiedzią <b>Na co patrzył Warashi</b> pokazuje procesor, pamięć, temperaturę i dysk oraz najaktywniejsze aplikacje podczas sprawdzania. Nic nie jest zapisywane poza Twoją zwykłą historią.</p>
+<h2>Bezpieczeństwo i kopie zapasowe</h2>
+<p>Sześć kafelków pokazuje, jak dobrze chroniony jest Twój Mac. Naciśnij jeden, aby otworzyć miejsce w Ustawieniach systemowych, w którym to zmienisz.</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-security-light.webp" alt="Bezpieczeństwo i kopie zapasowe: uaktualnienia macOS gotowe do instalacji, Time Machine, FileVault włączony, zapora sieciowa wyłączona, Ochrona integralności systemu i Gatekeeper włączone" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<div class="table"><table><tr><th>Kafelek</th><th>Co pokazuje</th><th>Gdy prosi, byś spojrzał w dal</th></tr>
+<tr><td>Uaktualnienia macOS</td><td>Czy czeka uaktualnienie macOS i kiedy macOS ostatnio sprawdzał</td><td>Uaktualnienie jest gotowe do instalacji</td></tr>
+<tr><td>Time Machine</td><td>Kiedy Mac ostatnio zrobił kopię i na który dysk</td><td>Nie skonfigurowano lub brak kopii od tygodnia</td></tr>
+<tr><td>FileVault</td><td>Czy Twoje pliki są zaszyfrowane</td><td>Wyłączona</td></tr>
+<tr><td>Zapora sieciowa</td><td>Czy niechciane połączenia przychodzące są blokowane</td><td>Wyłączona</td></tr>
+<tr><td>Ochrona integralności systemu</td><td>Czy podstawowe pliki macOS są chronione</td><td>Wyłączona</td></tr>
+<tr><td>Gatekeeper</td><td>Czy aplikacje są sprawdzane, zanim pierwszy raz się otworzą</td><td>Wyłączona</td></tr></table></div>
+<p>Warashi tylko patrzy. Pyta własne narzędzia macOS, gdy otwiera się Kontrola, nigdy w tle, i niczego nie zmienia. Zobaczenie daty ostatniej kopii wymaga Pełnego dostępu do dysku.</p>
 <h2>Uruchamiane razem z Makiem</h2>
 <p>Poniżej wszystko, co samo się zainstalowało, by uruchamiać się razem z Makiem, od najbardziej kosztownych, wraz z energią zużytą w tym tygodniu. <b>Otwórz rzeczy otwierane podczas logowania</b> przenosi Cię do Ustawień systemowych, gdzie możesz je wyłączyć.</p>
 <div class="tip"><b>Warto wiedzieć:</b> Na Macach z Apple Intelligence ocenę może sformułować na Macu model Apple działający na urządzeniu. Jest ona sprawdzana z faktami, a nic nie opuszcza Twojego Maca. Niektóre dyski zewnętrzne nie potrafią przekazać swojej kondycji przez USB; Kontrola mówi wtedy o tym wprost, zamiast zgadywać.</div>

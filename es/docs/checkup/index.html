@@ -67,7 +67,7 @@ posthog.register({ surface: "website" });
 <p>Chequeo es la primera pestaña de <b>Salud</b> (<kbd>⌘4</kbd>). Revisa la última semana y responde a una pregunta: ¿está tu Mac en buena forma?</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-checkup-light.webp" alt="Chequeo: Tu Mac está en buena forma, la batería con su límite de carga, almacenamiento, memoria, temperatura, salud del disco y lo que se inicia con tu Mac" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-checkup-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <h2>El veredicto</h2>
-<p>Arriba: <b>Tu Mac está en buena forma.</b>, o lo que conviene revisar, en palabras sencillas. Se calcula a partir de lo que Warashi ha medido durante la última semana y se actualiza cada pocos minutos.</p>
+<p>Arriba: <b>Tu Mac está en buena forma.</b>, o qué conviene mirar, con palabras sencillas. A su lado, un anillo con un segmento por cada cosa revisada, cada uno de su color: verde si va bien, ámbar si merece una mirada, gris si no se puede leer. Se calcula con lo que Warashi ha medido durante la última semana y se actualiza cada pocos minutos.</p>
 <h2>Qué revisa</h2>
 <div class="table"><table><tr><th>Tarjeta</th><th>Qué muestra</th><th>Cuándo te pide que mires</th></tr>
 <tr><td>Batería</td><td>Carga, salud, ciclos y estado, con el <a href="../../docs/battery/">límite de carga</a> justo al lado</td><td>Salud por debajo del 85 %; actúa por debajo del 80 %</td></tr>
@@ -77,6 +77,27 @@ posthog.register({ surface: "website" });
 <tr><td>Salud del disco</td><td>Cuánta vida útil estimada de tu SSD se ha gastado</td><td>70 % o más, o cualquier error</td></tr>
 <tr><td>Discos externos</td><td>Lo mismo para cada disco conectado que informa de su salud</td><td>70 % o más, o cualquier error</td></tr></table></div>
 <p>Pulsa Memoria para ver las apps que hay detrás, Temperatura para ver su historial, o <b>Abrir</b> en Almacenamiento.</p>
+<h2>¿Por qué va lento mi Mac?</h2>
+<p>La semana puede verse bien mientras ahora mismo todo va lento. Pulsa <b>¿Lo notas lento?</b> junto al veredicto, o escribe “lento” en Buscar lo que sea, y sigue haciendo lo que iba lento. Warashi observa durante diez segundos, compara lo que ve con la semana habitual de tu Mac y nombra la causa más probable, con sus números y una cosa que hacer:</p>
+<ul><li><b>Calor:</b> macOS frena tu Mac para enfriarlo.</li>
+<li><b>Memoria:</b> a tu Mac le falta memoria y la está pasando al disco, con las apps que más ocupan.</li>
+<li><b>Una app:</b> una sola app usa la mayor parte del procesador, frente a su nivel habitual. <b>Mostrar en Apps</b> la abre.</li>
+<li><b>El trabajo propio de macOS:</b> la indexación de Spotlight, una copia de Time Machine, Fotos analizando tu biblioteca o una actualización que se está preparando. Terminan solos.</li>
+<li><b>Muchas apps a la vez</b>, <b>un disco casi lleno</b> o el <b>Modo de bajo consumo</b>.</li>
+<li><b>Nada:</b> si nada destaca, lo dice, con los números que vio. Una web lenta suele deberse más a tu conexión, así que te ofrece una prueba de velocidad.</li></ul>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-slow-light.webp" alt="¿Por qué va lento mi Mac?: Xcode está usando la mayor parte de tu procesador, con sus números frente a los habituales, Mostrar en Apps y qué ha mirado Warashi" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<p>Debajo de la respuesta, <b>Qué ha mirado Warashi</b> muestra el procesador, la memoria, la temperatura y el disco, y las apps más activas durante la revisión. No se guarda nada más allá de tu historial normal.</p>
+<h2>Seguridad y copias</h2>
+<p>Seis recuadros muestran lo bien protegido que está tu Mac. Pulsa uno para abrir el lugar de Ajustes del Sistema donde se cambia.</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-security-light.webp" alt="Seguridad y copias: actualizaciones de macOS listas para instalar, Time Machine, FileVault activado, el firewall desactivado, Protección de la integridad del sistema y Gatekeeper activados" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<div class="table"><table><tr><th>Recuadro</th><th>Qué muestra</th><th>Cuándo te pide que mires</th></tr>
+<tr><td>Actualizaciones de macOS</td><td>Si hay una actualización de macOS esperando y cuándo comprobó macOS por última vez</td><td>Hay una actualización lista para instalar</td></tr>
+<tr><td>Time Machine</td><td>Cuándo hizo tu Mac la última copia y en qué disco</td><td>Sin configurar, o sin copia en una semana</td></tr>
+<tr><td>FileVault</td><td>Si tus archivos están cifrados</td><td>Desactivado</td></tr>
+<tr><td>Firewall</td><td>Si se bloquean las conexiones entrantes no deseadas</td><td>Desactivado</td></tr>
+<tr><td>Protección de la integridad del sistema</td><td>Si los archivos básicos de macOS están protegidos</td><td>Desactivado</td></tr>
+<tr><td>Gatekeeper</td><td>Si las apps se comprueban antes de abrirse por primera vez</td><td>Desactivado</td></tr></table></div>
+<p>Warashi solo mira. Consulta las propias herramientas de macOS cuando se abre Chequeo, nunca en segundo plano, y no cambia nada. Ver la fecha de la última copia requiere Acceso total al disco.</p>
 <h2>Se inicia con tu Mac</h2>
 <p>Debajo, todo lo que se ha instalado para iniciarse con tu Mac, de más a menos costoso, con la energía que usó cada uno esta semana. <b>Abrir Ítems de inicio</b> te lleva a Ajustes del Sistema para desactivar cualquiera de ellos.</p>
 <div class="tip"><b>Conviene saber:</b> en los Mac con Apple Intelligence, el veredicto puede redactarlo en tu Mac el modelo integrado de Apple. Se contrasta con los hechos y nada sale de tu Mac. Algunos discos externos no pueden informar de su salud por USB; Chequeo lo dice en lugar de adivinar.</div>

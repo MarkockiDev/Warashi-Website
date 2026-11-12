@@ -67,7 +67,7 @@ posthog.register({ surface: "website" });
 <p>チェックアップは<b>状態</b>（<kbd>⌘4</kbd>）の最初のタブです。過去1週間を見て、ひとつの問いに答えます。Macは良好な状態か？</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-checkup-light.webp" alt="チェックアップ：Macは良好な状態です。充電上限つきのバッテリー、ストレージ、メモリ、温度、ドライブの状態、Macと一緒に起動するもの" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-checkup-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <h2>判定</h2>
-<p>上部には<b>Macは良好な状態です。</b>、または確認すべきことが、わかりやすいことばで表示されます。Warashiが過去1週間に計測した内容から判断し、数分ごとに更新されます。</p>
+<p>最上部には、<b>Macは良好な状態です。</b>か、見ておくべきことがわかりやすい言葉で表示されます。その横のリングには、確認した項目ごとに1つの区間があり、それぞれ色が付きます。問題なければ緑、見ておく価値があれば琥珀色、読み取れなければグレーです。Warashiが直近1週間に測定した内容から算出し、数分ごとに更新されます。</p>
 <h2>確認する項目</h2>
 <div class="table"><table><tr><th>カード</th><th>表示内容</th><th>目をそらすよう促すタイミング</th></tr>
 <tr><td>バッテリー</td><td>充電量、状態、充放電回数、コンディション。すぐ横に<a href="../../docs/battery/">充電上限</a></td><td>状態が85%未満で注意、80%未満で対応を</td></tr>
@@ -77,6 +77,27 @@ posthog.register({ surface: "website" });
 <tr><td>ドライブの状態</td><td>SSDの定格寿命をどれだけ使ったか</td><td>70%以上、またはエラーあり</td></tr>
 <tr><td>外付けドライブ</td><td>状態を報告する接続中の各ドライブについても同様</td><td>70%以上、またはエラーあり</td></tr></table></div>
 <p>メモリを押すとその裏にあるアプリを、温度を押すとその履歴を見られます。ストレージでは<b>開く</b>を押します。</p>
+<h2>Macが遅いのはなぜ？</h2>
+<p>1週間は問題なさそうでも、今は遅く感じることがあります。判定の横にある<b>遅いと感じたら</b>を押すか、何でも検索に「slow」と入力して、遅く感じた操作をそのまま続けてください。Warashiは10秒間見守り、見たものをMacのいつもの1週間と比べて、最も可能性の高い原因を、数値と取るべき対処を1つ添えて伝えます。</p>
+<ul><li><b>熱：</b>macOSが冷却のためにMacの速度を落としています。</li>
+<li><b>メモリ：</b>Macのメモリが足りず、ディスクに移しています。メモリを最も多く使っているアプリも表示します。</li>
+<li><b>1つのアプリ：</b>1つのアプリが、いつもの水準に比べてプロセッサの大半を使っています。<b>アプリで表示</b>でそのアプリを開きます。</li>
+<li><b>macOS自身の作業：</b>Spotlightのインデックス作成、Time Machineのバックアップ、写真ライブラリの解析、アップデートの準備など。これらはひとりでに終わります。</li>
+<li><b>多くのアプリの同時使用</b>、<b>ほぼいっぱいのディスク</b>、または<b>低電力モード</b>。</li>
+<li><b>特になし：</b>目立つものがなければ、そのとおりにお伝えし、確認した数値を添えます。ウェブサイトが遅いだけなら、原因は回線のことが多いので、スピードテストをおすすめします。</li></ul>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-slow-light.webp" alt="Macが遅いのはなぜ？：Xcodeがプロセッサの大半を使っていて、いつもの水準との数値比較、アプリで表示、Warashiが調べたこと" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<p>答えの下の<b>Warashiが調べたこと</b>には、確認中のプロセッサ、メモリ、温度、ディスク、そして最も負荷の高かったアプリが表示されます。通常の履歴以外は何も記録されません。</p>
+<h2>セキュリティとバックアップ</h2>
+<p>6つのタイルで、Macがどれだけ守られているかがわかります。タイルを押すと、変更できるシステム設定の場所が開きます。</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-security-light.webp" alt="セキュリティとバックアップ：インストールできるmacOSアップデート、Time Machine、FileVaultがオン、ファイアウォールがオフ、システム整合性保護とGatekeeperがオン" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<div class="table"><table><tr><th>タイル</th><th>表示内容</th><th>目をそらすよう促すタイミング</th></tr>
+<tr><td>macOSアップデート</td><td>macOSアップデートが待機中かどうかと、macOSが最後に確認した日時</td><td>インストールできるアップデートがあります</td></tr>
+<tr><td>Time Machine</td><td>Macが最後にバックアップした日時と、バックアップ先のディスク</td><td>未設定、または1週間バックアップなし</td></tr>
+<tr><td>FileVault</td><td>ファイルが暗号化されているかどうか</td><td>オフ</td></tr>
+<tr><td>ファイアウォール</td><td>望まない着信接続がブロックされているかどうか</td><td>オフ</td></tr>
+<tr><td>システム整合性保護</td><td>macOSの中核ファイルが保護されているかどうか</td><td>オフ</td></tr>
+<tr><td>Gatekeeper</td><td>アプリが初めて開かれる前に確認されるかどうか</td><td>オフ</td></tr></table></div>
+<p>Warashiは見るだけです。チェックアップを開いたときにmacOS自身のツールに問い合わせ、バックグラウンドでは行わず、何も変更しません。最後のバックアップの日付を見るには、フルディスクアクセスが必要です。</p>
 <h2>Macと一緒に起動</h2>
 <p>下には、Macと一緒に起動するよう自分を登録したすべての項目が、コストの高い順に、今週使ったエネルギーとともに並びます。<b>ログイン項目を開く</b>を押すと、システム設定に移動して、どれでもオフにできます。</p>
 <div class="tip"><b>補足：</b> Apple Intelligence対応のMacでは、判定の文章をAppleのオンデバイスモデルがMac上で作成することがあります。内容は事実と照らし合わせて確認され、Macの外には何も送信されません。外付けドライブの中には、USB経由で状態を報告できないものがあります。その場合、チェックアップは推測せず、そのことを表示します。</div>

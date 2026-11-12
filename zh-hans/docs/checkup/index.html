@@ -67,7 +67,7 @@ posthog.register({ surface: "website" });
 <p>体检是<b>健康度</b>（<kbd>⌘4</kbd>）中的第一个标签页。它查看过去一周，回答一个问题：你的 Mac 状态好吗？</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-checkup-light.webp" alt="体检：你的 Mac 状态良好，带充电上限的电池、储存空间、内存、温度、磁盘健康，以及随 Mac 启动的项目" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-checkup-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <h2>结论</h2>
-<p>顶部会显示：<b>你的 Mac 状态良好。</b>，或用简单的话说明需要留意什么。它根据 Warashi 过去一周的测量结果得出，每隔几分钟刷新一次。</p>
+<p>最上方是<b>你的 Mac 状态良好。</b>，或是用平实的话告诉你该看什么。旁边是一个环，每一项检查对应一段，各有自己的颜色：正常为绿色，值得留意为琥珀色，无法读取为灰色。结果根据 Warashi 过去一周的测量得出，每隔几分钟刷新一次。</p>
 <h2>它查看什么</h2>
 <div class="table"><table><tr><th>卡片</th><th>显示内容</th><th>它何时提醒你看向远处</th></tr>
 <tr><td>电池</td><td>电量、健康度、循环次数和状况，旁边就是<a href="../../docs/battery/">充电上限</a></td><td>健康度低于 85%；低于 80% 时需处理</td></tr>
@@ -77,6 +77,27 @@ posthog.register({ surface: "website" });
 <tr><td>磁盘健康</td><td>你的 SSD 额定寿命已用掉多少</td><td>70% 或更多，或出现任何错误</td></tr>
 <tr><td>外置磁盘</td><td>每个能报告健康状况的已连接磁盘也是如此</td><td>70% 或更多，或出现任何错误</td></tr></table></div>
 <p>按下“内存”可查看背后的 App，按下“温度”可查看其历史，或按下储存空间上的<b>打开</b>。</p>
+<h2>我的 Mac 为什么变慢了？</h2>
+<p>整周看起来可能没问题，但此刻却觉得慢。点按判断旁边的<b>觉得变慢了？</b>，或在“查找任何内容”中输入“慢”，然后继续做让你觉得慢的事。Warashi 会观察十秒，把看到的情况与你的 Mac 平时一周的表现作比较，并指出最可能的原因，附上数字和一件可做的事：</p>
+<ul><li><b>温度：</b>macOS 正在为 Mac 降温而让它变慢。</li>
+<li><b>内存：</b>你的 Mac 内存不足，正在把内存内容换到磁盘上，并列出占用最多的 App。</li>
+<li><b>某个 App：</b>单个 App 占用了大部分处理器，高于它平时的水平。<b>在 App 中显示</b>可以打开它。</li>
+<li><b>macOS 自己的工作：</b>聚焦索引、Time Machine 备份、照片分析你的资料库，或正在准备更新。这些会自行完成。</li>
+<li><b>同时运行很多 App</b>、<b>磁盘快满了</b>或<b>低电量模式</b>。</li>
+<li><b>没有异常：</b>如果没有明显的问题，它会如实说明，并给出它看到的数字。网站慢更可能是网络的原因，所以它会提供网速测试。</li></ul>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-slow-light.webp" alt="我的 Mac 为什么变慢了？：Xcode 占用了大部分处理器，附上它的数字与平时的对比、在 App 中显示，以及 Warashi 看了什么" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<p>答案下方，<b>Warashi 看了什么</b>会显示处理器、内存、温度和磁盘，以及检查期间最忙的 App。除了你平常的历史记录外，不会多记录任何内容。</p>
+<h2>安全与备份</h2>
+<p>六个图块显示你的 Mac 受到多好的保护。点按其中一个，即可打开系统设置中可以更改它的位置。</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-security-light.webp" alt="安全与备份：待安装的 macOS 更新、Time Machine、已开启的 FileVault、已关闭的防火墙、已开启的系统完整性保护和 Gatekeeper" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<div class="table"><table><tr><th>图块</th><th>显示内容</th><th>它何时提醒你看向远处</th></tr>
+<tr><td>macOS 更新</td><td>是否有 macOS 更新在等待，以及 macOS 上次检查的时间</td><td>有更新可以安装</td></tr>
+<tr><td>Time Machine</td><td>你的 Mac 上次备份的时间，以及备份到哪个磁盘</td><td>未设置，或已一周没有备份</td></tr>
+<tr><td>FileVault</td><td>你的文件是否已加密</td><td>已关闭</td></tr>
+<tr><td>防火墙</td><td>是否拦截了不需要的传入连接</td><td>已关闭</td></tr>
+<tr><td>系统完整性保护</td><td>macOS 的核心文件是否受到保护</td><td>已关闭</td></tr>
+<tr><td>Gatekeeper</td><td>App 在首次打开前是否会被检查</td><td>已关闭</td></tr></table></div>
+<p>Warashi 只是查看。它在体检打开时向 macOS 自带的工具询问，从不在后台进行，也不会更改任何内容。要看到上次备份的日期，需要完全磁盘访问权限。</p>
 <h2>随 Mac 启动</h2>
 <p>下方是所有自行安装为随 Mac 启动的项目，按消耗从高到低排列，并显示每项本周的能耗。<b>打开登录项</b>会带你前往系统设置，在那里关闭其中任何一项。</p>
 <div class="tip"><b>补充说明：</b>在支持 Apple 智能的 Mac 上，结论可由 Apple 的设备端模型在你的 Mac 上撰写。撰写内容会与事实核对，任何内容都不会离开你的 Mac。有些外置磁盘无法通过 USB 报告健康状况；体检会如实说明，而不是猜测。</div>

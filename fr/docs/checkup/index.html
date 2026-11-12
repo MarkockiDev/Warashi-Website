@@ -67,7 +67,7 @@ posthog.register({ surface: "website" });
 <p>Bilan est le premier onglet d’<b>État</b> (<kbd>⌘4</kbd>). Il examine la semaine passée et répond à une question : votre Mac est-il en bonne forme ?</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-checkup-light.webp" alt="Bilan : Votre Mac est en pleine forme, la batterie et sa limite de charge, le stockage, la mémoire, la température, l’état des disques et ce qui démarre avec votre Mac" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-checkup-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <h2>Le verdict</h2>
-<p>En haut : <b>Votre Mac est en pleine forme.</b>, ou ce qu’il faut regarder, en termes simples. C’est établi à partir de ce que Warashi a mesuré la semaine passée, et actualisé toutes les quelques minutes.</p>
+<p>En haut : <b>Votre Mac est en pleine forme.</b>, ou ce qu’il faut regarder, en mots simples. À côté, un anneau avec un segment pour chaque point vérifié, chacun de sa couleur : vert quand tout va bien, ambre quand cela mérite un coup d’œil, gris quand il est illisible. Il est calculé d’après ce que Warashi a mesuré durant la dernière semaine, et se met à jour toutes les quelques minutes.</p>
 <h2>Ce qu’il examine</h2>
 <div class="table"><table><tr><th>Carte</th><th>Ce qu’elle affiche</th><th>Quand elle vous invite à regarder au loin</th></tr>
 <tr><td>Batterie</td><td>Charge, état, cycles et condition, avec la <a href="../../docs/battery/">limite de charge</a> juste à côté</td><td>État inférieur à 85 % ; agir sous 80 %</td></tr>
@@ -77,6 +77,27 @@ posthog.register({ surface: "website" });
 <tr><td>État du disque</td><td>La part de la durée de vie nominale de votre SSD déjà utilisée</td><td>70 % ou plus, ou des erreurs</td></tr>
 <tr><td>Disques externes</td><td>La même chose pour chaque disque connecté qui indique son état</td><td>70 % ou plus, ou des erreurs</td></tr></table></div>
 <p>Appuyez sur Mémoire pour voir les apps en cause, sur Température pour son historique, ou sur <b>Ouvrir</b> dans Stockage.</p>
+<h2>Pourquoi mon Mac est-il lent ?</h2>
+<p>La semaine peut sembler correcte alors que le Mac paraît lent maintenant. Appuyez sur <b>Un Mac lent ?</b> à côté du verdict, ou saisissez « slow » dans Rechercher, puis continuez ce qui semblait lent. Warashi observe pendant dix secondes, compare ce qu’il voit à la semaine habituelle de votre Mac et nomme la cause la plus probable, avec ses chiffres et une chose à faire :</p>
+<ul><li><b>La chaleur :</b> macOS ralentit votre Mac pour le refroidir.</li>
+<li><b>La mémoire :</b> votre Mac manque de mémoire et la déplace sur le disque, avec les apps qui en occupent le plus.</li>
+<li><b>Une seule app :</b> une app utilise la plus grande partie du processeur, par rapport à son niveau habituel. <b>Afficher dans Apps</b> l’ouvre.</li>
+<li><b>Le travail de macOS lui-même :</b> l’indexation Spotlight, une sauvegarde Time Machine, Photos qui analyse votre photothèque ou une mise à jour en préparation. Tout cela se termine tout seul.</li>
+<li><b>Beaucoup d’apps à la fois</b>, <b>un disque presque plein</b> ou le <b>Mode économie d’énergie</b>.</li>
+<li><b>Rien de particulier :</b> si rien ne ressort, Warashi le dit, chiffres à l’appui. Un site web lent vient plus probablement de votre connexion, alors il propose un test de débit.</li></ul>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-slow-light.webp" alt="Pourquoi mon Mac est-il lent ? : Xcode utilise la plus grande partie de votre processeur, avec ses chiffres comparés à son niveau habituel, Afficher dans Apps, et ce que Warashi a examiné" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<p>Sous la réponse, <b>Ce que Warashi a examiné</b> montre le processeur, la mémoire, la température et le disque, ainsi que les apps les plus actives pendant la vérification. Rien n’est enregistré en dehors de votre historique habituel.</p>
+<h2>Sécurité et sauvegarde</h2>
+<p>Six tuiles montrent à quel point votre Mac est protégé. Appuyez sur l’une d’elles pour ouvrir l’endroit de Réglages Système où cela se change.</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-security-light.webp" alt="Sécurité et sauvegarde : mises à jour de macOS prêtes à installer, Time Machine, FileVault activé, pare-feu désactivé, Protection de l’intégrité du système et Gatekeeper activés" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<div class="table"><table><tr><th>Tuile</th><th>Ce qu’elle affiche</th><th>Quand elle vous invite à regarder au loin</th></tr>
+<tr><td>Mises à jour de macOS</td><td>Si une mise à jour de macOS est en attente, et quand macOS a vérifié pour la dernière fois</td><td>Une mise à jour est prête à installer</td></tr>
+<tr><td>Time Machine</td><td>Quand votre Mac a été sauvegardé pour la dernière fois, et sur quel disque</td><td>Non configurée, ou aucune sauvegarde depuis une semaine</td></tr>
+<tr><td>FileVault</td><td>Si vos fichiers sont chiffrés</td><td>Désactivé</td></tr>
+<tr><td>Pare-feu</td><td>Si les connexions entrantes indésirables sont bloquées</td><td>Désactivé</td></tr>
+<tr><td>Protection de l’intégrité du système</td><td>Si les fichiers essentiels de macOS sont protégés</td><td>Désactivé</td></tr>
+<tr><td>Gatekeeper</td><td>Si les apps sont vérifiées avant leur première ouverture</td><td>Désactivé</td></tr></table></div>
+<p>Warashi ne fait que regarder. Il interroge les outils propres à macOS à l’ouverture de Bilan, jamais en arrière-plan, et ne change rien. Voir la date de la dernière sauvegarde nécessite l’accès complet au disque.</p>
 <h2>Démarre avec votre Mac</h2>
 <p>En dessous, tout ce qui s’est installé pour démarrer avec votre Mac, du plus coûteux au moins coûteux, avec l’énergie utilisée par chacun cette semaine. <b>Ouvrir Ouverture et extensions</b> vous mène à Réglages Système pour désactiver ce que vous voulez.</p>
 <div class="tip"><b>À savoir :</b> Sur les Mac dotés d’Apple Intelligence, le verdict peut être rédigé sur votre Mac par le modèle intégré d’Apple. Il est vérifié par rapport aux faits, et rien ne quitte votre Mac. Certains disques externes ne peuvent pas indiquer leur état via USB ; le Bilan le dit au lieu de deviner.</div>

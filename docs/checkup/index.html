@@ -67,7 +67,7 @@ posthog.register({ surface: "website" });
 <p>Checkup is the first tab in <b>Health</b> (<kbd>⌘4</kbd>). It looks at the last week and answers one question: is your Mac in good shape?</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../assets/img/help/w-checkup-light.webp" alt="Checkup: Your Mac is in good shape, the battery with its charge limit, storage, memory, temperature, drive health and what starts with your Mac" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../assets/img/help/w-checkup-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <h2>The verdict</h2>
-<p>At the top: <b>Your Mac is in good shape.</b>, or what to look at, in plain words. It's worked out from what Warashi has measured over the last week, and refreshed every few minutes.</p>
+<p>At the top: <b>Your Mac is in good shape.</b>, or what to look at, in plain words. Beside it, a ring with one segment for each thing checked, each in its own colour: green when fine, amber when worth a look, grey when it can't be read. It's worked out from what Warashi has measured over the last week, and refreshed every few minutes.</p>
 <h2>What it looks at</h2>
 <div class="table"><table><tr><th>Card</th><th>What it shows</th><th>When it asks you to look</th></tr>
 <tr><td>Battery</td><td>Charge, health, cycles and condition, with the <a href="../../docs/battery/">charge limit</a> right beside it</td><td>Health under 85%; act under 80%</td></tr>
@@ -77,6 +77,27 @@ posthog.register({ surface: "website" });
 <tr><td>Drive health</td><td>How much of your SSD's rated life is used</td><td>70% or more, or any errors</td></tr>
 <tr><td>External drives</td><td>The same for each connected drive that reports its health</td><td>70% or more, or any errors</td></tr></table></div>
 <p>Press Memory to see the apps behind it, Temperature for its history, or <b>Open</b> on Storage.</p>
+<h2>Why is my Mac slow?</h2>
+<p>The week can look fine while right now feels slow. Press <b>Feeling Slow?</b> beside the verdict, or type “slow” in Find anything, then keep doing what felt slow. Warashi watches for ten seconds, compares what it sees with your Mac's usual week, and names the most likely cause, with its numbers and one thing to do:</p>
+<ul><li><b>Heat:</b> macOS is slowing your Mac to cool it.</li>
+<li><b>Memory:</b> your Mac is short of memory and moving it to disk, with the apps holding the most.</li>
+<li><b>One app:</b> a single app is using most of the processor, against its usual level. <b>Show in Apps</b> opens it.</li>
+<li><b>macOS's own work:</b> Spotlight indexing, a Time Machine backup, Photos analysing your library or an update being prepared. These finish by themselves.</li>
+<li><b>Many apps at once</b>, <b>a nearly full disk</b> or <b>Low Power Mode</b>.</li>
+<li><b>Nothing:</b> if nothing stands out, it says so, with the numbers it saw. A slow website is more likely your connection, so it offers a speed test.</li></ul>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../assets/img/help/w-slow-light.webp" alt="Why Is My Mac Slow?: Xcode is using most of your processor, with its numbers against its usual, Show in Apps, and what Warashi looked at" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<p>Below the answer, <b>What Warashi looked at</b> shows the processor, memory, temperature and disk, and the busiest apps during the check. Nothing is recorded beyond your normal history.</p>
+<h2>Security and backup</h2>
+<p>Six tiles show how well your Mac is protected. Press one to open the place in System Settings where it's changed.</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../assets/img/help/w-security-light.webp" alt="Security and backup: macOS updates ready to install, Time Machine, FileVault on, the firewall off, System Integrity Protection and Gatekeeper on" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<div class="table"><table><tr><th>Tile</th><th>What it shows</th><th>When it asks you to look</th></tr>
+<tr><td>macOS updates</td><td>Whether a macOS update is waiting, and when macOS last checked</td><td>An update is ready to install</td></tr>
+<tr><td>Time Machine</td><td>When your Mac last backed up, and to which disk</td><td>Not set up, or no backup for a week</td></tr>
+<tr><td>FileVault</td><td>Whether your files are encrypted</td><td>Off</td></tr>
+<tr><td>Firewall</td><td>Whether unwanted incoming connections are blocked</td><td>Off</td></tr>
+<tr><td>System Integrity Protection</td><td>Whether macOS's core files are protected</td><td>Off</td></tr>
+<tr><td>Gatekeeper</td><td>Whether apps are checked before they first open</td><td>Off</td></tr></table></div>
+<p>Warashi only looks. It asks macOS's own tools when Checkup opens, never in the background, and changes nothing. Seeing the date of the last backup needs Full Disk Access.</p>
 <h2>Starts with your Mac</h2>
 <p>Below, everything that has installed itself to start with your Mac, costliest first, with the energy each used this week. <b>Open Login Items</b> takes you to System Settings to turn any of them off.</p>
 <div class="tip"><b>Good to know:</b> On Macs with Apple Intelligence, the verdict can be worded on your Mac by Apple's on-device model. It's checked against the facts, and nothing leaves your Mac. Some external drives can't report their health over USB; Checkup says so instead of guessing.</div>

@@ -67,7 +67,7 @@ posthog.register({ surface: "website" });
 <p>A Verificação é a primeira aba em <b>Saúde</b> (<kbd>⌘4</kbd>). Ela olha a última semana e responde a uma pergunta: seu Mac está em boa forma?</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-checkup-light.webp" alt="Verificação: Seu Mac está em boa forma, a bateria com o limite de carga, armazenamento, memória, temperatura, saúde dos discos e o que inicia com seu Mac" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-checkup-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <h2>O veredito</h2>
-<p>No topo: <b>Seu Mac está em boa forma.</b>, ou o que merece atenção, em palavras simples. Isso é calculado a partir do que o Warashi mediu na última semana e atualizado a cada poucos minutos.</p>
+<p>No topo: <b>Seu Mac está em boa forma.</b> ou o que vale olhar, em palavras simples. Ao lado, um anel com um segmento para cada item verificado, cada um na sua cor: verde quando está tudo bem, âmbar quando vale uma olhada, cinza quando não dá para ler. Ele é calculado com o que o Warashi mediu na última semana e atualizado a cada poucos minutos.</p>
 <h2>O que ela analisa</h2>
 <div class="table"><table><tr><th>Cartão</th><th>O que mostra</th><th>Quando ele pede para você olhar</th></tr>
 <tr><td>Bateria</td><td>Carga, saúde, ciclos e condição, com o <a href="../../docs/battery/">limite de carga</a> logo ao lado</td><td>Saúde abaixo de 85%; aja abaixo de 80%</td></tr>
@@ -77,6 +77,27 @@ posthog.register({ surface: "website" });
 <tr><td>Saúde do disco</td><td>Quanto da vida útil nominal do seu SSD já foi usada</td><td>70% ou mais, ou qualquer erro</td></tr>
 <tr><td>Discos externos</td><td>O mesmo para cada disco conectado que informa a própria saúde</td><td>70% ou mais, ou qualquer erro</td></tr></table></div>
 <p>Pressione Memória para ver os apps por trás dela, Temperatura para ver o histórico, ou <b>Abrir</b> em Armazenamento.</p>
+<h2>Por que meu Mac está lento?</h2>
+<p>A semana pode parecer boa enquanto agora está lento. Pressione <b>Está lento?</b> ao lado do veredito, ou digite “lento” em Buscar qualquer coisa, e continue fazendo o que estava lento. O Warashi observa por dez segundos, compara o que vê com a semana habitual do seu Mac e aponta a causa mais provável, com os números e uma coisa a fazer:</p>
+<ul><li><b>Calor:</b> o macOS está deixando seu Mac mais lento para esfriá-lo.</li>
+<li><b>Memória:</b> seu Mac está com pouca memória e passando dados para o disco, e mostra os apps que mais usam.</li>
+<li><b>Um app:</b> um único app está usando a maior parte do processador, acima do nível habitual. <b>Mostrar em Apps</b> abre o app.</li>
+<li><b>Trabalho do próprio macOS:</b> indexação do Spotlight, um backup do Time Machine, o Fotos analisando sua biblioteca ou uma atualização sendo preparada. Isso termina sozinho.</li>
+<li><b>Muitos apps ao mesmo tempo</b>, <b>um disco quase cheio</b> ou o <b>Modo de Pouca Energia</b>.</li>
+<li><b>Nada:</b> se nada se destaca, ele diz isso, com os números que viu. Um site lento costuma ser a conexão, então ele sugere um teste de velocidade.</li></ul>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-slow-light.webp" alt="Por que meu Mac está lento?: o Xcode está usando a maior parte do seu processador, com seus números em comparação ao habitual, Mostrar em Apps e o que o Warashi analisou" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<p>Abaixo da resposta, <b>O que o Warashi analisou</b> mostra o processador, a memória, a temperatura e o disco, além dos apps mais ocupados durante a verificação. Nada é gravado além do seu histórico normal.</p>
+<h2>Segurança e backup</h2>
+<p>Seis blocos mostram o quanto seu Mac está protegido. Pressione um para abrir o lugar nos Ajustes do Sistema onde isso é alterado.</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-security-light.webp" alt="Segurança e backup: atualizações do macOS prontas para instalar, Time Machine, FileVault ativado, firewall desativado, Proteção da Integridade do Sistema e Gatekeeper ativados" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
+<div class="table"><table><tr><th>Bloco</th><th>O que mostra</th><th>Quando ele pede para você olhar</th></tr>
+<tr><td>Atualizações do macOS</td><td>Se há uma atualização do macOS esperando e quando o macOS verificou pela última vez</td><td>Uma atualização está pronta para instalar</td></tr>
+<tr><td>Time Machine</td><td>Quando seu Mac fez backup pela última vez e em qual disco</td><td>Não configurado ou sem backup há uma semana</td></tr>
+<tr><td>FileVault</td><td>Se seus arquivos estão criptografados</td><td>Desativado</td></tr>
+<tr><td>Firewall</td><td>Se conexões de entrada indesejadas são bloqueadas</td><td>Desativado</td></tr>
+<tr><td>Proteção da Integridade do Sistema</td><td>Se os arquivos principais do macOS estão protegidos</td><td>Desativado</td></tr>
+<tr><td>Gatekeeper</td><td>Se os apps são verificados antes de abrirem pela primeira vez</td><td>Desativado</td></tr></table></div>
+<p>O Warashi só observa. Ele consulta as próprias ferramentas do macOS quando a Verificação abre, nunca em segundo plano, e não altera nada. Ver a data do último backup exige Acesso Total ao Disco.</p>
 <h2>Inicia com o seu Mac</h2>
 <p>Abaixo, tudo o que se instalou para iniciar com seu Mac, do mais custoso para o menos, com a energia que cada item usou nesta semana. <b>Abrir Itens de Início</b> leva você aos Ajustes do Sistema para desativar qualquer um deles.</p>
 <div class="tip"><b>Bom saber:</b> em Macs com Apple Intelligence, o veredito pode ser redigido no seu Mac pelo modelo da Apple no dispositivo. Ele é conferido com os fatos, e nada sai do seu Mac. Alguns discos externos não informam a saúde pela USB; a Verificação diz isso em vez de adivinhar.</div>
