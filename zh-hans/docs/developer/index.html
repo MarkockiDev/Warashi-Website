@@ -70,9 +70,11 @@ posthog.register({ surface: "website" });
 <p>服务器按其启动时所在的文件夹分组，并显示端口、CPU 和内存。<b>打开</b>会在浏览器中打开它，<b>拷贝</b>会拷贝它的地址，<b>退出…</b>会在你确认后请它停止。<b>△ 在你的网络上</b>表示你网络中的其他设备可能可以访问它。</p>
 <h2>AI 智能体</h2>
 <p>每个正在运行的 Claude Code、Codex、Cursor Agent、Gemini CLI、Aider、OpenCode、Amp 或 Goose 会话，以及它的项目、已运行时长、CPU 时间和内存。智能体启动的工具计入该智能体。</p>
+<h2>容器</h2>
+<p>如果你使用 Docker Desktop、OrbStack、Colima 或 Rancher Desktop，正在运行的容器会显示其镜像、已发布的端口、CPU 和内存，数据读取自你 Mac 上的引擎。点按网页端口即可在浏览器中打开。<b>△</b> 表示你网络中的其他设备可能可以访问它。没有这些 App 时，此部分不会显示。</p>
 <h2>其他开放端口</h2>
 <p>其他所有开放了端口的内容，例如本地 AI 模型。macOS 自身的服务已隐藏。</p>
-<div class="tip"><b>补充说明：</b>CPU 时间不包括在你打开此页面之前已结束的工具。从同一项目的不同子文件夹启动的两个服务器会显示为两个项目，因为 Warashi 只看各自启动时所在的文件夹。</div>
+<div class="tip"><b>补充说明：</b>容器的 CPU 与“活动监视器”一样，把一个核心算作 100%。CPU 时间不包括在你打开此页面之前已结束的工具。从同一项目的不同子文件夹启动的两个服务器会显示为两个项目，因为 Warashi 只看各自启动时所在的文件夹。</div>
 <div class="help-box"><h3>如果出现问题</h3><ul><li><b>某个端口没有显示：</b>无法读取以管理员身份运行的进程所占用的端口。</li><li><b>某个智能体没有显示：</b>智能体是根据已知程序列表识别的。请把你使用的那个告诉 <a href="mailto:adam@warashi.app">adam@warashi.app</a>。</li></ul><p style="margin-top:8px">更多内容见<a href="../../docs/troubleshooting/">疑难解答</a>，或发送电子邮件至 <a href="mailto:adam@warashi.app">adam@warashi.app</a>。</p></div>
 <div class="next"><a href="../../docs/time-and-cost/"><small>上一页</small>时间 × 消耗</a><a href="../../docs/history/" style="text-align:right"><small>下一页</small>历史记录</a></div></article>
   </div>

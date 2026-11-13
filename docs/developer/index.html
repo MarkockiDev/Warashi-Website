@@ -70,9 +70,11 @@ posthog.register({ surface: "website" });
 <p>Servers are grouped by the folder they were started in, with their ports, CPU and memory. <b>Open</b> opens one in your browser, <b>Copy</b> copies its address, and <b>Quit…</b> asks it to stop after you confirm. <b>△ On your network</b> means other devices on your network may be able to reach it.</p>
 <h2>AI agents</h2>
 <p>Each running Claude Code, Codex, Cursor Agent, Gemini CLI, Aider, OpenCode, Amp or Goose session, with its project, how long it's been running, CPU time and memory. Tools an agent has started count as part of it.</p>
+<h2>Containers</h2>
+<p>If you use Docker Desktop, OrbStack, Colima or Rancher Desktop, running containers appear with their image, published ports, CPU and memory, read from the engine on your Mac. Click a web port to open it in your browser. <b>△</b> means other devices on your network may be able to reach it. Without one of these apps the section doesn't appear.</p>
 <h2>Other open ports</h2>
 <p>Everything else with an open port, such as a local AI model. macOS's own services are hidden.</p>
-<div class="tip"><b>Good to know:</b> CPU time can't include tools that finished before you opened the page. Two servers started from different subfolders of one project appear as two projects, because Warashi only looks at the folder each was started in.</div>
+<div class="tip"><b>Good to know:</b> A container's CPU counts one core as 100%, like Activity Monitor. CPU time can't include tools that finished before you opened the page. Two servers started from different subfolders of one project appear as two projects, because Warashi only looks at the folder each was started in.</div>
 <div class="help-box"><h3>If something's not right</h3><ul><li><b>A port is missing:</b> ports held by processes running as administrator can't be read.</li><li><b>An agent is missing:</b> agents are recognised from a list of known programs. Tell <a href="mailto:adam@warashi.app">adam@warashi.app</a> which one you use.</li></ul><p style="margin-top:8px">More in <a href="../../docs/troubleshooting/">Troubleshooting</a>, or email <a href="mailto:adam@warashi.app">adam@warashi.app</a>.</p></div>
 <div class="next"><a href="../../docs/time-and-cost/"><small>Previous</small>Time × Cost</a><a href="../../docs/history/" style="text-align:right"><small>Next</small>History</a></div></article>
   </div>

@@ -70,9 +70,11 @@ posthog.register({ surface: "website" });
 <p>Os servidores são agrupados pela pasta em que foram iniciados, com suas portas, CPU e memória. <b>Abrir</b> abre um no navegador, <b>Copiar</b> copia o endereço dele e <b>Encerrar…</b> pede que ele pare, depois que você confirmar. <b>△ Na sua rede</b> significa que outros dispositivos da sua rede talvez consigam acessá-lo.</p>
 <h2>Agentes de IA</h2>
 <p>Cada sessão em execução do Claude Code, Codex, Cursor Agent, Gemini CLI, Aider, OpenCode, Amp ou Goose, com o projeto, há quanto tempo está rodando, tempo de CPU e memória. As ferramentas que um agente iniciou contam como parte dele.</p>
+<h2>Contêineres</h2>
+<p>Se você usa Docker Desktop, OrbStack, Colima ou Rancher Desktop, os contêineres em execução aparecem com a imagem, as portas publicadas, a CPU e a memória, lidas do motor no seu Mac. Clique em uma porta web para abri-la no navegador. <b>△</b> significa que outros dispositivos da sua rede podem acessá-la. Sem um desses apps, a seção não aparece.</p>
 <h2>Outras portas abertas</h2>
 <p>Todo o resto que tem uma porta aberta, como um modelo de IA local. Os serviços do próprio macOS ficam ocultos.</p>
-<div class="tip"><b>Bom saber:</b> o tempo de CPU não inclui ferramentas que terminaram antes de você abrir a página. Dois servidores iniciados em subpastas diferentes de um mesmo projeto aparecem como dois projetos, porque o Warashi só olha a pasta em que cada um foi iniciado.</div>
+<div class="tip"><b>Bom saber:</b> a CPU de um contêiner conta um núcleo como 100%, como o Monitor de Atividade. O tempo de CPU não inclui ferramentas que terminaram antes de você abrir a página. Dois servidores iniciados em subpastas diferentes de um mesmo projeto aparecem como dois projetos, porque o Warashi só olha a pasta em que cada um foi iniciado.</div>
 <div class="help-box"><h3>Se algo não estiver certo</h3><ul><li><b>Falta uma porta:</b> portas mantidas por processos executados como administrador não podem ser lidas.</li><li><b>Falta um agente:</b> os agentes são reconhecidos a partir de uma lista de programas conhecidos. Diga a <a href="mailto:adam@warashi.app">adam@warashi.app</a> qual você usa.</li></ul><p style="margin-top:8px">Mais em <a href="../../docs/troubleshooting/">Solução de problemas</a>, ou escreva para <a href="mailto:adam@warashi.app">adam@warashi.app</a>.</p></div>
 <div class="next"><a href="../../docs/time-and-cost/"><small>Anterior</small>Tempo × Custo</a><a href="../../docs/history/" style="text-align:right"><small>Próxima</small>Histórico</a></div></article>
   </div>

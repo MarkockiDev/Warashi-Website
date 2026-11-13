@@ -70,9 +70,11 @@ posthog.register({ surface: "website" });
 <p>Serwery są pogrupowane według folderu, z którego je uruchomiono, wraz z portami, CPU i pamięcią. <b>Otwórz</b> otwiera serwer w przeglądarce, <b>Kopiuj</b> kopiuje jego adres, a <b>Zakończ…</b> prosi go o zatrzymanie po Twoim potwierdzeniu. <b>△ W Twojej sieci</b> oznacza, że inne urządzenia w Twojej sieci mogą mieć do niego dostęp.</p>
 <h2>Agenci AI</h2>
 <p>Każda uruchomiona sesja Claude Code, Codex, Cursor Agent, Gemini CLI, Aider, OpenCode, Amp lub Goose, z projektem, czasem działania, czasem CPU i pamięcią. Narzędzia uruchomione przez agenta liczą się jako jego część.</p>
+<h2>Kontenery</h2>
+<p>Jeśli używasz Docker Desktop, OrbStack, Colimy lub Rancher Desktop, działające kontenery pojawiają się z obrazem, opublikowanymi portami, CPU i pamięcią, odczytanymi z silnika na Twoim Macu. Kliknij port WWW, by otworzyć go w przeglądarce. <b>△</b> oznacza, że inne urządzenia w Twojej sieci mogą mieć do niego dostęp. Bez żadnej z tych aplikacji ta sekcja się nie pojawia.</p>
 <h2>Inne otwarte porty</h2>
 <p>Wszystko inne z otwartym portem, na przykład lokalny model AI. Usługi samego macOS są ukryte.</p>
-<div class="tip"><b>Warto wiedzieć:</b> Czas CPU nie obejmuje narzędzi, które zakończyły pracę, zanim otworzysz stronę. Dwa serwery uruchomione z różnych podfolderów jednego projektu pojawią się jako dwa projekty, ponieważ Warashi patrzy tylko na folder, z którego każdy uruchomiono.</div>
+<div class="tip"><b>Warto wiedzieć:</b> CPU kontenera liczy jeden rdzeń jako 100%, jak Monitor aktywności. Czas CPU nie obejmuje narzędzi, które zakończyły pracę, zanim otworzysz stronę. Dwa serwery uruchomione z różnych podfolderów jednego projektu pojawią się jako dwa projekty, ponieważ Warashi patrzy tylko na folder, z którego każdy uruchomiono.</div>
 <div class="help-box"><h3>Gdy coś nie działa</h3><ul><li><b>Brakuje portu:</b> portów używanych przez procesy uruchomione jako administrator nie można odczytać.</li><li><b>Brakuje agenta:</b> agenci są rozpoznawani na podstawie listy znanych programów. Napisz na <a href="mailto:adam@warashi.app">adam@warashi.app</a>, którego używasz.</li></ul><p style="margin-top:8px">Więcej w sekcji <a href="../../docs/troubleshooting/">Rozwiązywanie problemów</a> lub napisz na <a href="mailto:adam@warashi.app">adam@warashi.app</a>.</p></div>
 <div class="next"><a href="../../docs/time-and-cost/"><small>Poprzednia</small>Czas × koszt</a><a href="../../docs/history/" style="text-align:right"><small>Następna</small>Historia</a></div></article>
   </div>

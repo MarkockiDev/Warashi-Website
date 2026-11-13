@@ -70,9 +70,11 @@ posthog.register({ surface: "website" });
 <p>サーバは起動したフォルダごとにまとめられ、ポート、CPU、メモリが表示されます。<b>開く</b>でブラウザで開き、<b>コピー</b>でアドレスをコピーし、<b>終了…</b>は確認後に停止を要求します。<b>△ ネットワーク上</b>は、ネットワーク上のほかのデバイスからアクセスできる可能性があることを示します。</p>
 <h2>AIエージェント</h2>
 <p>実行中のClaude Code、Codex、Cursor Agent、Gemini CLI、Aider、OpenCode、Amp、Gooseのセッションごとに、プロジェクト、実行時間、CPU時間、メモリを表示します。エージェントが起動したツールは、そのエージェントの一部として数えます。</p>
+<h2>コンテナ</h2>
+<p>Docker Desktop、OrbStack、Colima、Rancher Desktop を使っている場合、実行中のコンテナがイメージ、公開ポート、CPU、メモリとともに表示されます。値はMac上のエンジンから読み取ります。Webポートをクリックするとブラウザで開きます。<b>△</b>は、ネットワーク上の他のデバイスからアクセスできる可能性があることを示します。これらのアプリがない場合、このセクションは表示されません。</p>
 <h2>その他の開いているポート</h2>
 <p>ローカルAIモデルなど、ポートを開いているそのほかのすべて。macOS自身のサービスは表示されません。</p>
-<div class="tip"><b>補足：</b> CPU時間には、ページを開く前に終了したツールは含まれません。1つのプロジェクトの別のサブフォルダから起動した2つのサーバは、Warashiが起動したフォルダだけを見ているため、2つのプロジェクトとして表示されます。</div>
+<div class="tip"><b>補足：</b> コンテナのCPUは、アクティビティモニタと同じく1コアを100%として数えます。CPU時間には、ページを開く前に終了したツールは含まれません。1つのプロジェクトの別のサブフォルダから起動した2つのサーバは、Warashiが起動したフォルダだけを見ているため、2つのプロジェクトとして表示されます。</div>
 <div class="help-box"><h3>うまくいかないときは</h3><ul><li><b>ポートが表示されない：</b> 管理者として実行中のプロセスが使用するポートは読み取れません。</li><li><b>エージェントが表示されない：</b> エージェントは既知のプログラムのリストから認識されます。お使いのものを<a href="mailto:adam@warashi.app">adam@warashi.app</a>までお知らせください。</li></ul><p style="margin-top:8px">詳しくは<a href="../../docs/troubleshooting/">トラブルシューティング</a>をご覧いただくか、<a href="mailto:adam@warashi.app">adam@warashi.app</a>までメールでお問い合わせください。</p></div>
 <div class="next"><a href="../../docs/time-and-cost/"><small>前へ</small>時間 × コスト</a><a href="../../docs/history/" style="text-align:right"><small>次へ</small>履歴</a></div></article>
   </div>
