@@ -77,7 +77,10 @@ posthog.register({ surface: "website" });
 <tr><td>Battery running hot</td><td>The battery at 40 °C or more for 5 minutes in a row.</td></tr>
 <tr><td>Battery health dropping</td><td>Health below 80%, or 3 points lower than its best in the last 30 days.</td></tr>
 <tr><td>Connection lost</td><td>No network for 2 minutes in a row.</td></tr>
-<tr><td>Public IP changed</td><td>Your public IP address changed, for example because a VPN dropped.</td></tr></table></div>
+<tr><td>Public IP changed</td><td>Your public IP address changed, for example because a VPN dropped.</td></tr>
+<tr><td>Mac struggling</td><td>The processor busy, memory short or the Mac slowing to cool off, for 2 minutes in a row. Says why, like the Flight Log.</td></tr>
+<tr><td>Backup overdue</td><td>Time Machine is set up but hasn't backed up for a week. Checked once a day; seeing the date needs Full Disk Access.</td></tr>
+<tr><td>macOS update waiting</td><td>A macOS update has been waiting for a week. Checked once a day.</td></tr></table></div>
 <h2>The Public IP alert</h2>
 <p>Only while this alert is on, Warashi asks Cloudflare's <code>1.1.1.1</code> for your public IPv4 address every 10 minutes and shortly after your network changes. The request carries nothing about you or your Mac. If the address changes, you're told the new one, with a reminder to check your VPN. Turn the alert off and Warashi stops asking and forgets the address.</p>
 <div class="tip"><b>Good to know:</b> Warashi checks once a minute. An alert won't repeat until its cause has cleared for an hour (six hours for memory). When one fires, the notch or island opens for a few seconds with the reason, and it's written in the Flight Log.</div>

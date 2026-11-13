@@ -77,7 +77,10 @@ posthog.register({ surface: "website" });
 <tr><td>La batterie chauffe</td><td>La batterie à 40 °C ou plus pendant 5 minutes d’affilée.</td></tr>
 <tr><td>État de la batterie en baisse</td><td>État inférieur à 80 %, ou 3 points sous son maximum des 30 derniers jours.</td></tr>
 <tr><td>Connexion perdue</td><td>Aucun réseau pendant 2 minutes d’affilée.</td></tr>
-<tr><td>Changement d'IP publique</td><td>Votre adresse IP publique a changé, par exemple parce qu’un VPN s’est déconnecté.</td></tr></table></div>
+<tr><td>Changement d'IP publique</td><td>Votre adresse IP publique a changé, par exemple parce qu’un VPN s’est déconnecté.</td></tr>
+<tr><td>Mac en difficulté</td><td>Le processeur occupé, la mémoire insuffisante ou le Mac qui ralentit pour refroidir, pendant 2 minutes d’affilée. Dit pourquoi, comme le Journal de bord.</td></tr>
+<tr><td>Sauvegarde en retard</td><td>Time Machine est configuré mais n’a pas sauvegardé depuis une semaine. Vérifié une fois par jour ; voir la date nécessite l’accès complet au disque.</td></tr>
+<tr><td>Mise à jour de macOS en attente</td><td>Une mise à jour de macOS attend depuis une semaine. Vérifié une fois par jour.</td></tr></table></div>
 <h2>L’alerte IP publique</h2>
 <p>Uniquement tant que cette alerte est activée, Warashi demande au <code>1.1.1.1</code> de Cloudflare votre adresse IPv4 publique toutes les 10 minutes et peu après chaque changement de réseau. La requête ne transmet rien sur vous ni sur votre Mac. Si l’adresse change, vous recevez la nouvelle, avec un rappel de vérifier votre VPN. Désactivez l’alerte et Warashi cesse de demander et oublie l’adresse.</p>
 <div class="tip"><b>À savoir :</b> Warashi vérifie une fois par minute. Une alerte ne se répète pas tant que sa cause n’a pas disparu depuis une heure (six heures pour la mémoire). Quand une alerte se déclenche, l’encoche ou l’îlot s’ouvre quelques secondes avec la raison, et elle est inscrite dans le Journal de bord.</div>

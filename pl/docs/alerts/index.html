@@ -77,7 +77,10 @@ posthog.register({ surface: "website" });
 <tr><td>Bateria się nagrzewa</td><td>Bateria ma 40 °C lub więcej przez 5 minut z rzędu.</td></tr>
 <tr><td>Kondycja baterii spada</td><td>Kondycja poniżej 80% lub o 3 punkty niższa niż najlepsza z ostatnich 30 dni.</td></tr>
 <tr><td>Utracono połączenie</td><td>Brak sieci przez 2 minuty z rzędu.</td></tr>
-<tr><td>Zmiana publicznego IP</td><td>Twój publiczny adres IP się zmienił, na przykład dlatego, że rozłączył się VPN.</td></tr></table></div>
+<tr><td>Zmiana publicznego IP</td><td>Twój publiczny adres IP się zmienił, na przykład dlatego, że rozłączył się VPN.</td></tr>
+<tr><td>Mac nie nadąża</td><td>Zajęty procesor, brak pamięci lub Mac zwalniający, żeby się schłodzić, przez 2 minuty z rzędu. Mówi dlaczego, jak Dziennik pokładowy.</td></tr>
+<tr><td>Zaległa kopia zapasowa</td><td>Time Machine jest skonfigurowany, ale od tygodnia nie zrobił kopii. Sprawdzane raz dziennie; data wymaga pełnego dostępu do dysku.</td></tr>
+<tr><td>Czekające uaktualnienie macOS</td><td>Uaktualnienie macOS czeka od tygodnia. Sprawdzane raz dziennie.</td></tr></table></div>
 <h2>Alert Publiczne IP</h2>
 <p>Tylko gdy ten alert jest włączony, Warashi co 10 minut i krótko po zmianie sieci pyta usługę <code>1.1.1.1</code> od Cloudflare o Twój publiczny adres IPv4. Zapytanie nie zawiera niczego o Tobie ani o Twoim Macu. Jeśli adres się zmieni, dostaniesz nowy, z przypomnieniem, by sprawdzić VPN. Wyłącz alert, a Warashi przestanie pytać i zapomni adres.</p>
 <div class="tip"><b>Warto wiedzieć:</b> Warashi sprawdza wszystko raz na minutę. Alert nie powtórzy się, dopóki jego przyczyna nie zniknie na godzinę (na sześć godzin w przypadku pamięci). Gdy alert się pojawi, wycięcie lub wyspa otwiera się na kilka sekund z powodem, a wpis trafia do Dziennika pokładowego.</div>

@@ -97,7 +97,8 @@ posthog.register({ surface: "website" });
 <tr><td>Firewall</td><td>Whether unwanted incoming connections are blocked</td><td>Off</td></tr>
 <tr><td>System Integrity Protection</td><td>Whether macOS's core files are protected</td><td>Off</td></tr>
 <tr><td>Gatekeeper</td><td>Whether apps are checked before they first open</td><td>Off</td></tr></table></div>
-<p>Warashi only looks. It asks macOS's own tools when Checkup opens, never in the background, and changes nothing. Seeing the date of the last backup needs Full Disk Access.</p>
+<p>Warashi only looks. It asks macOS's own tools when Checkup opens, and changes nothing. Seeing the date of the last backup needs Full Disk Access.</p>
+<p>To be told without opening Checkup, turn on <b>Backup overdue</b> and <b>macOS update waiting</b> in Settings › <a href="../../docs/alerts/">Alerts</a>. While either is on, Warashi reads these once a day and tells you once: when Time Machine hasn't backed up for a week, and when an update has been waiting for a week.</p>
 <h2>Starts with your Mac</h2>
 <p>Below, everything that has installed itself to start with your Mac, costliest first, with the energy each used this week. <b>Open Login Items</b> takes you to System Settings to turn any of them off.</p>
 <div class="tip"><b>Good to know:</b> On Macs with Apple Intelligence, the verdict can be worded on your Mac by Apple's on-device model. It's checked against the facts, and nothing leaves your Mac. Some external drives can't report their health over USB; Checkup says so instead of guessing.</div>
