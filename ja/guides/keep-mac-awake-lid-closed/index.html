@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>How to keep your Mac awake with the lid closed · Warashi</title>
-<meta name="description" content="Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.">
+<title>蓋を閉じたままMacをスリープさせない方法 · Warashi</title>
+<meta name="description" content="クラムシェルモード、caffeinate、pmset、メニューバーアプリ：蓋を閉じたままMacBookを動かし続ける方法と、バッテリーを傷めずに行う方法。">
 <link rel="canonical" href="https://warashi.app/ja/guides/keep-mac-awake-lid-closed/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Warashi">
-<meta property="og:title" content="How to keep your Mac awake with the lid closed · Warashi">
-<meta property="og:description" content="Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.">
+<meta property="og:title" content="蓋を閉じたままMacをスリープさせない方法 · Warashi">
+<meta property="og:description" content="クラムシェルモード、caffeinate、pmset、メニューバーアプリ：蓋を閉じたままMacBookを動かし続ける方法と、バッテリーを傷めずに行う方法。">
 <meta property="og:url" content="https://warashi.app/ja/guides/keep-mac-awake-lid-closed/">
 <meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Warashi：Macのフライトレコーダー。Warashiのウインドウとポップオーバーの横にいるわらしのアイコン。">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How to keep your Mac awake with the lid closed · Warashi">
-<meta name="twitter:description" content="Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.">
+<meta name="twitter:title" content="蓋を閉じたままMacをスリープさせない方法 · Warashi">
+<meta name="twitter:description" content="クラムシェルモード、caffeinate、pmset、メニューバーアプリ：蓋を閉じたままMacBookを動かし続ける方法と、バッテリーを傷めずに行う方法。">
 <meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
 <meta name="twitter:image:alt" content="Warashi：Macのフライトレコーダー。Warashiのウインドウとポップオーバーの横にいるわらしのアイコン。">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
@@ -37,7 +37,7 @@ posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
 });
 posthog.register({ surface: "website" });
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to keep your Mac awake with the lid closed","description":"Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-14","dateModified":"2026-11-14","mainEntityOfPage":"https://warashi.app/guides/keep-mac-awake-lid-closed/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"蓋を閉じたままMacをスリープさせない方法","description":"クラムシェルモード、caffeinate、pmset、メニューバーアプリ：蓋を閉じたままMacBookを動かし続ける方法と、バッテリーを傷めずに行う方法。","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-14","dateModified":"2026-11-14","mainEntityOfPage":"https://warashi.app/guides/keep-mac-awake-lid-closed/"}</script>
 
 
 
@@ -68,25 +68,25 @@ posthog.register({ surface: "website" });
 <main id="main">
 
 <div class="wrap" style="max-width:800px">
-  <div class="page-head"><div class="crumbs"><a href="../../guides/">ガイド</a></div><h1>How to keep your Mac awake with the lid closed</h1>
-    <p class="lead">Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.</p><p class="meta">5 min read · Updated 14 November 2026</p></div>
+  <div class="page-head"><div class="crumbs"><a href="../../guides/">ガイド</a></div><h1>蓋を閉じたままMacをスリープさせない方法</h1>
+    <p class="lead">クラムシェルモード、caffeinate、pmset、メニューバーアプリ：蓋を閉じたままMacBookを動かし続ける方法と、バッテリーを傷めずに行う方法。</p><p class="meta">読了5分 · 2026年11月14日更新</p></div>
   <article class="prose" style="padding-bottom:40px">
-<p>Close the lid of a MacBook and it sleeps: downloads stop, builds pause, the server you were serving from goes quiet. macOS has no switch for "keep working with the lid closed" unless an external display and a keyboard are plugged in (clamshell mode). Here is what works, what doesn't, and how to do it safely.</p>
-<h2>1. The built-in way: clamshell mode</h2>
-<p>Plug in power, an external display, and a keyboard or mouse. Close the lid and the Mac keeps running on the external display. That's Apple's supported way, and it's the right one if you have a monitor. Without all three (power, display, input device) the Mac sleeps when the lid closes.</p>
-<h2>2. The Terminal way: <code>caffeinate</code> and <code>pmset</code></h2>
-<p><code>caffeinate -i</code> keeps the Mac from idle-sleeping while a command runs, but it does <b>not</b> stop lid sleep. For that you need <code>sudo pmset -a disablesleep 1</code>, which disables sleep altogether, including with the lid closed. It works, with three catches: it needs an administrator password every time, it's easy to forget to turn off again, and a MacBook left like that in a bag can get hot and drain its battery to nothing.</p>
-<h2>3. An app that does it on your terms</h2>
-<p>A menu bar app can hold the Mac awake for exactly as long as you want: for 30 minutes, until a download or build finishes, while a certain app is open, or until you say stop. The good ones add the lid-closed option with guard rails: only while plugged in, and with a time limit, so the Mac can't cook in a bag or run its battery flat.</p>
-<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/app/tools-light.webp" alt="Warashi's Tools page with the Keep Awake card" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../../../assets/img/app/tools-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span><figcaption>Keep Awake in Warashi's Tools: for a time, until the work is done, while an app is open, or with the lid closed.</figcaption></figure>
-<h2>Is it safe to run a MacBook with the lid closed?</h2>
-<p>Yes, on a desk and plugged in. Apple's own clamshell mode does exactly that. Two things to avoid: running it closed on battery for hours (the battery drains with the screen off and you don't notice), and putting a running MacBook in a bag, where the keyboard vents are covered. Pick a tool that releases the lid hold when the charger comes out, and set a time limit.</p>
-<h2>When the Mac still went to sleep</h2>
-<ul><li><b>The charger came out.</b> Most lid-closed tools release the hold on battery, on purpose.</li>
-<li><b>Only the screen turned off.</b> The Mac was awake; macOS turned off and locked the display on its own schedule. Check your tool's log for a real sleep entry before blaming it.</li>
-<li><b>The tool quit or updated.</b> Choose one that remembers a running session across its own restarts.</li>
-<li><b>Battery reached the floor.</b> Good tools stop at about 10% to protect the battery.</li></ul>
-    <div class="tip" style="margin-top:44px"><b>Warashi does this for you.</b> Its <a href="../../docs/keep-awake/">Keep Awake</a> holds your Mac awake for a set time, until a task finishes, while an app is open, or with the lid closed while plugged in, and the <a href="../../docs/flight-log/">Flight Log</a> tells you afterwards whether the Mac slept or only the screen did.</div>
+<p>MacBookの蓋を閉じるとスリープします。ダウンロードは止まり、ビルドは一時停止し、動かしていたサーバは黙ります。外部ディスプレイとキーボードをつないでいる場合（クラムシェルモード）を除き、macOSには「蓋を閉じたまま動かし続ける」スイッチがありません。ここでは、何が効いて何が効かないか、そして安全に行う方法を説明します。</p>
+<h2>1. 標準の方法：クラムシェルモード</h2>
+<p>電源、外部ディスプレイ、キーボードまたはマウスをつなぎます。蓋を閉じても、Macは外部ディスプレイで動き続けます。これがAppleが正式にサポートする方法で、モニターがあるならこれが正解です。3つ（電源、ディスプレイ、入力装置）がそろっていないと、蓋を閉じるとMacはスリープします。</p>
+<h2>2. ターミナルの方法：<code>caffeinate</code>と<code>pmset</code></h2>
+<p><code>caffeinate -i</code>はコマンドの実行中にMacがアイドルスリープするのを防ぎますが、蓋を閉じたときのスリープは止め<b>ません</b>。それには<code>sudo pmset -a disablesleep 1</code>が必要で、これは蓋を閉じた場合も含めてスリープを完全に無効にします。効果はありますが、3つの落とし穴があります。毎回管理者パスワードが必要なこと、元に戻すのを忘れやすいこと、そのままカバンに入れたMacBookが熱くなり、バッテリーを使い切ってしまうことです。</p>
+<h2>3. 自分の条件で任せられるアプリ</h2>
+<p>メニューバーアプリなら、望むあいだだけMacを起こしておけます。30分間、ダウンロードやビルドが終わるまで、特定のアプリが開いているあいだ、または止めると言うまで。良いアプリは、蓋を閉じたままのオプションに安全装置を付けています。電源接続中のみ、そして時間制限付きなので、Macがカバンの中で熱くなったり、バッテリーを使い切ったりすることがありません。</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/app/tools-light.webp" alt="Warashiのツールページ：「スリープさせない」のカード" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../../../assets/img/app/tools-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span><figcaption>Warashiのツールにある「スリープさせない」：時間を決めて、作業が終わるまで、アプリが開いているあいだ、または蓋を閉じたまま。</figcaption></figure>
+<h2>MacBookを蓋を閉じたまま動かしても安全ですか？</h2>
+<p>はい、デスクの上で電源につないでいれば安全です。Appleのクラムシェルモードはまさにそれをしています。避けるべきことは2つ。バッテリーで何時間も閉じたまま動かすこと（画面が消えたままバッテリーが減っていき、気づきません）と、動いているMacBookをカバンに入れること（キーボードの通気口がふさがれます）です。充電器を外すと蓋の保持を解除するツールを選び、時間制限を設定してください。</p>
+<h2>それでもMacがスリープしたとき</h2>
+<ul><li><b>充電器が外れた。</b> 蓋を閉じたまま使うツールの多くは、バッテリー駆動になると意図的に保持を解除します。</li>
+<li><b>画面だけが消えた。</b> Macは起きていて、macOSが自分のスケジュールでディスプレイを消してロックしただけです。ツールを責める前に、そのログに本当のスリープの記録があるか確認してください。</li>
+<li><b>ツールが終了またはアップデートした。</b> 自身の再起動をまたいで実行中のセッションを覚えているものを選んでください。</li>
+<li><b>バッテリーが下限に達した。</b> 良いツールはバッテリーを守るため、約10%で停止します。</li></ul>
+    <div class="tip" style="margin-top:44px"><b>Warashiが代わりにやってくれます。</b> <a href="../../docs/keep-awake/">スリープさせない</a>は、決めた時間のあいだ、作業が終わるまで、アプリが開いているあいだ、または電源接続中に蓋を閉じたままMacを起こしておき、<a href="../../docs/flight-log/">フライトログ</a>はあとから、Macがスリープしたのか画面だけが消えたのかを教えてくれます。</div>
     <h2>そのほかのガイド</h2><ul><li><a href="../../guides/whats-draining-my-macbook-battery/">MacBookのバッテリーを消耗させているものは？</a></li><li><a href="../../guides/why-is-my-mac-slow/">Macが遅い原因は？ 犯人のアプリを見つけよう</a></li><li><a href="../../guides/mac-running-hot-kernel-task/">Macが高温？ kernel_taskとサーマルスロットリングを解説</a></li></ul>
   </article>
 </div>

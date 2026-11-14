@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>How to keep your Mac awake with the lid closed · Warashi</title>
-<meta name="description" content="Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.">
+<title>Comment garder son Mac éveillé écran rabattu · Warashi</title>
+<meta name="description" content="Mode clamshell, caffeinate, pmset et apps de barre des menus : comment garder un MacBook en marche écran rabattu, et comment le faire sans cuire la batterie.">
 <link rel="canonical" href="https://warashi.app/fr/guides/keep-mac-awake-lid-closed/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Warashi">
-<meta property="og:title" content="How to keep your Mac awake with the lid closed · Warashi">
-<meta property="og:description" content="Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.">
+<meta property="og:title" content="Comment garder son Mac éveillé écran rabattu · Warashi">
+<meta property="og:description" content="Mode clamshell, caffeinate, pmset et apps de barre des menus : comment garder un MacBook en marche écran rabattu, et comment le faire sans cuire la batterie.">
 <meta property="og:url" content="https://warashi.app/fr/guides/keep-mac-awake-lid-closed/">
 <meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Warashi : la boîte noire de votre Mac. L’icône de l’esprit à côté de la fenêtre Warashi et de la fenêtre de la barre des menus.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How to keep your Mac awake with the lid closed · Warashi">
-<meta name="twitter:description" content="Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.">
+<meta name="twitter:title" content="Comment garder son Mac éveillé écran rabattu · Warashi">
+<meta name="twitter:description" content="Mode clamshell, caffeinate, pmset et apps de barre des menus : comment garder un MacBook en marche écran rabattu, et comment le faire sans cuire la batterie.">
 <meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
 <meta name="twitter:image:alt" content="Warashi : la boîte noire de votre Mac. L’icône de l’esprit à côté de la fenêtre Warashi et de la fenêtre de la barre des menus.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
@@ -37,7 +37,7 @@ posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
 });
 posthog.register({ surface: "website" });
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to keep your Mac awake with the lid closed","description":"Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-14","dateModified":"2026-11-14","mainEntityOfPage":"https://warashi.app/guides/keep-mac-awake-lid-closed/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Comment garder son Mac éveillé écran rabattu","description":"Mode clamshell, caffeinate, pmset et apps de barre des menus : comment garder un MacBook en marche écran rabattu, et comment le faire sans cuire la batterie.","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-14","dateModified":"2026-11-14","mainEntityOfPage":"https://warashi.app/guides/keep-mac-awake-lid-closed/"}</script>
 
 
 
@@ -68,25 +68,25 @@ posthog.register({ surface: "website" });
 <main id="main">
 
 <div class="wrap" style="max-width:800px">
-  <div class="page-head"><div class="crumbs"><a href="../../guides/">Guides</a></div><h1>How to keep your Mac awake with the lid closed</h1>
-    <p class="lead">Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.</p><p class="meta">5 min read · Updated 14 November 2026</p></div>
+  <div class="page-head"><div class="crumbs"><a href="../../guides/">Guides</a></div><h1>Comment garder son Mac éveillé écran rabattu</h1>
+    <p class="lead">Mode clamshell, caffeinate, pmset et apps de barre des menus : comment garder un MacBook en marche écran rabattu, et comment le faire sans cuire la batterie.</p><p class="meta">5 min de lecture · Mis à jour le 14 novembre 2026</p></div>
   <article class="prose" style="padding-bottom:40px">
-<p>Close the lid of a MacBook and it sleeps: downloads stop, builds pause, the server you were serving from goes quiet. macOS has no switch for "keep working with the lid closed" unless an external display and a keyboard are plugged in (clamshell mode). Here is what works, what doesn't, and how to do it safely.</p>
-<h2>1. The built-in way: clamshell mode</h2>
-<p>Plug in power, an external display, and a keyboard or mouse. Close the lid and the Mac keeps running on the external display. That's Apple's supported way, and it's the right one if you have a monitor. Without all three (power, display, input device) the Mac sleeps when the lid closes.</p>
-<h2>2. The Terminal way: <code>caffeinate</code> and <code>pmset</code></h2>
-<p><code>caffeinate -i</code> keeps the Mac from idle-sleeping while a command runs, but it does <b>not</b> stop lid sleep. For that you need <code>sudo pmset -a disablesleep 1</code>, which disables sleep altogether, including with the lid closed. It works, with three catches: it needs an administrator password every time, it's easy to forget to turn off again, and a MacBook left like that in a bag can get hot and drain its battery to nothing.</p>
-<h2>3. An app that does it on your terms</h2>
-<p>A menu bar app can hold the Mac awake for exactly as long as you want: for 30 minutes, until a download or build finishes, while a certain app is open, or until you say stop. The good ones add the lid-closed option with guard rails: only while plugged in, and with a time limit, so the Mac can't cook in a bag or run its battery flat.</p>
-<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/app/tools-light.webp" alt="Warashi's Tools page with the Keep Awake card" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../../../assets/img/app/tools-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span><figcaption>Keep Awake in Warashi's Tools: for a time, until the work is done, while an app is open, or with the lid closed.</figcaption></figure>
-<h2>Is it safe to run a MacBook with the lid closed?</h2>
-<p>Yes, on a desk and plugged in. Apple's own clamshell mode does exactly that. Two things to avoid: running it closed on battery for hours (the battery drains with the screen off and you don't notice), and putting a running MacBook in a bag, where the keyboard vents are covered. Pick a tool that releases the lid hold when the charger comes out, and set a time limit.</p>
-<h2>When the Mac still went to sleep</h2>
-<ul><li><b>The charger came out.</b> Most lid-closed tools release the hold on battery, on purpose.</li>
-<li><b>Only the screen turned off.</b> The Mac was awake; macOS turned off and locked the display on its own schedule. Check your tool's log for a real sleep entry before blaming it.</li>
-<li><b>The tool quit or updated.</b> Choose one that remembers a running session across its own restarts.</li>
-<li><b>Battery reached the floor.</b> Good tools stop at about 10% to protect the battery.</li></ul>
-    <div class="tip" style="margin-top:44px"><b>Warashi does this for you.</b> Its <a href="../../docs/keep-awake/">Keep Awake</a> holds your Mac awake for a set time, until a task finishes, while an app is open, or with the lid closed while plugged in, and the <a href="../../docs/flight-log/">Flight Log</a> tells you afterwards whether the Mac slept or only the screen did.</div>
+<p>Rabattez l’écran d’un MacBook et il se met en veille : les téléchargements s’arrêtent, les compilations se figent, le serveur que vous faisiez tourner se tait. macOS n’a pas d’interrupteur « continuer à travailler écran rabattu », sauf si un écran externe et un clavier sont branchés (mode clamshell). Voici ce qui fonctionne, ce qui ne fonctionne pas, et comment le faire sans risque.</p>
+<h2>1. La méthode intégrée : le mode clamshell</h2>
+<p>Branchez l’alimentation, un écran externe et un clavier ou une souris. Rabattez l’écran et le Mac continue de fonctionner sur l’écran externe. C’est la méthode prise en charge par Apple, et la bonne si vous avez un moniteur. Sans les trois (alimentation, écran, périphérique de saisie), le Mac se met en veille quand on rabat l’écran.</p>
+<h2>2. La méthode Terminal : <code>caffeinate</code> et <code>pmset</code></h2>
+<p><code>caffeinate -i</code> empêche le Mac de se mettre en veille par inactivité pendant qu’une commande s’exécute, mais n’empêche <b>pas</b> la veille à la fermeture de l’écran. Pour cela, il faut <code>sudo pmset -a disablesleep 1</code>, qui désactive complètement la veille, écran rabattu compris. Cela fonctionne, avec trois pièges : il faut un mot de passe administrateur à chaque fois, on oublie facilement de le désactiver, et un MacBook laissé ainsi dans un sac peut chauffer et vider sa batterie jusqu’au bout.</p>
+<h2>3. Une app qui le fait selon vos conditions</h2>
+<p>Une app de barre des menus peut garder le Mac éveillé exactement aussi longtemps que vous le voulez : pendant 30 minutes, jusqu’à la fin d’un téléchargement ou d’une compilation, tant qu’une app donnée est ouverte, ou jusqu’à ce que vous disiez stop. Les bonnes ajoutent l’option écran rabattu avec des garde-fous : seulement sur secteur, et avec une limite de temps, pour que le Mac ne puisse ni cuire dans un sac ni vider sa batterie.</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/app/tools-light.webp" alt="La page Outils de Warashi avec la carte Rester éveillé" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../../../assets/img/app/tools-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span><figcaption>Rester éveillé dans les Outils de Warashi : pour une durée, jusqu’à la fin du travail, tant qu’une app est ouverte, ou écran rabattu.</figcaption></figure>
+<h2>Est-il sûr de faire tourner un MacBook écran rabattu ?</h2>
+<p>Oui, sur un bureau et branché. Le mode clamshell d’Apple fait exactement cela. Deux choses à éviter : le faire tourner fermé sur batterie pendant des heures (la batterie se vide écran éteint sans que vous le remarquiez), et mettre un MacBook en marche dans un sac, où les ouïes du clavier sont couvertes. Choisissez un outil qui relâche le maintien écran rabattu quand le chargeur est débranché, et fixez une limite de temps.</p>
+<h2>Quand le Mac s’est quand même mis en veille</h2>
+<ul><li><b>Le chargeur a été débranché.</b> La plupart des outils écran rabattu relâchent le maintien sur batterie, volontairement.</li>
+<li><b>Seul l’écran s’est éteint.</b> Le Mac était éveillé ; macOS a éteint et verrouillé l’écran selon son propre calendrier. Cherchez une vraie entrée de veille dans le journal de votre outil avant de l’accuser.</li>
+<li><b>L’outil s’est fermé ou mis à jour.</b> Choisissez-en un qui se souvient d’une session en cours à travers ses propres redémarrages.</li>
+<li><b>La batterie a atteint le plancher.</b> Les bons outils s’arrêtent vers 10 % pour protéger la batterie.</li></ul>
+    <div class="tip" style="margin-top:44px"><b>Warashi le fait pour vous.</b> Son <a href="../../docs/keep-awake/">Rester éveillé</a> garde votre Mac éveillé pendant une durée donnée, jusqu’à la fin d’une tâche, tant qu’une app est ouverte, ou écran rabattu lorsqu’il est branché, et le <a href="../../docs/flight-log/">Journal de bord</a> vous dit ensuite si le Mac s’est mis en veille ou seulement l’écran.</div>
     <h2>Autres guides</h2><ul><li><a href="../../guides/whats-draining-my-macbook-battery/">Qu’est-ce qui vide la batterie de mon MacBook ?</a></li><li><a href="../../guides/why-is-my-mac-slow/">Pourquoi mon Mac est-il lent ? Trouvez l’app responsable</a></li><li><a href="../../guides/mac-running-hot-kernel-task/">Mac qui chauffe ? kernel_task et limitation thermique expliqués</a></li></ul>
   </article>
 </div>

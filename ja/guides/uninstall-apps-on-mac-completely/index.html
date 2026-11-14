@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>How to uninstall apps on a Mac completely, leftovers included · Warashi</title>
-<meta name="description" content="Where Mac apps keep their files, how to find what a deleted app left in your Library, and how to clear it without deleting anything you&#x27;ll miss.">
+<title>Macでアプリを残りものまで完全にアンインストールする方法 · Warashi</title>
+<meta name="description" content="Macのアプリがファイルを置いている場所、削除したアプリがライブラリに残したものの見つけ方、必要なものを消さずに片付ける方法。">
 <link rel="canonical" href="https://warashi.app/ja/guides/uninstall-apps-on-mac-completely/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Warashi">
-<meta property="og:title" content="How to uninstall apps on a Mac completely, leftovers included · Warashi">
-<meta property="og:description" content="Where Mac apps keep their files, how to find what a deleted app left in your Library, and how to clear it without deleting anything you&#x27;ll miss.">
+<meta property="og:title" content="Macでアプリを残りものまで完全にアンインストールする方法 · Warashi">
+<meta property="og:description" content="Macのアプリがファイルを置いている場所、削除したアプリがライブラリに残したものの見つけ方、必要なものを消さずに片付ける方法。">
 <meta property="og:url" content="https://warashi.app/ja/guides/uninstall-apps-on-mac-completely/">
 <meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Warashi：Macのフライトレコーダー。Warashiのウインドウとポップオーバーの横にいるわらしのアイコン。">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How to uninstall apps on a Mac completely, leftovers included · Warashi">
-<meta name="twitter:description" content="Where Mac apps keep their files, how to find what a deleted app left in your Library, and how to clear it without deleting anything you&#x27;ll miss.">
+<meta name="twitter:title" content="Macでアプリを残りものまで完全にアンインストールする方法 · Warashi">
+<meta name="twitter:description" content="Macのアプリがファイルを置いている場所、削除したアプリがライブラリに残したものの見つけ方、必要なものを消さずに片付ける方法。">
 <meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
 <meta name="twitter:image:alt" content="Warashi：Macのフライトレコーダー。Warashiのウインドウとポップオーバーの横にいるわらしのアイコン。">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
@@ -37,7 +37,7 @@ posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
 });
 posthog.register({ surface: "website" });
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to uninstall apps on a Mac completely, leftovers included","description":"Where Mac apps keep their files, how to find what a deleted app left in your Library, and how to clear it without deleting anything you'll miss.","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-14","dateModified":"2026-11-14","mainEntityOfPage":"https://warashi.app/guides/uninstall-apps-on-mac-completely/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Macでアプリを残りものまで完全にアンインストールする方法","description":"Macのアプリがファイルを置いている場所、削除したアプリがライブラリに残したものの見つけ方、必要なものを消さずに片付ける方法。","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-14","dateModified":"2026-11-14","mainEntityOfPage":"https://warashi.app/guides/uninstall-apps-on-mac-completely/"}</script>
 
 
 
@@ -68,32 +68,32 @@ posthog.register({ surface: "website" });
 <main id="main">
 
 <div class="wrap" style="max-width:800px">
-  <div class="page-head"><div class="crumbs"><a href="../../guides/">ガイド</a></div><h1>How to uninstall apps on a Mac completely, leftovers included</h1>
-    <p class="lead">Where Mac apps keep their files, how to find what a deleted app left in your Library, and how to clear it without deleting anything you'll miss.</p><p class="meta">5 min read · Updated 14 November 2026</p></div>
+  <div class="page-head"><div class="crumbs"><a href="../../guides/">ガイド</a></div><h1>Macでアプリを残りものまで完全にアンインストールする方法</h1>
+    <p class="lead">Macのアプリがファイルを置いている場所、削除したアプリがライブラリに残したものの見つけ方、必要なものを消さずに片付ける方法。</p><p class="meta">読了5分 · 2026年11月14日更新</p></div>
   <article class="prose" style="padding-bottom:40px">
-<p>Dragging an app to the Trash removes the app and leaves its baggage behind: caches, preferences, saved state, logs, sometimes gigabytes in <code>~/Library</code>. Here is where apps keep their things on a Mac, how to find what a removed app left, and how to clear it without deleting anything you'll miss.</p>
-<h2>Where apps keep their files</h2>
-<p>Apps store almost everything under your user Library, which Finder hides. Hold <kbd>⌥</kbd> while opening the Finder's <b>Go</b> menu to see it. The usual places, named after the app's bundle identifier (such as <code>com.company.app</code>):</p>
-<ul><li><code>~/Library/Application Support/</code>: the app's own data, often the biggest.</li>
-<li><code>~/Library/Caches/</code>: safe to remove; the app rebuilds them.</li>
-<li><code>~/Library/Preferences/</code>: settings, small.</li>
-<li><code>~/Library/Containers/</code> and <code>Group Containers/</code>: sandboxed apps' data.</li>
-<li><code>~/Library/Saved Application State/</code>, <code>Logs/</code>, <code>HTTPStorages/</code>, <code>WebKit/</code>: small, safe to remove.</li>
-<li><code>~/Library/LaunchAgents/</code>: helpers that start at login; remove the app's so it stops trying to run.</li></ul>
-<h2>The order that doesn't go wrong</h2>
-<ol><li><b>Quit the app</b>, and its menu bar helper if it has one.</li>
-<li><b>Use the app's own uninstaller</b> if it ships one (many developer tools and anti-virus apps do).</li>
-<li><b>Move the app to the Trash</b> from Applications. If macOS asks for your password, the app installed a helper; that's normal.</li>
-<li><b>Find the leftovers</b> by searching each folder above for the app's name and bundle identifier.</li>
-<li><b>Move them to the Trash too</b>, and leave the Trash alone for a few days before emptying it, in case something turns out to be shared with another app.</li></ol>
-<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/app/storage-light.webp" alt="Warashi's Storage page with the ring of what fills the disk" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../../../assets/img/app/storage-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span><figcaption>Storage › Apps lists every app, those you haven't opened in months first, with what each has left in your Library.</figcaption></figure>
-<h2>What not to delete</h2>
-<p>Anything in <code>Group Containers</code> that several apps from the same developer share, anything under <code>/Library</code> (the system-wide one) you don't recognise, and the iCloud Drive folders of apps whose documents you still want. When in doubt, leave it: a leftover costs disk space, a wrong deletion costs data.</p>
-<h2>Leftovers of apps you removed long ago</h2>
-<p>Every Mac accumulates folders from apps that are gone: a trial you forgot, a tool you replaced. They're easy to spot once you know the pattern: a folder in Application Support or Containers whose bundle identifier matches no app in Applications. These are the safest things on the disk to clear.</p>
-<h2>Why not a cleaner that deletes for you?</h2>
-<p>Because the risk sits in the one file it gets wrong. Prefer a tool that shows you each item, moves it to the Trash rather than deleting it, and never touches anything it can't tie to the app by identifier or name.</p>
-    <div class="tip" style="margin-top:44px"><b>Warashi does this for you.</b> Its <a href="../../docs/storage/">Storage</a> page has a real uninstaller: every app, those you haven't opened in months first, each with what it left in your Library, moved to the Trash item by item after you've seen it. It also finds the leftovers of apps you already removed.</div>
+<p>アプリをゴミ箱にドラッグするとアプリは消えますが、荷物は残ります。キャッシュ、環境設定、保存された状態、ログ、ときには<code>~/Library</code>に数GB。ここでは、Macでアプリがものを置いている場所、削除したアプリが残したものの見つけ方、必要なものを消さずに片付ける方法を説明します。</p>
+<h2>アプリがファイルを置いている場所</h2>
+<p>アプリはほとんどすべてを、Finderが隠しているユーザのライブラリに保存します。<kbd>⌥</kbd>を押しながらFinderの<b>移動</b>メニューを開くと表示されます。よくある場所は、アプリのバンドル識別子（<code>com.company.app</code>など）の名前が付いています：</p>
+<ul><li><code>~/Library/Application Support/</code>：アプリ自身のデータ。多くの場合いちばん大きいです。</li>
+<li><code>~/Library/Caches/</code>：削除しても安全です。アプリが作り直します。</li>
+<li><code>~/Library/Preferences/</code>：設定。小さいです。</li>
+<li><code>~/Library/Containers/</code>と<code>Group Containers/</code>：サンドボックス化されたアプリのデータ。</li>
+<li><code>~/Library/Saved Application State/</code>、<code>Logs/</code>、<code>HTTPStorages/</code>、<code>WebKit/</code>：小さく、削除しても安全です。</li>
+<li><code>~/Library/LaunchAgents/</code>：ログイン時に起動するヘルパー。そのアプリのものを削除すると、起動しようとしなくなります。</li></ul>
+<h2>失敗しない手順</h2>
+<ol><li><b>アプリを終了します</b>。メニューバーのヘルパーがあれば、それも終了します。</li>
+<li><b>アプリ自身のアンインストーラを使います</b>。付属している場合です（多くの開発ツールやアンチウイルスアプリにはあります）。</li>
+<li>Applicationsから<b>アプリをゴミ箱に入れます</b>。macOSがパスワードを求める場合、そのアプリはヘルパーをインストールしています。正常なことです。</li>
+<li><b>残りものを探す</b>には、上の各フォルダでアプリの名前とバンドル識別子を検索します。</li>
+<li><b>それらもゴミ箱に入れ</b>、別のアプリと共有していたものがあるかもしれないので、空にする前に数日はゴミ箱をそのままにしておきます。</li></ol>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/app/storage-light.webp" alt="Warashiのストレージページ：ディスクを埋めているもののリング" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../../../assets/img/app/storage-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span><figcaption>ストレージ › アプリには、すべてのアプリが何か月も開いていないものから順に、それぞれがライブラリに残したものと一緒に表示されます。</figcaption></figure>
+<h2>削除してはいけないもの</h2>
+<p><code>Group Containers</code>にある、同じ開発元の複数のアプリが共有しているもの、<code>/Library</code>（システム全体のもの）の下にある見覚えのないもの、そして書類がまだ必要なアプリのiCloud Driveフォルダ。迷ったら残してください。残りものはディスク容量を使うだけですが、誤った削除はデータを失います。</p>
+<h2>ずっと前に削除したアプリの残りもの</h2>
+<p>どのMacにも、もうないアプリのフォルダがたまっていきます。忘れた試用版、乗り換えたツール。パターンを知れば見つけるのは簡単です。Application SupportやContainersにあるフォルダで、そのバンドル識別子がApplicationsのどのアプリにも一致しないもの。これらはディスク上で最も安全に片付けられるものです。</p>
+<h2>代わりに削除してくれるクリーナーではだめなのはなぜ？</h2>
+<p>危険は、間違えたたった1つのファイルにあるからです。各項目を見せてくれて、削除ではなくゴミ箱に入れ、識別子や名前でアプリに結びつけられないものには決して触れないツールを選んでください。</p>
+    <div class="tip" style="margin-top:44px"><b>Warashiが代わりにやってくれます。</b> <a href="../../docs/storage/">ストレージ</a>ページには本物のアンインストーラがあります。すべてのアプリを、何か月も開いていないものから順に、ライブラリに残したものと一緒に表示し、確認したうえで1項目ずつゴミ箱に入れます。すでに削除したアプリの残りものも見つけます。</div>
     <h2>そのほかのガイド</h2><ul><li><a href="../../guides/whats-taking-up-space-on-my-mac/">Macのストレージを占めているものは？</a></li><li><a href="../../guides/why-is-my-mac-slow/">Macが遅い原因は？ 犯人のアプリを見つけよう</a></li><li><a href="../../guides/whats-draining-my-macbook-battery/">MacBookのバッテリーを消耗させているものは？</a></li></ul>
   </article>
 </div>

@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>How to keep your Mac awake with the lid closed · Warashi</title>
-<meta name="description" content="Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.">
+<title>Jak nie usypiać Maca z zamkniętą pokrywą · Warashi</title>
+<meta name="description" content="Tryb zamkniętej pokrywy, caffeinate, pmset i aplikacje z paska menu: jak utrzymać MacBooka w pracy z zamkniętą pokrywą i jak zrobić to, nie gotując baterii.">
 <link rel="canonical" href="https://warashi.app/pl/guides/keep-mac-awake-lid-closed/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Warashi">
-<meta property="og:title" content="How to keep your Mac awake with the lid closed · Warashi">
-<meta property="og:description" content="Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.">
+<meta property="og:title" content="Jak nie usypiać Maca z zamkniętą pokrywą · Warashi">
+<meta property="og:description" content="Tryb zamkniętej pokrywy, caffeinate, pmset i aplikacje z paska menu: jak utrzymać MacBooka w pracy z zamkniętą pokrywą i jak zrobić to, nie gotując baterii.">
 <meta property="og:url" content="https://warashi.app/pl/guides/keep-mac-awake-lid-closed/">
 <meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Warashi: czarna skrzynka Twojego Maca. Ikona duszka obok okna Warashi i okna paska menu.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How to keep your Mac awake with the lid closed · Warashi">
-<meta name="twitter:description" content="Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.">
+<meta name="twitter:title" content="Jak nie usypiać Maca z zamkniętą pokrywą · Warashi">
+<meta name="twitter:description" content="Tryb zamkniętej pokrywy, caffeinate, pmset i aplikacje z paska menu: jak utrzymać MacBooka w pracy z zamkniętą pokrywą i jak zrobić to, nie gotując baterii.">
 <meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
 <meta name="twitter:image:alt" content="Warashi: czarna skrzynka Twojego Maca. Ikona duszka obok okna Warashi i okna paska menu.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
@@ -37,7 +37,7 @@ posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
 });
 posthog.register({ surface: "website" });
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to keep your Mac awake with the lid closed","description":"Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-14","dateModified":"2026-11-14","mainEntityOfPage":"https://warashi.app/guides/keep-mac-awake-lid-closed/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Jak nie usypiać Maca z zamkniętą pokrywą","description":"Tryb zamkniętej pokrywy, caffeinate, pmset i aplikacje z paska menu: jak utrzymać MacBooka w pracy z zamkniętą pokrywą i jak zrobić to, nie gotując baterii.","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-14","dateModified":"2026-11-14","mainEntityOfPage":"https://warashi.app/guides/keep-mac-awake-lid-closed/"}</script>
 
 
 
@@ -68,25 +68,25 @@ posthog.register({ surface: "website" });
 <main id="main">
 
 <div class="wrap" style="max-width:800px">
-  <div class="page-head"><div class="crumbs"><a href="../../guides/">Poradniki</a></div><h1>How to keep your Mac awake with the lid closed</h1>
-    <p class="lead">Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.</p><p class="meta">5 min read · Updated 14 November 2026</p></div>
+  <div class="page-head"><div class="crumbs"><a href="../../guides/">Poradniki</a></div><h1>Jak nie usypiać Maca z zamkniętą pokrywą</h1>
+    <p class="lead">Tryb zamkniętej pokrywy, caffeinate, pmset i aplikacje z paska menu: jak utrzymać MacBooka w pracy z zamkniętą pokrywą i jak zrobić to, nie gotując baterii.</p><p class="meta">5 min czytania · Aktualizacja: 14 listopada 2026</p></div>
   <article class="prose" style="padding-bottom:40px">
-<p>Close the lid of a MacBook and it sleeps: downloads stop, builds pause, the server you were serving from goes quiet. macOS has no switch for "keep working with the lid closed" unless an external display and a keyboard are plugged in (clamshell mode). Here is what works, what doesn't, and how to do it safely.</p>
-<h2>1. The built-in way: clamshell mode</h2>
-<p>Plug in power, an external display, and a keyboard or mouse. Close the lid and the Mac keeps running on the external display. That's Apple's supported way, and it's the right one if you have a monitor. Without all three (power, display, input device) the Mac sleeps when the lid closes.</p>
-<h2>2. The Terminal way: <code>caffeinate</code> and <code>pmset</code></h2>
-<p><code>caffeinate -i</code> keeps the Mac from idle-sleeping while a command runs, but it does <b>not</b> stop lid sleep. For that you need <code>sudo pmset -a disablesleep 1</code>, which disables sleep altogether, including with the lid closed. It works, with three catches: it needs an administrator password every time, it's easy to forget to turn off again, and a MacBook left like that in a bag can get hot and drain its battery to nothing.</p>
-<h2>3. An app that does it on your terms</h2>
-<p>A menu bar app can hold the Mac awake for exactly as long as you want: for 30 minutes, until a download or build finishes, while a certain app is open, or until you say stop. The good ones add the lid-closed option with guard rails: only while plugged in, and with a time limit, so the Mac can't cook in a bag or run its battery flat.</p>
-<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/app/tools-light.webp" alt="Warashi's Tools page with the Keep Awake card" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../../../assets/img/app/tools-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span><figcaption>Keep Awake in Warashi's Tools: for a time, until the work is done, while an app is open, or with the lid closed.</figcaption></figure>
-<h2>Is it safe to run a MacBook with the lid closed?</h2>
-<p>Yes, on a desk and plugged in. Apple's own clamshell mode does exactly that. Two things to avoid: running it closed on battery for hours (the battery drains with the screen off and you don't notice), and putting a running MacBook in a bag, where the keyboard vents are covered. Pick a tool that releases the lid hold when the charger comes out, and set a time limit.</p>
-<h2>When the Mac still went to sleep</h2>
-<ul><li><b>The charger came out.</b> Most lid-closed tools release the hold on battery, on purpose.</li>
-<li><b>Only the screen turned off.</b> The Mac was awake; macOS turned off and locked the display on its own schedule. Check your tool's log for a real sleep entry before blaming it.</li>
-<li><b>The tool quit or updated.</b> Choose one that remembers a running session across its own restarts.</li>
-<li><b>Battery reached the floor.</b> Good tools stop at about 10% to protect the battery.</li></ul>
-    <div class="tip" style="margin-top:44px"><b>Warashi does this for you.</b> Its <a href="../../docs/keep-awake/">Keep Awake</a> holds your Mac awake for a set time, until a task finishes, while an app is open, or with the lid closed while plugged in, and the <a href="../../docs/flight-log/">Flight Log</a> tells you afterwards whether the Mac slept or only the screen did.</div>
+<p>Zamknij pokrywę MacBooka i zaśnie: pobieranie się zatrzymuje, kompilacje stają, serwer, z którego serwowałeś, milknie. macOS nie ma przełącznika „pracuj dalej z zamkniętą pokrywą”, chyba że podłączony jest monitor zewnętrzny i klawiatura (tryb zamkniętej pokrywy). Oto co działa, co nie i jak zrobić to bezpiecznie.</p>
+<h2>1. Sposób wbudowany: tryb zamkniętej pokrywy</h2>
+<p>Podłącz zasilanie, monitor zewnętrzny oraz klawiaturę lub mysz. Zamknij pokrywę, a Mac dalej działa na monitorze zewnętrznym. To sposób wspierany przez Apple i właściwy, jeśli masz monitor. Bez wszystkich trzech (zasilanie, monitor, urządzenie wejściowe) Mac zasypia po zamknięciu pokrywy.</p>
+<h2>2. Sposób z Terminala: <code>caffeinate</code> i <code>pmset</code></h2>
+<p><code>caffeinate -i</code> nie pozwala Macowi zasnąć z bezczynności, gdy działa polecenie, ale <b>nie</b> zatrzymuje uśpienia po zamknięciu pokrywy. Do tego potrzebujesz <code>sudo pmset -a disablesleep 1</code>, które wyłącza uśpienie całkowicie, także z zamkniętą pokrywą. Działa, z trzema haczykami: za każdym razem wymaga hasła administratora, łatwo zapomnieć je potem wyłączyć, a MacBook zostawiony w ten sposób w torbie może się nagrzać i rozładować baterię do zera.</p>
+<h2>3. Aplikacja, która robi to na Twoich warunkach</h2>
+<p>Aplikacja z paska menu może utrzymać Maca w czuwaniu dokładnie tak długo, jak chcesz: przez 30 minut, do końca pobierania lub kompilacji, gdy otwarta jest dana aplikacja albo dopóki nie powiesz stop. Te dobre dodają opcję zamkniętej pokrywy z zabezpieczeniami: tylko przy podłączonym zasilaniu i z limitem czasu, by Mac nie mógł ugotować się w torbie ani rozładować baterii do zera.</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/app/tools-light.webp" alt="Strona Narzędzia w Warashi z kartą Nie usypiaj" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../../../assets/img/app/tools-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span><figcaption>Nie usypiaj w Narzędziach Warashi: na określony czas, do końca pracy, gdy otwarta jest aplikacja albo z zamkniętą pokrywą.</figcaption></figure>
+<h2>Czy praca MacBooka z zamkniętą pokrywą jest bezpieczna?</h2>
+<p>Tak, na biurku i przy podłączonym zasilaniu. Własny tryb zamkniętej pokrywy Apple robi dokładnie to. Dwóch rzeczy unikaj: pracy z zamkniętą pokrywą na baterii przez wiele godzin (bateria rozładowuje się przy wyłączonym ekranie, a Ty tego nie zauważasz) oraz wkładania działającego MacBooka do torby, gdzie otwory wentylacyjne przy klawiaturze są zasłonięte. Wybierz narzędzie, które zwalnia blokadę pokrywy po odłączeniu ładowarki, i ustaw limit czasu.</p>
+<h2>Gdy Mac i tak zasnął</h2>
+<ul><li><b>Odłączono ładowarkę.</b> Większość narzędzi do pracy z zamkniętą pokrywą celowo zwalnia blokadę na baterii.</li>
+<li><b>Wyłączył się tylko ekran.</b> Mac czuwał; macOS wyłączył i zablokował ekran według własnego harmonogramu. Zanim obwinisz narzędzie, sprawdź w jego dzienniku, czy jest tam prawdziwy wpis o uśpieniu.</li>
+<li><b>Narzędzie zakończyło działanie lub się uaktualniło.</b> Wybierz takie, które pamięta trwającą sesję mimo własnych restartów.</li>
+<li><b>Bateria osiągnęła dolny próg.</b> Dobre narzędzia zatrzymują się przy około 10%, by chronić baterię.</li></ul>
+    <div class="tip" style="margin-top:44px"><b>Warashi robi to za Ciebie.</b> Jego <a href="../../docs/keep-awake/">Nie usypiaj</a> utrzymuje Maca w czuwaniu przez ustalony czas, do końca zadania, gdy otwarta jest dana aplikacja albo z zamkniętą pokrywą przy podłączonym zasilaniu, a <a href="../../docs/flight-log/">Dziennik pokładowy</a> mówi Ci potem, czy zasnął Mac, czy tylko ekran.</div>
     <h2>Więcej poradników</h2><ul><li><a href="../../guides/whats-draining-my-macbook-battery/">Co rozładowuje baterię mojego MacBooka?</a></li><li><a href="../../guides/why-is-my-mac-slow/">Dlaczego mój Mac działa wolno? Znajdź aplikację, która za tym stoi</a></li><li><a href="../../guides/mac-running-hot-kernel-task/">Mac się nagrzewa? kernel_task i spowolnienie termiczne wyjaśnione</a></li></ul>
   </article>
 </div>

@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>How to stop your MacBook charging at 80% · Warashi</title>
-<meta name="description" content="Why holding a MacBook battery at 80% makes it last years longer, what macOS does by itself, and how to set a charge limit on macOS 26.">
+<title>MacBookの充電を80%で止める方法 · Warashi</title>
+<meta name="description" content="MacBookのバッテリーを80%で保つと何年も長持ちする理由、macOSが自分でしていること、macOS 26で充電上限を設定する方法。">
 <link rel="canonical" href="https://warashi.app/ja/guides/limit-macbook-charging-80-percent/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Warashi">
-<meta property="og:title" content="How to stop your MacBook charging at 80% · Warashi">
-<meta property="og:description" content="Why holding a MacBook battery at 80% makes it last years longer, what macOS does by itself, and how to set a charge limit on macOS 26.">
+<meta property="og:title" content="MacBookの充電を80%で止める方法 · Warashi">
+<meta property="og:description" content="MacBookのバッテリーを80%で保つと何年も長持ちする理由、macOSが自分でしていること、macOS 26で充電上限を設定する方法。">
 <meta property="og:url" content="https://warashi.app/ja/guides/limit-macbook-charging-80-percent/">
 <meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Warashi：Macのフライトレコーダー。Warashiのウインドウとポップオーバーの横にいるわらしのアイコン。">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How to stop your MacBook charging at 80% · Warashi">
-<meta name="twitter:description" content="Why holding a MacBook battery at 80% makes it last years longer, what macOS does by itself, and how to set a charge limit on macOS 26.">
+<meta name="twitter:title" content="MacBookの充電を80%で止める方法 · Warashi">
+<meta name="twitter:description" content="MacBookのバッテリーを80%で保つと何年も長持ちする理由、macOSが自分でしていること、macOS 26で充電上限を設定する方法。">
 <meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
 <meta name="twitter:image:alt" content="Warashi：Macのフライトレコーダー。Warashiのウインドウとポップオーバーの横にいるわらしのアイコン。">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
@@ -37,7 +37,7 @@ posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
 });
 posthog.register({ surface: "website" });
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to stop your MacBook charging at 80%","description":"Why holding a MacBook battery at 80% makes it last years longer, what macOS does by itself, and how to set a charge limit on macOS 26.","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-14","dateModified":"2026-11-14","mainEntityOfPage":"https://warashi.app/guides/limit-macbook-charging-80-percent/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"MacBookの充電を80%で止める方法","description":"MacBookのバッテリーを80%で保つと何年も長持ちする理由、macOSが自分でしていること、macOS 26で充電上限を設定する方法。","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-14","dateModified":"2026-11-14","mainEntityOfPage":"https://warashi.app/guides/limit-macbook-charging-80-percent/"}</script>
 
 
 
@@ -68,26 +68,26 @@ posthog.register({ surface: "website" });
 <main id="main">
 
 <div class="wrap" style="max-width:800px">
-  <div class="page-head"><div class="crumbs"><a href="../../guides/">ガイド</a></div><h1>How to stop your MacBook charging at 80%</h1>
-    <p class="lead">Why holding a MacBook battery at 80% makes it last years longer, what macOS does by itself, and how to set a charge limit on macOS 26.</p><p class="meta">4 min read · Updated 14 November 2026</p></div>
+  <div class="page-head"><div class="crumbs"><a href="../../guides/">ガイド</a></div><h1>MacBookの充電を80%で止める方法</h1>
+    <p class="lead">MacBookのバッテリーを80%で保つと何年も長持ちする理由、macOSが自分でしていること、macOS 26で充電上限を設定する方法。</p><p class="meta">読了4分 · 2026年11月14日更新</p></div>
   <article class="prose" style="padding-bottom:40px">
-<p>Lithium batteries age fastest when they sit at 100% and warm. If your MacBook lives on a desk, plugged in most of the day, stopping the charge at about 80% is the single most effective thing you can do for its battery health. Here is what macOS does by itself, what a limit changes, and how to set one.</p>
-<h2>What macOS already does</h2>
-<p><b>Optimized Battery Charging</b> (System Settings › Battery) learns your routine and holds the charge at 80% until it predicts you'll unplug. It's good when your days are regular and does nothing on days that aren't. It never lets you choose a level.</p>
-<h2>What a fixed limit changes</h2>
-<p>A charge limit tells the Mac to stop charging at a level you pick, every day, routine or not. At 80% you lose a fifth of the battery's range on the days you do unplug, and gain years of slower ageing on the days you don't. For a desk Mac it's an easy trade; for a Mac that travels most days, leave it at 100% or charge to full before you go.</p>
-<h2>How to set a limit on macOS 26</h2>
-<p>macOS 26.4 added a system charge limit of 80% that apps can turn on with your permission, and later versions allow lower levels. A battery app can show the limit as a slider, switch it on and off, and offer a one-off <b>charge to full</b> for the day you need it, without you touching System Settings.</p>
-<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/app/battery-light.webp" alt="Warashi's Battery page with the charge limit, health and how the battery has aged" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../../../assets/img/app/battery-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span><figcaption>A charge limit with a one-off charge to full, beside the battery's health and how it has aged over the months.</figcaption></figure>
-<h2>Is a limit below 80% safe?</h2>
-<p>Yes: a battery held at 60 or 70% ages even more slowly, and macOS allows it from 26.7 on. The cost is range on the day you unplug. Many people settle on 80% as the point where the gain is most of the way there and the Mac still has a useful afternoon in it.</p>
-<h2>Why did it charge past the limit anyway?</h2>
-<ul><li><b>Two charge managers.</b> Two apps setting the limit will fight, and a calibration run by one of them charges to 100% on purpose. Keep one.</li>
-<li><b>Charge to full was on.</b> Most tools offer a one-off full charge; it switches itself off afterwards.</li>
-<li><b>An older macOS.</b> Before 26.4 there is no system limit; apps that claim one on older systems are guessing.</li></ul>
-<h2>How to tell whether it's working</h2>
-<p>Look at the battery's health and cycle count over months, not days. A tool that keeps a history can show you the curve: a battery held at 80% loses maximum capacity noticeably slower than one that sits at 100%.</p>
-    <div class="tip" style="margin-top:44px"><b>Warashi does this for you.</b> Its <a href="../../docs/battery/">Battery page</a> sets the limit, charges to full for a day, warns when another app also manages charging, logs every time the battery went past the limit, and shows how the battery has aged over the months.</div>
+<p>リチウムバッテリーは、100%のまま温かい状態にあるときに最も速く劣化します。MacBookが一日の大半を電源につないだままデスクで過ごしているなら、充電を約80%で止めることが、バッテリーの状態のためにできる最も効果的なことです。ここでは、macOSが自分でしていること、上限で何が変わるか、設定する方法を説明します。</p>
+<h2>macOSがすでにしていること</h2>
+<p><b>バッテリー充電の最適化</b>（システム設定 › バッテリー）は、あなたの習慣を学習し、電源を外すと予測する時刻まで充電を80%で保ちます。毎日が規則的なら有効ですが、そうでない日には何もしません。レベルを自分で選ぶことはできません。</p>
+<h2>固定の上限で変わること</h2>
+<p>充電上限は、習慣があるかどうかに関係なく、選んだレベルで毎日充電を止めるようMacに指示します。80%にすると、電源を外す日にはバッテリーの持ちが5分の1減り、外さない日には劣化が遅くなる年月を得ます。デスクのMacなら簡単な取引です。ほぼ毎日持ち歩くMacなら、100%のままにするか、出かける前に満充電にしてください。</p>
+<h2>macOS 26で上限を設定する方法</h2>
+<p>macOS 26.4では、アプリがあなたの許可を得てオンにできる80%のシステム充電上限が追加され、以降のバージョンではより低いレベルも許可されています。バッテリーアプリは上限をスライダーで表示し、オンとオフを切り替え、必要な日のために1回限りの<b>満充電</b>を提供できます。システム設定に触れる必要はありません。</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/app/battery-light.webp" alt="Warashiのバッテリーページ：充電上限、状態、バッテリーの劣化の推移" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../../../assets/img/app/battery-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span><figcaption>1回限りの満充電付きの充電上限と、その横にバッテリーの状態と数か月にわたる劣化の推移。</figcaption></figure>
+<h2>80%より低い上限は安全ですか？</h2>
+<p>はい。60%や70%で保たれたバッテリーはさらにゆっくり劣化し、macOSは26.7からそれを許可しています。代わりに失うのは、電源を外す日の持ち時間です。多くの人は、効果の大半が得られ、Macにまだ午後いっぱい使える余力が残る点として、80%に落ち着いています。</p>
+<h2>それでも上限を超えて充電されたのはなぜ？</h2>
+<ul><li><b>充電管理アプリが2つある。</b> 2つのアプリが上限を設定すると互いに打ち消し合い、一方が行う調整は意図的に100%まで充電します。1つだけにしてください。</li>
+<li><b>「満充電にする」がオンだった。</b> ほとんどのツールには1回限りの満充電があり、終わると自動でオフになります。</li>
+<li><b>古いmacOS。</b> 26.4より前にはシステムの上限がありません。古いシステムで上限をうたうアプリは推測で動いています。</li></ul>
+<h2>効いているかどうかの見分け方</h2>
+<p>バッテリーの状態と充放電回数を、日単位ではなく月単位で見てください。履歴を残すツールなら、その曲線を見せてくれます。80%で保たれたバッテリーは、100%のままのものより最大容量の低下が目に見えて遅くなります。</p>
+    <div class="tip" style="margin-top:44px"><b>Warashiが代わりにやってくれます。</b> <a href="../../docs/battery/">バッテリーページ</a>では上限を設定し、1日だけ満充電にし、別のアプリも充電を管理しているときに警告し、バッテリーが上限を超えるたびに記録し、数か月にわたるバッテリーの劣化の推移を表示します。</div>
     <h2>そのほかのガイド</h2><ul><li><a href="../../guides/whats-draining-my-macbook-battery/">MacBookのバッテリーを消耗させているものは？</a></li><li><a href="../../guides/mac-running-hot-kernel-task/">Macが高温？ kernel_taskとサーマルスロットリングを解説</a></li><li><a href="../../guides/why-is-my-mac-slow/">Macが遅い原因は？ 犯人のアプリを見つけよう</a></li></ul>
   </article>
 </div>

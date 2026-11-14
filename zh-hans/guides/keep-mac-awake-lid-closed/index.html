@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>How to keep your Mac awake with the lid closed · Warashi</title>
-<meta name="description" content="Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.">
+<title>如何让 Mac 在合盖时保持唤醒 · Warashi</title>
+<meta name="description" content="合盖模式、caffeinate、pmset 和菜单栏 App：如何让 MacBook 在合盖时继续运行，以及如何做到不把电池烤坏。">
 <link rel="canonical" href="https://warashi.app/zh-hans/guides/keep-mac-awake-lid-closed/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Warashi">
-<meta property="og:title" content="How to keep your Mac awake with the lid closed · Warashi">
-<meta property="og:description" content="Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.">
+<meta property="og:title" content="如何让 Mac 在合盖时保持唤醒 · Warashi">
+<meta property="og:description" content="合盖模式、caffeinate、pmset 和菜单栏 App：如何让 MacBook 在合盖时继续运行，以及如何做到不把电池烤坏。">
 <meta property="og:url" content="https://warashi.app/zh-hans/guides/keep-mac-awake-lid-closed/">
 <meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Warashi：你的 Mac 的飞行记录仪。Warashi 窗口和菜单栏窗口旁的精灵图标。">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How to keep your Mac awake with the lid closed · Warashi">
-<meta name="twitter:description" content="Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.">
+<meta name="twitter:title" content="如何让 Mac 在合盖时保持唤醒 · Warashi">
+<meta name="twitter:description" content="合盖模式、caffeinate、pmset 和菜单栏 App：如何让 MacBook 在合盖时继续运行，以及如何做到不把电池烤坏。">
 <meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
 <meta name="twitter:image:alt" content="Warashi：你的 Mac 的飞行记录仪。Warashi 窗口和菜单栏窗口旁的精灵图标。">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
@@ -37,7 +37,7 @@ posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
 });
 posthog.register({ surface: "website" });
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to keep your Mac awake with the lid closed","description":"Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-14","dateModified":"2026-11-14","mainEntityOfPage":"https://warashi.app/guides/keep-mac-awake-lid-closed/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"如何让 Mac 在合盖时保持唤醒","description":"合盖模式、caffeinate、pmset 和菜单栏 App：如何让 MacBook 在合盖时继续运行，以及如何做到不把电池烤坏。","author":{"@type":"Person","name":"Adam Markocki"},"publisher":{"@type":"Organization","name":"Warashi"},"datePublished":"2026-11-14","dateModified":"2026-11-14","mainEntityOfPage":"https://warashi.app/guides/keep-mac-awake-lid-closed/"}</script>
 
 
 
@@ -68,25 +68,25 @@ posthog.register({ surface: "website" });
 <main id="main">
 
 <div class="wrap" style="max-width:800px">
-  <div class="page-head"><div class="crumbs"><a href="../../guides/">指南</a></div><h1>How to keep your Mac awake with the lid closed</h1>
-    <p class="lead">Clamshell mode, caffeinate, pmset and menu bar apps: how to keep a MacBook running with the lid closed, and how to do it without cooking the battery.</p><p class="meta">5 min read · Updated 14 November 2026</p></div>
+  <div class="page-head"><div class="crumbs"><a href="../../guides/">指南</a></div><h1>如何让 Mac 在合盖时保持唤醒</h1>
+    <p class="lead">合盖模式、caffeinate、pmset 和菜单栏 App：如何让 MacBook 在合盖时继续运行，以及如何做到不把电池烤坏。</p><p class="meta">阅读约 5 分钟 · 更新于 2026 年 11 月 14 日</p></div>
   <article class="prose" style="padding-bottom:40px">
-<p>Close the lid of a MacBook and it sleeps: downloads stop, builds pause, the server you were serving from goes quiet. macOS has no switch for "keep working with the lid closed" unless an external display and a keyboard are plugged in (clamshell mode). Here is what works, what doesn't, and how to do it safely.</p>
-<h2>1. The built-in way: clamshell mode</h2>
-<p>Plug in power, an external display, and a keyboard or mouse. Close the lid and the Mac keeps running on the external display. That's Apple's supported way, and it's the right one if you have a monitor. Without all three (power, display, input device) the Mac sleeps when the lid closes.</p>
-<h2>2. The Terminal way: <code>caffeinate</code> and <code>pmset</code></h2>
-<p><code>caffeinate -i</code> keeps the Mac from idle-sleeping while a command runs, but it does <b>not</b> stop lid sleep. For that you need <code>sudo pmset -a disablesleep 1</code>, which disables sleep altogether, including with the lid closed. It works, with three catches: it needs an administrator password every time, it's easy to forget to turn off again, and a MacBook left like that in a bag can get hot and drain its battery to nothing.</p>
-<h2>3. An app that does it on your terms</h2>
-<p>A menu bar app can hold the Mac awake for exactly as long as you want: for 30 minutes, until a download or build finishes, while a certain app is open, or until you say stop. The good ones add the lid-closed option with guard rails: only while plugged in, and with a time limit, so the Mac can't cook in a bag or run its battery flat.</p>
-<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/app/tools-light.webp" alt="Warashi's Tools page with the Keep Awake card" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../../../assets/img/app/tools-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span><figcaption>Keep Awake in Warashi's Tools: for a time, until the work is done, while an app is open, or with the lid closed.</figcaption></figure>
-<h2>Is it safe to run a MacBook with the lid closed?</h2>
-<p>Yes, on a desk and plugged in. Apple's own clamshell mode does exactly that. Two things to avoid: running it closed on battery for hours (the battery drains with the screen off and you don't notice), and putting a running MacBook in a bag, where the keyboard vents are covered. Pick a tool that releases the lid hold when the charger comes out, and set a time limit.</p>
-<h2>When the Mac still went to sleep</h2>
-<ul><li><b>The charger came out.</b> Most lid-closed tools release the hold on battery, on purpose.</li>
-<li><b>Only the screen turned off.</b> The Mac was awake; macOS turned off and locked the display on its own schedule. Check your tool's log for a real sleep entry before blaming it.</li>
-<li><b>The tool quit or updated.</b> Choose one that remembers a running session across its own restarts.</li>
-<li><b>Battery reached the floor.</b> Good tools stop at about 10% to protect the battery.</li></ul>
-    <div class="tip" style="margin-top:44px"><b>Warashi does this for you.</b> Its <a href="../../docs/keep-awake/">Keep Awake</a> holds your Mac awake for a set time, until a task finishes, while an app is open, or with the lid closed while plugged in, and the <a href="../../docs/flight-log/">Flight Log</a> tells you afterwards whether the Mac slept or only the screen did.</div>
+<p>合上 MacBook 的盖子，它就会睡眠：下载停止，构建暂停，你正在提供服务的服务器也安静下来。除非接上外接显示器和键盘（合盖模式），macOS 没有“合盖继续工作”的开关。下面说明哪些方法有效，哪些无效，以及如何安全地做到。</p>
+<h2>1. 内建的方法：合盖模式</h2>
+<p>接上电源、外接显示器，以及键盘或鼠标。合上盖子，Mac 会继续在外接显示器上运行。这是 Apple 官方支持的方式；如果你有显示器，这就是正确的做法。三者（电源、显示器、输入设备）缺一，合盖时 Mac 就会进入睡眠。</p>
+<h2>2. 终端的方法：<code>caffeinate</code> 和 <code>pmset</code></h2>
+<p><code>caffeinate -i</code> 可在命令运行期间阻止 Mac 闲置睡眠，但<b>不能</b>阻止合盖睡眠。要做到这一点，你需要 <code>sudo pmset -a disablesleep 1</code>，它会完全禁用睡眠，包括合盖时。它有效，但有三个问题：每次都需要管理员密码，很容易忘记再关掉，而且这样放进包里的 MacBook 可能发热并把电池耗光。</p>
+<h2>3. 按你的条件来做的 App</h2>
+<p>菜单栏 App 可以让 Mac 恰好保持唤醒你想要的那么久：30 分钟、直到下载或构建完成、在某个 App 打开期间，或直到你说停。好的 App 会加上带防护的合盖选项：只在接通电源时生效，并设有时间限制，这样 Mac 就不会在包里过热，也不会把电池耗光。</p>
+<figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/app/tools-light.webp" alt="Warashi 的工具页面，显示保持唤醒卡片" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../../../assets/img/app/tools-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span><figcaption>Warashi 工具中的保持唤醒：按时长、直到工作完成、在某个 App 打开期间，或合盖时。</figcaption></figure>
+<h2>合盖运行 MacBook 安全吗？</h2>
+<p>安全，只要放在桌上并接通电源。Apple 自己的合盖模式就是这样做的。两件事要避免：用电池合盖运行几个小时（屏幕关着，电池悄悄耗尽而你察觉不到），以及把运行中的 MacBook 放进包里，键盘处的散热口会被盖住。选一个在充电器拔出时就解除合盖保持的工具，并设置时间限制。</p>
+<h2>如果 Mac 还是睡着了</h2>
+<ul><li><b>充电器被拔掉了。</b>大多数合盖工具在使用电池时会故意解除保持。</li>
+<li><b>只是屏幕关了。</b>Mac 其实是醒着的；macOS 按自己的计划关闭并锁定了显示器。在怪罪工具之前，先查看它的日志中是否有真正的睡眠记录。</li>
+<li><b>工具退出或更新了。</b>选一个在自身重启后仍能记住正在运行的会话的工具。</li>
+<li><b>电池到了下限。</b>好的工具会在大约 10% 时停止，以保护电池。</li></ul>
+    <div class="tip" style="margin-top:44px"><b>Warashi 可以为你做到这一点。</b>它的<a href="../../docs/keep-awake/">保持唤醒</a>可让你的 Mac 在设定的时间内、直到任务完成、在某个 App 打开期间，或接通电源合上盖子时保持唤醒；事后<a href="../../docs/flight-log/">飞行日志</a>会告诉你是 Mac 真的睡了，还是只有屏幕关了。</div>
     <h2>更多指南</h2><ul><li><a href="../../guides/whats-draining-my-macbook-battery/">是什么在消耗 MacBook 的电量？</a></li><li><a href="../../guides/why-is-my-mac-slow/">Mac 为什么变慢？找出背后的 App</a></li><li><a href="../../guides/mac-running-hot-kernel-task/">Mac 发烫？kernel_task 与温控降频详解</a></li></ul>
   </article>
 </div>
