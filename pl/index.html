@@ -26,6 +26,8 @@
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="icon" href="../favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/fraunces.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/instrument-sans.woff2">
 <link rel="stylesheet" href="../assets/css/site.css">
 <link rel="stylesheet" href="../assets/css/home.css">
 <script>
@@ -71,53 +73,52 @@ posthog.register({ surface: "website" });
 
 <section class="hero lacquer">
   <div class="wrap">
-    <div>
-      <p class="status reveal"><i></i><span>Bezpłatna publiczna beta · Apple silicon · macOS 26</span></p>
-      <h1 class="reveal d1">Twój Mac ma swoją historię.<br>Warashi ją <em>pamięta</em>.</h1>
-      <p class="lead reveal d2">Cicha aplikacja na pasku menu, która zapisuje, co robi Twój Mac, co pięć sekund, przez rok. Więc gdy o 14:02 działał wolno, o 02:38 bateria naładowała się ponad Twój limit albo dysk zapełnił się w nocy, nie zgadujesz. Sprawdzasz.</p>
-      <div class="ctas reveal d3">
-        <a class="btn" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="hero">Pobierz bezpłatną betę</a> <a class="btn ghost" href="#film">Zobacz dwuminutowy film</a>
-      </div>
-      <p class="fine-print reveal d3">17 MB. Bez konta. Twoja historia nigdy nie opuszcza Maca.</p>
-      <ul class="proof reveal d3">
-        <li><b>0,2%</b> jednego rdzenia, w tle</li>
-        <li><b>12</b> miesięcy historii</li>
-        <li><b>7</b> języków</li>
-        <li><b>0</b> kont</li>
-      </ul>
+    <h1 class="reveal">Twój Mac ma swoją historię.<br>Warashi ją <em>pamięta</em>.</h1>
+    <p class="lead reveal d1">Cicha aplikacja na pasku menu, która zapisuje, co robi Twój Mac, co pięć sekund, przez rok. Więc gdy o 14:02 działał wolno, o 02:38 bateria naładowała się ponad Twój limit albo dysk zapełnił się w nocy, nie zgadujesz. Sprawdzasz.</p>
+    <div class="ctas reveal d2">
+      <a class="btn" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="hero">Pobierz bezpłatną betę</a> <a class="more" href="#film">Zobacz dwuminutowy film</a>
     </div>
-    <div class="stage">
-      <div class="desk reveal d2" role="img" aria-label="Animowany podgląd: wycięcie otwierające się w miniaturowy pulpit, a potem element paska menu otwierający okno paska menu Warashi">
-        <div class="bar"><b style="font-weight:700">&#63743;</b><span>Finder</span><span>Plik</span>
-          <span class="right"><span class="mb-item"><img src="../assets/img/glyph.svg" alt=""><span><span data-live="cpu">23</span>%</span></span><span>14:32</span></span></div>
-        <div class="notch">
-          <div class="glance"><span><i style="background:#E08A5E"></i><span data-live="cpu">23</span>%</span><span><span data-live="mem">24.8</span>G<i style="background:#8FAAD0"></i></span></div>
-          <div class="dash">
-            <div class="tile" style="--i:0"><div class="cap">CPU</div><div class="num"><span data-live="cpu">23</span><small>%</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="cpu" fill="none" stroke="#E08A5E" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
-            <div class="tile" style="--i:1"><div class="cap">Pamięć</div><div class="num"><span data-live="mem">24,8</span><small>GB</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="mem" fill="none" stroke="#8FAAD0" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
-            <div class="tile" style="--i:2"><div class="cap">Moc</div><div class="num"><span data-live="pwr">14.2</span><small>W</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="pwr" fill="none" stroke="#D9AE55" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
-          </div>
-        </div>
-        <span class="themed peek"><img class="t-light" src="../assets/img/app/now-light.webp" alt="" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
-        <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1226"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1226"></span>
-        <svg class="cursor" viewBox="0 0 24 24" style="left:62%; top:64%" aria-hidden="true"><path d="M4 2l15 9-7 1.6L8.5 20z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg>
-      </div>
-
-    </div>
+    <p class="fine-print reveal d2">17 MB. Bez konta. Twoja historia nigdy nie opuszcza Maca.</p>
   </div>
-  <div class="tape-wrap reveal" aria-hidden="true"><span class="tape-label">Dziennik pokładowy</span>
-    <div class="tape">
-      <span style="--c:var(--indigo)"><i></i><time>02:38</time><b>Naładowano ponad 80%</b> ładowaniem zarządzał AlDente</span> <span style="--c:var(--clay)"><i></i><time>09:14</time><b>Xcode</b> zużywał 97% procesora przez 6 min</span> <span style="--c:var(--ochre)"><i></i><time>11:02</time><b>Zabrakło pamięci</b> pamięć wymiany urosła do 8,6 GB</span> <span style="--c:var(--matcha)"><i></i><time>12:30</time><b>Uśpienie</b> 42 min, pokrywa zamknięta</span> <span style="--c:var(--beni)"><i></i><time>14:02</time><b>Wolno przez 4 min</b> Spotlight indeksował</span> <span style="--c:var(--indigo)"><i></i><time>15:47</time><b>Brak sieci</b> 3 min, Wi‑Fi się rozłączyło</span> <span style="--c:var(--ochre)"><i></i><time>17:20</time><b>Dysk</b> o 11 GB więcej wolnego po Pobranych rzeczach</span> <span style="--c:var(--clay)"><i></i><time>18:05</time><b>macOS 27.1</b> zainstalowany, restart</span> <span style="--c:var(--matcha)"><i></i><time>19:40</time><b>Czuwanie</b> do końca kompilacji</span> <span style="--c:var(--beni)"><i></i><time>22:12</time><b>Gorąca bateria</b> 41 °C podczas ładowania</span>
+  <div class="wrap stage">
+    <div class="desk reveal d2" role="img" aria-label="Animowany podgląd: wycięcie otwierające się w miniaturowy pulpit, a potem element paska menu otwierający okno paska menu Warashi">
+      <div class="bar"><b style="font-weight:700">&#63743;</b><span>Finder</span><span>Plik</span>
+        <span class="right"><span class="mb-item"><img src="../assets/img/glyph.svg" alt=""><span><span data-live="cpu">23</span>%</span></span><span>14:32</span></span></div>
+      <div class="notch">
+        <div class="glance"><span><i style="background:#E08A5E"></i><span data-live="cpu">23</span>%</span><span><span data-live="mem">24.8</span>G<i style="background:#8FAAD0"></i></span></div>
+        <div class="dash">
+          <div class="tile" style="--i:0"><div class="cap">CPU</div><div class="num"><span data-live="cpu">23</span><small>%</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="cpu" fill="none" stroke="#E08A5E" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
+          <div class="tile" style="--i:1"><div class="cap">Pamięć</div><div class="num"><span data-live="mem">24,8</span><small>GB</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="mem" fill="none" stroke="#8FAAD0" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
+          <div class="tile" style="--i:2"><div class="cap">Moc</div><div class="num"><span data-live="pwr">14.2</span><small>W</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="pwr" fill="none" stroke="#D9AE55" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
+        </div>
+      </div>
+      <span class="themed peek"><img class="t-light" src="../assets/img/app/now-light.webp" alt="" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
+      <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1226"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1226"></span>
+      <svg class="cursor" viewBox="0 0 24 24" style="left:62%; top:64%" aria-hidden="true"><path d="M4 2l15 9-7 1.6L8.5 20z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg>
     </div>
   </div>
 </section>
 
-<section class="chapter" id="why">
+<section class="chapter after-hero" id="why">
   <div class="wrap">
-    <div class="head">
-      <p class="eyebrow reveal">Cena niewiedzy</p>
-      <h2 class="reveal d1">Każdy Mac ma swoje tajemnice. Bywają kosztowne.</h2>
-      <p class="lead reveal d2">Monitor aktywności pokazuje tę sekundę i zapomina. To, co kosztuje Cię pieniądze i całe popołudnia, dzieje się, gdy nie patrzysz.</p>
+    <div class="why">
+      <div>
+        <h2 class="reveal">Każdy Mac ma swoje tajemnice. Bywają kosztowne.</h2>
+        <p class="lead reveal d1">Monitor aktywności pokazuje tę sekundę i zapomina. To, co kosztuje Cię pieniądze i całe popołudnia, dzieje się, gdy nie patrzysz. Warashi je zapisuje.</p>
+      </div>
+      <div class="reveal d1">
+        <div class="log-head"><span>Dziennik pokładowy · czwartek</span><span class="rec"><i></i>Nagrywanie</span></div>
+        <ol class="log" aria-label="Jeden dzień w dzienniku pokładowym">
+          <li style="--i:0; --c:var(--indigo)"><time>02:38</time><span><b>Naładowano ponad 80%</b>ładowaniem zarządzał AlDente</span></li>
+          <li style="--i:1; --c:var(--clay)"><time>09:14</time><span><b>Xcode</b>zużywał 97% procesora przez 6 min</span></li>
+          <li style="--i:2; --c:var(--ochre)"><time>11:02</time><span><b>Zabrakło pamięci</b>pamięć wymiany urosła do 8,6 GB</span></li>
+          <li style="--i:3; --c:var(--matcha)"><time>12:30</time><span><b>Uśpienie</b>42 min, pokrywa zamknięta</span></li>
+          <li style="--i:4; --c:var(--beni)"><time>14:02</time><span><b>Wolno przez 4 min</b>Spotlight indeksował</span></li>
+          <li style="--i:5; --c:var(--indigo)"><time>15:47</time><span><b>Brak sieci</b>3 min, Wi‑Fi się rozłączyło</span></li>
+          <li style="--i:6; --c:var(--ochre)"><time>17:20</time><span><b>Dysk</b>o 11 GB więcej wolnego po Pobranych rzeczach</span></li>
+          <li style="--i:7; --c:var(--beni)"><time>22:12</time><span><b>Gorąca bateria</b>41 °C podczas ładowania</span></li>
+        </ol>
+      </div>
     </div>
     <div class="costs">
       <div class="cost reveal" style="--c:var(--matcha)">
@@ -146,29 +147,28 @@ posthog.register({ surface: "website" });
 <section class="chapter" id="how">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow reveal">Jak to działa</p>
-      <h2 class="reveal d1">Czarna skrzynka, nie pulpit.</h2>
-      <p class="lead reveal d2">Pulpity pokazują liczby. Rejestrator je zachowuje, więc gdy ten jeden raz potrzebujesz odpowiedzi, już na Ciebie czeka.</p>
+      <h2 class="reveal">Czarna skrzynka, nie pulpit.</h2>
+      <p class="lead reveal d1">Pulpity pokazują liczby. Rejestrator je zachowuje, więc gdy ten jeden raz potrzebujesz odpowiedzi, już na Ciebie czeka.</p>
     </div>
     <div class="story">
       <div class="steps">
         <div class="step" data-tag="Now: how your Mac is right now">
-          <p class="num">01</p>
+          <p class="num">Jeden</p>
           <h3>Obserwuje, po cichu.</h3>
           <p>Jeden mały element na pasku menu. Dwie liczby obok wycięcia. Odczyt co pięć sekund, za około 0,2% jednego rdzenia. Zapomnisz, że tam jest.</p>
         </div>
         <div class="step" data-tag="History: a year back, every few seconds for a day">
-          <p class="num">02</p>
+          <p class="num">Dwa</p>
           <h3>Pamięta cały rok.</h3>
           <p>CPU, pamięć, moc, ciepło, sieć, dysk i bateria, przechowywane na Twoim Macu. Co kilka sekund z ostatniej doby, co minutę przez miesiąc, co godzinę przez rok.</p>
         </div>
         <div class="step" data-tag="What happened here? Click any moment">
-          <p class="num">03</p>
+          <p class="num">Trzy</p>
           <h3>Wyjaśnia każdą chwilę.</h3>
           <p>Kliknij skok, a Warashi powie prostymi słowami, co się działo, wraz z aplikacjami, które wtedy działały, i tym, co zwykle robią. Jeśli nie wydarzyło się nic niezwykłego, tak właśnie napisze.</p>
         </div>
         <div class="step" data-tag="Checkup: one verdict from a week of data">
-          <p class="num">04</p>
+          <p class="num">Cztery</p>
           <h3>Odzywa się tylko wtedy, gdy to ważne.</h3>
           <p>Aplikacja wymykająca się spod kontroli, szybko rosnąca pamięć, zapełniający się dysk, nagrzewająca się bateria. Raz na problem, z dowodami, plus cotygodniowa kontrola, która mówi, czy Twój Mac jest w dobrej formie.</p>
         </div>
@@ -186,9 +186,8 @@ posthog.register({ surface: "website" });
 
 <section class="chapter" id="film">
   <div class="wrap">
-    <div class="head centre">
-      <p class="eyebrow reveal">Filmy</p>
-      <h2 class="reveal d1">Zobacz w dwie minuty.</h2>
+    <div class="head">
+      <h2 class="reveal">Zobacz w dwie minuty.</h2>
     </div>
     <div class="films reveal">
       <figure><video controls preload="none" playsinline poster="../assets/press/keynote-poster.jpg" src="../assets/press/warashi-keynote.mp4" aria-label="Keynote: dwuminutowa wycieczka po Warashi"></video><figcaption>Keynote · 2:14</figcaption></figure>
@@ -199,12 +198,12 @@ posthog.register({ surface: "website" });
 
 <section class="chapter" id="glance">
   <div class="wrap">
-    <div class="feature" style="--c:var(--clay)">
+    <p class="running reveal"><b>01</b><span>Rzut oka</span></p>
+    <div class="feature">
       <div>
-        <p class="eyebrow reveal">01 · Rzut oka</p>
-        <h2 class="reveal d1">Jeden duszek. Jedna liczba. Nic, co by przeszkadzało.</h2>
-        <p class="lead reveal d2">Warashi zajmuje na pasku menu jeden mały element i dwie liczby obok wycięcia. Wskaż wycięcie, a otworzy się w pulpit na żywo. Po całą resztę kliknij duszka.</p>
-        <ul class="points reveal d3">
+        <h2 class="reveal">Jeden duszek. Jedna liczba. Nic, co by przeszkadzało.</h2>
+        <p class="lead reveal d1">Warashi zajmuje na pasku menu jeden mały element i dwie liczby obok wycięcia. Wskaż wycięcie, a otworzy się w pulpit na żywo. Po całą resztę kliknij duszka.</p>
+        <ul class="points reveal d2">
           <li><b>Okno paska menu</b>Pierścienie z ostatniej minuty, wszystkie odczyty i akcje jednym kliknięciem: nie usypiaj, zrób przerwę, sprawdź internet, naładuj do pełna.</li>
           <li><b>Wycięcie przy pracy</b>Dwie liczby otaczają kamerę. Na innych monitorach to samo robi mała wyspa. Podczas testu szybkości lub Nie usypiaj na czas widać tam odliczanie na żywo.</li>
           <li><b>Ułóż po swojemu</b>Wybierz, co pokazują pasek menu, wycięcie i okno paska menu, i przeciągnij wszystko tam, gdzie chcesz.</li>
@@ -223,27 +222,26 @@ posthog.register({ surface: "website" });
 
 <section class="chapter" id="power-flow">
   <div class="wrap">
+    <p class="running reveal"><b>02</b><span>Przepływ energii</span></p>
     <div class="head">
-      <p class="eyebrow reveal">02 · Przepływ energii</p>
-      <h2 class="reveal d1">Zobacz, dokąd trafia każdy wat.</h2>
-      <p class="lead reveal d2">Od ładowarki i baterii, przez Twojego Maca, do układu, urządzeń USB i wszystkiego innego. Podczas ładowania część płynąca do baterii ma własną ścieżkę, więc liczba przy Macu to tylko to, co zużywa sam Mac.</p>
+      <h2 class="reveal">Zobacz, dokąd trafia każdy wat.</h2>
+      <p class="lead reveal d1">Od ładowarki i baterii, przez Twojego Maca, do układu, urządzeń USB i wszystkiego innego. Podczas ładowania część płynąca do baterii ma własną ścieżkę, więc liczba przy Macu to tylko to, co zużywa sam Mac.</p>
     </div>
     <div class="flow-stage reveal"><svg class="flow-live" viewBox="0 0 1000 430" role="img" aria-label="Przepływ energii podczas ładowania: ładowarka dostarcza 44 waty, 28 trafia prosto do baterii, a 16 do Maca, który zużywa je na układ i pamięć, urządzenia USB i wszystko inne"><defs><linearGradient id="fb-chgb" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="385" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--matcha)"/></linearGradient><linearGradient id="fl-chgb" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="247.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-138 0" to="275 0" dur="3.6s" begin="-0.0s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-chgm" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="385" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--ochre)"/></linearGradient><linearGradient id="fl-chgm" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="247.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-138 0" to="275 0" dur="3.2s" begin="-0.7s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-chip" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="700" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--clay)"/></linearGradient><linearGradient id="fl-chip" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="627.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-72 0" to="145 0" dur="4.2s" begin="-1.4s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-usb" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="700" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--indigo)"/></linearGradient><linearGradient id="fl-usb" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="627.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-72 0" to="145 0" dur="5s" begin="-2.1s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-rest" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="700" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--sub)"/></linearGradient><linearGradient id="fl-rest" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="627.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-72 0" to="145 0" dur="3.8s" begin="-2.8s" repeatCount="indefinite"/></linearGradient></defs><path d="M110 196 C247 196 247 53 385 53 L385 83 C247 83 247 224 110 224 Z" fill="url(#fb-chgb)" fill-opacity=".52"/><path d="M110 196 C247 196 247 53 385 53 L385 83 C247 83 247 224 110 224 Z" fill="url(#fl-chgb)"/><path d="M110 226 C247 226 247 248 385 248 L385 292 C247 292 247 244 110 244 Z" fill="url(#fb-chgm)" fill-opacity=".52"/><path d="M110 226 C247 226 247 248 385 248 L385 292 C247 292 247 244 110 244 Z" fill="url(#fl-chgm)"/><path d="M555 245 C627 245 627 142 700 142 L700 158 C627 158 627 261 555 261 Z" fill="url(#fb-chip)" fill-opacity=".52"/><path d="M555 245 C627 245 627 142 700 142 L700 158 C627 158 627 261 555 261 Z" fill="url(#fl-chip)"/><path d="M555 264 C627 264 627 256 700 256 L700 264 C627 264 627 272 555 272 Z" fill="url(#fb-usb)" fill-opacity=".52"/><path d="M555 264 C627 264 627 256 700 256 L700 264 C627 264 627 272 555 272 Z" fill="url(#fl-usb)"/><path d="M555 275 C627 275 627 360 700 360 L700 380 C627 380 627 295 555 295 Z" fill="url(#fb-rest)" fill-opacity=".52"/><path d="M555 275 C627 275 627 360 700 360 L700 380 C627 380 627 295 555 295 Z" fill="url(#fl-rest)"/>
 <g style="color:var(--ochre)"><rect x="30" y="178" width="80" height="80" rx="22" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(47.6 195.6) scale(1.867)"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0V8zM12 18v4"/></g></g><text class="label" x="70" y="288" text-anchor="middle">Ładowarka</text><text class="watts" x="70" y="316" text-anchor="middle">44.0 W</text><text class="note" x="70" y="337" text-anchor="middle">z 96 W</text>
 <g style="color:var(--matcha)"><rect x="385" y="40" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(397.3 52.3) scale(1.307)"><rect x="2" y="7" width="18" height="10" rx="3"/><path d="M22.5 11v2M12 8.8l-3 3.8h3l-1 3 3-3.8h-3z"/></g></g><text class="label" x="454" y="56">Bateria</text><text class="watts" x="454" y="80">28.0 W</text><text class="note" x="454" y="99">ładowanie · 79%</text>
 <rect x="385" y="185" width="170" height="170" rx="44" style="fill:var(--hub);stroke:var(--edge)"/><g style="color:var(--ink)"><g class="icon" transform="translate(442 200) scale(2.35)"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19.5h20"/></g></g><text class="big" x="470" y="302" text-anchor="middle">16.0 W</text><text class="note" x="470" y="328" text-anchor="middle">Ten Mac</text><g style="color:var(--clay)"><rect x="700" y="122" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 134.3) scale(1.307)"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></g></g><text class="label" x="770" y="156">Układ i RAM</text><text class="watts" x="992" y="157" text-anchor="end">6.0 W</text><g style="color:var(--indigo)"><rect x="700" y="232" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 244.3) scale(1.307)"><path d="M12 22v-5M8 9h8v6a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9zM10 9V3h4v6"/></g></g><text class="label" x="770" y="266">Urządzenia USB</text><text class="watts" x="992" y="267" text-anchor="end">3.0 W</text><g style="color:var(--sub)"><rect x="700" y="342" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 354.3) scale(1.307)"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></g></g><text class="label" x="770" y="367">Wszystko inne</text><text class="note" x="770" y="387">ekran, Wi-Fi</text><text class="watts" x="992" y="377" text-anchor="end">7.0 W</text></svg><span class="themed flow-shot"><img class="t-light" src="../assets/img/app/flow-light.webp" alt="Warashi Przepływ energii, od ładowarki i baterii przez Maca do układu, urządzeń USB i całej reszty" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/flow-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div>
-
   </div>
 </section>
 
 <section class="chapter" id="health">
   <div class="wrap">
-    <div class="feature flip" style="--c:var(--matcha)">
+    <p class="running reveal"><b>03</b><span>Bateria</span></p>
+    <div class="feature flip">
       <div>
-        <p class="eyebrow reveal">03 · Bateria</p>
-        <h2 class="reveal d1">Zatrzymaj ładowanie na 80%. Patrz, jak bateria zużywa się wolniej.</h2>
-        <p class="lead reveal d2">Bateria trzymana na 80% żyje o lata dłużej niż ta, która stoi na 100%. Warashi ustawia limit, ładuje do pełna na ten jeden dzień, gdy tego potrzebujesz, i pilnuje.</p>
-        <ul class="points reveal d3">
+        <h2 class="reveal">Zatrzymaj ładowanie na 80%. Patrz, jak bateria zużywa się wolniej.</h2>
+        <p class="lead reveal d1">Bateria trzymana na 80% żyje o lata dłużej niż ta, która stoi na 100%. Warashi ustawia limit, ładuje do pełna na ten jeden dzień, gdy tego potrzebujesz, i pilnuje.</p>
+        <ul class="points reveal d2">
           <li><b>Uczciwe wobec innych aplikacji</b>Jeśli działa też AlDente lub inny menedżer, Warashi o tym mówi, a Dziennik pokładowy zapisuje każdy raz, gdy bateria przekroczyła Twój limit, i kto to zrobił.</li>
           <li><b>Jak się zużywała</b>Kondycja i cykle miesiąc po miesiącu, od dnia instalacji, więc widzisz, czy limit działa.</li>
           <li><b>Przepływ energii</b>Ile dostarcza ładowarka, ile bierze bateria, ile zużywa Mac.</li>
@@ -256,12 +254,12 @@ posthog.register({ surface: "website" });
 
 <section class="chapter" id="storage">
   <div class="wrap">
-    <div class="feature" style="--c:var(--ochre)">
+    <p class="running reveal"><b>04</b><span>Miejsce na dysku</span></p>
+    <div class="feature">
       <div>
-        <p class="eyebrow reveal">04 · Miejsce na dysku</p>
-        <h2 class="reveal d1">Usuwaj aplikacje jak należy. Nic nie ginie.</h2>
-        <p class="lead reveal d2">Pierścień całego dysku, w który możesz wejść. Duże pliki, stare Pobrane rzeczy z oznaczonymi instalatorami, lokalne modele AI i prawdziwy dezinstalator: każda aplikacja, na początku te nieotwierane od miesięcy, z tym, co każda zostawiła w Twojej Bibliotece.</p>
-        <ul class="points reveal d3">
+        <h2 class="reveal">Usuwaj aplikacje jak należy. Nic nie ginie.</h2>
+        <p class="lead reveal d1">Pierścień całego dysku, w który możesz wejść. Duże pliki, stare Pobrane rzeczy z oznaczonymi instalatorami, lokalne modele AI i prawdziwy dezinstalator: każda aplikacja, na początku te nieotwierane od miesięcy, z tym, co każda zostawiła w Twojej Bibliotece.</p>
+        <ul class="points reveal d2">
           <li><b>Do Kosza, rzecz po rzeczy</b>Widzisz każdą rzecz, zanim się przeniesie, i możesz wszystko przywrócić, dopóki nie opróżnisz Kosza.</li>
           <li><b>Pozostałości po dawno usuniętych aplikacjach</b>Foldery aplikacji usuniętych lata temu, odnalezione po identyfikatorze: najbezpieczniejsze miejsce na dysku do odzyskania.</li>
           <li><b>Nigdy Twoje pliki</b>Tylko nazwy, rozmiary i daty. Pełny dostęp do dysku jest opcjonalny, a Warashi nigdy nie otwiera żadnego dokumentu.</li>
@@ -274,12 +272,12 @@ posthog.register({ surface: "website" });
 
 <section class="chapter" id="checkup">
   <div class="wrap">
-    <div class="feature flip" style="--c:var(--indigo)">
+    <p class="running reveal"><b>05</b><span>Kontrola</span></p>
+    <div class="feature flip">
       <div>
-        <p class="eyebrow reveal">05 · Kontrola</p>
-        <h2 class="reveal d1">Czy mój Mac jest w dobrej formie?</h2>
-        <p class="lead reveal d2">Jedna linijka z tygodnia pomiarów: bateria, miejsce na dysku, pamięć, ciepło, kondycja SSD i to, co uruchamia się razem z Makiem. Do tego bezpieczeństwo i kopie zapasowe: FileVault, zapora sieciowa, Gatekeeper, Time Machine, uaktualnienia macOS i świeżość definicji złośliwego oprogramowania w macOS.</p>
-        <ul class="points reveal d3">
+        <h2 class="reveal">Czy mój Mac jest w dobrej formie?</h2>
+        <p class="lead reveal d1">Jedna linijka z tygodnia pomiarów: bateria, miejsce na dysku, pamięć, ciepło, kondycja SSD i to, co uruchamia się razem z Makiem. Do tego bezpieczeństwo i kopie zapasowe: FileVault, zapora sieciowa, Gatekeeper, Time Machine, uaktualnienia macOS i świeżość definicji złośliwego oprogramowania w macOS.</p>
+        <ul class="points reveal d2">
           <li><b>Dlaczego mój Mac działa wolno?</b>Dziesięć sekund obserwacji, porównanie z Twoim zwykłym tygodniem i przyczyna z nazwy, z jedną rzeczą do zrobienia.</li>
           <li><b>Sprawdź aplikacje</b>Podpis każdej aplikacji sprawdzony: Apple, App Store, programista albo brak podpisu.</li>
           <li><b>Ostrzeżenia, zanim zaboli</b>„Twój dysk startowy może być prawie pełny za około 40 dni”. Kopia zapasowa spóźniona o tydzień. Uaktualnienie, które czeka za długo.</li>
@@ -292,12 +290,12 @@ posthog.register({ surface: "website" });
 
 <section class="chapter" id="tools">
   <div class="wrap">
-    <div class="feature" style="--c:var(--beni)">
+    <p class="running reveal"><b>06</b><span>Narzędzia i przerwy</span></p>
+    <div class="feature">
       <div>
-        <p class="eyebrow reveal">06 · Narzędzia i przerwy</p>
-        <h2 class="reveal d1">Nie usypiaj Maca. A potem pamiętaj o odpoczynku.</h2>
-        <p class="lead reveal d2">Nie usypiaj na czas pobierania, kompilacji lub prezentacji, nawet z zamkniętą pokrywą. Przerwy dla oczu w wybranym przez Ciebie rytmie, małe przypomnienia, by usiąść prosto i napić się wody, a wszystko cicho podczas rozmów, poza godzinami pracy i w trybie Skupienia.</p>
-        <ul class="points reveal d3">
+        <h2 class="reveal">Nie usypiaj Maca. A potem pamiętaj o odpoczynku.</h2>
+        <p class="lead reveal d1">Nie usypiaj na czas pobierania, kompilacji lub prezentacji, nawet z zamkniętą pokrywą. Przerwy dla oczu w wybranym przez Ciebie rytmie, małe przypomnienia, by usiąść prosto i napić się wody, a wszystko cicho podczas rozmów, poza godzinami pracy i w trybie Skupienia.</p>
+        <ul class="points reveal d2">
           <li><b>Nie usypiaj, po Twojemu</b>Na godzinę, do końca zadania, póki otwarta jest aplikacja albo z zamkniętą pokrywą na zasilaczu. Przetrwa nawet uaktualnienia samego Warashi.</li>
           <li><b>I te drobiazgi</b>Szybkość internetu i dysku, jakość Wi‑Fi, czarny ekran lub wyłączona klawiatura do czyszczenia, ukrywanie ikon biurka na czas udostępniania ekranu, wyciszenie mikrofonu we wszystkich aplikacjach, Wysuń wszystkie, raport o Macu dla pomocy technicznej.</li>
         </ul>
@@ -309,19 +307,19 @@ posthog.register({ surface: "website" });
 
 <section class="chapter" id="developers">
   <div class="wrap">
-    <div class="feature flip" style="--c:var(--clay)">
+    <p class="running reveal"><b>07</b><span>Dla programistów</span></p>
+    <div class="feature flip">
       <div>
-        <p class="eyebrow reveal">07 · Dla programistów</p>
-        <h2 class="reveal d1">Co działa na tym porcie? Ile kosztuje ten agent?</h2>
-        <p class="lead reveal d2">Serwery dev pogrupowane według projektów, z ostrzeżeniem, gdy któryś jest otwarty na Twoją sieć. Kontenery Dockera. Każdy agent programistyczny AI, z CPU i pamięcią, które zużył on i jego narzędzia.</p>
-        <div class="term reveal d3"><pre><code><b>$</b> warashi explain 14:30
+        <h2 class="reveal">Co działa na tym porcie? Ile kosztuje ten agent?</h2>
+        <p class="lead reveal d1">Serwery dev pogrupowane według projektów, z ostrzeżeniem, gdy któryś jest otwarty na Twoją sieć. Kontenery Dockera. Każdy agent programistyczny AI, z CPU i pamięcią, które zużył on i jego narzędzia.</p>
+        <div class="term reveal d2"><pre><code><b>$</b> warashi explain 14:30
 Memory ran short
 <i>Swap rose from 1.2 GB to 8.6 GB.</i>
 
 <b>$</b> warashi apps --hours 3
 Xcode    CPU 37m 35s   memory 9.4 GB
 Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
-        <p class="reveal d3" style="color:var(--sub);margin-top:18px">Polecenie <code>warashi</code> i opcjonalne połączenie MCP tylko do odczytu pozwalają aplikacjom Claude, Cursor i innym aplikacjom AI odpowiadać na pytania na podstawie historii Twojego Maca. Nic nie jest udostępniane, dopóki tego nie dodasz.</p>
+        <p class="reveal d2">Polecenie <code>warashi</code> i opcjonalne połączenie MCP tylko do odczytu pozwalają aplikacjom Claude, Cursor i innym aplikacjom AI odpowiadać na pytania na podstawie historii Twojego Maca. Nic nie jest udostępniane, dopóki tego nie dodasz.</p>
       </div>
       <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/developer-light.webp" alt="Warashi Programista z serwerami deweloperskimi i agentami AI" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/developer-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
     </div>
@@ -331,9 +329,8 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
 <section class="chapter" id="compare">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow reveal">Zamiast sześciu aplikacji</p>
-      <h2 class="reveal d1">Jedna cicha aplikacja tam, gdzie kiedyś była ich cała szuflada.</h2>
-      <p class="lead reveal d2">Warashi wzięło to jedno, co każda z nich robi dobrze, i zebrało w jednym miejscu, które dodatkowo pamięta. Nic przeciwko nim: w swojej jednej rzeczy są dobre.</p>
+      <h2 class="reveal">Jedna cicha aplikacja tam, gdzie kiedyś była ich cała szuflada.</h2>
+      <p class="lead reveal d1">Warashi wzięło to jedno, co każda z nich robi dobrze, i zebrało w jednym miejscu, które dodatkowo pamięta. Nic przeciwko nim: w swojej jednej rzeczy są dobre.</p>
     </div>
     <div class="compare reveal">
       <table>
@@ -363,9 +360,8 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
 <section class="chapter" id="weight">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow reveal">Ile waży</p>
-      <h2 class="reveal d1">Monitor, który nic Cię nie kosztuje.</h2>
-      <p class="lead reveal d2">Natywny Swift, stworzony dla Apple silicon. Warashi mierzy własny koszt tak samo jak każdej innej aplikacji, pokazuje siebie w Aplikacjach razem z resztą i podaje tę liczbę w Ustawieniach.</p>
+      <h2 class="reveal">Monitor, który nic Cię nie kosztuje.</h2>
+      <p class="lead reveal d1">Natywny Swift, stworzony dla Apple silicon. Warashi mierzy własny koszt tak samo jak każdej innej aplikacji, pokazuje siebie w Aplikacjach razem z resztą i podaje tę liczbę w Ustawieniach.</p>
     </div>
     <div class="figures">
       <div class="figure reveal"><p class="big"><span data-count="0.2">0.2</span><small>%</small></p><p>jednego rdzenia, w tle. Zupełnie nic, gdy ekrany śpią.</p></div>
@@ -379,10 +375,9 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
   <div class="wrap">
     <div class="promise">
       <div>
-        <p class="eyebrow reveal">Obietnica</p>
-        <h2 class="reveal d1">Historia Twojego Maca zostaje na Macu.</h2>
-        <p class="lead reveal d2">Historia, nazwy aplikacji i aktywność są przechowywane w małej bazie danych w Twojej Bibliotece. Opuszczają ją tylko wtedy, gdy sam zdecydujesz się połączyć aplikację AI.</p>
-        <ul class="reveal d3">
+        <h2 class="reveal">Historia Twojego Maca zostaje na Macu.</h2>
+        <p class="lead reveal d1">Historia, nazwy aplikacji i aktywność są przechowywane w małej bazie danych w Twojej Bibliotece. Opuszczają ją tylko wtedy, gdy sam zdecydujesz się połączyć aplikację AI.</p>
+        <ul class="reveal d2">
           <li>Bez konta, bez chmury, bez telemetrii o Twoich aplikacjach czy plikach.</li>
           <li>Bez nagrywania ekranu, bez naciśnięć klawiszy, bez zawartości plików. Nigdy.</li>
           <li>Anonimowe statystyki użycia (wersja, macOS, rodzina układu, z których funkcji korzystasz), ujawnione w prezentacji powitalnej. <a class="link-arrow" href="docs/privacy-and-data/">Dokładnie, co jest wysyłane</a></li>
@@ -396,22 +391,21 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
 <section class="chapter" id="answers">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow reveal">Odpowiedzi</p>
-      <h2 class="reveal d1">Pytania, które naprawdę masz.</h2>
+      <h2 class="reveal">Pytania, które naprawdę masz.</h2>
     </div>
     <div class="answers">
       <div class="answer reveal"><h3>Czy potrzebuję nowego Maca? Którego?</h3><p>Doradca zakupu obserwuje obciążenie pamięci, pamięć wymiany, przyrost zajętego miejsca na dysku i to, jak często układ pracuje na pełnych obrotach. Po 30 dniach mówi, ile pamięci i miejsca na dysku potrzebuje Twój następny Mac i czy pomógłby szybszy układ, wraz z dowodami. <a class="link-arrow" href="docs/upgrade-advisor/">Jak podejmuje decyzję</a></p></div>
-      <div class="answer reveal d1"><h3>Ile naprawdę kosztuje mnie każda aplikacja?</h3><p>Czas na pierwszym planie połączony z energią: ile aplikacja kosztuje na godzinę użycia i co rozładowało baterię w aplikacjach, których nawet nie otwarto. <a class="link-arrow" href="docs/time-and-cost/">Czas × koszt</a></p></div>
+      <div class="answer reveal"><h3>Ile naprawdę kosztuje mnie każda aplikacja?</h3><p>Czas na pierwszym planie połączony z energią: ile aplikacja kosztuje na godzinę użycia i co rozładowało baterię w aplikacjach, których nawet nie otwarto. <a class="link-arrow" href="docs/time-and-cost/">Czas × koszt</a></p></div>
       <div class="answer reveal"><h3>Dlaczego dziesięć minut temu działał wolno?</h3><p>Rok historii, a z ostatniej doby co kilka sekund. Kliknij chwilę, w której do tego doszło, a Warashi to wyjaśni, wraz z aplikacją, która za tym stała. <a class="link-arrow" href="guides/why-is-my-mac-slow/">Przeczytaj poradnik</a></p></div>
-      <div class="answer reveal d1"><h3>Powiedz mi, gdy to ważne. Tylko wtedy.</h3><p>Aplikacja wymykająca się spod kontroli, szybko rosnąca pamięć, zapełniający się dysk, ciepło, kondycja baterii. Raz na problem, z dowodami, jako powiadomienie, które możesz wyciszyć. <a class="link-arrow" href="docs/alerts/">Alerty</a></p></div>
+      <div class="answer reveal"><h3>Powiedz mi, gdy to ważne. Tylko wtedy.</h3><p>Aplikacja wymykająca się spod kontroli, szybko rosnąca pamięć, zapełniający się dysk, ciepło, kondycja baterii. Raz na problem, z dowodami, jako powiadomienie, które możesz wyciszyć. <a class="link-arrow" href="docs/alerts/">Alerty</a></p></div>
     </div>
   </div>
 </section>
 
 <section class="chapter" id="questions">
   <div class="wrap">
-    <div class="head"><p class="eyebrow reveal">Pytania</p><h2 class="reveal d1">Dobre pytania.</h2></div>
-    <div class="faq-grid">
+    <div class="head"><h2 class="reveal">Dobre pytania.</h2></div>
+    <div class="faq">
       <div class="qa reveal"><h3>Kiedy mogę dostać Warashi?</h3><p>Już teraz. Betę można pobrać bezpłatnie, a uaktualnia się sama. Gdy pojawi się Warashi 1.0, beta się kończy i prosi o uaktualnienie oraz zakup licencji.</p></div>
       <div class="qa reveal"><h3>Na jakich Makach działa?</h3><p>Maki z Apple silicon (M1 i nowsze) z macOS 26 lub nowszym.</p></div>
       <div class="qa reveal"><h3>Czy jest bezpłatne?</h3><p>Bezpłatne w czasie bety. Warashi 1.0 będzie jednorazowym zakupem, bez subskrypcji.</p></div>
@@ -428,7 +422,6 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
     <div class="maker">
       <img class="reveal" src="../assets/img/adam.webp" alt="Ilustrowany portret Adama, uśmiechniętego, ze skrzyżowanymi ramionami, pod namalowaną tęczą w zielonym parku" width="960" height="723" loading="lazy">
       <div class="reveal d1">
-        <p class="eyebrow">Twórca</p>
         <h2>Stworzone z troską przez jedną osobę.</h2>
         <p class="lead">Cześć, jestem Adam, niezależny programista. Warashi to mój własny projekt: aplikacja, jej wygląd i ta strona. Chcę, żeby było taką aplikacją na Maca, jakiej sam chciałbym używać: spokojną, uczciwą wobec swoich liczb i lekką dla Twojego Maca. Jeśli masz pomysł albo coś nie działa, napisz do mnie.</p>
         <p class="signature">Adam</p>
@@ -444,7 +437,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
   <div class="wrap">
     <img class="icon reveal" src="../assets/img/app-icon.png" alt="" width="120" height="120">
     <h2 class="reveal d1">Niech cichy duszek<br>zaopiekuje się Twoim Macem.</h2>
-    <p class="lead reveal d2" style="margin:0 auto">Bezpłatne w czasie bety Warashi. Jedno małe pobranie, bez konta, a Twój Mac zaczyna pamiętać już dziś wieczorem.</p>
+    <p class="lead reveal d2">Bezpłatne w czasie bety Warashi. Jedno małe pobranie, bez konta, a Twój Mac zaczyna pamiętać już dziś wieczorem.</p>
     <div class="ctas reveal d3">
       <a class="btn" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="finale">Pobierz bezpłatną betę</a> <a class="btn ghost" href="docs/">Przeczytaj Pomoc</a>
     </div>

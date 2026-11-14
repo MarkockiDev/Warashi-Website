@@ -23,9 +23,15 @@
     }
   }
 
-  // The tape under the hero: doubled, so it loops without a seam.
-  const tape = document.querySelector(".tape");
-  if (tape && !reduce) tape.innerHTML += tape.innerHTML;
+  // The flight log writes itself, one line after another, the first time it comes into view.
+  const log = document.querySelector(".log");
+  if (log) {
+    if (reduce) log.classList.add("on");
+    else new IntersectionObserver((entries, o) => {
+      if (!entries.some((e) => e.isIntersecting)) return;
+      log.classList.add("on"); o.disconnect();
+    }, { threshold: 0.25 }).observe(log);
+  }
 
   // The comparison: a tap on a column heading on a phone brings that column into view.
   const compare = document.querySelector(".compare");
