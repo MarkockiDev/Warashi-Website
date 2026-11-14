@@ -137,9 +137,15 @@ function tick() {
   series.pwr.push(values.pwr); series.pwr.shift();
   countTo(values);
   for (const [key, max] of [["cpu", 100], ["mem", 100], ["pwr", 40]]) {
-    document.querySelectorAll(`[data-spark="${key}"]`).forEach((path) =>
-      path.setAttribute("points", series[key].map((v, i) => `${(i / 23 * 100).toFixed(1)},${(21 - v / max * 19).toFixed(1)}`).join(" ")));
+    const y = (v) => 21 - v / max * 19;
+    const points = series[key].map((v, i) => `${(i / 23 * 100).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+    document.querySelectorAll(`[data-spark="${key}"]`).forEach((line) => line.setAttribute("points", points));
+    // the notch's area under the line, and the dot that marks the latest reading, as in the app
+    document.querySelectorAll(`[data-area="${key}"]`).forEach((area) => area.setAttribute("points", `0,22 ${points} 100,22`));
+    document.querySelectorAll(`[data-dot="${key}"]`).forEach((dot) => { dot.style.top = `${(y(series[key][23]) / 22 * 100).toFixed(1)}%`; });
   }
+  document.querySelectorAll('[data-ring="cpu"]').forEach((ring) => ring.style.setProperty("--p", (values.cpu / 100).toFixed(3)));
+  document.querySelectorAll('[data-ring="mem"]').forEach((ring) => ring.style.setProperty("--p", (values.mem / 32).toFixed(3)));
 }
 
 // Numbers count to their new value (like the app) instead of jumping: half a second, ease-out.
@@ -152,8 +158,10 @@ function countTo(target) {
     const t = Math.min(1, (now - start) / 500), e = 1 - (1 - t) ** 3;
     for (const key in target) shown[key] = from[key] + (target[key] - from[key]) * e;
     document.querySelectorAll("[data-live]").forEach((el) => {
-      const v = shown[el.dataset.live];
-      el.firstChild.nodeValue = el.dataset.live === "cpu" ? Math.round(v) : v.toFixed(1);
+      const key = el.dataset.live;
+      if (key === "memg") { el.firstChild.nodeValue = Math.round(shown.mem); return; }
+      const digits = el.dataset.digits ?? (key === "cpu" ? "0" : "1");
+      el.firstChild.nodeValue = shown[key].toFixed(Number(digits));
     });
     if (t < 1) counting = requestAnimationFrame(frame);
   };
@@ -179,6 +187,18 @@ const desk = document.querySelector(".desk");
 if (desk) {
   const notch = desk.querySelector(".notch"), cursor = desk.querySelector(".cursor"), pop = desk.querySelector(".pop"), item = desk.querySelector(".mb-item");
   const at = (x, y) => { cursor.style.left = x + "%"; cursor.style.top = y + "%"; };
+  // The pointer's tip goes to the middle of a real element on the desk, wherever the layout put it.
+  const on = (el, dx = 0.5, dy = 0.5) => {
+    const d = desk.getBoundingClientRect(), r = el.getBoundingClientRect();
+    at((r.left - d.left + r.width * dx) / d.width * 100, (r.top - d.top + r.height * dy) / d.height * 100);
+  };
+  // The menu bar window hangs under the menu bar item, centred on it, kept on the desk, like macOS places it.
+  const placePop = () => {
+    const d = desk.getBoundingClientRect(), r = item.getBoundingClientRect(), w = pop.offsetWidth;
+    const left = Math.max(8, Math.min(d.width - w - 8, r.left - d.left + r.width / 2 - w / 2));
+    pop.style.left = left + "px";
+    pop.style.transformOrigin = `${r.left - d.left + r.width / 2 - left}px 0`;
+  };
   let onScreen = false, resume = null, playing = false;
   const sleep = (ms) => new Promise((done) => setTimeout(done, ms));
   // Waits, then holds until the desk is back on screen.
@@ -186,17 +206,18 @@ if (desk) {
   const click = async () => { cursor.classList.add("press"); await sleep(130); cursor.classList.remove("press"); };
   const story = async () => {
     await wait(1100);
-    at(50, 1.6);                       // up to the notch
+    on(notch, 0.5, 0.45);              // up to the notch
     await wait(1050);                  // arrive, and a short hover dwell like the app's
     notch.classList.add("open");
-    await wait(3000);                  // the numbers tick in the mini dashboard
-    at(64, 42);                        // the pointer leaves...
+    await wait(3400);                  // the numbers tick in the dashboard
+    at(70, 56);                        // the pointer leaves...
     await wait(220);
     notch.classList.remove("open");    // ...and the notch closes behind it
     await wait(700);
-    at(81, 1.6);                       // over to the menu bar item
+    on(item, 0.35, 0.5);               // over to Warashi's menu bar item
     await wait(1000);
     await click();
+    placePop();
     item.classList.add("on");
     pop.classList.remove("hidden");
     await wait(3400);

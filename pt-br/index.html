@@ -81,15 +81,33 @@ posthog.register({ surface: "website" });
     <p class="fine-print reveal d2">17 MB. Sem conta. Seu histórico nunca sai do seu Mac.</p>
   </div>
   <div class="wrap stage">
-    <div class="desk reveal d2" role="img" aria-label="Prévia animada: o entalhe se abrindo em um mini painel e depois o item da barra de menus abrindo a janela do Warashi">
-      <div class="bar"><b style="font-weight:700">&#63743;</b><span>Finder</span><span>Arquivo</span>
-        <span class="right"><span class="mb-item"><img src="../assets/img/glyph.svg" alt=""><span><span data-live="cpu">23</span>%</span></span><span>14:32</span></span></div>
+    <div class="desk reveal d2" role="img" aria-label="Prévia animada: o notch se abre no painel do Warashi e depois o item da barra de menus abre a janela da barra de menus do Warashi">
+      <div class="bar"><b style="font-weight:700">&#63743;</b><b>Finder</b><span>Arquivo</span><span>Editar</span><span>Visualizar</span>
+        <span class="right"><span class="mb-item"><img src="../assets/img/glyph.svg" alt=""><span><span data-live="cpu">23</span>%</span></span><span>qui. 14:32</span></span></div>
       <div class="notch">
-        <div class="glance"><span><i style="background:#E08A5E"></i><span data-live="cpu">23</span>%</span><span><span data-live="mem">24.8</span>G<i style="background:#8FAAD0"></i></span></div>
-        <div class="dash">
-          <div class="tile" style="--i:0"><div class="cap">CPU</div><div class="num"><span data-live="cpu">23</span><small>%</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="cpu" fill="none" stroke="#E08A5E" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
-          <div class="tile" style="--i:1"><div class="cap">Memória</div><div class="num"><span data-live="mem">24,8</span><small>GB</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="mem" fill="none" stroke="#8FAAD0" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
-          <div class="tile" style="--i:2"><div class="cap">Potência</div><div class="num"><span data-live="pwr">14.2</span><small>W</small></div><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="pwr" fill="none" stroke="#D9AE55" stroke-width="1.6" stroke-linejoin="round" points=""/></svg></div>
+        <div class="glance"><span><i class="ring" data-ring="cpu" style="--c:#E08A5E"></i><b><span data-live="cpu">23</span>%</b></span><span><b><span data-live="memg">25</span>G</b><i class="ring" data-ring="mem" style="--c:#8FAAD0"></i></span></div>
+        <div class="dash" aria-hidden="true">
+          <div class="nhead"><img src="../assets/img/app-icon.png" alt=""><b>Tudo calmo</b><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M2 4.5h12M2 11.5h12"/><circle cx="10.5" cy="4.5" r="1.8" fill="#000"/><circle cx="5.5" cy="11.5" r="1.8" fill="#000"/></svg><span>Abrir Warashi ↗</span></span></div>
+          <div class="ncols" style="--i:1">
+            <div style="--t:#F2C9AB"><div class="nnum"><span data-live="cpu" data-digits="1">23.0</span><small>%</small></div><div class="nlab">CPU</div>
+              <div class="nspark"><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="cpu" fill="none" stroke="#EAB490" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" points=""/></svg><i class="dot" data-dot="cpu"></i></div></div>
+            <div style="--t:#F0DCA6"><div class="nnum"><span data-live="pwr">14.2</span><small>W</small></div><div class="nlab">Potência</div>
+              <div class="nspark"><svg viewBox="0 0 100 22" preserveAspectRatio="none"><defs><linearGradient id="nf-pwr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E6CE99" stop-opacity=".35"/><stop offset="1" stop-color="#E6CE99" stop-opacity="0"/></linearGradient></defs><polygon data-area="pwr" fill="url(#nf-pwr)" points=""/><polyline data-spark="pwr" fill="none" stroke="#E6CE99" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" points=""/></svg><i class="dot" data-dot="pwr"></i></div></div>
+            <div style="--t:#C3CFF2"><div class="nnum"><span data-live="mem">24,8</span><small>GB</small></div><div class="nlab">Memória</div>
+              <div class="nspark"><svg viewBox="0 0 100 22" preserveAspectRatio="none"><defs><linearGradient id="nf-mem" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9CAF0" stop-opacity=".3"/><stop offset="1" stop-color="#B9CAF0" stop-opacity="0"/></linearGradient></defs><polygon data-area="mem" fill="url(#nf-mem)" points=""/><polyline data-spark="mem" fill="none" stroke="#B9CAF0" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" points=""/></svg><i class="dot" data-dot="mem"></i></div></div>
+          </div>
+          <div class="nrule" style="--i:2"></div>
+          <div class="nacts" style="--i:2">
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7h9v2.5a4 4 0 0 1-4 4h-1a4 4 0 0 1-4-4V7zM11.5 8h1a1.5 1.5 0 0 1 0 3h-1.2M5 2.5c-.6.7.6 1.3 0 2M7.5 2.5c-.6.7.6 1.3 0 2M10 2.5c-.6.7.6 1.3 0 2"/></svg>Ativo</span>
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1.5 8S4 3.5 8 3.5 14.5 8 14.5 8 12 12.5 8 12.5 1.5 8 1.5 8z"/><circle cx="8" cy="8" r="2.2"/></svg>Pausa</span>
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M9 1.5 3.5 9h4L7 14.5 12.5 7h-4z"/></svg>Carga</span>
+          </div>
+          <div class="nrule" style="--i:3"></div>
+          <div class="napps" style="--i:3">
+            <div><img src="../assets/img/app/icon-xcode.png" alt=""><span>Xcode</span><i>39%</i><i>4,28 GB</i></div>
+            <div><img src="../assets/img/app/icon-chrome.png" alt=""><span>Google Chrome</span><i>16%</i><i>3,03 GB</i></div>
+            <div><img src="../assets/img/app/icon-safari.png" alt=""><span>Safari</span><i>7,4%</i><i>1,58 GB</i></div>
+          </div>
         </div>
       </div>
       <span class="themed peek"><img class="t-light" src="../assets/img/app/now-light.webp" alt="" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
@@ -106,17 +124,20 @@ posthog.register({ surface: "website" });
         <h2 class="reveal">Todo Mac guarda segredos. Eles saem caro.</h2>
         <p class="lead reveal d1">O Monitor de Atividade mostra este segundo e o esquece. As coisas que custam dinheiro e tardes inteiras acontecem enquanto você não está olhando. O Warashi anota tudo.</p>
       </div>
-      <div class="reveal d1">
-        <div class="log-head"><span>O diário de bordo · quinta-feira</span><span class="rec"><i></i>Gravando</span></div>
-        <ol class="log" aria-label="Um dia no diário de bordo">
-          <li style="--i:0; --c:var(--indigo)"><time>02:38</time><span><b>Carregou acima de 80%</b>o AlDente estava gerenciando a carga</span></li>
-          <li style="--i:1; --c:var(--clay)"><time>09:14</time><span><b>Xcode</b>usou 97% do processador por 6 min</span></li>
-          <li style="--i:2; --c:var(--ochre)"><time>11:02</time><span><b>Memória ficou curta</b>o swap cresceu para 8,6 GB</span></li>
-          <li style="--i:3; --c:var(--matcha)"><time>12:30</time><span><b>Em repouso</b>42 min, tampa fechada</span></li>
-          <li style="--i:4; --c:var(--beni)"><time>14:02</time><span><b>Lento por 4 min</b>o Spotlight estava indexando</span></li>
-          <li style="--i:5; --c:var(--indigo)"><time>15:47</time><span><b>Sem conexão</b>3 min, o Wi‑Fi caiu</span></li>
-          <li style="--i:6; --c:var(--ochre)"><time>17:20</time><span><b>Disco</b>11 GB mais livres depois de Downloads</span></li>
-          <li style="--i:7; --c:var(--beni)"><time>22:12</time><span><b>Bateria quente</b>41 °C durante a carga</span></li>
+      <div class="flightlog reveal d1" aria-label="O diário de bordo do Warashi de um dia">
+        <p class="fl-kicker">Ontem à noite</p>
+        <p class="fl-night">Seu Mac ficou em repouso por 7 h, 48 min.</p>
+        <p class="fl-why">Nada o despertou. Você abriu a tampa.</p>
+        <p class="fl-day">Ontem</p>
+        <ol class="log">
+          <li style="--i:0; --t:var(--ochre)"><time>21:10</time><i><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3.2" fill="currentColor"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M3.4 12.6l1.3-1.3M11.3 4.7l1.3-1.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></i><div><b>Music manteve o seu Mac ativo por 55 min</b></div></li>
+          <li style="--i:1; --t:var(--clay)"><time>15:20</time><i><svg viewBox="0 0 16 16"><path d="M2.5 7.5h9v2a4 4 0 0 1-4 4h-1a4 4 0 0 1-4-4v-2z" fill="currentColor"/><path d="M11.5 8.3h.8a1.5 1.5 0 0 1 0 3h-1.1M5 2.5c-.6.7.6 1.4 0 2.2M8 2.5c-.6.7.6 1.4 0 2.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></i><div><b>Ativo por 42 min</b><span>O trabalho terminou.</span></div></li>
+          <li style="--i:2; --t:var(--ochre)"><time>14:02</time><i><svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 10.2C2.2 6.8 4.6 5 7.4 5s5 1.8 5.2 5.2H2z"/><path d="M12.4 8.6c.4-1.3 1.3-1.9 2.1-1.6.6.3.4 1.4-.4 1.9-.5.3-1.1.2-1.7-.3zM3.2 10.6h1.9l-.4 1.8H3.4zM9.5 10.6h1.9l-.3 1.8H9.8z"/></svg></i><div><b>Seu Mac ficou lento por 6 min</b><span>Xcode estava usando a maior parte do processador.</span></div></li>
+          <li style="--i:3; --t:var(--beni)"><time>11:41</time><i><svg viewBox="0 0 16 16"><path d="M8 1.8 15 14H1z" fill="currentColor"/><path d="M8 6v3.6M8 11.6v.2" stroke="var(--face)" stroke-width="1.5" stroke-linecap="round"/></svg></i><div><b>Final Cut Pro travou</b></div></li>
+          <li style="--i:4; --t:var(--ochre)"><time>10:05</time><i><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1.8 6.2a9 9 0 0 1 12.4 0M4 8.6a6 6 0 0 1 8 0M6.2 10.9a3 3 0 0 1 3.6 0M2.5 2.5l11 11"/></svg></i><div><b>Sem conexão por 12 min</b></div></li>
+          <li style="--i:5; --t:var(--ochre)"><time>09:50</time><i><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.8c-2.4 0-4 1.8-4 4.2v3L2.6 11.2v.8h10.8v-.8L12 9V6c0-2.4-1.6-4.2-4-4.2zM6.3 13h3.4a1.7 1.7 0 0 1-3.4 0z"/></svg></i><div><b>A memória de Google Chrome está crescendo rápido</b><span>Cresceu 1,35 GB na última hora. Reiniciar o app costuma liberar a memória.</span></div></li>
+          <li style="--i:6; --t:var(--matcha)"><time>03:44</time><i><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 1.8v3M10 1.8v3M4.5 4.8h7v2.7a3.5 3.5 0 0 1-7 0V4.8zM8 11v3.2"/></svg></i><div><b>Funcionou na bateria por 3 h, 30 min enquanto conectado</b><span>AlDente estava descarregando a bateria de propósito, por exemplo ao calibrá-la.</span></div></li>
+          <li style="--i:7; --t:var(--matcha)"><time>02:41</time><i><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><rect x="1.5" y="4.8" width="11.5" height="6.4" rx="1.8"/><path d="M14.6 7v2" stroke-linecap="round"/><path d="M7.9 5.8 5.8 8.3h2l-.6 1.9 2.1-2.5h-2z" fill="currentColor" stroke-width=".6"/></svg></i><div><b>Carregou até 100%, acima do seu limite de 80%</b><span>AlDente estava gerenciando a carga na hora, por exemplo calibrando a bateria. Ficou acima do limite por 4 h, 30 min.</span></div></li>
         </ol>
       </div>
     </div>

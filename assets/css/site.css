@@ -186,41 +186,76 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
   :root { --spring: linear(0, .009, .035 2.1%, .141 4.4%, .723 12.9%, .938 16.7%, 1.017 19.4%, 1.067, 1.077 24.5%, 1.064 27.2%, 1.018 33.7%, 1.001 38%, .993 42.8%, 1.001 58.5%, 1); }
 }
 
-/* the desk: a slice of a Mac screen, alive */
-.desk { position: relative; aspect-ratio: 16 / 11.5; width: 100%; border-radius: clamp(14px, 2vw, 22px); overflow: hidden;
-  background: var(--wall); container-type: inline-size;
+/* the desk: a slice of a Mac screen, alive. Everything on it is drawn at the app's own proportions:
+   --u is one macOS point, so the notch, the menu bar and the windows keep the sizes they have on a real Mac. */
+.desk { --u: .09cqw; position: relative; aspect-ratio: 16 / 11.5; width: 100%; border-radius: clamp(14px, 2vw, 22px); overflow: hidden;
+  background: var(--wall); container-type: inline-size; text-align: left; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
   box-shadow: 0 50px 100px -30px rgba(0, 0, 0, .7), inset 0 0 0 .5px rgba(255, 240, 220, .12); }
-.desk .bar { position: absolute; inset: 0 0 auto; height: 6.2cqw; min-height: 24px; max-height: 30px; display: flex; align-items: center; gap: 2.6cqw; padding: 0 2.6cqw;
-  font: 500 clamp(9px, 2.2cqw, 12.5px) var(--sans); color: var(--mac-ink); background: var(--mac-bar); }
-.desk .bar .right { margin-left: auto; display: flex; gap: 2.4cqw; align-items: center; }
+.desk .bar { position: absolute; inset: 0 0 auto; height: calc(37 * var(--u)); display: flex; align-items: center; gap: calc(20 * var(--u)); padding: 0 calc(18 * var(--u));
+  font-size: calc(13 * var(--u)); font-weight: 500; color: var(--mac-ink); background: var(--mac-bar); }
+.desk .bar .right { margin-left: auto; display: flex; gap: calc(16 * var(--u)); align-items: center; }
+.desk .bar .mb-item { gap: calc(5 * var(--u)); padding: calc(2 * var(--u)) calc(7 * var(--u)); border-radius: calc(5 * var(--u)); }
 .mb-item { display: inline-flex; align-items: center; gap: 5px; padding: 2px 6px; border-radius: 5px; color: var(--mac-ink); font-variant-numeric: tabular-nums; }
 .mb-item img { width: 1.15em; height: 1.15em; filter: var(--glyph); }
 .mb-item.on { background: var(--mac-item-on); }
-.notch { position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: #000; color: #EDE7DB; width: 33cqw; height: 6.2cqw; min-height: 24px; max-height: 30px;
-  border-radius: 0 0 2.6cqw 2.6cqw; overflow: hidden; z-index: 3;
-  /* closing: quick and settled; opening (below): a spring that grows evenly to both sides, like the app */
+
+/* The notch, as Warashi draws it: two readouts with their rings either side of the camera; on hover it opens into
+   the dashboard (health, three numbers with their minute, one-click actions, the busiest apps). */
+.notch { position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 3; color: rgb(247, 240, 228);
+  width: calc(356 * var(--u)); height: calc(37 * var(--u)); background: #000; border-radius: 0 0 calc(11 * var(--u)) calc(11 * var(--u));
   transition: width .3s var(--ease), height .3s var(--ease), border-radius .3s var(--ease); }
-.notch .glance { display: flex; justify-content: space-between; align-items: center; height: min(max(6.2cqw, 24px), 30px); padding: 0 2.4cqw; font: 500 clamp(9px, 2.1cqw, 12px) var(--mono); }
-.notch .glance i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin: 0 4px; vertical-align: 1px; }
-.notch .dash { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4cqw; padding: .6cqw 2cqw 2cqw; }
-.notch.open { width: 66cqw; height: calc(min(max(6.2cqw, 24px), 30px) + 17cqw); max-height: none; border-radius: 0 0 4.5cqw 4.5cqw;
+/* the shoulders: the little curve where the notch meets the menu bar */
+.notch::before, .notch::after { content: ""; position: absolute; top: 0; width: calc(8 * var(--u)); height: calc(8 * var(--u)); }
+.notch::before { right: 100%; background: radial-gradient(circle at 0 100%, transparent calc(8 * var(--u)), #000 calc(8 * var(--u) + .5px)); }
+.notch::after { left: 100%; background: radial-gradient(circle at 100% 100%, transparent calc(8 * var(--u)), #000 calc(8 * var(--u) + .5px)); }
+.notch.open { width: calc(460 * var(--u)); height: calc(314 * var(--u)); border-radius: 0 0 calc(30 * var(--u)) calc(30 * var(--u));
   transition: width .55s var(--spring), height .55s var(--spring), border-radius .55s var(--spring); }
-.notch .tile { opacity: 0; transform: translateY(-1cqw) scale(.97); transition: opacity .12s, transform .12s; }
-.notch.open .tile { opacity: 1; transform: none;
-  transition: opacity .25s calc(.14s + var(--i) * .05s), transform .5s var(--spring) calc(.14s + var(--i) * .05s); }
-.tile { background: #161513; box-shadow: inset 0 0 0 .5px rgba(255, 255, 255, .08); border-radius: 1.8cqw; padding: 1.5cqw 1.7cqw; }
-.tile .cap { font: 600 clamp(6px, 1.6cqw, 8.5px) var(--sans); letter-spacing: .08em; text-transform: uppercase; color: #A8A296; }
-.tile .num { font: 500 clamp(11px, 3.4cqw, 18px) var(--mono); margin-top: 2px; }
-.tile .num small { font-size: .55em; color: #A8A296; margin-left: 1px; }
-.tile svg { width: 100%; height: 4cqw; margin-top: .6cqw; display: block; }
-.desk .peek { position: absolute; left: 5%; bottom: -7%; width: 82%; border-radius: 1.6cqw; box-shadow: 0 24px 60px rgba(0, 0, 0, .6), 0 0 0 .5px rgba(255, 240, 220, .12); }
-.desk .pop { position: absolute; right: 2.5cqw; top: 7.5cqw; width: 44%; z-index: 4; border-radius: 2.4cqw; box-shadow: 0 30px 60px rgba(0, 0, 0, .6), 0 0 0 .5px rgba(255, 240, 220, .15);
-  transform-origin: 82% 0; transition: opacity .18s, transform .5s var(--spring); }
-.desk .pop.hidden { opacity: 0; transform: scale(.94) translateY(-1cqw); transition: opacity .2s, transform .2s var(--ease); }
-/* Different curves on x and y bend the path into a gentle arc, like a hand on a trackpad. */
-.cursor { position: absolute; width: max(14px, 3.2cqw); z-index: 5; pointer-events: none; transform-origin: 20% 10%;
+.notch .glance { position: absolute; inset: 0 0 auto; height: calc(37 * var(--u)); display: flex; justify-content: space-between; align-items: center; padding: 0 calc(12 * var(--u));
+  font-size: calc(12 * var(--u)); font-weight: 600; font-variant-numeric: tabular-nums; transition: opacity .2s .1s; }
+.notch.open .glance { opacity: 0; transition: opacity .1s; }
+.notch .glance b { font-weight: 600; }
+.notch .glance > span { display: inline-flex; align-items: center; gap: calc(5 * var(--u)); }
+.ring { --p: .2; --c: #E08A5E; width: calc(14 * var(--u)); height: calc(14 * var(--u)); border-radius: 50%; flex: none;
+  background: conic-gradient(var(--c) calc(var(--p) * 1turn), color-mix(in srgb, var(--c) 28%, transparent) 0);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2.4 * var(--u)), #000 calc(100% - 2.4 * var(--u) + .5px));
+          mask: radial-gradient(farthest-side, transparent calc(100% - 2.4 * var(--u)), #000 calc(100% - 2.4 * var(--u) + .5px)); }
+.notch .dash { position: absolute; inset: 0; padding: 0 calc(20 * var(--u)); overflow: hidden; opacity: 0; transition: opacity .1s; }
+.notch.open .dash { opacity: 1; transition: opacity .25s .14s; }
+.notch .dash > * { transform: translateY(calc(-6 * var(--u))); transition: transform .12s; }
+.notch.open .dash > * { transform: none; transition: transform .5s var(--spring) calc(.14s + var(--i, 0) * .05s); }
+.nhead { display: flex; align-items: center; gap: calc(8 * var(--u)); height: calc(37 * var(--u)); font-size: calc(10.5 * var(--u)); }
+.nhead img { width: calc(22 * var(--u)); height: calc(22 * var(--u)); border-radius: calc(7 * var(--u)); }
+.nhead b { font-weight: 600; }
+.nhead .go { margin-left: auto; display: inline-flex; align-items: center; gap: calc(12 * var(--u)); color: rgb(189, 179, 164); font-weight: 500; }
+.nhead svg { width: calc(12 * var(--u)); height: calc(12 * var(--u)); }
+.ncols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: calc(26 * var(--u)); margin-top: calc(6 * var(--u)); }
+.nnum { font-size: calc(30 * var(--u)); line-height: 1; color: var(--t); font-variant-numeric: tabular-nums; letter-spacing: -.01em; white-space: nowrap; }
+.nnum small { font-size: calc(12 * var(--u)); color: rgb(189, 179, 164); margin-left: calc(3 * var(--u)); letter-spacing: 0; }
+.nlab { font-size: calc(10 * var(--u)); color: rgb(189, 179, 164); margin-top: calc(3 * var(--u)); }
+.nspark { position: relative; height: calc(40 * var(--u)); margin-top: calc(8 * var(--u)); }
+.nspark svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.nspark .dot { position: absolute; right: calc(-3 * var(--u)); width: calc(6 * var(--u)); height: calc(6 * var(--u)); margin-top: calc(-3 * var(--u)); border-radius: 50%;
+  background: var(--t); box-shadow: 0 0 0 calc(3 * var(--u)) color-mix(in srgb, var(--t) 25%, transparent); transition: top .5s var(--ease); }
+.nrule { height: .5px; background: rgba(255, 255, 255, .09); margin: calc(13 * var(--u)) 0 calc(8 * var(--u)); }
+.nacts { display: grid; grid-template-columns: repeat(3, 1fr); height: calc(44 * var(--u)); border-radius: calc(16 * var(--u)); background: #0F0F0F;
+  box-shadow: inset 0 0 0 .5px rgba(255, 255, 255, .08); font-size: calc(10.5 * var(--u)); font-weight: 600; }
+.nacts span { display: flex; align-items: center; justify-content: center; gap: calc(6 * var(--u)); }
+.nacts svg { width: calc(14 * var(--u)); height: calc(14 * var(--u)); }
+.napps { display: grid; gap: 0; font-size: calc(12 * var(--u)); }
+.napps div { display: grid; grid-template-columns: calc(16 * var(--u)) 1fr auto calc(64 * var(--u)); gap: calc(8 * var(--u)); align-items: center; height: calc(24 * var(--u)); }
+.napps img { width: calc(16 * var(--u)); height: calc(16 * var(--u)); }
+.napps i { font: normal calc(10.5 * var(--u)) ui-monospace, "SF Mono", Menlo, monospace; text-align: right; }
+.napps i + i { color: rgb(189, 179, 164); }
+
+/* the window and the menu bar window, at their real sizes; their pictures carry their own corners and shadow */
+.desk .peek { position: absolute; left: 7cqw; top: calc(37 * var(--u) + 9cqw); width: calc(1080 * var(--u)); }
+.desk .pop { position: absolute; left: 60cqw; top: calc(41 * var(--u)); width: calc(360 * var(--u)); z-index: 4; border-radius: calc(12 * var(--u)); overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .45), 0 0 0 .5px rgba(255, 240, 220, .18); transform-origin: 50% 0; transition: opacity .18s, transform .45s var(--spring); }
+.desk .pop.hidden { opacity: 0; transform: scale(.96) translateY(calc(-4 * var(--u))); transition: opacity .2s, transform .2s var(--ease); }
+/* Different curves on x and y bend the path into a gentle arc, like a hand on a trackpad. The tip is the hot spot. */
+.cursor { position: absolute; width: max(12px, calc(22 * var(--u))); z-index: 5; pointer-events: none; margin: -2px 0 0 -2px; transform-origin: 15% 8%;
   transition: left .9s cubic-bezier(.45, 0, .2, 1), top .9s cubic-bezier(.3, 0, .3, 1), transform .12s var(--ease); }
-.cursor.press { transform: scale(.82); }
+.cursor.press { transform: scale(.85); }
 
 /* ---------- home: chapters ---------- */
 .chapter { padding: clamp(80px, 12vw, 150px) 0; position: relative; }

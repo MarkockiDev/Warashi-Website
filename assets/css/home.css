@@ -42,19 +42,27 @@
 
 /* ---------- the cost of not knowing: the log that writes itself, then three figures ---------- */
 .home .why { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
-.home .log-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: .5px solid color-mix(in srgb, var(--ink) 22%, transparent);
-  font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--faint); }
-.home .log-head .rec { display: inline-flex; align-items: center; gap: 8px; color: var(--beni); }
-.home .log-head .rec i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; animation: rec 1.8s ease-in-out infinite; }
-@keyframes rec { 50% { opacity: .25; } }
-.home .log { list-style: none; margin: 0; padding: 0; font-size: 15px; }
-.home .log li { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 14px; padding: 13px 0; border-bottom: .5px solid var(--rule);
-  opacity: 0; transform: translateY(8px); transition: opacity .55s var(--ease) calc(var(--i) * .2s), transform .55s var(--ease) calc(var(--i) * .2s); }
+/* The Flight Log, drawn as the app draws it: last night's sleep on top, then the day as a card of events, each with
+   its time, a tinted mark on a thread, a title and, when there is one, the reason. Lines arrive one after another. */
+.home .flightlog { --app: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; font-family: var(--app); }
+.home .fl-kicker { margin: 0; font-size: 13px; color: var(--sub); }
+.home .fl-night { margin: 4px 0 0; font: 700 clamp(24px, 2.6vw, 32px)/1.1 var(--app); letter-spacing: -.02em; color: var(--ink); }
+.home .fl-why { margin: 6px 0 0; font-size: 17px; color: var(--sub); }
+.home .fl-day { margin: 26px 0 10px; font-size: 14px; font-weight: 600; color: var(--ink); }
+.home .log { list-style: none; margin: 0; padding: 22px 24px 22px 14px; border-radius: 20px; background: var(--face);
+  box-shadow: inset 0 0 0 .5px color-mix(in srgb, var(--ink) 10%, transparent), 0 30px 70px -40px rgba(20, 14, 8, .4); }
+.home .log li { display: grid; grid-template-columns: 48px 28px minmax(0, 1fr); gap: 14px; position: relative; padding-bottom: 14px;
+  opacity: 0; transform: translateY(6px); transition: opacity .5s var(--ease) calc(var(--i) * .16s), transform .5s var(--ease) calc(var(--i) * .16s); }
+.home .log li:last-child { padding-bottom: 0; }
 .home .log.on li { opacity: 1; transform: none; }
-.home .log time { font: 500 13px/1.6 var(--mono); color: var(--faint); font-variant-numeric: tabular-nums; }
-.home .log b { display: block; color: var(--ink); font-weight: 600; }
-.home .log b::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--c, var(--clay)); margin-right: 10px; vertical-align: 1px; }
-.home .log span { color: var(--sub); }
+.home .log time { font: 500 12px/28px ui-monospace, "SF Mono", Menlo, monospace; color: var(--sub); text-align: right; font-variant-numeric: tabular-nums; }
+.home .log i { position: relative; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: var(--t);
+  background: color-mix(in srgb, var(--t) 15%, var(--face)); }
+.home .log i svg { width: 13px; height: 13px; }
+/* the thread from one mark to the next */
+.home .log li:not(:last-child)::after { content: ""; position: absolute; left: calc(48px + 14px + 13.5px); top: 28px; bottom: 0; width: 1px; background: color-mix(in srgb, var(--sub) 25%, transparent); }
+.home .log b { display: block; padding-top: 4px; font-size: 14.5px; font-weight: 500; line-height: 1.35; color: var(--ink); }
+.home .log span { display: block; margin-top: 1px; font-size: 12.5px; line-height: 1.4; color: var(--sub); }
 .home .costs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(64px, 8vw, 110px); border-top: .5px solid var(--rule); }
 .home .cost { padding: clamp(28px, 3.5vw, 44px) clamp(20px, 3vw, 40px) 10px 0; }
 .home .cost + .cost { border-left: .5px solid var(--rule); padding-left: clamp(20px, 3vw, 40px); }
@@ -77,13 +85,13 @@
 .home .step .num { font: italic 400 15px/1 var(--serif); color: var(--clay); margin: 0 0 12px; }
 .home .step h3 { font-size: clamp(25px, 2.5vw, 34px); margin-bottom: 10px; }
 .home .step p { color: var(--sub); margin: 0; max-width: 420px; }
-.home .story-screen { position: sticky; top: 110px; border-radius: 20px; overflow: hidden; aspect-ratio: 2160 / 1572; background: var(--face);
-  box-shadow: 0 0 0 .5px color-mix(in srgb, var(--ink) 14%, transparent), 0 50px 110px -50px rgba(20, 14, 8, .55); }
-.home .story-screen .themed { position: absolute; inset: 0; opacity: 0; transform: scale(1.012); transition: opacity .7s var(--ease), transform 1.2s var(--ease); }
+/* The window, whole: each picture at its own size, stacked, carrying its own corners and shadow; the caption under it. */
+.home .story-screen { position: sticky; top: 110px; display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; }
+.home .story-screen .themed { grid-area: 1 / 1; opacity: 0; transform: scale(1.012); transition: opacity .7s var(--ease), transform 1.2s var(--ease); overflow: visible; }
 .home .story-screen .themed.on { opacity: 1; transform: none; }
-.home .story-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.home .story-screen .tag { position: absolute; left: 16px; bottom: 16px; padding: 7px 12px; border-radius: 999px; font: 500 13px/1 var(--sans); color: var(--ink);
-  background: color-mix(in srgb, var(--paper) 80%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: inset 0 0 0 .5px color-mix(in srgb, var(--ink) 14%, transparent); }
+.home .story-screen img { width: 100%; height: auto; }
+.home .story-screen .tag { grid-area: 2 / 1; justify-self: start; margin-top: 14px; padding: 7px 12px; border-radius: 999px; font: 500 13.5px/1 var(--sans); color: var(--sub);
+  background: color-mix(in srgb, var(--ink) 6%, transparent); box-shadow: inset 0 0 0 .5px color-mix(in srgb, var(--ink) 12%, transparent); }
 
 /* ---------- feature chapters: words on one side, the real window on the other ---------- */
 .home .feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: clamp(28px, 5vw, 80px); align-items: center; }
@@ -92,7 +100,8 @@
 .home .feature h2 { font-size: clamp(30px, 3.6vw, 46px); }
 .home .points { margin-top: 26px; }
 .home .points li { font-size: 15.5px; line-height: 1.55; }
-.home .shot { border-radius: 18px; overflow: hidden; box-shadow: 0 0 0 .5px color-mix(in srgb, var(--ink) 14%, transparent), 0 50px 110px -50px rgba(20, 14, 8, .55); }
+/* the window pictures carry their own rounded corners and shadow, so no frame of ours around them */
+.home .shot { border-radius: 0; overflow: visible; box-shadow: none; }
 .home .shot img { width: 100%; height: auto; display: block; }
 .home .feature .term { margin-top: 24px; }
 .home .feature .term + p { color: var(--sub); margin: 18px 0 0; font-size: 15.5px; }
@@ -192,6 +201,5 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .home .log li { opacity: 1; transform: none; transition: none; }
-  .home .log-head .rec i { animation: none; }
   .home .story-screen .themed { transition: opacity .3s; transform: none; }
 }
