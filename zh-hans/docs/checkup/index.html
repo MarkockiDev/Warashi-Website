@@ -88,7 +88,7 @@ posthog.register({ surface: "website" });
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-slow-light.webp" alt="我的 Mac 为什么变慢了？：Xcode 占用了大部分处理器，附上它的数字与平时的对比、在 App 中显示，以及 Warashi 看了什么" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <p>答案下方，<b>Warashi 看了什么</b>会显示处理器、内存、温度和磁盘，以及检查期间最忙的 App。除了你平常的历史记录外，不会多记录任何内容。</p>
 <h2>安全与备份</h2>
-<p>六个图块显示你的 Mac 受到多好的保护。点按其中一个，即可打开系统设置中可以更改它的位置。</p>
+<p>九个卡片显示你的 Mac 受保护的程度。点按其中一个即可打开“系统设置”中更改它的位置。</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-security-light.webp" alt="安全与备份：待安装的 macOS 更新、Time Machine、已开启的 FileVault、已关闭的防火墙、已开启的系统完整性保护和 Gatekeeper" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <div class="table"><table><tr><th>图块</th><th>显示内容</th><th>它何时提醒你看向远处</th></tr>
 <tr><td>macOS 更新</td><td>是否有 macOS 更新在等待，以及 macOS 上次检查的时间</td><td>有更新可以安装</td></tr>
@@ -96,8 +96,11 @@ posthog.register({ surface: "website" });
 <tr><td>FileVault</td><td>你的文件是否已加密</td><td>已关闭</td></tr>
 <tr><td>防火墙</td><td>是否拦截了不需要的传入连接</td><td>已关闭</td></tr>
 <tr><td>系统完整性保护</td><td>macOS 的核心文件是否受到保护</td><td>已关闭</td></tr>
-<tr><td>Gatekeeper</td><td>App 在首次打开前是否会被检查</td><td>已关闭</td></tr></table></div>
-<p>Warashi 只是查看。它在体检打开时向 macOS 自带的工具询问，不会更改任何内容。要看到上次备份的日期，需要完全磁盘访问权限。</p>
+<tr><td>Gatekeeper</td><td>App 在首次打开前是否会被检查</td><td>已关闭</td></tr>
+<tr><td>恶意软件防护</td><td>XProtect，macOS 内置的恶意软件防护：其定义的版本，以及 Apple 上次更新它们的时间。点按它，然后点按<b>检查 App</b>，即可检查 Mac 上每个 App 和登录项的签名：没有经过识别的开发者签名、或签名后被修改的内容，会连同处理建议一起列出</td><td>一个月没有更新，说明安全响应没有送达这台 Mac</td></tr>
+<tr><td>本地快照</td><td>时间机器在磁盘本身保留的副本数量，以及最早的一份。空间不足时 macOS 会自动移除它们；点按它，然后点按<b>释放空间</b>，让 macOS 立即移除。备份磁盘不受影响</td><td>从不：这很正常</td></tr>
+<tr><td>App 权限</td><td>“系统设置”中隐私页面的列表（摄像头、麦克风、录屏、完全磁盘访问权限等），每项一点即达</td><td>从不：这是指南</td></tr></table></div>
+<p>打开“体检”时，Warashi 会询问 macOS 自带的工具，只有在你要求时才会更改内容。查看上次备份的日期需要完全磁盘访问权限。</p>
 <p>无需打开体检也能得到提醒：在设置 › <a href="../../docs/alerts/">警报</a>中打开<b>备份已逾期</b>和<b>macOS 更新待安装</b>。只要其中一个开着，Warashi 每天读取一次，并只提醒一次：时间机器一周没有备份时，以及某个更新已等待一周时。</p>
 <h2>随 Mac 启动</h2>
 <p>下方是所有自行安装为随 Mac 启动的项目，按消耗从高到低排列，并显示每项本周的能耗。<b>打开登录项</b>会带你前往系统设置，在那里关闭其中任何一项。</p>

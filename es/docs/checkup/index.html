@@ -88,7 +88,7 @@ posthog.register({ surface: "website" });
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-slow-light.webp" alt="¿Por qué va lento mi Mac?: Xcode está usando la mayor parte de tu procesador, con sus números frente a los habituales, Mostrar en Apps y qué ha mirado Warashi" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <p>Debajo de la respuesta, <b>Qué ha mirado Warashi</b> muestra el procesador, la memoria, la temperatura y el disco, y las apps más activas durante la revisión. No se guarda nada más allá de tu historial normal.</p>
 <h2>Seguridad y copias</h2>
-<p>Seis recuadros muestran lo bien protegido que está tu Mac. Pulsa uno para abrir el lugar de Ajustes del Sistema donde se cambia.</p>
+<p>Nueve casillas muestran lo protegido que está tu Mac. Pulsa una para abrir el lugar de Ajustes del Sistema donde se cambia.</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-security-light.webp" alt="Seguridad y copias: actualizaciones de macOS listas para instalar, Time Machine, FileVault activado, el firewall desactivado, Protección de la integridad del sistema y Gatekeeper activados" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <div class="table"><table><tr><th>Recuadro</th><th>Qué muestra</th><th>Cuándo te pide que mires</th></tr>
 <tr><td>Actualizaciones de macOS</td><td>Si hay una actualización de macOS esperando y cuándo comprobó macOS por última vez</td><td>Hay una actualización lista para instalar</td></tr>
@@ -96,8 +96,11 @@ posthog.register({ surface: "website" });
 <tr><td>FileVault</td><td>Si tus archivos están cifrados</td><td>Desactivado</td></tr>
 <tr><td>Firewall</td><td>Si se bloquean las conexiones entrantes no deseadas</td><td>Desactivado</td></tr>
 <tr><td>Protección de la integridad del sistema</td><td>Si los archivos básicos de macOS están protegidos</td><td>Desactivado</td></tr>
-<tr><td>Gatekeeper</td><td>Si las apps se comprueban antes de abrirse por primera vez</td><td>Desactivado</td></tr></table></div>
-<p>Warashi solo mira. Consulta las propias herramientas de macOS cuando se abre Chequeo, y no cambia nada. Ver la fecha de la última copia requiere Acceso total al disco.</p>
+<tr><td>Gatekeeper</td><td>Si las apps se comprueban antes de abrirse por primera vez</td><td>Desactivado</td></tr>
+<tr><td>Protección contra malware</td><td>XProtect, la protección contra malware integrada en macOS: la versión de sus definiciones y cuándo Apple las actualizó por última vez. Púlsala y luego <b>Revisar apps</b> para revisar la firma de cada app y elemento de inicio en tu Mac: todo lo que no firmó un desarrollador identificado, o que cambió tras firmarse, aparece con qué hacer</td><td>Sin actualizaciones desde hace un mes, lo que significa que las respuestas de seguridad no llegan a este Mac</td></tr>
+<tr><td>Instantáneas locales</td><td>Cuántas copias guarda Time Machine en el propio disco, y la más antigua. macOS las elimina solo cuando falta espacio; púlsala y luego <b>Liberar espacio</b> para que macOS las elimine ya. Tu disco de copia de seguridad no se toca</td><td>Nunca: son normales</td></tr>
+<tr><td>Permisos de apps</td><td>Una lista de las páginas de privacidad de Ajustes del Sistema (cámara, micrófono, grabación de pantalla, Acceso total al disco y más), cada una a un clic</td><td>Nunca: es una guía</td></tr></table></div>
+<p>Warashi pregunta a las herramientas de macOS al abrir Chequeo, y solo cambia algo cuando tú lo pides. Ver la fecha de la última copia necesita Acceso total al disco.</p>
 <p>Para enterarte sin abrir Chequeo, activa <b>Copia de seguridad atrasada</b> y <b>Actualización de macOS pendiente</b> en Ajustes › <a href="../../docs/alerts/">Alertas</a>. Mientras alguna esté activada, Warashi lo comprueba una vez al día y te avisa una vez: cuando Time Machine lleva una semana sin hacer copia y cuando una actualización lleva una semana esperando.</p>
 <h2>Se inicia con tu Mac</h2>
 <p>Debajo, todo lo que se ha instalado para iniciarse con tu Mac, de más a menos costoso, con la energía que usó cada uno esta semana. <b>Abrir Ítems de inicio</b> te lleva a Ajustes del Sistema para desactivar cualquiera de ellos.</p>

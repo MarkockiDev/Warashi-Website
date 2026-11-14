@@ -88,7 +88,7 @@ posthog.register({ surface: "website" });
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-slow-light.webp" alt="Por que meu Mac está lento?: o Xcode está usando a maior parte do seu processador, com seus números em comparação ao habitual, Mostrar em Apps e o que o Warashi analisou" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <p>Abaixo da resposta, <b>O que o Warashi analisou</b> mostra o processador, a memória, a temperatura e o disco, além dos apps mais ocupados durante a verificação. Nada é gravado além do seu histórico normal.</p>
 <h2>Segurança e backup</h2>
-<p>Seis blocos mostram o quanto seu Mac está protegido. Pressione um para abrir o lugar nos Ajustes do Sistema onde isso é alterado.</p>
+<p>Nove blocos mostram o quanto seu Mac está protegido. Clique em um para abrir o lugar nos Ajustes do Sistema onde isso é alterado.</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-security-light.webp" alt="Segurança e backup: atualizações do macOS prontas para instalar, Time Machine, FileVault ativado, firewall desativado, Proteção da Integridade do Sistema e Gatekeeper ativados" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <div class="table"><table><tr><th>Bloco</th><th>O que mostra</th><th>Quando ele pede para você olhar</th></tr>
 <tr><td>Atualizações do macOS</td><td>Se há uma atualização do macOS esperando e quando o macOS verificou pela última vez</td><td>Uma atualização está pronta para instalar</td></tr>
@@ -96,8 +96,11 @@ posthog.register({ surface: "website" });
 <tr><td>FileVault</td><td>Se seus arquivos estão criptografados</td><td>Desativado</td></tr>
 <tr><td>Firewall</td><td>Se conexões de entrada indesejadas são bloqueadas</td><td>Desativado</td></tr>
 <tr><td>Proteção da Integridade do Sistema</td><td>Se os arquivos principais do macOS estão protegidos</td><td>Desativado</td></tr>
-<tr><td>Gatekeeper</td><td>Se os apps são verificados antes de abrirem pela primeira vez</td><td>Desativado</td></tr></table></div>
-<p>O Warashi só observa. Ele consulta as próprias ferramentas do macOS quando a Verificação abre, e não altera nada. Ver a data do último backup exige Acesso Total ao Disco.</p>
+<tr><td>Gatekeeper</td><td>Se os apps são verificados antes de abrirem pela primeira vez</td><td>Desativado</td></tr>
+<tr><td>Proteção contra malware</td><td>XProtect, a proteção contra malware embutida no macOS: a versão das definições e quando a Apple as atualizou pela última vez. Clique nele e em <b>Verificar apps</b> para verificar a assinatura de cada app e item de início no seu Mac: o que nenhum desenvolvedor identificado assinou, ou foi alterado depois de assinado, aparece com o que fazer</td><td>Sem atualização há um mês, o que significa que as respostas de segurança não estão chegando a este Mac</td></tr>
+<tr><td>Instantâneos locais</td><td>Quantas cópias o Time Machine guarda no próprio disco, e a mais antiga. O macOS as remove sozinho quando falta espaço; clique nele e em <b>Liberar espaço</b> para o macOS removê-los agora. Seu disco de backup não é afetado</td><td>Nunca: são normais</td></tr>
+<tr><td>Permissões de apps</td><td>Uma lista das páginas de privacidade dos Ajustes do Sistema (câmera, microfone, gravação de tela, Acesso Total ao Disco e mais), cada uma a um clique</td><td>Nunca: é um guia</td></tr></table></div>
+<p>O Warashi consulta as ferramentas do macOS ao abrir a Verificação e só muda algo quando você pede. Ver a data do último backup exige Acesso Total ao Disco.</p>
 <p>Para ser avisado sem abrir a Verificação, ative <b>Backup atrasado</b> e <b>Atualização do macOS aguardando</b> em Ajustes › <a href="../../docs/alerts/">Alertas</a>. Enquanto algum estiver ativado, o Warashi verifica isso uma vez por dia e avisa uma vez: quando o Time Machine não faz backup há uma semana e quando uma atualização está aguardando há uma semana.</p>
 <h2>Inicia com o seu Mac</h2>
 <p>Abaixo, tudo o que se instalou para iniciar com seu Mac, do mais custoso para o menos, com a energia que cada item usou nesta semana. <b>Abrir Itens de Início</b> leva você aos Ajustes do Sistema para desativar qualquer um deles.</p>

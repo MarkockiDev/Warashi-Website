@@ -88,7 +88,7 @@ posthog.register({ surface: "website" });
 <figure class="shot"><span class="themed"><img class="t-light" src="../../assets/img/help/w-slow-light.webp" alt="Why Is My Mac Slow?: Xcode is using most of your processor, with its numbers against its usual, Show in Apps, and what Warashi looked at" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <p>Below the answer, <b>What Warashi looked at</b> shows the processor, memory, temperature and disk, and the busiest apps during the check. Nothing is recorded beyond your normal history.</p>
 <h2>Security and backup</h2>
-<p>Six tiles show how well your Mac is protected. Press one to open the place in System Settings where it's changed.</p>
+<p>Nine tiles show how well your Mac is protected. Press one to open the place in System Settings where it's changed.</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../assets/img/help/w-security-light.webp" alt="Security and backup: macOS updates ready to install, Time Machine, FileVault on, the firewall off, System Integrity Protection and Gatekeeper on" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <div class="table"><table><tr><th>Tile</th><th>What it shows</th><th>When it asks you to look</th></tr>
 <tr><td>macOS updates</td><td>Whether a macOS update is waiting, and when macOS last checked</td><td>An update is ready to install</td></tr>
@@ -96,8 +96,11 @@ posthog.register({ surface: "website" });
 <tr><td>FileVault</td><td>Whether your files are encrypted</td><td>Off</td></tr>
 <tr><td>Firewall</td><td>Whether unwanted incoming connections are blocked</td><td>Off</td></tr>
 <tr><td>System Integrity Protection</td><td>Whether macOS's core files are protected</td><td>Off</td></tr>
-<tr><td>Gatekeeper</td><td>Whether apps are checked before they first open</td><td>Off</td></tr></table></div>
-<p>Warashi only looks. It asks macOS's own tools when Checkup opens, and changes nothing. Seeing the date of the last backup needs Full Disk Access.</p>
+<tr><td>Gatekeeper</td><td>Whether apps are checked before they first open</td><td>Off</td></tr>
+<tr><td>Malware protection</td><td>XProtect, the malware protection built into macOS: its definitions' version and when Apple last updated them. Press it, then <b>Check Apps</b>, to check every app and login item's signature on your Mac: anything no identified developer signed, or changed after signing, is listed with what to do</td><td>No update for a month, which means security responses aren't reaching this Mac</td></tr>
+<tr><td>Local snapshots</td><td>How many copies Time Machine keeps on the disk itself, and the oldest. macOS removes them by itself when space runs short; press it, then <b>Free Up Space</b>, to have macOS remove them now. Your backup disk isn't touched</td><td>Never: they're normal</td></tr>
+<tr><td>App permissions</td><td>A list of the privacy pages in System Settings (camera, microphone, screen recording, Full Disk Access and more), each a click away</td><td>Never: it's a guide</td></tr></table></div>
+<p>Warashi asks macOS's own tools when Checkup opens, and changes something only when you ask. Seeing the date of the last backup needs Full Disk Access.</p>
 <p>To be told without opening Checkup, turn on <b>Backup overdue</b> and <b>macOS update waiting</b> in Settings › <a href="../../docs/alerts/">Alerts</a>. While either is on, Warashi reads these once a day and tells you once: when Time Machine hasn't backed up for a week, and when an update has been waiting for a week.</p>
 <h2>Starts with your Mac</h2>
 <p>Below, everything that has installed itself to start with your Mac, costliest first, with the energy each used this week. <b>Open Login Items</b> takes you to System Settings to turn any of them off.</p>

@@ -88,7 +88,7 @@ posthog.register({ surface: "website" });
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-slow-light.webp" alt="Macが遅いのはなぜ？：Xcodeがプロセッサの大半を使っていて、いつもの水準との数値比較、アプリで表示、Warashiが調べたこと" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <p>答えの下の<b>Warashiが調べたこと</b>には、確認中のプロセッサ、メモリ、温度、ディスク、そして最も負荷の高かったアプリが表示されます。通常の履歴以外は何も記録されません。</p>
 <h2>セキュリティとバックアップ</h2>
-<p>6つのタイルで、Macがどれだけ守られているかがわかります。タイルを押すと、変更できるシステム設定の場所が開きます。</p>
+<p>9つのタイルで、Macがどれだけ保護されているかがわかります。タイルを押すと、それを変更するシステム設定の場所が開きます。</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-security-light.webp" alt="セキュリティとバックアップ：インストールできるmacOSアップデート、Time Machine、FileVaultがオン、ファイアウォールがオフ、システム整合性保護とGatekeeperがオン" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <div class="table"><table><tr><th>タイル</th><th>表示内容</th><th>目をそらすよう促すタイミング</th></tr>
 <tr><td>macOSアップデート</td><td>macOSアップデートが待機中かどうかと、macOSが最後に確認した日時</td><td>インストールできるアップデートがあります</td></tr>
@@ -96,8 +96,11 @@ posthog.register({ surface: "website" });
 <tr><td>FileVault</td><td>ファイルが暗号化されているかどうか</td><td>オフ</td></tr>
 <tr><td>ファイアウォール</td><td>望まない着信接続がブロックされているかどうか</td><td>オフ</td></tr>
 <tr><td>システム整合性保護</td><td>macOSの中核ファイルが保護されているかどうか</td><td>オフ</td></tr>
-<tr><td>Gatekeeper</td><td>アプリが初めて開かれる前に確認されるかどうか</td><td>オフ</td></tr></table></div>
-<p>Warashiは見るだけです。チェックアップを開いたときにmacOS自身のツールに問い合わせ、何も変更しません。最後のバックアップの日付を見るには、フルディスクアクセスが必要です。</p>
+<tr><td>Gatekeeper</td><td>アプリが初めて開かれる前に確認されるかどうか</td><td>オフ</td></tr>
+<tr><td>マルウェア対策</td><td>macOSに組み込まれたマルウェア対策XProtectの定義のバージョンと、Appleが最後に更新した日時。押してから<b>アプリを確認</b>を押すと、Mac上のすべてのアプリとログイン項目の署名を確認します。確認済みの開発元が署名していないものや署名後に変更されたものは、対処法とともに表示されます</td><td>1か月更新がない。セキュリティ対応がこのMacに届いていないということです</td></tr>
+<tr><td>ローカルスナップショット</td><td>Time Machineがディスク自体に保持しているコピーの数と、最も古いもの。容量が足りなくなるとmacOSが自動で削除します。押してから<b>空き容量を増やす</b>を押すと、macOSが今すぐ削除します。バックアップディスクには影響しません</td><td>なし：通常のものです</td></tr>
+<tr><td>アプリの許可</td><td>システム設定のプライバシーページ（カメラ、マイク、画面収録、フルディスクアクセスなど）の一覧。どれもワンクリックで開けます</td><td>なし：ガイドです</td></tr></table></div>
+<p>Warashiはチェックアップを開いたときにmacOS自身のツールに問い合わせ、あなたが頼んだときだけ何かを変更します。最後のバックアップの日付を見るにはフルディスクアクセスが必要です。</p>
 <p>チェックアップを開かずに知らせを受けるには、設定 › <a href="../../docs/alerts/">アラート</a>で<b>バックアップの遅れ</b>と<b>macOSアップデートの待機</b>をオンにします。どちらかがオンの間、Warashiは1日に1回これらを読み、1度だけ知らせます。Time Machineが1週間バックアップしていないときと、アップデートが1週間待機しているときです。</p>
 <h2>Macと一緒に起動</h2>
 <p>下には、Macと一緒に起動するよう自分を登録したすべての項目が、コストの高い順に、今週使ったエネルギーとともに並びます。<b>ログイン項目を開く</b>を押すと、システム設定に移動して、どれでもオフにできます。</p>

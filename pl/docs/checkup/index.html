@@ -88,7 +88,7 @@ posthog.register({ surface: "website" });
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-slow-light.webp" alt="Dlaczego mój Mac zwalnia?: Xcode zużywa większość procesora, z jego liczbami na tle zwykłych, Pokaż w Aplikacjach i to, na co patrzył Warashi" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-slow-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <p>Pod odpowiedzią <b>Na co patrzył Warashi</b> pokazuje procesor, pamięć, temperaturę i dysk oraz najaktywniejsze aplikacje podczas sprawdzania. Nic nie jest zapisywane poza Twoją zwykłą historią.</p>
 <h2>Bezpieczeństwo i kopie zapasowe</h2>
-<p>Sześć kafelków pokazuje, jak dobrze chroniony jest Twój Mac. Naciśnij jeden, aby otworzyć miejsce w Ustawieniach systemowych, w którym to zmienisz.</p>
+<p>Dziewięć kafelków pokazuje, jak dobrze chroniony jest Twój Mac. Naciśnij jeden, by otworzyć miejsce w Ustawieniach systemowych, gdzie się to zmienia.</p>
 <figure class="shot"><span class="themed"><img class="t-light" src="../../../assets/img/help/w-security-light.webp" alt="Bezpieczeństwo i kopie zapasowe: uaktualnienia macOS gotowe do instalacji, Time Machine, FileVault włączony, zapora sieciowa wyłączona, Ochrona integralności systemu i Gatekeeper włączone" width="1080" height="700" loading="lazy" decoding="async"><img class="t-dark" src="../../../assets/img/help/w-security-dark.webp" alt="" width="1080" height="700" loading="lazy" decoding="async"></span></figure>
 <div class="table"><table><tr><th>Kafelek</th><th>Co pokazuje</th><th>Gdy prosi, byś spojrzał w dal</th></tr>
 <tr><td>Uaktualnienia macOS</td><td>Czy czeka uaktualnienie macOS i kiedy macOS ostatnio sprawdzał</td><td>Uaktualnienie jest gotowe do instalacji</td></tr>
@@ -96,8 +96,11 @@ posthog.register({ surface: "website" });
 <tr><td>FileVault</td><td>Czy Twoje pliki są zaszyfrowane</td><td>Wyłączona</td></tr>
 <tr><td>Zapora sieciowa</td><td>Czy niechciane połączenia przychodzące są blokowane</td><td>Wyłączona</td></tr>
 <tr><td>Ochrona integralności systemu</td><td>Czy podstawowe pliki macOS są chronione</td><td>Wyłączona</td></tr>
-<tr><td>Gatekeeper</td><td>Czy aplikacje są sprawdzane, zanim pierwszy raz się otworzą</td><td>Wyłączona</td></tr></table></div>
-<p>Warashi tylko patrzy. Pyta własne narzędzia macOS, gdy otwiera się Kontrola, i niczego nie zmienia. Zobaczenie daty ostatniej kopii wymaga Pełnego dostępu do dysku.</p>
+<tr><td>Gatekeeper</td><td>Czy aplikacje są sprawdzane, zanim pierwszy raz się otworzą</td><td>Wyłączona</td></tr>
+<tr><td>Ochrona przed złośliwym oprogramowaniem</td><td>XProtect, wbudowana w macOS ochrona przed złośliwym oprogramowaniem: wersja jej definicji i kiedy Apple ostatnio je zaktualizował. Naciśnij go, potem <b>Sprawdź aplikacje</b>, by sprawdzić podpis każdej aplikacji i elementu logowania na Macu: wszystko, czego nie podpisał zidentyfikowany deweloper albo co zmieniono po podpisaniu, pojawi się z radą, co zrobić</td><td>Brak aktualizacji od miesiąca, co oznacza, że odpowiedzi bezpieczeństwa nie docierają do tego Maca</td></tr>
+<tr><td>Lokalne migawki</td><td>Ile kopii Time Machine trzyma na samym dysku i najstarsza z nich. macOS usuwa je sam, gdy brakuje miejsca; naciśnij go, potem <b>Zwolnij miejsce</b>, by macOS usunął je od razu. Dysk kopii zapasowych pozostaje nietknięty</td><td>Nigdy: to normalne</td></tr>
+<tr><td>Uprawnienia aplikacji</td><td>Lista stron prywatności w Ustawieniach systemowych (kamera, mikrofon, nagrywanie ekranu, Pełny dostęp do dysku i inne), każda o jedno kliknięcie</td><td>Nigdy: to przewodnik</td></tr></table></div>
+<p>Warashi pyta narzędzia macOS przy otwarciu Kontroli i zmienia coś tylko, gdy o to poprosisz. Data ostatniej kopii wymaga Pełnego dostępu do dysku.</p>
 <p>Aby dowiedzieć się bez otwierania Kontroli, włącz <b>Zaległa kopia zapasowa</b> i <b>Czekające uaktualnienie macOS</b> w Ustawieniach › <a href="../../docs/alerts/">Alerty</a>. Gdy któryś jest włączony, Warashi sprawdza to raz dziennie i mówi raz: gdy Time Machine od tygodnia nie zrobił kopii i gdy uaktualnienie czeka od tygodnia.</p>
 <h2>Uruchamiane razem z Makiem</h2>
 <p>Poniżej wszystko, co samo się zainstalowało, by uruchamiać się razem z Makiem, od najbardziej kosztownych, wraz z energią zużytą w tym tygodniu. <b>Otwórz rzeczy otwierane podczas logowania</b> przenosi Cię do Ustawień systemowych, gdzie możesz je wyłączyć.</p>
