@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://warashi.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/docs/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/docs/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/docs/install/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/welcome-tour/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/first-day/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/docs/apps/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/docs/apps/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/docs/history/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/updates/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/beta/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/docs/menu-bar/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/docs/menu-bar/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/docs/customize/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/notch-and-island/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/window/</loc><lastmod>2026-11-10</lastmod></url>
@@ -19,8 +19,11 @@
   <url><loc>https://warashi.app/docs/system-processes/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/settings/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/privacy-and-data/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/docs/troubleshooting/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/guides/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/docs/troubleshooting/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/guides/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/guides/keep-mac-awake-lid-closed/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/guides/limit-macbook-charging-80-percent/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/guides/uninstall-apps-on-mac-completely/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/guides/why-is-my-mac-slow/</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://warashi.app/guides/how-much-ram-do-i-need/</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://warashi.app/guides/whats-draining-my-macbook-battery/</loc><lastmod>2026-11-03</lastmod></url>
@@ -28,8 +31,8 @@
   <url><loc>https://warashi.app/guides/whats-taking-up-space-on-my-mac/</loc><lastmod>2026-11-09</lastmod></url>
   <url><loc>https://warashi.app/guides/test-internet-speed-on-mac/</loc><lastmod>2026-11-09</lastmod></url>
   <url><loc>https://warashi.app/guides/should-i-upgrade-my-mac/</loc><lastmod>2026-11-03</lastmod></url>
-  <url><loc>https://warashi.app/faq/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/changelog/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/faq/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/changelog/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/privacy/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/terms/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/refunds/</loc><lastmod>2026-11-10</lastmod></url>
@@ -38,26 +41,26 @@
   <url><loc>https://warashi.app/docs/developer/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/weekly-summary/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/command-line-and-ai/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/docs/storage/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/docs/storage/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/docs/flight-log/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/checkup/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/battery/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/docs/tools/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/docs/tools/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/docs/breaks/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/keep-awake/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/docs/speed-test/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pl/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/fr/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/es/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pt-br/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/ja/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/zh-hans/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pl/docs/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/fr/docs/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/es/docs/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pt-br/docs/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/ja/docs/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/zh-hans/docs/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/pl/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/fr/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/es/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pt-br/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/ja/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/zh-hans/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pl/docs/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/fr/docs/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/es/docs/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pt-br/docs/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/ja/docs/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/zh-hans/docs/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/pl/docs/install/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/fr/docs/install/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/es/docs/install/</loc><lastmod>2026-11-10</lastmod></url>
@@ -76,12 +79,12 @@
   <url><loc>https://warashi.app/pt-br/docs/first-day/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/ja/docs/first-day/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/zh-hans/docs/first-day/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pl/docs/apps/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/fr/docs/apps/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/es/docs/apps/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pt-br/docs/apps/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/ja/docs/apps/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/zh-hans/docs/apps/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/pl/docs/apps/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/fr/docs/apps/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/es/docs/apps/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pt-br/docs/apps/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/ja/docs/apps/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/zh-hans/docs/apps/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/pl/docs/history/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/fr/docs/history/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/es/docs/history/</loc><lastmod>2026-11-10</lastmod></url>
@@ -100,12 +103,12 @@
   <url><loc>https://warashi.app/pt-br/docs/beta/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/ja/docs/beta/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/zh-hans/docs/beta/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pl/docs/menu-bar/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/fr/docs/menu-bar/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/es/docs/menu-bar/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pt-br/docs/menu-bar/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/ja/docs/menu-bar/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/zh-hans/docs/menu-bar/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/pl/docs/menu-bar/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/fr/docs/menu-bar/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/es/docs/menu-bar/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pt-br/docs/menu-bar/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/ja/docs/menu-bar/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/zh-hans/docs/menu-bar/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/pl/docs/customize/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/fr/docs/customize/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/es/docs/customize/</loc><lastmod>2026-11-10</lastmod></url>
@@ -160,18 +163,36 @@
   <url><loc>https://warashi.app/pt-br/docs/privacy-and-data/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/ja/docs/privacy-and-data/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/zh-hans/docs/privacy-and-data/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pl/docs/troubleshooting/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/fr/docs/troubleshooting/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/es/docs/troubleshooting/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pt-br/docs/troubleshooting/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/ja/docs/troubleshooting/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/zh-hans/docs/troubleshooting/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pl/guides/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/fr/guides/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/es/guides/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pt-br/guides/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/ja/guides/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/zh-hans/guides/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/pl/docs/troubleshooting/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/fr/docs/troubleshooting/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/es/docs/troubleshooting/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pt-br/docs/troubleshooting/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/ja/docs/troubleshooting/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/zh-hans/docs/troubleshooting/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pl/guides/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/fr/guides/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/es/guides/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pt-br/guides/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/ja/guides/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/zh-hans/guides/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pl/guides/keep-mac-awake-lid-closed/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/fr/guides/keep-mac-awake-lid-closed/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/es/guides/keep-mac-awake-lid-closed/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pt-br/guides/keep-mac-awake-lid-closed/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/ja/guides/keep-mac-awake-lid-closed/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/zh-hans/guides/keep-mac-awake-lid-closed/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pl/guides/limit-macbook-charging-80-percent/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/fr/guides/limit-macbook-charging-80-percent/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/es/guides/limit-macbook-charging-80-percent/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pt-br/guides/limit-macbook-charging-80-percent/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/ja/guides/limit-macbook-charging-80-percent/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/zh-hans/guides/limit-macbook-charging-80-percent/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pl/guides/uninstall-apps-on-mac-completely/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/fr/guides/uninstall-apps-on-mac-completely/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/es/guides/uninstall-apps-on-mac-completely/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pt-br/guides/uninstall-apps-on-mac-completely/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/ja/guides/uninstall-apps-on-mac-completely/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/zh-hans/guides/uninstall-apps-on-mac-completely/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/pl/guides/why-is-my-mac-slow/</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://warashi.app/fr/guides/why-is-my-mac-slow/</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://warashi.app/es/guides/why-is-my-mac-slow/</loc><lastmod>2026-11-03</lastmod></url>
@@ -214,12 +235,12 @@
   <url><loc>https://warashi.app/pt-br/guides/should-i-upgrade-my-mac/</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://warashi.app/ja/guides/should-i-upgrade-my-mac/</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://warashi.app/zh-hans/guides/should-i-upgrade-my-mac/</loc><lastmod>2026-11-03</lastmod></url>
-  <url><loc>https://warashi.app/pl/faq/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/fr/faq/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/es/faq/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pt-br/faq/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/ja/faq/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/zh-hans/faq/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/pl/faq/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/fr/faq/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/es/faq/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pt-br/faq/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/ja/faq/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/zh-hans/faq/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/pl/docs/power-flow/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/fr/docs/power-flow/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/es/docs/power-flow/</loc><lastmod>2026-11-10</lastmod></url>
@@ -244,12 +265,12 @@
   <url><loc>https://warashi.app/pt-br/docs/command-line-and-ai/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/ja/docs/command-line-and-ai/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/zh-hans/docs/command-line-and-ai/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pl/docs/storage/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/fr/docs/storage/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/es/docs/storage/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pt-br/docs/storage/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/ja/docs/storage/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/zh-hans/docs/storage/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/pl/docs/storage/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/fr/docs/storage/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/es/docs/storage/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pt-br/docs/storage/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/ja/docs/storage/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/zh-hans/docs/storage/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/pl/docs/flight-log/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/fr/docs/flight-log/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/es/docs/flight-log/</loc><lastmod>2026-11-10</lastmod></url>
@@ -268,12 +289,12 @@
   <url><loc>https://warashi.app/pt-br/docs/battery/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/ja/docs/battery/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/zh-hans/docs/battery/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pl/docs/tools/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/fr/docs/tools/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/es/docs/tools/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/pt-br/docs/tools/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/ja/docs/tools/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://warashi.app/zh-hans/docs/tools/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://warashi.app/pl/docs/tools/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/fr/docs/tools/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/es/docs/tools/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/pt-br/docs/tools/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/ja/docs/tools/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://warashi.app/zh-hans/docs/tools/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://warashi.app/pl/docs/breaks/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/fr/docs/breaks/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://warashi.app/es/docs/breaks/</loc><lastmod>2026-11-10</lastmod></url>
