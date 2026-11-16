@@ -111,7 +111,7 @@ posthog.register({ surface: "website" });
         </div>
       </div>
       <span class="themed peek"><img class="t-light" src="../assets/img/app/now-light.webp" alt="" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
-      <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1226"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1226"></span>
+      <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1216"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1216"></span>
       <svg class="cursor" viewBox="0 0 24 24" style="left:62%; top:64%" aria-hidden="true"><path d="M4 2l15 9-7 1.6L8.5 20z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg>
     </div>
   </div>
@@ -193,12 +193,18 @@ posthog.register({ surface: "website" });
           <h3>Odzywa się tylko wtedy, gdy to ważne.</h3>
           <p>Aplikacja wymykająca się spod kontroli, szybko rosnąca pamięć, zapełniający się dysk, nagrzewająca się bateria. Raz na problem, z dowodami, plus cotygodniowa kontrola, która mówi, czy Twój Mac jest w dobrej formie.</p>
         </div>
+        <div class="step" data-tag="Soft Focus: everything else goes quiet">
+          <p class="num">Pięć</p>
+          <h3>Wycisza resztę.</h3>
+          <p>Włącz Rozmycie tła, a każde okno poza tym, w którym pracujesz, łagodnie się rozmyje. Jeden skrót, ⌃⌥⌘F, i ekran się uspokaja. Rozmywa macOS: Warashi nigdy nie widzi, co na nim jest.</p>
+        </div>
       </div>
       <div class="story-screen reveal" aria-label="Okno Warashi, zmieniające się z każdym krokiem">
         <span class="themed"><img class="t-light" src="../assets/img/app/now-light.webp" alt="Warashi Teraz: Nic nie wymaga Twojej uwagi, z pierścieniami CPU i pamięci oraz kafelkami na żywo" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
         <span class="themed"><img class="t-light" src="../assets/img/app/history-light.webp" alt="Historia Warashi: jeden duży wykres z przyciskami miar i porównaniem" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/history-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="../assets/img/app/moment-light.webp" alt="Historia Warashi z zaznaczoną chwilą i jej wyjaśnieniem" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/moment-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="../assets/img/app/checkup-light.webp" alt="Warashi Kontrola: Twój Mac jest w dobrej formie" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/checkup-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+        <span class="themed"><img class="t-light" src="../assets/img/app/softfocus-light.webp" alt="Rozmycie tła: okno Warashi ostre na wierzchu, wszystkie inne łagodnie rozmyte" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="tag"></span>
       </div>
     </div>
@@ -309,26 +315,62 @@ posthog.register({ surface: "website" });
   </div>
 </section>
 
-<section class="chapter" id="tools">
+<section class="chapter" id="breaks">
   <div class="wrap">
-    <p class="running reveal"><b>06</b><span>Narzędzia i przerwy</span></p>
+    <p class="running reveal"><b>06</b><span>Przerwy</span></p>
     <div class="feature">
       <div>
-        <h2 class="reveal">Nie usypiaj Maca. A potem pamiętaj o odpoczynku.</h2>
-        <p class="lead reveal d1">Nie usypiaj na czas pobierania, kompilacji lub prezentacji, nawet z zamkniętą pokrywą. Przerwy dla oczu w wybranym przez Ciebie rytmie, małe przypomnienia, by usiąść prosto i napić się wody, a wszystko cicho podczas rozmów, poza godzinami pracy i w trybie Skupienia.</p>
+        <h2 class="reveal">Oderwij wzrok. Usiądź prosto. I wracaj do pracy.</h2>
+        <p class="lead reveal d1">Co dwadzieścia minut łagodna przerwa rozmywa ekran i prosi wprost: „Oderwij wzrok od ekranu.” Między przerwami Usiądź prosto wznosi się z dołu ekranu do jego środka, a Twoja głowa podąża za nim. Wszystko to czeka podczas rozmów, poza godzinami pracy i w trybie skupienia.</p>
+        <ul class="points reveal d2">
+          <li><b>Rytm, który pasuje</b>20-20-20, Pomodoro, 50 i 10, Głęboka praca albo Twój własny: przerwy dla oczu, odpoczynek z dala od Maca i od czasu do czasu dłuższa przerwa.</li>
+          <li><b>Najpierw zapowiedź</b>Piętnaście sekund wcześniej mała pigułka pod paskiem menu: Zacznij teraz, jeszcze pięć minut albo Pomiń.</li>
+          <li><b>Drobne szturchnięcia</b>Usiądź prosto, a jeśli chcesz, mrugnij, rozciągnij się, napij się wody albo rozluźnij szczękę. Po cztery sekundy, i nigdy nie przejmują kliknięć.</li>
+        </ul>
+      </div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/break-light.webp" alt="Przerwa w Warashi: łagodnie rozmyty ekran z odliczaniem i „Oderwij wzrok od ekranu.”" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/break-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="soft-focus">
+  <div class="wrap">
+    <p class="running reveal"><b>07</b><span>Rozmycie tła</span></p>
+    <div class="feature flip">
+      <div>
+        <h2 class="reveal">Cała reszta, łagodnie poza ostrością.</h2>
+        <p class="lead reveal d1">Włącz Rozmycie tła, a każde okno poza tym, w którym pracujesz, łagodnie się rozmyje, więc ostra zostaje tylko Twoja praca. Kliknij inne okno, a stanie się ostre. Okna zostają tam, gdzie je zostawiłeś.</p>
+        <ul class="points reveal d2">
+          <li><b>Łagodny lub Głęboki</b>Lekkie zmiękczenie albo głębokie rozmycie, które przyciemnia resztę, z odcieniem i delikatnym ziarnem filmowym, jeśli chcesz.</li>
+          <li><b>Twoje zasady</b>Zostaw ostre wszystkie okna aplikacji, rozmywaj tylko monitor, na którym pracujesz, i wskaż aplikacje, przy których ma ustąpić.</li>
+          <li><b>Nic nie jest widziane</b>⌃⌥⌘F w każdej aplikacji. Bez uprawnień: rozmywa macOS, a Warashi wie tylko, gdzie jest Twoje okno.</li>
+        </ul>
+      </div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/softfocus-light.webp" alt="Rozmycie tła: okno Warashi ostre na wierzchu, wszystkie inne łagodnie rozmyte" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="tools">
+  <div class="wrap">
+    <p class="running reveal"><b>08</b><span>Narzędzia</span></p>
+    <div class="feature">
+      <div>
+        <h2 class="reveal">Nie usypiaj. I drobiazgi.</h2>
+        <p class="lead reveal d1">Nie usypiaj na czas pobierania, kompilacji czy prezentacji, nawet przy zamkniętej pokrywie, i skrzynka z narzędziami do drobnych zadań, do których inaczej potrzebowałbyś pięciu aplikacji.</p>
         <ul class="points reveal d2">
           <li><b>Nie usypiaj, po Twojemu</b>Na godzinę, do końca zadania, póki otwarta jest aplikacja albo z zamkniętą pokrywą na zasilaczu. Przetrwa nawet uaktualnienia samego Warashi.</li>
           <li><b>I te drobiazgi</b>Szybkość internetu i dysku, jakość Wi‑Fi, czarny ekran lub wyłączona klawiatura do czyszczenia, ukrywanie ikon biurka na czas udostępniania ekranu, wyciszenie mikrofonu we wszystkich aplikacjach, Wysuń wszystkie, raport o Macu dla pomocy technicznej.</li>
         </ul>
       </div>
-      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/tools-light.webp" alt="Warashi Narzędzia: przerwy, Nie usypiaj, testy szybkości, Wi-Fi i więcej" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/tools-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/tools-light.webp" alt="Warashi Narzędzia: przerwy, Rozmycie tła, Nie usypiaj, testy szybkości, Wi-Fi i więcej" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/tools-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
     </div>
   </div>
 </section>
 
 <section class="chapter" id="developers">
   <div class="wrap">
-    <p class="running reveal"><b>07</b><span>Dla programistów</span></p>
+    <p class="running reveal"><b>09</b><span>Dla programistów</span></p>
     <div class="feature flip">
       <div>
         <h2 class="reveal">Co działa na tym porcie? Ile kosztuje ten agent?</h2>
@@ -404,7 +446,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
           <li>Anonimowe statystyki użycia (wersja, macOS, rodzina układu, z których funkcji korzystasz), ujawnione w prezentacji powitalnej. <a class="link-arrow" href="docs/privacy-and-data/">Dokładnie, co jest wysyłane</a></li>
         </ul>
       </div>
-      <img class="shot reveal d1" src="../assets/img/onboarding.webp" alt="Powitanie Warashi: Poznaj Warashi" width="720" height="520" loading="lazy">
+      <img class="shot reveal d1" src="../assets/img/help/tour-0.webp" alt="Przewodnik powitalny Warashi: Poznaj Warashi i to, co zostaje na Twoim Macu" width="1920" height="1280" loading="lazy">
     </div>
   </div>
 </section>

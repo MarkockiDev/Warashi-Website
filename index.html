@@ -112,7 +112,7 @@ posthog.register({ surface: "website" });
         </div>
       </div>
       <span class="themed peek"><img class="t-light" src="assets/img/app/now-light.webp" alt="" width="2160" height="1572"><img class="t-dark" src="assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
-      <span class="themed pop hidden"><img class="t-light" src="assets/img/app/popover-light.webp" alt="" width="720" height="1226"><img class="t-dark" src="assets/img/app/popover-dark.webp" alt="" width="720" height="1226"></span>
+      <span class="themed pop hidden"><img class="t-light" src="assets/img/app/popover-light.webp" alt="" width="720" height="1216"><img class="t-dark" src="assets/img/app/popover-dark.webp" alt="" width="720" height="1216"></span>
       <svg class="cursor" viewBox="0 0 24 24" style="left:62%; top:64%" aria-hidden="true"><path d="M4 2l15 9-7 1.6L8.5 20z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg>
     </div>
   </div>
@@ -194,12 +194,18 @@ posthog.register({ surface: "website" });
           <h3>It speaks up only when it matters.</h3>
           <p>A runaway app, memory growing fast, a disk filling up, a battery running hot. Once per problem, with the evidence, and a weekly checkup that says whether your Mac is in good shape.</p>
         </div>
+        <div class="step" data-tag="Soft Focus: everything else goes quiet">
+          <p class="num">Five</p>
+          <h3>It quiets the rest.</h3>
+          <p>Turn on Soft Focus and every window but the one you're working in softens into a blur. One shortcut, ⌃⌥⌘F, and your screen goes calm. macOS does the blurring: Warashi never sees what's on it.</p>
+        </div>
       </div>
       <div class="story-screen reveal" aria-label="Warashi's window, changing with each step">
         <span class="themed"><img class="t-light" src="assets/img/app/now-light.webp" alt="Warashi Now: Nothing needs you, with CPU and memory rings and live tiles" width="2160" height="1572"><img class="t-dark" src="assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
         <span class="themed"><img class="t-light" src="assets/img/app/history-light.webp" alt="Warashi History: one large chart with metric chips and a comparison" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/history-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="assets/img/app/moment-light.webp" alt="Warashi History with a marked moment and its explanation" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/moment-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="assets/img/app/checkup-light.webp" alt="Warashi Checkup: Your Mac is in good shape" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/checkup-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+        <span class="themed"><img class="t-light" src="assets/img/app/softfocus-light.webp" alt="Soft Focus: Warashi's window sharp in front, every other window softly blurred" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="tag"></span>
       </div>
     </div>
@@ -310,26 +316,62 @@ posthog.register({ surface: "website" });
   </div>
 </section>
 
-<section class="chapter" id="tools">
+<section class="chapter" id="breaks">
   <div class="wrap">
-    <p class="running reveal"><b>06</b><span>Tools and breaks</span></p>
+    <p class="running reveal"><b>06</b><span>Breaks</span></p>
     <div class="feature">
       <div>
-        <h2 class="reveal">Keep it awake. Then remember to rest.</h2>
-        <p class="lead reveal d1">Keep Awake for a download, a build or a presentation, even with the lid closed. Breaks for your eyes in a rhythm you choose, small nudges to sit up and drink water, all quiet during calls, outside your work hours and in a Focus.</p>
+        <h2 class="reveal">Look away. Sit up. Then carry on.</h2>
+        <p class="lead reveal d1">Every twenty minutes, a gentle break blurs the screen and asks, plainly: “Look away from the screen.” Between breaks, Sit up straight rises from the bottom of your screen to its centre, and your head follows it up. All of it waits during calls, outside your work hours and in a Focus.</p>
+        <ul class="points reveal d2">
+          <li><b>A rhythm that fits</b>20-20-20, Pomodoro, 50 and 10, Deep work, or your own: eye breaks, rests away from the Mac, and a longer rest now and then.</li>
+          <li><b>A heads-up first</b>Fifteen seconds before, a small pill under the menu bar: Start Now, five more minutes, or Skip.</li>
+          <li><b>Small nudges</b>Sit up straight, and if you like, blink, stretch, drink water or relax your jaw. Four seconds each, and they never take your clicks.</li>
+        </ul>
+      </div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="assets/img/app/break-light.webp" alt="A Warashi break: the screen softly blurred with a countdown and “Look away from the screen.”" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/break-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="soft-focus">
+  <div class="wrap">
+    <p class="running reveal"><b>07</b><span>Soft Focus</span></p>
+    <div class="feature flip">
+      <div>
+        <h2 class="reveal">Everything else, softly out of focus.</h2>
+        <p class="lead reveal d1">Turn on Soft Focus and every window except the one you're working in softens into a blur, so only your work stays sharp. Click another window and it comes into focus. Your windows stay where you left them.</p>
+        <ul class="points reveal d2">
+          <li><b>Ambient or Deep</b>A light softening, or a deep blur that dims the rest, with a tint and fine film grain if you like.</li>
+          <li><b>Your rules</b>Keep every window of an app sharp, blur only the display you're on, and name apps it should step aside for.</li>
+          <li><b>Nothing seen</b>⌃⌥⌘F from any app. No permission: macOS does the blurring, and Warashi only knows where your window is.</li>
+        </ul>
+      </div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="assets/img/app/softfocus-light.webp" alt="Soft Focus: Warashi's window sharp in front, every other window softly blurred" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="tools">
+  <div class="wrap">
+    <p class="running reveal"><b>08</b><span>Tools</span></p>
+    <div class="feature">
+      <div>
+        <h2 class="reveal">Keep it awake. And the little things.</h2>
+        <p class="lead reveal d1">Keep Awake for a download, a build or a presentation, even with the lid closed, and a toolbox for the small jobs you'd otherwise need five apps for.</p>
         <ul class="points reveal d2">
           <li><b>Keep Awake, your way</b>For an hour, until the work is done, while an app is open, or with the lid closed while plugged in. It survives Warashi's own updates.</li>
           <li><b>And the little things</b>Internet and disk speed, Wi‑Fi quality, a black screen or switched-off keyboard for cleaning, hide desktop icons for a screen share, mute the microphone everywhere, Eject All, a Mac report for support.</li>
         </ul>
       </div>
-      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="assets/img/app/tools-light.webp" alt="Warashi Tools: breaks, Keep Awake, speed tests, Wi-Fi and more" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/tools-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="assets/img/app/tools-light.webp" alt="Warashi Tools: breaks, Soft Focus, Keep Awake, speed tests, Wi-Fi and more" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/tools-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
     </div>
   </div>
 </section>
 
 <section class="chapter" id="developers">
   <div class="wrap">
-    <p class="running reveal"><b>07</b><span>For developers</span></p>
+    <p class="running reveal"><b>09</b><span>For developers</span></p>
     <div class="feature flip">
       <div>
         <h2 class="reveal">What's on that port? What's that agent costing?</h2>
@@ -405,7 +447,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
           <li>Anonymous usage statistics (version, macOS, chip family, which features are used), disclosed in the welcome tour. <a class="link-arrow" href="docs/privacy-and-data/">Exactly what's sent</a></li>
         </ul>
       </div>
-      <img class="shot reveal d1" src="assets/img/onboarding.webp" alt="Warashi's welcome: Meet Warashi" width="720" height="520" loading="lazy">
+      <img class="shot reveal d1" src="assets/img/help/tour-0.webp" alt="Warashi's welcome tour: Meet Warashi, with what stays on your Mac" width="1920" height="1280" loading="lazy">
     </div>
   </div>
 </section>

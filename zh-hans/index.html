@@ -111,7 +111,7 @@ posthog.register({ surface: "website" });
         </div>
       </div>
       <span class="themed peek"><img class="t-light" src="../assets/img/app/now-light.webp" alt="" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
-      <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1226"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1226"></span>
+      <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1216"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1216"></span>
       <svg class="cursor" viewBox="0 0 24 24" style="left:62%; top:64%" aria-hidden="true"><path d="M4 2l15 9-7 1.6L8.5 20z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg>
     </div>
   </div>
@@ -193,12 +193,18 @@ posthog.register({ surface: "website" });
           <h3>它只在要紧时才开口。</h3>
           <p>失控的 App、快速增长的内存、即将装满的磁盘、发烫的电池。每个问题只提醒一次，附上依据，再加一份每周体检，告诉你 Mac 状态是否良好。</p>
         </div>
+        <div class="step" data-tag="Soft Focus: everything else goes quiet">
+          <p class="num">五</p>
+          <h3>让其余一切安静下来。</h3>
+          <p>打开背景模糊，除你正在使用的窗口外，其余窗口都会柔化为模糊。一个快捷键 ⌃⌥⌘F，屏幕就安静下来。模糊由 macOS 完成：Warashi 从不查看屏幕上的内容。</p>
+        </div>
       </div>
       <div class="story-screen reveal" aria-label="Warashi 的窗口，随每一步变化">
         <span class="themed"><img class="t-light" src="../assets/img/app/now-light.webp" alt="Warashi 现在：没有需要你处理的事项，附带 CPU 和内存圆环以及实时图块" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
         <span class="themed"><img class="t-light" src="../assets/img/app/history-light.webp" alt="Warashi 历史记录：一张大图表，带有指标选择标签和对比" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/history-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="../assets/img/app/moment-light.webp" alt="Warashi 历史记录，标出了某个时刻及其解释" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/moment-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="../assets/img/app/checkup-light.webp" alt="Warashi 体检：你的 Mac 状态良好" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/checkup-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+        <span class="themed"><img class="t-light" src="../assets/img/app/softfocus-light.webp" alt="背景模糊：前面的 Warashi 窗口清晰，其他窗口都被柔和地模糊" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="tag"></span>
       </div>
     </div>
@@ -309,26 +315,62 @@ posthog.register({ surface: "website" });
   </div>
 </section>
 
-<section class="chapter" id="tools">
+<section class="chapter" id="breaks">
   <div class="wrap">
-    <p class="running reveal"><b>06</b><span>工具与休息</span></p>
+    <p class="running reveal"><b>06</b><span>休息</span></p>
     <div class="feature">
       <div>
-        <h2 class="reveal">让它保持唤醒。然后记得休息。</h2>
-        <p class="lead reveal d1">为下载、构建或演示保持唤醒，即使合上盖子。按你选择的节奏让眼睛休息，轻轻提醒你坐直、喝水，而在通话中、工作时间之外和专注模式期间全部保持安静。</p>
+        <h2 class="reveal">移开目光，坐直身子，然后继续。</h2>
+        <p class="lead reveal d1">每二十分钟，一次温和的休息会模糊屏幕，并直接提醒：“把目光从屏幕上移开。”在休息之间，“坐直”会从屏幕底部升到中央，你的头也会跟着抬起。通话时、工作时间以外和专注模式下，这一切都会等待。</p>
+        <ul class="points reveal d2">
+          <li><b>适合你的节奏</b>20-20-20、番茄钟、50 和 10、深度工作，或你自己的节奏：眼部休息、离开 Mac 的休息，以及不时的一次长休息。</li>
+          <li><b>先来个提醒</b>提前十五秒，菜单栏下方会出现一个小药丸：立即开始、再等五分钟，或跳过。</li>
+          <li><b>小小的提醒</b>坐直，还可以选择眨眼、伸展、喝水或放松下巴。每个只有四秒，绝不会抢走你的点按。</li>
+        </ul>
+      </div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/break-light.webp" alt="Warashi 的休息：屏幕被柔和地模糊，显示倒计时和“把目光从屏幕上移开。”" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/break-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="soft-focus">
+  <div class="wrap">
+    <p class="running reveal"><b>07</b><span>背景模糊</span></p>
+    <div class="feature flip">
+      <div>
+        <h2 class="reveal">其余一切，柔和地退出焦点。</h2>
+        <p class="lead reveal d1">打开背景模糊，除你正在使用的窗口外，其余窗口都会柔化为模糊，只有你的工作保持清晰。点按另一个窗口，它就会变清晰。窗口都留在你原来放置的位置。</p>
+        <ul class="points reveal d2">
+          <li><b>柔和或深度</b>轻轻柔化，或用深度模糊调暗其余部分，还可以加上色调和细腻的胶片颗粒。</li>
+          <li><b>你的规则</b>让一个应用的所有窗口保持清晰，只模糊你正在使用的显示器，并指定它要让开的应用。</li>
+          <li><b>什么都不看</b>在任何应用中按 ⌃⌥⌘F。无需权限：模糊由 macOS 完成，Warashi 只知道你的窗口在哪里。</li>
+        </ul>
+      </div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/softfocus-light.webp" alt="背景模糊：前面的 Warashi 窗口清晰，其他窗口都被柔和地模糊" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="tools">
+  <div class="wrap">
+    <p class="running reveal"><b>08</b><span>工具</span></p>
+    <div class="feature">
+      <div>
+        <h2 class="reveal">保持唤醒。还有那些小事。</h2>
+        <p class="lead reveal d1">为下载、编译或演示保持唤醒，即使合上盖子也行；还有一个工具箱，处理那些原本需要五个应用才能完成的小事。</p>
         <ul class="points reveal d2">
           <li><b>保持唤醒，由你定</b>一小时、直到任务完成、某个 App 打开期间，或接通电源时合上盖子。Warashi 自身更新也不会中断它。</li>
           <li><b>还有那些小事</b>网速和磁盘速度、Wi‑Fi 质量，清洁时黑屏或关闭键盘，共享屏幕时隐藏桌面图标，一键静音所有 App 的麦克风，全部推出，以及一份给技术支持的 Mac 报告。</li>
         </ul>
       </div>
-      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/tools-light.webp" alt="Warashi 工具：休息、保持唤醒、网速测试、Wi-Fi 等" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/tools-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/tools-light.webp" alt="Warashi 工具：休息、背景模糊、保持唤醒、网速测试、Wi-Fi 等" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/tools-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
     </div>
   </div>
 </section>
 
 <section class="chapter" id="developers">
   <div class="wrap">
-    <p class="running reveal"><b>07</b><span>面向开发者</span></p>
+    <p class="running reveal"><b>09</b><span>面向开发者</span></p>
     <div class="feature flip">
       <div>
         <h2 class="reveal">那个端口上运行的是什么？那个智能体消耗了多少？</h2>
@@ -404,7 +446,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
           <li>匿名使用统计（版本、macOS、芯片系列、使用了哪些功能），在欢迎导览中已说明。<a class="link-arrow" href="docs/privacy-and-data/">具体发送了什么</a></li>
         </ul>
       </div>
-      <img class="shot reveal d1" src="../assets/img/onboarding.webp" alt="Warashi 的欢迎页面：认识一下 Warashi" width="720" height="520" loading="lazy">
+      <img class="shot reveal d1" src="../assets/img/help/tour-0.webp" alt="Warashi 欢迎导览：认识 Warashi，以及哪些内容留在你的 Mac 上" width="1920" height="1280" loading="lazy">
     </div>
   </div>
 </section>

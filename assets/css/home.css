@@ -77,7 +77,7 @@
 
 /* ---------- how it works: a sticky story ---------- */
 .home .story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
-.home .steps { display: flex; flex-direction: column; }
+.home .steps { display: flex; flex-direction: column; padding-bottom: 22vh; }
 .home .step { padding: 28px 0 28px 30px; border-left: .5px solid var(--rule); position: relative; opacity: .4; transition: opacity .5s var(--ease); min-height: 46vh; display: flex; flex-direction: column; justify-content: center; }
 .home .step::before { content: ""; position: absolute; left: -5px; top: 50%; width: 9px; height: 9px; border-radius: 50%; background: var(--paper); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 30%, transparent); transform: translateY(-50%); transition: background .4s, box-shadow .4s; }
 .home .step.on { opacity: 1; }
@@ -89,7 +89,9 @@
 .home .story-screen { position: sticky; top: 110px; display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; }
 .home .story-screen .themed { grid-area: 1 / 1; opacity: 0; transform: scale(1.012); transition: opacity .7s var(--ease), transform 1.2s var(--ease); overflow: visible; }
 .home .story-screen .themed.on { opacity: 1; transform: none; }
-.home .story-screen img { width: 100%; height: auto; }
+/* One frame for every step: the Now window is taller than the rest, so each picture sits top-aligned in the same box. */
+.home .story-screen .themed { aspect-ratio: 2160 / 1572; }
+.home .story-screen img { width: 100%; height: 100%; object-fit: contain; object-position: top center; }
 .home .story-screen .tag { grid-area: 2 / 1; justify-self: start; margin-top: 14px; padding: 7px 12px; border-radius: 999px; font: 500 13.5px/1 var(--sans); color: var(--sub);
   background: color-mix(in srgb, var(--ink) 6%, transparent); box-shadow: inset 0 0 0 .5px color-mix(in srgb, var(--ink) 12%, transparent); }
 
@@ -178,6 +180,7 @@
   .home .why, .home .story, .home .feature, .home .feature.flip, .home .promise, .home .maker { grid-template-columns: 1fr; }
   .home .feature.flip > :first-child { order: 0; }
   .home .story-screen { position: relative; top: auto; order: -1; margin-bottom: 8px; }
+  .home .steps { padding-bottom: 0; }
   .home .step { min-height: 0; padding: 18px 0 18px 24px; opacity: 1; }
   .home .figures, .home .compare-sum { grid-template-columns: 1fr; }
   .home .figure + .figure, .home .compare-sum > div + div { border-left: 0; border-top: .5px solid var(--rule); padding-left: 0; }

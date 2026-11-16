@@ -111,7 +111,7 @@ posthog.register({ surface: "website" });
         </div>
       </div>
       <span class="themed peek"><img class="t-light" src="../assets/img/app/now-light.webp" alt="" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
-      <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1226"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1226"></span>
+      <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1216"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1216"></span>
       <svg class="cursor" viewBox="0 0 24 24" style="left:62%; top:64%" aria-hidden="true"><path d="M4 2l15 9-7 1.6L8.5 20z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg>
     </div>
   </div>
@@ -193,12 +193,18 @@ posthog.register({ surface: "website" });
           <h3>大事なときだけ、声をあげる。</h3>
           <p>アプリの暴走、急増するメモリ、埋まっていくディスク、熱くなるバッテリー。問題ごとに1回、根拠を添えて。そして週に一度、Macが良好な状態かを伝えるチェックアップ。</p>
         </div>
+        <div class="step" data-tag="Soft Focus: everything else goes quiet">
+          <p class="num">五</p>
+          <h3>ほかを静かにする。</h3>
+          <p>背景ぼかしをオンにすると、作業中のウインドウ以外がやわらかくぼけます。ショートカット ⌃⌥⌘F ひとつで、画面が静かになります。ぼかすのは macOS で、Warashi が画面の内容を見ることはありません。</p>
+        </div>
       </div>
       <div class="story-screen reveal" aria-label="ステップごとに切り替わるWarashiのウインドウ">
         <span class="themed"><img class="t-light" src="../assets/img/app/now-light.webp" alt="Warashiの現在：対応が必要なことはありません。CPUとメモリのリングとライブタイル" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
         <span class="themed"><img class="t-light" src="../assets/img/app/history-light.webp" alt="Warashiの履歴：指標チップと比較のある1つの大きなチャート" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/history-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="../assets/img/app/moment-light.webp" alt="マークした時点とその説明のあるWarashiの履歴" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/moment-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="../assets/img/app/checkup-light.webp" alt="Warashiのチェックアップ：Macは良好な状態です。" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/checkup-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+        <span class="themed"><img class="t-light" src="../assets/img/app/softfocus-light.webp" alt="背景ぼかし：手前の Warashi のウインドウはくっきり、ほかのウインドウはやわらかくぼけている" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="tag"></span>
       </div>
     </div>
@@ -309,26 +315,62 @@ posthog.register({ surface: "website" });
   </div>
 </section>
 
-<section class="chapter" id="tools">
+<section class="chapter" id="breaks">
   <div class="wrap">
-    <p class="running reveal"><b>06</b><span>ツールと休憩</span></p>
+    <p class="running reveal"><b>06</b><span>休憩</span></p>
     <div class="feature">
       <div>
-        <h2 class="reveal">Macは起こしておく。そして、休むのを忘れない。</h2>
-        <p class="lead reveal d1">ダウンロード、ビルド、プレゼンのあいだはスリープさせない。蓋を閉じていても。目のための休憩は自分で選んだリズムで、姿勢を正す、水を飲むといった小さなお知らせも。通話中、勤務時間外、集中モード中は、すべて静かにしています。</p>
+        <h2 class="reveal">目を離して、背筋を伸ばして、また続ける。</h2>
+        <p class="lead reveal d1">20分ごとに、やさしい休憩が画面をぼかし、はっきりと「画面から目を離しましょう。」と伝えます。休憩の合間には「姿勢を正す」が画面の下から中央まで上がり、頭も自然とそれを追います。通話中、勤務時間外、集中モード中はすべて待ちます。</p>
+        <ul class="points reveal d2">
+          <li><b>合ったリズムで</b>20-20-20、ポモドーロ、50分と10分、ディープワーク、または自分好みに。目の休憩、Macから離れる休息、ときどき長めの休息。</li>
+          <li><b>まずお知らせ</b>15秒前に、メニューバーの下に小さなピルが現れます。今すぐ開始、あと5分、またはスキップ。</li>
+          <li><b>小さなひと声</b>姿勢を正す、さらにお好みで、まばたき、ストレッチ、水分補給、あごの力を抜く。それぞれ4秒で、クリックを奪うことはありません。</li>
+        </ul>
+      </div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/break-light.webp" alt="Warashi の休憩：やわらかくぼけた画面にカウントダウンと「画面から目を離しましょう。」" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/break-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="soft-focus">
+  <div class="wrap">
+    <p class="running reveal"><b>07</b><span>背景ぼかし</span></p>
+    <div class="feature flip">
+      <div>
+        <h2 class="reveal">それ以外は、やわらかくピントの外へ。</h2>
+        <p class="lead reveal d1">背景ぼかしをオンにすると、作業中のウインドウ以外がやわらかくぼけ、作業だけがくっきり残ります。別のウインドウをクリックすると、そちらにピントが合います。ウインドウは置いた場所のままです。</p>
+        <ul class="points reveal d2">
+          <li><b>アンビエントかディープか</b>軽くぼかすか、ほかを暗くする深いぼかしか。お好みで色合いと細かなフィルムグレインも。</li>
+          <li><b>自分のルールで</b>アプリのすべてのウインドウをくっきり保つ、作業中のディスプレイだけをぼかす、ぼかさないアプリを指定する。</li>
+          <li><b>何も見ない</b>どのアプリからでも ⌃⌥⌘F。許可は不要です。ぼかすのは macOS で、Warashi はウインドウの位置しか知りません。</li>
+        </ul>
+      </div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/softfocus-light.webp" alt="背景ぼかし：手前の Warashi のウインドウはくっきり、ほかのウインドウはやわらかくぼけている" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="tools">
+  <div class="wrap">
+    <p class="running reveal"><b>08</b><span>ツール</span></p>
+    <div class="feature">
+      <div>
+        <h2 class="reveal">スリープさせない。そして小さなこと。</h2>
+        <p class="lead reveal d1">ダウンロード、ビルド、プレゼンのためにスリープさせない。蓋を閉じていても。そして、ほかなら5つのアプリが必要な小さな作業のためのツールボックス。</p>
         <ul class="points reveal d2">
           <li><b>スリープさせない、あなた流に</b>1時間、作業が終わるまで、アプリが開いているあいだ、または電源につないで蓋を閉じたまま。Warashi自身のアップデート中も途切れません。</li>
           <li><b>そして、細やかなこと</b>インターネットとディスクの速度、Wi‑Fiの品質、クリーニングのための真っ黒な画面やキーボードのオフ、画面共有のためにデスクトップのアイコンを隠す、すべてのアプリでマイクをミュート、すべて取り出す、サポート向けのMacレポート。</li>
         </ul>
       </div>
-      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/tools-light.webp" alt="Warashiのツール：休憩、スリープさせない、スピードテスト、Wi-Fiなど" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/tools-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/tools-light.webp" alt="Warashiのツール：休憩、背景ぼかし、スリープさせない、スピードテスト、Wi-Fiなど" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/tools-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
     </div>
   </div>
 </section>
 
 <section class="chapter" id="developers">
   <div class="wrap">
-    <p class="running reveal"><b>07</b><span>開発者向け</span></p>
+    <p class="running reveal"><b>09</b><span>開発者向け</span></p>
     <div class="feature flip">
       <div>
         <h2 class="reveal">そのポートには何がある？ そのエージェントのコストは？</h2>
@@ -404,7 +446,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
           <li>匿名の使用状況統計（バージョン、macOS、チップファミリ、使用された機能）。ようこそツアーで開示しています。<a class="link-arrow" href="docs/privacy-and-data/">送信される内容の詳細</a></li>
         </ul>
       </div>
-      <img class="shot reveal d1" src="../assets/img/onboarding.webp" alt="Warashiのようこそ画面：はじめまして、Warashiです" width="720" height="520" loading="lazy">
+      <img class="shot reveal d1" src="../assets/img/help/tour-0.webp" alt="Warashi のウェルカムツアー：Warashi の紹介と、Mac に残るもの" width="1920" height="1280" loading="lazy">
     </div>
   </div>
 </section>

@@ -111,7 +111,7 @@ posthog.register({ surface: "website" });
         </div>
       </div>
       <span class="themed peek"><img class="t-light" src="../assets/img/app/now-light.webp" alt="" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
-      <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1226"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1226"></span>
+      <span class="themed pop hidden"><img class="t-light" src="../assets/img/app/popover-light.webp" alt="" width="720" height="1216"><img class="t-dark" src="../assets/img/app/popover-dark.webp" alt="" width="720" height="1216"></span>
       <svg class="cursor" viewBox="0 0 24 24" style="left:62%; top:64%" aria-hidden="true"><path d="M4 2l15 9-7 1.6L8.5 20z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg>
     </div>
   </div>
@@ -193,12 +193,18 @@ posthog.register({ surface: "website" });
           <h3>Il ne parle que quand ça compte.</h3>
           <p>Une app qui s’emballe, une mémoire qui augmente vite, un disque qui se remplit, une batterie qui chauffe. Une fois par problème, données à l’appui, et un bilan hebdomadaire qui dit si votre Mac est en pleine forme.</p>
         </div>
+        <div class="step" data-tag="Soft Focus: everything else goes quiet">
+          <p class="num">Cinq</p>
+          <h3>Il apaise le reste.</h3>
+          <p>Activez le Flou d’arrière-plan et toutes les fenêtres sauf celle où vous travaillez s’adoucissent en un flou. Un raccourci, ⌃⌥⌘F, et votre écran s’apaise. C’est macOS qui floute : Warashi ne voit jamais ce qu’il affiche.</p>
+        </div>
       </div>
       <div class="story-screen reveal" aria-label="La fenêtre de Warashi, qui change à chaque étape">
         <span class="themed"><img class="t-light" src="../assets/img/app/now-light.webp" alt="Warashi, Maintenant : Rien à signaler, avec des anneaux CPU et mémoire et des vignettes en direct" width="2160" height="1572"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
         <span class="themed"><img class="t-light" src="../assets/img/app/history-light.webp" alt="Historique de Warashi : un grand graphique avec des puces de mesure et une comparaison" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/history-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="../assets/img/app/moment-light.webp" alt="Historique de Warashi avec un moment marqué et son explication" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/moment-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="../assets/img/app/checkup-light.webp" alt="Warashi, Bilan : Votre Mac est en pleine forme" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/checkup-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+        <span class="themed"><img class="t-light" src="../assets/img/app/softfocus-light.webp" alt="Flou d’arrière-plan : la fenêtre de Warashi nette au premier plan, toutes les autres doucement floutées" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="tag"></span>
       </div>
     </div>
@@ -309,26 +315,62 @@ posthog.register({ surface: "website" });
   </div>
 </section>
 
-<section class="chapter" id="tools">
+<section class="chapter" id="breaks">
   <div class="wrap">
-    <p class="running reveal"><b>06</b><span>Outils et pauses</span></p>
+    <p class="running reveal"><b>06</b><span>Pauses</span></p>
     <div class="feature">
       <div>
-        <h2 class="reveal">Gardez-le éveillé. Puis pensez à vous reposer.</h2>
-        <p class="lead reveal d1">Rester éveillé pour un téléchargement, une compilation ou une présentation, même écran rabattu. Des pauses pour vos yeux au rythme de votre choix, de petits rappels pour vous tenir droit et boire de l’eau, tous silencieux pendant les appels, en dehors de vos heures de travail et pendant une Concentration.</p>
+        <h2 class="reveal">Détournez les yeux. Redressez-vous. Puis continuez.</h2>
+        <p class="lead reveal d1">Toutes les vingt minutes, une pause douce floute l’écran et demande simplement : « Détournez les yeux de l’écran. » Entre les pauses, Tenez-vous droit monte du bas de l’écran jusqu’à son centre, et votre tête suit. Tout cela attend pendant les appels, en dehors de vos heures de travail et en mode Concentration.</p>
+        <ul class="points reveal d2">
+          <li><b>Un rythme qui vous va</b>20-20-20, Pomodoro, 50 et 10, Travail profond, ou le vôtre : des pauses pour les yeux, des repos loin du Mac, et un repos plus long de temps en temps.</li>
+          <li><b>D’abord un avertissement</b>Quinze secondes avant, une petite pastille sous la barre des menus : Commencer, cinq minutes de plus, ou Ignorer.</li>
+          <li><b>De petits rappels</b>Tenez-vous droit et, si vous voulez, clignez des yeux, étirez-vous, buvez de l’eau ou détendez la mâchoire. Quatre secondes chacun, sans jamais prendre vos clics.</li>
+        </ul>
+      </div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/break-light.webp" alt="Une pause Warashi : l’écran doucement flouté avec un compte à rebours et « Détournez les yeux de l’écran. »" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/break-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="soft-focus">
+  <div class="wrap">
+    <p class="running reveal"><b>07</b><span>Flou d’arrière-plan</span></p>
+    <div class="feature flip">
+      <div>
+        <h2 class="reveal">Tout le reste, doucement flou.</h2>
+        <p class="lead reveal d1">Activez le Flou d’arrière-plan et toutes les fenêtres sauf celle où vous travaillez s’adoucissent en un flou, pour que seul votre travail reste net. Cliquez sur une autre fenêtre et elle devient nette. Vos fenêtres restent où vous les avez laissées.</p>
+        <ul class="points reveal d2">
+          <li><b>Ambiant ou Profond</b>Un léger adoucissement, ou un flou profond qui assombrit le reste, avec une teinte et un fin grain argentique si vous voulez.</li>
+          <li><b>Vos règles</b>Gardez nettes toutes les fenêtres d’une app, floutez seulement l’écran où vous êtes, et nommez les apps pour lesquelles il s’efface.</li>
+          <li><b>Rien n’est vu</b>⌃⌥⌘F depuis n’importe quelle app. Aucune autorisation : c’est macOS qui floute, et Warashi sait seulement où est votre fenêtre.</li>
+        </ul>
+      </div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/softfocus-light.webp" alt="Flou d’arrière-plan : la fenêtre de Warashi nette au premier plan, toutes les autres doucement floutées" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="tools">
+  <div class="wrap">
+    <p class="running reveal"><b>08</b><span>Outils</span></p>
+    <div class="feature">
+      <div>
+        <h2 class="reveal">Rester éveillé. Et les petites choses.</h2>
+        <p class="lead reveal d1">Rester éveillé pour un téléchargement, une compilation ou une présentation, même capot fermé, et une boîte à outils pour les petites tâches qui demanderaient sinon cinq apps.</p>
         <ul class="points reveal d2">
           <li><b>Rester éveillé, à votre façon</b>Pour une heure, jusqu’à la fin du travail, tant qu’une app est ouverte, ou écran rabattu sur secteur. Il survit même aux mises à jour de Warashi.</li>
           <li><b>Et les petites choses</b>Débit Internet et vitesse du disque, qualité du Wi‑Fi, un écran noir ou un clavier désactivé pour le nettoyage, masquer les icônes du bureau pour un partage d’écran, couper le micro partout, Tout éjecter, un rapport du Mac pour le support.</li>
         </ul>
       </div>
-      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/tools-light.webp" alt="Warashi, Outils : pauses, Rester éveillé, tests de débit, Wi-Fi et plus" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/tools-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
+      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="../assets/img/app/tools-light.webp" alt="Warashi, Outils : pauses, Flou d’arrière-plan, Rester éveillé, tests de débit, Wi-Fi et plus" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/tools-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
     </div>
   </div>
 </section>
 
 <section class="chapter" id="developers">
   <div class="wrap">
-    <p class="running reveal"><b>07</b><span>Pour les développeurs</span></p>
+    <p class="running reveal"><b>09</b><span>Pour les développeurs</span></p>
     <div class="feature flip">
       <div>
         <h2 class="reveal">Qu’y a-t-il sur ce port ? Combien coûte cet agent ?</h2>
@@ -404,7 +446,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
           <li>Des statistiques d’utilisation anonymes (version, macOS, famille de puce, fonctions utilisées), annoncées dans la visite de bienvenue. <a class="link-arrow" href="docs/privacy-and-data/">Exactement ce qui est envoyé</a></li>
         </ul>
       </div>
-      <img class="shot reveal d1" src="../assets/img/onboarding.webp" alt="Bienvenue dans Warashi : Voici Warashi" width="720" height="520" loading="lazy">
+      <img class="shot reveal d1" src="../assets/img/help/tour-0.webp" alt="La visite d’accueil de Warashi : Découvrez Warashi, et ce qui reste sur votre Mac" width="1920" height="1280" loading="lazy">
     </div>
   </div>
 </section>
