@@ -40,7 +40,7 @@ posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
 });
 posthog.register({ surface: "website" });
 </script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Warashi", "applicationCategory": "UtilitiesApplication", "operatingSystem": "macOS 26 or later (Apple silicon)", "description": "Warashi is the flight recorder for your Mac: a quiet menu bar app for Apple silicon that records what your Mac does for a year, explains any slow moment, protects the battery with a charge limit, removes apps safely and keeps you awake or rested. Free beta.", "url": "https://warashi.app/", "image": "https://warashi.app/assets/img/app-icon.png", "author": {"@type": "Person", "name": "Adam Markocki", "url": "https://markockiadam.com"}, "softwareVersion": "0.3.57", "dateModified": "2026-11-17"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Warashi", "applicationCategory": "UtilitiesApplication", "operatingSystem": "macOS 26 or later (Apple silicon)", "description": "Warashi is the flight recorder for your Mac: a quiet menu bar app for Apple silicon that records what your Mac does for a year, explains any slow moment, protects the battery with a charge limit, removes apps safely and keeps you awake or rested. Free beta.", "url": "https://warashi.app/", "image": "https://warashi.app/assets/img/app-icon.png", "author": {"@type": "Person", "name": "Adam Markocki", "url": "https://markockiadam.com"}, "softwareVersion": "0.3.58", "dateModified": "2026-11-20"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Warashi", "url": "https://warashi.app/"}</script>
 
 
@@ -202,7 +202,7 @@ posthog.register({ surface: "website" });
       </div>
       <div class="story-screen reveal" aria-label="Warashi's window, changing with each step">
         <span class="themed"><img class="t-light" src="assets/img/app/now-light.webp" alt="Warashi Now: Nothing needs you, with CPU and memory rings and live tiles" width="2160" height="1572"><img class="t-dark" src="assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
-        <span class="themed"><img class="t-light" src="assets/img/app/history-light.webp" alt="Warashi History: one large chart with metric chips and a comparison" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/history-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+        <span class="themed"><img class="t-light" src="assets/img/app/history-light.webp" alt="Warashi History: one large chart with metric chips and a comparison" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/history-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="assets/img/app/moment-light.webp" alt="Warashi History with a marked moment and its explanation" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/moment-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="assets/img/app/checkup-light.webp" alt="Warashi Checkup: Your Mac is in good shape" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/checkup-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
         <span class="themed"><img class="t-light" src="assets/img/app/softfocus-light.webp" alt="Soft Focus: Warashi's window sharp in front, every other window softly blurred" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
@@ -234,7 +234,7 @@ posthog.register({ surface: "website" });
         <ul class="points reveal d2">
           <li><b>The menu bar window</b>Rings over the last minute, every reading, and one-click actions: keep awake, take a break, test the internet, charge to full.</li>
           <li><b>The notch, put to work</b>Two numbers hug the camera. On other displays, a small island does the same. Live countdowns show there while a speed test or a timed Keep Awake runs.</li>
-          <li><b>Yours to arrange</b>Choose what the menu bar, the notch and the menu bar window show, and drag anything where you want it.</li>
+          <li><b>Yours to arrange</b>Choose what the menu bar, the notch and the menu bar window show, and drag anything where you want it. Beside the spirit: a number, your battery drawn to its level, your coding agent’s limit, or the next break.</li>
         </ul>
       </div>
       <div class="reveal d1">
@@ -273,6 +273,7 @@ posthog.register({ surface: "website" });
           <li><b>Honest about other apps</b>If AlDente or another manager also runs, Warashi says so, and the Flight Log notes every time the battery went past your limit and who did it.</li>
           <li><b>How it has aged</b>Health and cycles over the months, from the day you installed it, so you can see whether the limit is working.</li>
           <li><b>Power Flow</b>What the charger delivers, what the battery takes, what the Mac uses.</li>
+          <li><b>Discharge, plugged in</b>Run on the battery with the charger connected, down to the level you pick, then let charging take over.</li>
         </ul>
       </div>
       <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="assets/img/app/battery-light.webp" alt="Warashi Battery: stop charging at 80%, with health, cycles and how the battery has aged" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/battery-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
@@ -375,7 +376,7 @@ posthog.register({ surface: "website" });
     <div class="feature flip">
       <div>
         <h2 class="reveal">What's on that port? What's that agent costing?</h2>
-        <p class="lead reveal d1">Dev servers grouped by project, with a warning when one is open to your network. Docker containers. Every AI coding agent, with the CPU and memory it and its tools have used.</p>
+        <p class="lead reveal d1">Claude Code, Codex and Cursor: what each is doing, how much of your limit is left and when it resets, and a nudge in the notch when one needs you or is done. Dev servers grouped by project, Docker containers, the local AI models in memory, and the gigabytes your tools leave behind.</p>
         <div class="term reveal d2"><pre><code><b>$</b> warashi explain 14:30
 Memory ran short
 <i>Swap rose from 1.2 GB to 8.6 GB.</i>
