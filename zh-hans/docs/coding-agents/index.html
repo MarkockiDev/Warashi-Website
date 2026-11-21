@@ -70,7 +70,7 @@ posthog.register({ surface: "website" });
 <p>每个限额都是一个圆环：5 小时限额和每周限额，并标出重置时间。圆环从 80% 起变为琥珀色，从 95% 起变为红色。</p>
 <ul><li><b>Codex</b> 把限额写在你 Mac 上它自己的文件里，所以要等 Codex 下一次回答之后才会出现。</li>
 <li><b>Cursor</b> 会显示它的每月用量。开启<b>显示 Cursor 的用量</b>后，Warashi 会用 Cursor 命令行智能体保存在你钥匙串中的登录信息向 Cursor 查询，所以请先用 <code>cursor-agent login</code> 登录一次。如果 macOS 询问，请选择<b>始终允许</b>。</li>
-<li><b>Claude Code</b> 不会把限额保存在你的 Mac 上。开启<b>显示 Claude 的用量限额</b>后，Claude Code 运行期间，Warashi 每隔几分钟会用 Claude Code 保存在你钥匙串中的登录信息向 Anthropic 查询。macOS 会询问一次是否允许 Warashi 读取：请选择<b>始终允许</b>。登录信息仅用于这次请求，绝不会被保存、修改或发送到别处。</li></ul>
+<li><b>Claude Code</b> 不会把用量上限保存在你的 Mac 上。打开<b>显示 Claude 的用量上限</b>后，Claude Code 运行期间，Warashi 每隔几分钟用钥匙串中 Claude Code 的登录信息向 Anthropic 查询。打开时 macOS 会询问一次是否允许 Warashi 读取：请选择<b>始终允许</b>。Warashi 从不自行询问：如果之后 macOS 需要你同意，设置会告诉你，并提供<b>允许…</b>按钮。登录信息仅用于这次查询，绝不会被保存、更改或发送到别处。</li></ul>
 <h2>登录 Claude</h2>
 <p>在<b>显示 Claude 的用量限额</b>下方，“设置”会显示 Claude Code 登录的账户。尚未登录？<b>登录</b>会在“终端”中打开 Claude Code 自己的登录流程，并带你到浏览器。Claude Code 只有在你使用时才会续期登录，所以安静的一天之后，限额可能停止更新：开启<b>自动续期登录</b>后，Warashi 会最多每六小时请 Claude Code 用它最小的模型给出一次很短的回答，Claude Code 就会借此续期。<b>立即续期</b>会马上执行。Warashi 绝不自己刷新或写入登录信息。</p>
 <h2>在它们工作时保持唤醒</h2>
