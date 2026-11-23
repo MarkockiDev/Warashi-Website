@@ -428,8 +428,6 @@ code, kbd { font-family: var(--mono); font-size: .88em; background: color-mix(in
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
 .site-footer nav a { color: var(--sub); text-decoration: none; padding: 4px 0; touch-action: manipulation; }
 @media (hover: hover) and (pointer: fine) { .site-footer nav a:hover { color: var(--ink); } }
-.site-footer .macpip-badge { display: inline-block; margin-top: 28px; line-height: 0; }
-.site-footer .macpip-badge img { height: 58px; width: auto; }
 .site-footer .fine { margin-top: 28px; font-size: 13px; max-width: 60em; }
 
 /* ---------- motion ---------- */
