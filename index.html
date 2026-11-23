@@ -3,30 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Warashi: the flight recorder for your Mac</title>
-<meta name="description" content="Warashi is the flight recorder for your Mac: a quiet menu bar app for Apple silicon that records what your Mac does for a year, explains any slow moment, protects the battery with a charge limit, removes apps safely and keeps you awake or rested. Free beta.">
+<title>Warashi: the spirit that looks after your Mac</title>
+<meta name="description" content="Warashi is the spirit that looks after your Mac: one quiet menu bar app for Apple silicon that watches it, keeps its battery young and its disk clear, tells you when something's wrong, and reminds you to rest. Free beta.">
 <link rel="canonical" href="https://warashi.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Warashi">
-<meta property="og:title" content="Warashi: the flight recorder for your Mac">
-<meta property="og:description" content="Warashi is the flight recorder for your Mac: a quiet menu bar app for Apple silicon that records what your Mac does for a year, explains any slow moment, protects the battery with a charge limit, removes apps safely and keeps you awake or rested. Free beta.">
+<meta property="og:title" content="Warashi: the spirit that looks after your Mac">
+<meta property="og:description" content="Warashi is the spirit that looks after your Mac: one quiet menu bar app for Apple silicon that watches it, keeps its battery young and its disk clear, tells you when something's wrong, and reminds you to rest. Free beta.">
 <meta property="og:url" content="https://warashi.app/">
 <meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Warashi: the flight recorder for your Mac. The spirit icon beside the Warashi window and popover.">
+<meta property="og:image:alt" content="Warashi: the spirit that looks after your Mac. The spirit icon beside the Warashi window and menu bar window.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Warashi: the flight recorder for your Mac">
-<meta name="twitter:description" content="Warashi is the flight recorder for your Mac: a quiet menu bar app for Apple silicon that records what your Mac does for a year, explains any slow moment, protects the battery with a charge limit, removes apps safely and keeps you awake or rested. Free beta.">
+<meta name="twitter:title" content="Warashi: the spirit that looks after your Mac">
+<meta name="twitter:description" content="Warashi is the spirit that looks after your Mac: one quiet menu bar app for Apple silicon that watches it, keeps its battery young and its disk clear, tells you when something's wrong, and reminds you to rest. Free beta.">
 <meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
-<meta name="twitter:image:alt" content="Warashi: the flight recorder for your Mac. The spirit icon beside the Warashi window and popover.">
+<meta name="twitter:image:alt" content="Warashi: the spirit that looks after your Mac. The spirit icon beside the Warashi window and menu bar window.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
 <meta name="color-scheme" content="light dark">
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="icon" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/fraunces.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/bricolage.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/instrument-sans.woff2">
 <link rel="stylesheet" href="assets/css/site.css">
 <link rel="stylesheet" href="assets/css/home.css">
@@ -40,7 +40,7 @@ posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
 });
 posthog.register({ surface: "website" });
 </script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Warashi", "applicationCategory": "UtilitiesApplication", "operatingSystem": "macOS 26 or later (Apple silicon)", "description": "Warashi is the flight recorder for your Mac: a quiet menu bar app for Apple silicon that records what your Mac does for a year, explains any slow moment, protects the battery with a charge limit, removes apps safely and keeps you awake or rested. Free beta.", "url": "https://warashi.app/", "image": "https://warashi.app/assets/img/app-icon.png", "author": {"@type": "Person", "name": "Adam Markocki", "url": "https://markockiadam.com"}, "softwareVersion": "0.3.63", "dateModified": "2026-11-23"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Warashi", "applicationCategory": "UtilitiesApplication", "operatingSystem": "macOS 26 or later (Apple silicon)", "description": "Warashi is the spirit that looks after your Mac: one quiet menu bar app for Apple silicon that watches it, keeps its battery young and its disk clear, tells you when something's wrong, and reminds you to rest. Free beta.", "url": "https://warashi.app/", "image": "https://warashi.app/assets/img/app-icon.png", "author": {"@type": "Person", "name": "Adam Markocki", "url": "https://markockiadam.com"}, "softwareVersion": "0.3.63", "dateModified": "2026-11-23"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Warashi", "url": "https://warashi.app/"}</script>
 
 
@@ -55,338 +55,243 @@ posthog.register({ surface: "website" });
 </head>
 <body class="home">
 <a class="skip" href="#main">Skip to content</a>
-<div class="grain" aria-hidden="true"></div>
 <header class="site-header">
   <div class="pill">
     <div class="row">
       <a class="brand" href="index.html"><img src="assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
-      <nav class="nav" aria-label="Main"><a href="index.html#glance" aria-current="page">Features</a><a href="docs/">Help</a><a href="guides/">Guides</a><a href="faq/">Q&A</a><a href="changelog/">Changelog</a></nav>
+      <nav class="nav" aria-label="Main"><a href="index.html#know" aria-current="page">Features</a><a href="docs/">Help</a><a href="guides/">Guides</a><a href="faq/">Q&A</a><a href="changelog/">Changelog</a></nav>
       
       <!--i18n-lang--><details class="lang"><summary aria-label="Language"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><ellipse cx="8" cy="8" rx="2.8" ry="6.4"/><path d="M1.8 6h12.4M1.8 10h12.4"/></svg><span>EN</span></summary><div class="lang-menu"><a lang="en" hreflang="en" href="./" aria-current="true">English</a><a lang="pl" hreflang="pl" href="pl/">Polski</a><a lang="fr" hreflang="fr" href="fr/">Français</a><a lang="es" hreflang="es" href="es/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="pt-br/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="ja/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="zh-hans/">简体中文</a></div></details><!--/i18n-lang-->
       <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">Download</a>
       <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
     </div>
-    <div class="sheet" id="sheet"><div><nav aria-label="Main"><a href="index.html#glance" aria-current="page">Features</a><a href="docs/">Help</a><a href="guides/">Guides</a><a href="faq/">Q&A</a><a href="changelog/">Changelog</a></nav><!--i18n-lang--><div class="sheet-lang"><p>Language</p><div><a lang="en" hreflang="en" href="./" aria-current="true">English</a><a lang="pl" hreflang="pl" href="pl/">Polski</a><a lang="fr" hreflang="fr" href="fr/">Français</a><a lang="es" hreflang="es" href="es/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="pt-br/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="ja/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="zh-hans/">简体中文</a></div></div><!--/i18n-lang--></div></div>
+    <div class="sheet" id="sheet"><div><nav aria-label="Main"><a href="index.html#know" aria-current="page">Features</a><a href="docs/">Help</a><a href="guides/">Guides</a><a href="faq/">Q&A</a><a href="changelog/">Changelog</a></nav><!--i18n-lang--><div class="sheet-lang"><p>Language</p><div><a lang="en" hreflang="en" href="./" aria-current="true">English</a><a lang="pl" hreflang="pl" href="pl/">Polski</a><a lang="fr" hreflang="fr" href="fr/">Français</a><a lang="es" hreflang="es" href="es/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="pt-br/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="ja/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="zh-hans/">简体中文</a></div></div><!--/i18n-lang--></div></div>
   </div>
 </header>
 <main id="main">
 
-<section class="hero lacquer">
+<section class="b-hero">
   <div class="wrap">
-    <h1 class="reveal">Your Mac has a story.<br>Warashi <em>remembers</em> it.</h1>
-    <p class="lead reveal d1">A quiet menu bar app that records what your Mac does, every five seconds, for a year. So when it was slow at 14:02, the battery charged past your limit at 02:38, or the disk filled up overnight, you don't guess. You look.</p>
-    <div class="ctas reveal d2">
-      <a class="btn" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="hero">Download the free beta</a>
-      <a class="more" href="#film">Watch the two-minute film</a>
+    <a class="b-news reveal" href="changelog/"><b>New</b><span>Clean Up: what's safe to clean, gone in one go</span></a>
+    <h1 class="reveal d1">The <span class="b-spirit" role="img" aria-label="Warashi's spirit"></span> spirit that looks after your Mac.</h1>
+    <p class="lead reveal d2">Warashi watches your Mac, keeps its battery young and its disk clear, tells you the moment something's wrong, and reminds you to rest. One quiet menu bar app instead of six.</p>
+    <div class="b-ctas reveal d3">
+      <a class="btn" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="hero">Download free for Mac</a>
+      <a class="btn quiet" href="#know">See everything it does</a>
     </div>
-    <p class="fine-print reveal d2">17 MB. No account. Your history never leaves your Mac.</p>
+    <p class="b-fine reveal d3">Apple silicon · macOS 26 or later · Free beta · No account</p>
   </div>
-  <div class="wrap stage">
-    <div class="desk reveal d2" role="img" aria-label="Animated preview: the notch opening into Warashi's dashboard, then the menu bar item opening Warashi's menu bar window">
-      <div class="bar"><b style="font-weight:700">&#63743;</b><b>Finder</b><span>File</span><span>Edit</span><span>View</span>
-        <span class="right"><span class="mb-item"><img src="assets/img/glyph.svg" alt=""><span><span data-live="cpu">23</span>%</span></span><span>Thu 14:32</span></span></div>
-      <div class="notch">
-        <div class="glance"><span><i class="ring" data-ring="cpu" style="--c:#E08A5E"></i><b><span data-live="cpu">23</span>%</b></span><span><b><span data-live="memg">25</span>G</b><i class="ring" data-ring="mem" style="--c:#8FAAD0"></i></span></div>
-        <div class="dash" aria-hidden="true">
-          <div class="nhead"><img src="assets/img/app-icon.png" alt=""><b>All calm</b><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M2 4.5h12M2 11.5h12"/><circle cx="10.5" cy="4.5" r="1.8" fill="#000"/><circle cx="5.5" cy="11.5" r="1.8" fill="#000"/></svg><span>Open Warashi ↗</span></span></div>
-          <div class="ncols" style="--i:1">
-            <div style="--t:#F2C9AB"><div class="nnum"><span data-live="cpu" data-digits="1">23.0</span><small>%</small></div><div class="nlab">CPU</div>
-              <div class="nspark"><svg viewBox="0 0 100 22" preserveAspectRatio="none"><polyline data-spark="cpu" fill="none" stroke="#EAB490" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" points=""/></svg><i class="dot" data-dot="cpu"></i></div></div>
-            <div style="--t:#F0DCA6"><div class="nnum"><span data-live="pwr">14.2</span><small>W</small></div><div class="nlab">Power</div>
-              <div class="nspark"><svg viewBox="0 0 100 22" preserveAspectRatio="none"><defs><linearGradient id="nf-pwr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E6CE99" stop-opacity=".35"/><stop offset="1" stop-color="#E6CE99" stop-opacity="0"/></linearGradient></defs><polygon data-area="pwr" fill="url(#nf-pwr)" points=""/><polyline data-spark="pwr" fill="none" stroke="#E6CE99" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" points=""/></svg><i class="dot" data-dot="pwr"></i></div></div>
-            <div style="--t:#C3CFF2"><div class="nnum"><span data-live="mem">24.8</span><small>GB</small></div><div class="nlab">Memory</div>
-              <div class="nspark"><svg viewBox="0 0 100 22" preserveAspectRatio="none"><defs><linearGradient id="nf-mem" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9CAF0" stop-opacity=".3"/><stop offset="1" stop-color="#B9CAF0" stop-opacity="0"/></linearGradient></defs><polygon data-area="mem" fill="url(#nf-mem)" points=""/><polyline data-spark="mem" fill="none" stroke="#B9CAF0" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" points=""/></svg><i class="dot" data-dot="mem"></i></div></div>
-          </div>
-          <div class="nrule" style="--i:2"></div>
-          <div class="nacts" style="--i:2">
-            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7h9v2.5a4 4 0 0 1-4 4h-1a4 4 0 0 1-4-4V7zM11.5 8h1a1.5 1.5 0 0 1 0 3h-1.2M5 2.5c-.6.7.6 1.3 0 2M7.5 2.5c-.6.7.6 1.3 0 2M10 2.5c-.6.7.6 1.3 0 2"/></svg>Awake</span>
-            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1.5 8S4 3.5 8 3.5 14.5 8 14.5 8 12 12.5 8 12.5 1.5 8 1.5 8z"/><circle cx="8" cy="8" r="2.2"/></svg>Break</span>
-            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M9 1.5 3.5 9h4L7 14.5 12.5 7h-4z"/></svg>Charge</span>
-          </div>
-          <div class="nrule" style="--i:3"></div>
-          <div class="napps" style="--i:3">
-            <div><img src="assets/img/app/icon-xcode.png" alt=""><span>Xcode</span><i>39%</i><i>4.28 GB</i></div>
-            <div><img src="assets/img/app/icon-chrome.png" alt=""><span>Google Chrome</span><i>16%</i><i>3.03 GB</i></div>
-            <div><img src="assets/img/app/icon-safari.png" alt=""><span>Safari</span><i>7.4%</i><i>1.58 GB</i></div>
-          </div>
-        </div>
+
+  <div class="wrap">
+    <div class="bento b-overview" id="glance">
+      <figure class="tile shot-tile span-7 rows-3 reveal">
+        <span class="themed"><img class="t-light" src="assets/img/app/now-light.webp" alt="Warashi's Now page: Nothing needs you, CPU and memory rings, and every reading at a glance" width="2160" height="1572" fetchpriority="high"><img class="t-dark" src="assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
+      </figure>
+      <div class="tile span-5 b-battery reveal d1">
+        <div class="b-ring" style="--v:80"><i>80%</i></div>
+        <div><p class="eyebrow">Care · Battery</p><p class="b-big">Held at 80%.</p><p>Ages years slower than a battery that sits at 100%.</p></div>
       </div>
-      <span class="themed peek"><img class="t-light" src="assets/img/app/now-light.webp" alt="" width="2160" height="1572"><img class="t-dark" src="assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
-      <span class="themed pop hidden"><img class="t-light" src="assets/img/app/popover-light.webp" alt="" width="720" height="1216"><img class="t-dark" src="assets/img/app/popover-dark.webp" alt="" width="720" height="1216"></span>
-      <svg class="cursor" viewBox="0 0 24 24" style="left:62%; top:64%" aria-hidden="true"><path d="M4 2l15 9-7 1.6L8.5 20z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg>
+      <div class="tile span-5 reveal d1">
+        <p class="eyebrow">Clean · Clean Up</p>
+        <p class="b-big">7.2 GB safe to clean</p>
+        <div class="b-bar" aria-hidden="true"><span style="--w:38%;--c:var(--clay)"></span><span style="--w:22%;--c:var(--indigo)"></span><span style="--w:12%;--c:var(--ochre)"></span><span style="--w:28%;--c:var(--matcha)"></span></div>
+        <p class="b-legend"><span style="--c:var(--clay)">App caches</span><span style="--c:var(--indigo)">Browsers</span><span style="--c:var(--ochre)">Logs</span><span style="--c:var(--matcha)">Developer</span></p>
+      </div>
+      <div class="tile span-3 tone-indigo reveal d2">
+        <p class="eyebrow">Rest · Breaks</p><p class="b-big b-count">0:15</p><p>Look away from the screen.</p>
+      </div>
+      <div class="tile span-2 tone-matcha b-check reveal d2">
+        <p class="eyebrow">Checkup</p><p class="b-big">All good.</p>
+      </div>
+      <div class="tile span-4 reveal">
+        <p class="eyebrow">Know · Alerts</p>
+        <p class="b-app"><img src="assets/img/app/icon-chrome.png" alt="" width="28" height="28">Google Chrome<em>9.8 GB</em></p>
+        <p>Memory is running short. Quit it, or let it be.</p>
+      </div>
+      <div class="tile span-4 reveal d1">
+        <p class="eyebrow">Know · History</p>
+        <p class="b-big b-mid">Why was it slow at 14:02?</p>
+        <svg class="b-spark" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 L25 46 L50 48 L75 30 L95 47 L120 44 L145 10 L165 42 L190 45 L215 34 L240 47 L270 38 L300 42 L300 60 L0 60 Z"/></svg>
+        <p>Xcode was using most of the processor.</p>
+      </div>
+      <div class="tile span-4 tone-ink b-term reveal d2">
+        <p class="eyebrow">For developers</p>
+        <pre><b>$ warashi agents</b>
+Claude Code  <i>working</i> · 62% left
+Codex        <i>done</i> · my-app</pre>
+      </div>
+    </div>
+
+    <a class="b-instead reveal" href="#compare">
+      <span class="b-instead-lead">One app instead of</span>
+      <span class="b-names"><s>iStat Menus</s><s>CleanMyMac</s><s>AlDente</s><s>Amphetamine</s><s>coconutBattery</s><s>a break timer</s></span>
+      <span class="link-arrow">Compare</span>
+    </a>
+  </div>
+</section>
+
+<section class="b-part" id="know">
+  <div class="wrap">
+    <header class="b-head">
+      <p class="b-chip reveal" style="--c:var(--ochre)">Know</p>
+      <h2 class="reveal d1">It knows your Mac by heart.</h2>
+      <p class="lead reveal d2">One spirit and one number in the menu bar, two beside the notch, and a reading every five seconds, kept for a year. When something happens, Warashi already knows why.</p>
+    </header>
+    <div class="bento">
+      <figure class="tile shot-tile span-8 rows-3 reveal">
+        <span class="themed"><img class="t-light" src="assets/img/app/moment-light.webp" alt="History: one moment explained in plain words, with the apps that were running" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/moment-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+        <figcaption><b>Any moment, explained.</b> Click a spike and Warashi says what was going on, with the app behind it.</figcaption>
+      </figure>
+      <figure class="tile tone-black b-notch span-4 rows-2 reveal d1">
+        <img src="assets/img/help/notch-open-clean.webp" alt="The notch opened into a small live dashboard" width="1082" height="701" loading="lazy">
+        <figcaption><b>The notch, put to work.</b> Hover it for a live dashboard; a small island does the same on other displays.</figcaption>
+      </figure>
+      <div class="tile span-4 reveal d2">
+        <p class="eyebrow">Told once</p>
+        <p class="b-big b-mid">A runaway app, memory running short, heat, a disk filling up.</p>
+        <p>Once per problem, with the evidence and one thing to do.</p>
+      </div>
+      <div class="tile span-6 rows-2 b-log reveal">
+        <p class="eyebrow">Flight Log · yesterday</p>
+        <ul>
+          <li><time>21:10</time>Music kept your Mac awake for 55 min</li>
+          <li><time>14:02</time>Your Mac was slow for 6 min <small>Xcode was using most of the processor.</small></li>
+          <li><time>09:50</time>Google Chrome's memory is growing fast <small>Grew by 1.35 GB in the last hour.</small></li>
+          <li><time>02:41</time>Charged to 100%, past your 80% limit</li>
+        </ul>
+      </div>
+      <figure class="tile shot-tile span-6 rows-2 reveal d1">
+        <span class="themed"><img class="t-light" src="assets/img/app/timecost-light.webp" alt="Time × Cost: time in front and energy for each app" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/timecost-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+        <figcaption><b>What each app really costs.</b> Time in front joined with energy, per hour you use it.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<section class="chapter after-hero" id="why">
+<section class="b-part" id="care">
   <div class="wrap">
-    <div class="why">
-      <div>
-        <h2 class="reveal">Every Mac keeps secrets. They get expensive.</h2>
-        <p class="lead reveal d1">Activity Monitor shows this second and forgets it. The things that cost you money and afternoons happen while you aren't looking. Warashi writes them down.</p>
+    <header class="b-head">
+      <p class="b-chip reveal" style="--c:var(--matcha)">Care</p>
+      <h2 class="reveal d1">It keeps your Mac young.</h2>
+      <p class="lead reveal d2">A battery held at 80% lasts years longer. A weekly Checkup catches trouble before it costs you. And when it's time for a new Mac, Warashi knows exactly what you need.</p>
+    </header>
+    <div class="bento">
+      <figure class="tile shot-tile span-7 rows-3 reveal">
+        <span class="themed"><img class="t-light" src="assets/img/app/battery-light.webp" alt="Battery: the charge limit, health over the months and what drained it" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/battery-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
+        <figcaption><b>Charge limit, done properly.</b> Stop at the level you choose, charge to full for the one day you need it, discharge while plugged in.</figcaption>
+      </figure>
+      <div class="tile span-5 b-price reveal d1">
+        <p class="b-big b-huge">$249</p>
+        <p>what a worn MacBook Pro battery costs at Apple, out of warranty. A battery that sits at 100% and warm wears fastest.</p>
       </div>
-      <div class="flightlog reveal d1" aria-label="Warashi's Flight Log for one day">
-        <p class="fl-kicker">Last night</p>
-        <p class="fl-night">Your Mac slept for 7 hrs, 48 min.</p>
-        <p class="fl-why">Nothing woke it. You opened the lid.</p>
-        <p class="fl-day">Yesterday</p>
-        <ol class="log">
-          <li style="--i:0; --t:var(--ochre)"><time>21:10</time><i><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3.2" fill="currentColor"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M3.4 12.6l1.3-1.3M11.3 4.7l1.3-1.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></i><div><b>Music kept your Mac awake for 55 min</b></div></li>
-          <li style="--i:1; --t:var(--clay)"><time>15:20</time><i><svg viewBox="0 0 16 16"><path d="M2.5 7.5h9v2a4 4 0 0 1-4 4h-1a4 4 0 0 1-4-4v-2z" fill="currentColor"/><path d="M11.5 8.3h.8a1.5 1.5 0 0 1 0 3h-1.1M5 2.5c-.6.7.6 1.4 0 2.2M8 2.5c-.6.7.6 1.4 0 2.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></i><div><b>Kept awake for 42 min</b><span>The work finished.</span></div></li>
-          <li style="--i:2; --t:var(--ochre)"><time>14:02</time><i><svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 10.2C2.2 6.8 4.6 5 7.4 5s5 1.8 5.2 5.2H2z"/><path d="M12.4 8.6c.4-1.3 1.3-1.9 2.1-1.6.6.3.4 1.4-.4 1.9-.5.3-1.1.2-1.7-.3zM3.2 10.6h1.9l-.4 1.8H3.4zM9.5 10.6h1.9l-.3 1.8H9.8z"/></svg></i><div><b>Your Mac was slow for 6 min</b><span>Xcode was using most of the processor.</span></div></li>
-          <li style="--i:3; --t:var(--beni)"><time>11:41</time><i><svg viewBox="0 0 16 16"><path d="M8 1.8 15 14H1z" fill="currentColor"/><path d="M8 6v3.6M8 11.6v.2" stroke="var(--face)" stroke-width="1.5" stroke-linecap="round"/></svg></i><div><b>Final Cut Pro crashed</b></div></li>
-          <li style="--i:4; --t:var(--ochre)"><time>10:05</time><i><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1.8 6.2a9 9 0 0 1 12.4 0M4 8.6a6 6 0 0 1 8 0M6.2 10.9a3 3 0 0 1 3.6 0M2.5 2.5l11 11"/></svg></i><div><b>Offline for 12 min</b></div></li>
-          <li style="--i:5; --t:var(--ochre)"><time>09:50</time><i><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.8c-2.4 0-4 1.8-4 4.2v3L2.6 11.2v.8h10.8v-.8L12 9V6c0-2.4-1.6-4.2-4-4.2zM6.3 13h3.4a1.7 1.7 0 0 1-3.4 0z"/></svg></i><div><b>Google Chrome's memory is growing fast</b><span>Grew by 1.35 GB in the last hour. Restarting it usually releases the memory.</span></div></li>
-          <li style="--i:6; --t:var(--matcha)"><time>03:44</time><i><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 1.8v3M10 1.8v3M4.5 4.8h7v2.7a3.5 3.5 0 0 1-7 0V4.8zM8 11v3.2"/></svg></i><div><b>Ran on battery for 3 hrs, 30 min while plugged in</b><span>AlDente was running the battery down on purpose, for example while calibrating it.</span></div></li>
-          <li style="--i:7; --t:var(--matcha)"><time>02:41</time><i><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><rect x="1.5" y="4.8" width="11.5" height="6.4" rx="1.8"/><path d="M14.6 7v2" stroke-linecap="round"/><path d="M7.9 5.8 5.8 8.3h2l-.6 1.9 2.1-2.5h-2z" fill="currentColor" stroke-width=".6"/></svg></i><div><b>Charged to 100%, past your 80% limit</b><span>AlDente was managing charging at the time, for example calibrating the battery. It stayed above the limit for 4 hrs, 30 min.</span></div></li>
+      <figure class="tile shot-tile span-5 rows-2 reveal d2">
+        <span class="themed"><img class="t-light" src="assets/img/app/checkup-light.webp" alt="Checkup: one line on how the Mac is doing, with battery, storage, memory, heat, security and backup" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/checkup-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
+        <figcaption><b>Is my Mac in good shape?</b> One line from a week of readings, plus security and backup.</figcaption>
+      </figure>
+      <figure class="tile shot-tile span-6 rows-2 reveal">
+        <span class="themed"><img class="t-light" src="assets/img/app/flow-light.webp" alt="Power Flow: from the charger and battery through the Mac to the chip and devices" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/flow-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
+        <figcaption><b>Power Flow.</b> See where every watt goes, from the charger to the chip.</figcaption>
+      </figure>
+      <div class="tile span-6 rows-2 tone-clay b-advisor reveal d1">
+        <p class="eyebrow">Upgrade Advisor</p>
+        <p class="b-big b-mid">Does my next Mac need 32 GB?</p>
+        <p>After 30 days of your real use, Warashi says how much memory and storage your next Mac needs, and whether a faster chip would help. With the evidence, not a guess at checkout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="b-part" id="clean">
+  <div class="wrap">
+    <header class="b-head">
+      <p class="b-chip reveal" style="--c:var(--clay)">Clean</p>
+      <h2 class="reveal d1">It keeps your disk clear.</h2>
+      <p class="lead reveal d2">See what's filling the disk, clear what comes back by itself in one go, and remove apps with everything they left behind. All of it goes to the Trash, so nothing is ever lost by mistake.</p>
+    </header>
+    <div class="bento">
+      <div class="tile span-5 rows-3 b-groups reveal">
+        <p class="eyebrow">Clean Up</p>
+        <p class="b-big b-mid">Everything that could go, by how careful to be.</p>
+        <ol>
+          <li style="--c:var(--matcha)"><b>Safe to clean</b><span>App and browser caches, logs, Xcode's build data. They come back by themselves.</span><em>7.2 GB</em></li>
+          <li style="--c:var(--ochre)"><b>Look first</b><span>Old installers, second copies of downloads, Mail's attachment copies.</span><em>1.4 GB</em></li>
+          <li style="--c:var(--beni)"><b>Handle with care</b><span>iPhone and iPad backups, which may be the only copy.</span><em>38 GB</em></li>
         </ol>
       </div>
-    </div>
-    <div class="costs">
-      <div class="cost reveal" style="--c:var(--matcha)">
-        <p class="q">Which app drained the battery?</p>
-        <p class="n">$249<small>for a new battery</small></p>
-        <p>A battery that sits at 100% and warm ages fastest. That's what a MacBook Pro battery costs at Apple once it's worn, out of warranty.</p>
-        <p class="with">Warashi holds the charge at a level you choose, names the app that drained it, and shows how the battery has aged, month by month.</p>
+      <figure class="tile shot-tile span-7 rows-3 reveal d1">
+        <span class="themed"><img class="t-light" src="assets/img/app/storage-light.webp" alt="Storage: a ring of the whole disk you can step into" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/storage-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
+        <figcaption><b>Your whole disk, in one ring.</b> Step into any folder. Big files, old Downloads and local AI models have their own lists.</figcaption>
+      </figure>
+      <div class="tile span-4 reveal">
+        <p class="eyebrow">Uninstaller</p>
+        <p class="b-big b-mid">Remove apps properly.</p>
+        <p>Every app with what it left in your Library, the ones you haven't opened in months first. Plus leftovers of apps you removed years ago.</p>
       </div>
-      <div class="cost reveal d1" style="--c:var(--clay)">
-        <p class="q">Why was it slow at 14:02?</p>
-        <p class="n">4 min<small>×&nbsp;every day</small></p>
-        <p>A process runs away, the Mac stutters, you lose the thread. By the time you open Activity Monitor it's over, and tomorrow it happens again.</p>
-        <p class="with">Warashi writes the slowdown down with its cause, and shows you the app behind it when you click the moment.</p>
+      <div class="tile span-4 reveal d1">
+        <p class="eyebrow">Never your files</p>
+        <p class="b-big b-mid">Names, sizes and dates only.</p>
+        <p>Warashi never opens a document. Full Disk Access is optional.</p>
       </div>
-      <div class="cost reveal d2" style="--c:var(--indigo)">
-        <p class="q">Does my next Mac need 32 GB?</p>
-        <p class="n">$400<small>guessed at checkout</small></p>
-        <p>Memory can't be added later. Most people buy too much to be safe, or too little and live with swap for four years.</p>
-        <p class="with">After 30 days of your real use, the Upgrade Advisor says what your next Mac needs, with the evidence.</p>
-      </div>
-    </div>
-    <p class="costs-note reveal">Apple's out-of-warranty battery service price for MacBook Pro, November 2026. Memory upgrade from Apple's configurator.</p>
-  </div>
-</section>
-
-<section class="chapter" id="how">
-  <div class="wrap">
-    <div class="head">
-      <h2 class="reveal">A flight recorder, not a dashboard.</h2>
-      <p class="lead reveal d1">Dashboards show you numbers. A recorder keeps them, so the one time you need the answer, it's already there.</p>
-    </div>
-    <div class="story">
-      <div class="steps">
-        <div class="step" data-tag="Now: how your Mac is right now">
-          <p class="num">One</p>
-          <h3>It watches, quietly.</h3>
-          <p>One small item in your menu bar. Two numbers beside the notch. A reading every five seconds, costing about 0.2% of one core. You'll forget it's there.</p>
-        </div>
-        <div class="step" data-tag="History: a year back, every few seconds for a day">
-          <p class="num">Two</p>
-          <h3>It remembers a year.</h3>
-          <p>CPU, memory, power, heat, network, disk and battery, kept on your Mac. Every few seconds for the last day, every minute for a month, every hour for a year.</p>
-        </div>
-        <div class="step" data-tag="What happened here? Click any moment">
-          <p class="num">Three</p>
-          <h3>It explains any moment.</h3>
-          <p>Click a spike and Warashi tells you what was going on, in plain words, with the apps that were running and what they usually do. If nothing unusual happened, it says so.</p>
-        </div>
-        <div class="step" data-tag="Checkup: one verdict from a week of data">
-          <p class="num">Four</p>
-          <h3>It speaks up only when it matters.</h3>
-          <p>A runaway app, memory growing fast, a disk filling up, a battery running hot. Once per problem, with the evidence, and a weekly checkup that says whether your Mac is in good shape.</p>
-        </div>
-        <div class="step" data-tag="Soft Focus: everything else goes quiet">
-          <p class="num">Five</p>
-          <h3>It quiets the rest.</h3>
-          <p>Turn on Soft Focus and every window but the one you're working in softens into a blur. One shortcut, ⌃⌥⌘F, and your screen goes calm. macOS does the blurring: Warashi never sees what's on it.</p>
-        </div>
-      </div>
-      <div class="story-screen reveal" aria-label="Warashi's window, changing with each step">
-        <span class="themed"><img class="t-light" src="assets/img/app/now-light.webp" alt="Warashi Now: Nothing needs you, with CPU and memory rings and live tiles" width="2160" height="1572"><img class="t-dark" src="assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
-        <span class="themed"><img class="t-light" src="assets/img/app/history-light.webp" alt="Warashi History: one large chart with metric chips and a comparison" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/history-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
-        <span class="themed"><img class="t-light" src="assets/img/app/moment-light.webp" alt="Warashi History with a marked moment and its explanation" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/moment-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
-        <span class="themed"><img class="t-light" src="assets/img/app/checkup-light.webp" alt="Warashi Checkup: Your Mac is in good shape" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/checkup-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
-        <span class="themed"><img class="t-light" src="assets/img/app/softfocus-light.webp" alt="Soft Focus: Warashi's window sharp in front, every other window softly blurred" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
-        <span class="tag"></span>
+      <div class="tile span-4 tone-matcha reveal d2">
+        <p class="eyebrow">Trash</p>
+        <p class="b-big b-mid">Emptied. 4.8 GB freed.</p>
+        <p>A nudge when the Trash grows large, and the real number when you empty it.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="chapter" id="film">
+<section class="b-part" id="rest">
   <div class="wrap">
-    <div class="head">
-      <h2 class="reveal">See it in two minutes.</h2>
-    </div>
-    <div class="films reveal">
-      <figure><video controls preload="none" playsinline poster="assets/press/keynote-poster.jpg" src="assets/press/warashi-keynote.mp4" aria-label="The Keynote: a two-minute tour of Warashi"></video><figcaption>The Keynote · 2:14</figcaption></figure>
-      <figure><video controls preload="none" playsinline poster="assets/press/day-poster.jpg" src="assets/press/warashi-a-day.mp4" aria-label="A day with your Mac: one day with Warashi"></video><figcaption>A day with your Mac · 1:10</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section class="chapter" id="glance">
-  <div class="wrap">
-    <p class="running reveal"><b>01</b><span>The glance</span></p>
-    <div class="feature">
-      <div>
-        <h2 class="reveal">One spirit. One number. Nothing in your way.</h2>
-        <p class="lead reveal d1">Warashi keeps a single small item in your menu bar and two numbers beside the notch. Hover the notch and it opens into a live dashboard. Click the spirit for everything else.</p>
-        <ul class="points reveal d2">
-          <li><b>The menu bar window</b>Rings over the last minute, every reading, and one-click actions: keep awake, take a break, test the internet, charge to full.</li>
-          <li><b>The notch, put to work</b>Two numbers hug the camera. On other displays, a small island does the same. Live countdowns show there while a speed test or a timed Keep Awake runs.</li>
-          <li><b>Yours to arrange</b>Choose what the menu bar, the notch and the menu bar window show, and drag anything where you want it. Beside the spirit: a number, your battery drawn to its level, your coding agent’s limit, or the next break.</li>
-        </ul>
+    <header class="b-head">
+      <p class="b-chip reveal" style="--c:var(--indigo)">Rest</p>
+      <h2 class="reveal d1">And it looks after you.</h2>
+      <p class="lead reveal d2">Gentle breaks for your eyes and your back, a calmer screen when you need to focus, and a Mac that stays awake exactly as long as the work needs.</p>
+    </header>
+    <div class="bento">
+      <figure class="tile shot-tile span-8 rows-3 reveal">
+        <span class="themed"><img class="t-light" src="assets/img/app/break-light.webp" alt="A break: the screen blurs and asks you to look away" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/break-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+        <figcaption><b>Look away. Sit up. Then carry on.</b> 20-20-20, Pomodoro or your own rhythm. Breaks wait for calls, your work hours and a Focus.</figcaption>
+      </figure>
+      <div class="tile span-4 tone-indigo reveal d1">
+        <p class="eyebrow">Keep Awake</p>
+        <p class="b-big b-mid">For an hour, until the work is done, or with the lid closed.</p>
+        <p>For a download, a build or a presentation.</p>
       </div>
-      <div class="reveal d1">
-        <div class="glance-stage" aria-label="Warashi's menu bar item and island">
-          <div class="zoom-bar"><span>Wi‑Fi</span><span class="mb-item"><img src="assets/img/glyph.svg" alt=""><span class="label">23%</span></span><span>14:32</span></div>
-          <div class="island"><span><i style="background:#E08A5E"></i><span data-live="cpu">23</span>%</span><img src="assets/img/glyph.svg" alt=""><span><span data-live="mem">24.8</span>G<i style="background:#8FAAD0"></i></span></div>
-          <p class="stage-caption">When memory runs short, the number becomes the warning.</p>
-        </div>
+      <div class="tile span-4 reveal d2">
+        <p class="eyebrow">The little things</p>
+        <ul class="b-list"><li>Internet and disk speed</li><li>Wi‑Fi quality</li><li>A black screen for cleaning</li><li>Hide desktop icons</li><li>Mute the microphone</li><li>Eject All</li></ul>
       </div>
+      <figure class="tile shot-tile span-12 rows-3 b-wide reveal">
+        <span class="themed"><img class="t-light" src="assets/img/app/softfocus-light.webp" alt="Soft Focus: the window you're working in stays sharp, the rest softly blurred" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+        <figcaption><b>Soft Focus.</b> Everything but the window you're working in softens into a blur. ⌃⌥⌘F, from any app. macOS does the blurring: Warashi never sees your screen.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<section class="chapter" id="power-flow">
+<section class="b-part b-dev" id="developers">
   <div class="wrap">
-    <p class="running reveal"><b>02</b><span>Power Flow</span></p>
-    <div class="head">
-      <h2 class="reveal">See where every watt goes.</h2>
-      <p class="lead reveal d1">From the charger and battery, through your Mac, to the chip, your USB devices and everything else. While it charges, the part going to the battery is its own path, so the Mac's number is only what the Mac is using.</p>
-    </div>
-    <div class="flow-stage reveal"><svg class="flow-live" viewBox="0 0 1000 430" role="img" aria-label="Power Flow while charging: the charger delivers 44 watts, 28 go straight to the battery and 16 to the Mac, which uses them on the chip and memory, USB devices and everything else"><defs><linearGradient id="fb-chgb" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="385" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--matcha)"/></linearGradient><linearGradient id="fl-chgb" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="247.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-138 0" to="275 0" dur="3.6s" begin="-0.0s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-chgm" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="385" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--ochre)"/></linearGradient><linearGradient id="fl-chgm" gradientUnits="userSpaceOnUse" x1="110" y1="0" x2="247.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-138 0" to="275 0" dur="3.2s" begin="-0.7s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-chip" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="700" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--clay)"/></linearGradient><linearGradient id="fl-chip" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="627.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-72 0" to="145 0" dur="4.2s" begin="-1.4s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-usb" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="700" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--indigo)"/></linearGradient><linearGradient id="fl-usb" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="627.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-72 0" to="145 0" dur="5s" begin="-2.1s" repeatCount="indefinite"/></linearGradient><linearGradient id="fb-rest" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="700" y2="0"><stop offset="0" style="stop-color:var(--ochre)"/><stop offset="1" style="stop-color:var(--sub)"/></linearGradient><linearGradient id="fl-rest" gradientUnits="userSpaceOnUse" x1="555" y1="0" x2="627.5" y2="0"><stop offset="0" style="stop-color:var(--sheen);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--sheen);stop-opacity:1"/><stop offset="1" style="stop-color:var(--sheen);stop-opacity:0"/><animateTransform attributeName="gradientTransform" type="translate" from="-72 0" to="145 0" dur="3.8s" begin="-2.8s" repeatCount="indefinite"/></linearGradient></defs><path d="M110 196 C247 196 247 53 385 53 L385 83 C247 83 247 224 110 224 Z" fill="url(#fb-chgb)" fill-opacity=".52"/><path d="M110 196 C247 196 247 53 385 53 L385 83 C247 83 247 224 110 224 Z" fill="url(#fl-chgb)"/><path d="M110 226 C247 226 247 248 385 248 L385 292 C247 292 247 244 110 244 Z" fill="url(#fb-chgm)" fill-opacity=".52"/><path d="M110 226 C247 226 247 248 385 248 L385 292 C247 292 247 244 110 244 Z" fill="url(#fl-chgm)"/><path d="M555 245 C627 245 627 142 700 142 L700 158 C627 158 627 261 555 261 Z" fill="url(#fb-chip)" fill-opacity=".52"/><path d="M555 245 C627 245 627 142 700 142 L700 158 C627 158 627 261 555 261 Z" fill="url(#fl-chip)"/><path d="M555 264 C627 264 627 256 700 256 L700 264 C627 264 627 272 555 272 Z" fill="url(#fb-usb)" fill-opacity=".52"/><path d="M555 264 C627 264 627 256 700 256 L700 264 C627 264 627 272 555 272 Z" fill="url(#fl-usb)"/><path d="M555 275 C627 275 627 360 700 360 L700 380 C627 380 627 295 555 295 Z" fill="url(#fb-rest)" fill-opacity=".52"/><path d="M555 275 C627 275 627 360 700 360 L700 380 C627 380 627 295 555 295 Z" fill="url(#fl-rest)"/>
-<g style="color:var(--ochre)"><rect x="30" y="178" width="80" height="80" rx="22" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(47.6 195.6) scale(1.867)"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0V8zM12 18v4"/></g></g><text class="label" x="70" y="288" text-anchor="middle">Charger</text><text class="watts" x="70" y="316" text-anchor="middle">44.0 W</text><text class="note" x="70" y="337" text-anchor="middle">of 96 W</text>
-<g style="color:var(--matcha)"><rect x="385" y="40" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(397.3 52.3) scale(1.307)"><rect x="2" y="7" width="18" height="10" rx="3"/><path d="M22.5 11v2M12 8.8l-3 3.8h3l-1 3 3-3.8h-3z"/></g></g><text class="label" x="454" y="56">Battery</text><text class="watts" x="454" y="80">28.0 W</text><text class="note" x="454" y="99">charging · 79%</text>
-<rect x="385" y="185" width="170" height="170" rx="44" style="fill:var(--hub);stroke:var(--edge)"/><g style="color:var(--ink)"><g class="icon" transform="translate(442 200) scale(2.35)"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19.5h20"/></g></g><text class="big" x="470" y="302" text-anchor="middle">16.0 W</text><text class="note" x="470" y="328" text-anchor="middle">This Mac</text><g style="color:var(--clay)"><rect x="700" y="122" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 134.3) scale(1.307)"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></g></g><text class="label" x="770" y="156">Chip and RAM</text><text class="watts" x="992" y="157" text-anchor="end">6.0 W</text><g style="color:var(--indigo)"><rect x="700" y="232" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 244.3) scale(1.307)"><path d="M12 22v-5M8 9h8v6a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9zM10 9V3h4v6"/></g></g><text class="label" x="770" y="266">USB devices</text><text class="watts" x="992" y="267" text-anchor="end">3.0 W</text><g style="color:var(--sub)"><rect x="700" y="342" width="56" height="56" rx="15" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-opacity=".34"/><g class="icon" transform="translate(712.3 354.3) scale(1.307)"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></g></g><text class="label" x="770" y="367">Everything else</text><text class="note" x="770" y="387">screen, Wi-Fi</text><text class="watts" x="992" y="377" text-anchor="end">7.0 W</text></svg><span class="themed flow-shot"><img class="t-light" src="assets/img/app/flow-light.webp" alt="Warashi Power Flow, from the charger and battery through the Mac to the chip, USB devices and everything else" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/flow-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span></div>
-  </div>
-</section>
-
-<section class="chapter" id="health">
-  <div class="wrap">
-    <p class="running reveal"><b>03</b><span>Battery</span></p>
-    <div class="feature flip">
-      <div>
-        <h2 class="reveal">Stop charging at 80%. Watch the battery age slower.</h2>
-        <p class="lead reveal d1">A battery held at 80% lasts years longer than one that sits at 100%. Warashi sets the limit, charges to full for the one day you need it, and keeps watch.</p>
-        <ul class="points reveal d2">
-          <li><b>Honest about other apps</b>If AlDente or another manager also runs, Warashi says so, and the Flight Log notes every time the battery went past your limit and who did it.</li>
-          <li><b>How it has aged</b>Health and cycles over the months, from the day you installed it, so you can see whether the limit is working.</li>
-          <li><b>Power Flow</b>What the charger delivers, what the battery takes, what the Mac uses.</li>
-          <li><b>Discharge, plugged in</b>Run on the battery with the charger connected, down to the level you pick, then let charging take over.</li>
-        </ul>
-      </div>
-      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="assets/img/app/battery-light.webp" alt="Warashi Battery: stop charging at 80%, with health, cycles and how the battery has aged" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/battery-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="chapter" id="storage">
-  <div class="wrap">
-    <p class="running reveal"><b>04</b><span>Storage</span></p>
-    <div class="feature">
-      <div>
-        <h2 class="reveal">Remove apps properly. Nothing is deleted.</h2>
-        <p class="lead reveal d1">A ring of your whole disk you can step into. Big files, old Downloads with installers marked, local AI models, and a real uninstaller: every app, the ones you haven't opened in months first, with what each has left in your Library.</p>
-        <ul class="points reveal d2">
-          <li><b>To the Trash, item by item</b>You see every item before it moves, and you can put anything back until you empty the Trash.</li>
-          <li><b>Leftovers of apps long gone</b>Folders from apps you removed years ago, found by their identifier, the safest space on the disk to reclaim.</li>
-          <li><b>Never your files</b>Names, sizes and dates only. Full Disk Access is optional, and Warashi never opens a document.</li>
-        </ul>
-      </div>
-      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="assets/img/app/storage-light.webp" alt="Warashi Storage: a ring of the whole disk with categories by size" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/storage-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="chapter" id="checkup">
-  <div class="wrap">
-    <p class="running reveal"><b>05</b><span>Checkup</span></p>
-    <div class="feature flip">
-      <div>
-        <h2 class="reveal">Is my Mac in good shape?</h2>
-        <p class="lead reveal d1">One line, from a week of measurements: battery, storage, memory, heat, SSD health and what starts with your Mac. Plus security and backup: FileVault, the firewall, Gatekeeper, Time Machine, macOS updates, and how fresh macOS's malware definitions are.</p>
-        <ul class="points reveal d2">
-          <li><b>Why is my Mac slow?</b>Ten seconds of watching, compared with your usual week, and the cause by name, with one thing to do.</li>
-          <li><b>Check Apps</b>Every app's signature verified: Apple, App Store, a developer, or unsigned.</li>
-          <li><b>Warnings before it hurts</b>"Your startup disk could be nearly full in about 40 days." A backup that's a week overdue. An update waiting too long.</li>
-        </ul>
-      </div>
-      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="assets/img/app/checkup-light.webp" alt="Warashi Checkup: Your Mac is in good shape, with battery, storage and vital signs" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/checkup-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="chapter" id="breaks">
-  <div class="wrap">
-    <p class="running reveal"><b>06</b><span>Breaks</span></p>
-    <div class="feature">
-      <div>
-        <h2 class="reveal">Look away. Sit up. Then carry on.</h2>
-        <p class="lead reveal d1">Every twenty minutes, a gentle break blurs the screen and asks, plainly: “Look away from the screen.” Between breaks, Sit up straight rises from the bottom of your screen to its centre, and your head follows it up. All of it waits during calls, outside your work hours and in a Focus.</p>
-        <ul class="points reveal d2">
-          <li><b>A rhythm that fits</b>20-20-20, Pomodoro, 50 and 10, Deep work, or your own: eye breaks, rests away from the Mac, and a longer rest now and then.</li>
-          <li><b>A heads-up first</b>Fifteen seconds before, a small pill under the menu bar: Start Now, five more minutes, or Skip.</li>
-          <li><b>Small nudges</b>Sit up straight, and if you like, blink, stretch, drink water or relax your jaw. Four seconds each, and they never take your clicks.</li>
-        </ul>
-      </div>
-      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="assets/img/app/break-light.webp" alt="A Warashi break: the screen softly blurred with a countdown and “Look away from the screen.”" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/break-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="chapter" id="soft-focus">
-  <div class="wrap">
-    <p class="running reveal"><b>07</b><span>Soft Focus</span></p>
-    <div class="feature flip">
-      <div>
-        <h2 class="reveal">Everything else, softly out of focus.</h2>
-        <p class="lead reveal d1">Turn on Soft Focus and every window except the one you're working in softens into a blur, so only your work stays sharp. Click another window and it comes into focus. Your windows stay where you left them.</p>
-        <ul class="points reveal d2">
-          <li><b>Ambient or Deep</b>A light softening, or a deep blur that dims the rest, with a tint and fine film grain if you like.</li>
-          <li><b>Your rules</b>Keep every window of an app sharp, blur only the display you're on, and name apps it should step aside for.</li>
-          <li><b>Nothing seen</b>⌃⌥⌘F from any app. No permission: macOS does the blurring, and Warashi only knows where your window is.</li>
-        </ul>
-      </div>
-      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="assets/img/app/softfocus-light.webp" alt="Soft Focus: Warashi's window sharp in front, every other window softly blurred" width="2160" height="1400" loading="lazy"><img class="t-dark" src="assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="chapter" id="tools">
-  <div class="wrap">
-    <p class="running reveal"><b>08</b><span>Tools</span></p>
-    <div class="feature">
-      <div>
-        <h2 class="reveal">Keep it awake. And the little things.</h2>
-        <p class="lead reveal d1">Keep Awake for a download, a build or a presentation, even with the lid closed, and a toolbox for the small jobs you'd otherwise need five apps for.</p>
-        <ul class="points reveal d2">
-          <li><b>Keep Awake, your way</b>For an hour, until the work is done, while an app is open, or with the lid closed while plugged in. It survives Warashi's own updates.</li>
-          <li><b>And the little things</b>Internet and disk speed, Wi‑Fi quality, a black screen or switched-off keyboard for cleaning, hide desktop icons for a screen share, mute the microphone everywhere, Eject All, a Mac report for support.</li>
-        </ul>
-      </div>
-      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="assets/img/app/tools-light.webp" alt="Warashi Tools: breaks, Soft Focus, Keep Awake, speed tests, Wi-Fi and more" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/tools-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="chapter" id="developers">
-  <div class="wrap">
-    <p class="running reveal"><b>09</b><span>For developers</span></p>
-    <div class="feature flip">
-      <div>
-        <h2 class="reveal">What's on that port? What's that agent costing?</h2>
-        <p class="lead reveal d1">Claude Code, Codex and Cursor: what each is doing, how much of your limit is left and when it resets, and a nudge in the notch when one needs you or is done. Dev servers grouped by project, Docker containers, the local AI models in memory, and the gigabytes your tools leave behind.</p>
-        <div class="term reveal d2"><pre><code><b>$</b> warashi explain 14:30
+    <header class="b-head">
+      <p class="b-chip reveal" style="--c:var(--ink)">For developers</p>
+      <h2 class="reveal d1">What's on that port? What's that agent costing?</h2>
+      <p class="lead reveal d2">Claude Code, Codex and Cursor: what each is doing, how much of your limit is left, and a nudge in the notch when one needs you. Dev servers by project, Docker, local AI models in memory, and the gigabytes your tools leave behind.</p>
+    </header>
+    <div class="bento">
+      <figure class="tile shot-tile span-7 rows-3 reveal">
+        <span class="themed"><img class="t-light" src="assets/img/app/developer-light.webp" alt="Developer: coding agents, ports, Docker and local AI models" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/developer-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
+      </figure>
+      <div class="tile span-5 rows-3 tone-ink b-term reveal d1">
+        <p class="eyebrow">The warashi command</p>
+        <pre><b>$ warashi explain 14:30</b>
 Memory ran short
-<i>Swap rose from 1.2 GB to 8.6 GB.</i>
+Swap rose from 1.2 GB to 8.6 GB.
 
-<b>$</b> warashi apps --hours 3
-Xcode    CPU 37m 35s   memory 9.4 GB
-Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
-        <p class="reveal d2">The <code>warashi</code> command and an optional, read-only MCP connection let Claude, Cursor and other AI apps answer questions from your Mac's history. Nothing is shared unless you add it.</p>
+<b>$ warashi apps --hours 3</b>
+Xcode    CPU 37m 35s   <i>9.4 GB</i>
+Safari   CPU 26m 22s   <i>6.1 GB</i></pre>
+        <p>And an optional, read-only MCP connection, so Claude, Cursor and other AI apps can answer from your Mac's history. Nothing is shared unless you add it.</p>
       </div>
-      <div class="reveal d1"><div class="shot"><span class="themed"><img class="t-light" src="assets/img/app/developer-light.webp" alt="Warashi Developer with dev servers and AI agents" width="2160" height="1572" loading="lazy"><img class="t-dark" src="assets/img/app/developer-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span></div></div>
     </div>
   </div>
 </section>
@@ -395,7 +300,7 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
   <div class="wrap">
     <div class="head">
       <h2 class="reveal">One quiet app, where there used to be a drawer of them.</h2>
-      <p class="lead reveal d1">Warashi took the one thing each of these does well, and put them in one place that also remembers. Nothing against them: they're good at their one thing.</p>
+      <p class="lead reveal d1">Warashi took the one thing each of these does well and put them in one place that also remembers. Nothing against them: they're good at their one thing.</p>
     </div>
     <div class="compare reveal">
       <table>
@@ -422,63 +327,44 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
   </div>
 </section>
 
-<section class="chapter" id="weight">
+<section class="chapter b-light-weight" id="weight">
   <div class="wrap">
-    <div class="head">
-      <h2 class="reveal">A monitor that doesn't cost you.</h2>
-      <p class="lead reveal d1">Native Swift, built for Apple silicon. Warashi measures its own cost the same way it measures every other app, lists itself in Apps with the rest, and shows you the number in Settings.</p>
-    </div>
-    <div class="figures">
-      <div class="figure reveal"><p class="big"><span data-count="0.2">0.2</span><small>%</small></p><p>of one core, in the background. Nothing at all while your screens sleep.</p></div>
-      <div class="figure reveal d1"><p class="big"><span data-count="60">60</span><small>MB</small></p><p>of memory, typically, with the window closed.</p></div>
-      <div class="figure reveal d2"><p class="big">0<small>accounts</small></p><p>Download, open, done. No sign-up, no licence key during the beta.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="chapter" id="promise">
-  <div class="wrap">
-    <div class="promise">
-      <div>
-        <h2 class="reveal">Your Mac's story stays on your Mac.</h2>
-        <p class="lead reveal d1">History, app names and activity live in a small database in your Library. They leave it only if you choose to connect an AI app.</p>
-        <ul class="reveal d2">
-          <li>No account, no cloud, no telemetry about your apps or files.</li>
-          <li>No screen recording, no keystrokes, no file contents, ever.</li>
-          <li>Anonymous usage statistics (version, macOS, chip family, which features are used), disclosed in the welcome tour. <a class="link-arrow" href="docs/privacy-and-data/">Exactly what's sent</a></li>
-        </ul>
+    <div class="bento">
+      <div class="tile span-4 reveal"><p class="b-big b-huge"><span data-count="0.2">0.2</span><small>%</small></p><p>of one core in the background. Nothing at all while your screens sleep.</p></div>
+      <div class="tile span-4 reveal d1"><p class="b-big b-huge"><span data-count="60">60</span><small>MB</small></p><p>of memory, typically, with the window closed. Native Swift, built for Apple silicon.</p></div>
+      <div class="tile span-4 reveal d2"><p class="b-big b-huge">0<small> accounts</small></p><p>Download, open, done. Your history never leaves your Mac.</p></div>
+      <div class="tile span-12 b-private reveal">
+        <p class="eyebrow">Private by design</p>
+        <ul><li>No account, no cloud, no telemetry about your apps or files.</li><li>No screen recording, no keystrokes, no file contents, ever.</li><li>Anonymous usage statistics only, disclosed in the welcome tour. <a href="docs/privacy-and-data/">Exactly what's sent</a></li></ul>
       </div>
-      <img class="shot reveal d1" src="assets/img/help/tour-0.webp" alt="Warashi's welcome tour: Meet Warashi, with what stays on your Mac" width="1920" height="1280" loading="lazy">
     </div>
   </div>
 </section>
 
-<section class="chapter" id="answers">
+<section class="chapter" id="film">
   <div class="wrap">
     <div class="head">
-      <h2 class="reveal">The questions you actually have.</h2>
+      <h2 class="reveal">See it in two minutes.</h2>
     </div>
-    <div class="answers">
-      <div class="answer reveal"><h3>Do I need a new Mac? Which one?</h3><p>The Upgrade Advisor watches memory pressure, swap, storage growth and how often the chip runs flat out. After 30 days it says how much memory and storage your next Mac needs, and whether a faster chip would help, with the evidence. <a class="link-arrow" href="docs/upgrade-advisor/">How it decides</a></p></div>
-      <div class="answer reveal"><h3>What does each app really cost me?</h3><p>Time in front, joined with energy: what an app costs per hour you use it, and what drained the battery from apps you never even opened. <a class="link-arrow" href="docs/time-and-cost/">Time × Cost</a></p></div>
-      <div class="answer reveal"><h3>Why was it slow ten minutes ago?</h3><p>A year of history, every few seconds for the last day. Click the moment it happened and Warashi explains it, with the app behind it. <a class="link-arrow" href="guides/why-is-my-mac-slow/">Read the guide</a></p></div>
-      <div class="answer reveal"><h3>Tell me when it matters. Only then.</h3><p>A runaway app, memory growing fast, a disk filling up, heat, battery health. Once per problem, with the evidence, as a notification you can mute. <a class="link-arrow" href="docs/alerts/">Alerts</a></p></div>
+    <div class="films reveal">
+      <figure><video controls preload="none" playsinline poster="assets/press/keynote-poster.jpg" src="assets/press/warashi-keynote.mp4" aria-label="The Keynote: a two-minute tour of Warashi"></video><figcaption>The Keynote · 2:14</figcaption></figure>
+      <figure><video controls preload="none" playsinline poster="assets/press/day-poster.jpg" src="assets/press/warashi-a-day.mp4" aria-label="A day with your Mac: one day with Warashi"></video><figcaption>A day with your Mac · 1:10</figcaption></figure>
     </div>
   </div>
 </section>
 
-<section class="chapter" id="questions">
+<section class="chapter" id="faq">
   <div class="wrap">
     <div class="head"><h2 class="reveal">Good questions.</h2></div>
-    <div class="faq">
-      <div class="qa reveal"><h3>When can I get Warashi?</h3><p>Now. The beta is free to download and updates itself. When Warashi 1.0 arrives, the beta stops and asks you to update and buy a licence.</p></div>
-      <div class="qa reveal"><h3>Which Macs does it run on?</h3><p>Macs with Apple silicon (M1 and later) running macOS 26 or newer.</p></div>
-      <div class="qa reveal"><h3>Is it free?</h3><p>Free during the beta. Warashi 1.0 will be a one-time purchase, with no subscription.</p></div>
-      <div class="qa reveal"><h3>How is it different from Activity Monitor?</h3><p>Activity Monitor shows this second. Warashi remembers: what happened while you weren't looking, which app was behind it, what it cost, and what that means for your next Mac.</p></div>
-      <div class="qa reveal"><h3>Can I keep AlDente or CleanMyMac?</h3><p>You can, though two charge managers will fight over the limit; keep one. Warashi tells you when it sees another one running.</p></div>
-      <div class="qa reveal"><h3>Does it slow my Mac down?</h3><p>No. About 0.2% of one core in the background and 60 MB of memory, measured and shown in Settings. It stops drawing altogether while your screens sleep.</p></div>
+    <div class="bento b-faq">
+      <div class="tile span-6 reveal"><h3>What is a warashi?</h3><p>In Japanese folklore, a zashiki-warashi is a small house spirit. A home it lives in is said to thrive. Ours lives in your menu bar and looks after your Mac.</p></div>
+      <div class="tile span-6 reveal d1"><h3>Which Macs does it run on?</h3><p>Macs with Apple silicon (M1 and later) running macOS 26 or newer.</p></div>
+      <div class="tile span-6 reveal"><h3>Is it free?</h3><p>Free during the beta. Warashi 1.0 will be a one-time purchase, with no subscription. Your history and settings carry over.</p></div>
+      <div class="tile span-6 reveal d1"><h3>Can I keep AlDente or CleanMyMac?</h3><p>You can, though two charge managers will fight over the limit, so keep one. Warashi tells you when it sees another one running.</p></div>
+      <div class="tile span-6 reveal"><h3>Does it slow my Mac down?</h3><p>No. About 0.2% of one core in the background and 60 MB of memory, measured and shown in Settings.</p></div>
+      <div class="tile span-6 reveal d1"><h3>How is it different from Activity Monitor?</h3><p>Activity Monitor shows this second. Warashi remembers what happened while you weren't looking, tells you when it matters, and looks after the battery, the disk and you.</p></div>
     </div>
-    <p class="reveal" style="margin-top:28px"><a class="link-arrow" href="faq/">All questions</a></p>
+    <p class="reveal" style="margin-top:22px"><a class="link-arrow" href="faq/">All questions</a></p>
   </div>
 </section>
 
@@ -503,16 +389,17 @@ Safari   CPU 26m 22s   memory 6.1 GB</code></pre></div>
   <div class="wrap">
     <img class="icon reveal" src="assets/img/app-icon.png" alt="" width="120" height="120">
     <h2 class="reveal d1">Let a quiet spirit<br>look after your Mac.</h2>
-    <p class="lead reveal d2">Free while Warashi is in beta. One small download, no account, and your Mac starts remembering tonight.</p>
+    <p class="lead reveal d2">Free while Warashi is in beta. One small download, no account, and from tonight your Mac has someone looking after it.</p>
     <div class="ctas reveal d3">
-      <a class="btn" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="finale">Download the free beta</a>
+      <a class="btn" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="finale">Download free for Mac</a>
       <a class="btn ghost" href="docs/">Read the Help</a>
     </div>
-    <a class="ph-badge reveal d3" href="https://www.producthunt.com/products/warashi/reviews/new?utm_source=badge-product_review&amp;utm_medium=badge&amp;utm_source=badge-warashi" target="_blank" rel="noopener"><span class="themed"><img class="t-light" src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1366176&amp;theme=light" alt="Warashi - The flight recorder for your Mac | Product Hunt" width="250" height="54" loading="lazy"><img class="t-dark" src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1366176&amp;theme=dark" alt="" width="250" height="54" loading="lazy"></span></a>
+    <a class="ph-badge reveal d3" href="https://www.producthunt.com/products/warashi/reviews/new?utm_source=badge-product_review&amp;utm_medium=badge&amp;utm_source=badge-warashi" target="_blank" rel="noopener"><span class="themed"><img class="t-light" src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1366176&amp;theme=light" alt="Warashi on Product Hunt" width="250" height="54" loading="lazy"><img class="t-dark" src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1366176&amp;theme=dark" alt="" width="250" height="54" loading="lazy"></span></a>
   </div>
 </section>
 
 </main>
+
 <footer class="site-footer">
   <div class="wrap">
     <div class="row">
