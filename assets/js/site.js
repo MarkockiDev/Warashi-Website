@@ -329,3 +329,15 @@ document.querySelectorAll("a[data-download]").forEach((link) => {
   document.addEventListener("click", (event) => { if (open() && !open().contains(event.target)) open().removeAttribute("open"); });
   document.addEventListener("keydown", (event) => { if (event.key === "Escape" && open()) open().removeAttribute("open"); });
 }
+
+// The MacPip badge in the footer: its <picture> follows the system; this makes it follow the theme button too.
+(() => {
+  const source = document.querySelector('.macpip-badge source');
+  if (!source) return;
+  const sync = () => {
+    const theme = document.documentElement.dataset.theme;
+    source.media = theme === "dark" ? "all" : theme === "light" ? "not all" : "(prefers-color-scheme: dark)";
+  };
+  new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  sync();
+})();
