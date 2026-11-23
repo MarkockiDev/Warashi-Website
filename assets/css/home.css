@@ -130,20 +130,23 @@
 .home .films video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
 .home .films figcaption { padding: 14px 22px 16px; margin: 0; color: var(--sub); font-size: 14.5px; }
 
-/* ---------- compare: a ledger in a tile ---------- */
-.home .compare { overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 10px 26px 18px; border-radius: var(--radius); background: var(--tile); box-shadow: inset 0 0 0 1px var(--tile-edge); }
-.home .compare table { width: 100%; border-collapse: collapse; min-width: 880px; font-size: 14.5px; }
-.home .compare th, .home .compare td { padding: 15px 12px; text-align: center; border-bottom: .5px solid var(--rule); vertical-align: middle; }
-.home .compare th:first-child, .home .compare td:first-child { text-align: left; padding-left: 0; color: var(--ink); font-weight: 500; width: 30%; }
-.home .compare thead th { font: 500 13.5px/1.3 var(--sans); color: var(--sub); padding-top: 14px; padding-bottom: 14px; border-bottom: 1px solid color-mix(in srgb, var(--ink) 20%, transparent); }
-.home .compare thead th.us { font: 800 18px/1.2 var(--display); letter-spacing: -.02em; color: var(--ink); border-bottom: 2px solid var(--clay); }
-.home .compare td.us { background: color-mix(in srgb, var(--clay) 7%, transparent); color: var(--ink); }
-.home .compare tbody tr:last-child td { border-bottom: 0; font-weight: 600; color: var(--ink); padding-top: 20px; padding-bottom: 6px; }
-.home .compare tbody tr:last-child td.us { color: var(--clay); }
-.home .compare .y { color: var(--matcha); font-weight: 700; }
-.home .compare .p { color: var(--ochre); font-weight: 700; }
-.home .compare .n { color: var(--faint); }
-.home .compare td small { display: block; font-weight: 400; color: var(--faint); font-size: 12px; margin-top: 3px; }
+/* ---------- compare: the drawer as a receipt ---------- */
+.home .receipt { padding: 8px 28px 4px; border-radius: var(--radius); background: var(--tile); box-shadow: inset 0 0 0 1px var(--tile-edge); }
+.home .receipt ul { list-style: none; margin: 0; padding: 0; }
+.home .r-row { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) 128px; gap: 20px; align-items: baseline; padding: 14px 0; border-bottom: .5px solid var(--rule); font-size: 15px; }
+.home .r-head { font: 500 12.5px/1.3 var(--sans); color: var(--faint); text-transform: uppercase; letter-spacing: .06em; padding: 18px 0 12px; border-bottom: 1px solid color-mix(in srgb, var(--ink) 20%, transparent); }
+.home .r-head span:last-child, .home .r-price { text-align: right; }
+.home .r-what { color: var(--ink); font-weight: 500; }
+.home .r-app { color: var(--sub); }
+.home .r-price { color: var(--ink); font: 700 16.5px/1.2 var(--display); letter-spacing: -.01em; }
+.home .r-price small { font-family: var(--sans); letter-spacing: 0; }
+.home .r-price small { display: block; font-weight: 400; font-size: 12px; color: var(--faint); margin-top: 2px; }
+.home .r-only .r-app { color: var(--clay); font-weight: 500; }
+.home .r-only .r-price { color: var(--faint); }
+.home .r-total { border-bottom: 0; border-top: 2px solid var(--ink); margin-top: -1px; padding: 18px 0 20px; }
+.home .r-total .r-what { font: 800 20px/1.2 var(--display); letter-spacing: -.02em; }
+.home .r-total .r-price { font: 800 28px/1 var(--display); letter-spacing: -.03em; color: var(--ink); }
+.home .r-total .r-price small { font: 500 12.5px/1.3 var(--sans); letter-spacing: 0; margin-top: 6px; }
 .home .compare-sum { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); margin-top: var(--gap); }
 .home .compare-sum > div { padding: 26px; border-radius: var(--radius); background: var(--tile); box-shadow: inset 0 0 0 1px var(--tile-edge); }
 .home .compare-sum .big { font: 800 clamp(40px, 4.6vw, 64px)/1 var(--display); letter-spacing: -.05em; margin: 0 0 10px; font-variant-numeric: tabular-nums; }
@@ -190,10 +193,16 @@
   .b-battery { flex-direction: row; }
   .b-instead { padding: 18px 20px; }
   .home .films, .home .compare-sum { grid-template-columns: 1fr; }
+  .home .receipt { padding: 4px 20px 2px; }
+  .home .r-head { display: none; }
+  .home .r-row { grid-template-columns: minmax(0, 1fr) auto; gap: 2px 14px; }
+  .home .r-what { grid-column: 1; }
+  .home .r-app { grid-column: 1; grid-row: 2; font-size: 13.5px; }
+  .home .r-price { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+  .home .r-total .r-app { display: none; }
   .home .maker { grid-template-columns: 1fr; }
   .home .maker img { max-width: 240px; }
   .b-ctas .btn, .home .ctas .btn { width: 100%; }
-  .home .compare table { min-width: 760px; font-size: 13.5px; }
 }
 
 /* The Checkup tile is narrow: longer languages ("Wszystko w porządku.") get a smaller size and may break. */
