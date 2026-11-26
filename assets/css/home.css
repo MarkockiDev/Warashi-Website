@@ -18,7 +18,7 @@
 
 /* ---------- hero ---------- */
 .b-hero { padding: clamp(124px, 14vw, 170px) 0 0; text-align: center; }
-.b-news { display: inline-flex; align-items: center; gap: 10px; padding: 5px 16px 5px 5px; border-radius: 999px; background: var(--tile);
+.b-news { display: inline-flex; align-items: center; gap: 10px; padding-block: 5px; padding-inline: 5px 16px; border-radius: 999px; background: var(--tile);
   box-shadow: inset 0 0 0 1px var(--tile-edge); color: var(--sub); text-decoration: none; font-size: 14px; }
 .b-news b { background: var(--matcha); color: var(--paper); border-radius: 999px; padding: 3px 10px; font-size: 12.5px; font-weight: 600; }
 .b-hero h1 { font-size: clamp(44px, 7.4vw, 104px); line-height: .96; letter-spacing: -.055em; max-width: 11.5em; margin: 26px auto 24px; }
@@ -32,7 +32,7 @@
 .b-fine { margin: 16px 0 0; color: var(--faint); font-size: 13.5px; }
 
 /* ---------- the bento grid ---------- */
-.bento { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: minmax(150px, auto); gap: var(--gap); text-align: left; }
+.bento { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: minmax(150px, auto); gap: var(--gap); text-align: start; }
 .b-overview { margin-top: clamp(48px, 6vw, 72px); }
 .tile { position: relative; margin: 0; padding: 24px 26px; border-radius: var(--radius); background: var(--tile); box-shadow: inset 0 0 0 1px var(--tile-edge);
   overflow: hidden; display: flex; flex-direction: column; justify-content: flex-start; gap: 6px; }
@@ -41,7 +41,7 @@
 .b-big { font: 800 clamp(28px, 2.9vw, 40px)/1.02 var(--display) !important; letter-spacing: -.04em; color: var(--ink) !important; margin: 0 0 4px !important; }
 .b-mid { font-size: clamp(21px, 1.9vw, 26px) !important; letter-spacing: -.03em; line-height: 1.12 !important; }
 .b-huge { font-size: clamp(54px, 6vw, 84px) !important; letter-spacing: -.06em; font-variant-numeric: tabular-nums; }
-.b-huge small { font: 600 .3em var(--sans); color: var(--sub); letter-spacing: 0; margin-left: 4px; }
+.b-huge small { font: 600 .3em var(--sans); color: var(--sub); letter-spacing: 0; margin-inline-start: 4px; }
 .span-2 { grid-column: span 2; } .span-3 { grid-column: span 3; } .span-4 { grid-column: span 4; } .span-5 { grid-column: span 5; }
 .span-6 { grid-column: span 6; } .span-7 { grid-column: span 7; } .span-8 { grid-column: span 8; } .span-12 { grid-column: span 12; }
 .rows-2 { grid-row: span 2; } .rows-3 { grid-row: span 3; }
@@ -74,11 +74,11 @@
 .b-bar { display: flex; height: 14px; border-radius: 7px; overflow: hidden; margin: 12px 0 10px; gap: 2px; }
 .b-bar span { width: var(--w); background: var(--c); }
 .b-legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px !important; }
-.b-legend span::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--c); margin-right: 6px; }
+.b-legend span::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--c); margin-inline-end: 6px; }
 .b-count { font-size: clamp(40px, 4vw, 56px) !important; font-variant-numeric: tabular-nums; }
 .b-check { justify-content: space-between; }
 .b-app { display: flex; align-items: center; gap: 10px; color: var(--ink) !important; font-weight: 600; font-size: 17px !important; margin: 4px 0 2px !important; }
-.b-app em { margin-left: auto; font-style: normal; color: var(--beni); font-variant-numeric: tabular-nums; }
+.b-app em { margin-inline-start: auto; font-style: normal; color: var(--beni); font-variant-numeric: tabular-nums; }
 .b-spark { width: 100%; height: 56px; margin: 6px 0 8px; }
 .b-spark path { fill: color-mix(in srgb, var(--clay) 80%, transparent); }
 .b-term pre { margin: 6px 0 0; font: 13.5px/1.65 var(--mono); color: #EDE7DB; white-space: pre; overflow-x: auto; }
@@ -88,7 +88,7 @@
 
 /* "Instead of six": the apps it replaces, struck through. */
 .b-instead { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; margin-top: var(--gap); padding: 20px 26px; border-radius: var(--radius);
-  background: var(--tile); box-shadow: inset 0 0 0 1px var(--tile-edge); text-decoration: none; color: var(--ink); text-align: left; }
+  background: var(--tile); box-shadow: inset 0 0 0 1px var(--tile-edge); text-decoration: none; color: var(--ink); text-align: start; }
 .b-instead-lead { font: 800 22px var(--display); letter-spacing: -.03em; }
 .b-names { display: flex; flex-wrap: wrap; gap: 6px 18px; flex: 1; color: var(--faint); font-size: 15.5px; }
 .b-names s { text-decoration-thickness: 1.5px; text-decoration-color: color-mix(in srgb, var(--clay) 70%, transparent); }
@@ -119,7 +119,7 @@
 .b-list li { padding: 6px 12px; border-radius: 999px; background: color-mix(in srgb, var(--ink) 6%, transparent); font-size: 14px; color: var(--ink); }
 .b-dev .b-chip::before { background: var(--ink); }
 .b-private ul { margin: 4px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; color: var(--ink); font-size: 15px; }
-.b-private li::before { content: "✓"; color: var(--matcha); font-weight: 700; margin-right: 8px; }
+.b-private li::before { content: "✓"; color: var(--matcha); font-weight: 700; margin-inline-end: 8px; }
 .b-light-weight .tile:not(.b-private) { justify-content: center; }
 .b-faq .tile h3 { font-size: 21px; margin: 0 0 4px; letter-spacing: -.025em; }
 .b-faq { grid-auto-rows: auto; }
@@ -135,7 +135,7 @@
 .home .receipt ul { list-style: none; margin: 0; padding: 0; }
 .home .r-row { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) 128px; gap: 20px; align-items: baseline; padding: 14px 0; border-bottom: .5px solid var(--rule); font-size: 15px; }
 .home .r-head { font: 500 12.5px/1.3 var(--sans); color: var(--faint); text-transform: uppercase; letter-spacing: .06em; padding: 18px 0 12px; border-bottom: 1px solid color-mix(in srgb, var(--ink) 20%, transparent); }
-.home .r-head span:last-child, .home .r-price { text-align: right; }
+.home .r-head span:last-child, .home .r-price { text-align: end; }
 .home .r-what { color: var(--ink); font-weight: 500; }
 .home .r-app { color: var(--sub); }
 .home .r-price { color: var(--ink); font: 700 16.5px/1.2 var(--display); letter-spacing: -.01em; }

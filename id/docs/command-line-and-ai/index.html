@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Baris perintah &amp; app AI · Bantuan · Warashi</title>
+<meta name="description" content="Gunakan perintah warashi di Terminal, dan biarkan Claude, Cursor, dan app AI lain membaca riwayat Mac Anda lewat MCP.">
+<link rel="canonical" href="https://warashi.app/id/docs/command-line-and-ai/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Warashi">
+<meta property="og:title" content="Baris perintah &amp; app AI · Bantuan · Warashi">
+<meta property="og:description" content="Gunakan perintah warashi di Terminal, dan biarkan Claude, Cursor, dan app AI lain membaca riwayat Mac Anda lewat MCP.">
+<meta property="og:url" content="https://warashi.app/id/docs/command-line-and-ai/">
+<meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Warashi: si roh kecil yang menjaga Mac Anda. Ikon roh kecil di samping jendela Warashi dan jendela bar menu.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Baris perintah &amp; app AI · Bantuan · Warashi">
+<meta name="twitter:description" content="Gunakan perintah warashi di Terminal, dan biarkan Claude, Cursor, dan app AI lain membaca riwayat Mac Anda lewat MCP.">
+<meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="Warashi: si roh kecil yang menjaga Mac Anda. Ikon roh kecil di samping jendela Warashi dan jendela bar menu.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+// Website analytics: cookieless (nothing stored in the browser), EU servers, no person profiles, Do Not Track respected.
+posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
+  api_host: "https://eu.i.posthog.com", ui_host: "https://eu.posthog.com",
+  persistence: "memory", person_profiles: "identified_only", respect_dnt: true,
+  capture_pageview: true, capture_pageleave: true, disable_session_recording: true,
+});
+posthog.register({ surface: "website" });
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Bantuan","item":"https://warashi.app/docs/"},{"@type":"ListItem","position":2,"name":"Baris perintah & app AI","item":"https://warashi.app/docs/command-line-and-ai/"}]}</script>
+
+<!--i18n-head--><link rel="alternate" hreflang="en" href="https://warashi.app/docs/command-line-and-ai/"><link rel="alternate" hreflang="x-default" href="https://warashi.app/docs/command-line-and-ai/"><link rel="alternate" hreflang="pl" href="https://warashi.app/pl/docs/command-line-and-ai/"><link rel="alternate" hreflang="fr" href="https://warashi.app/fr/docs/command-line-and-ai/"><link rel="alternate" hreflang="es" href="https://warashi.app/es/docs/command-line-and-ai/"><link rel="alternate" hreflang="pt-BR" href="https://warashi.app/pt-br/docs/command-line-and-ai/"><link rel="alternate" hreflang="ja" href="https://warashi.app/ja/docs/command-line-and-ai/"><link rel="alternate" hreflang="zh-Hans" href="https://warashi.app/zh-hans/docs/command-line-and-ai/"><link rel="alternate" hreflang="it" href="https://warashi.app/it/docs/command-line-and-ai/"><link rel="alternate" hreflang="nl" href="https://warashi.app/nl/docs/command-line-and-ai/"><link rel="alternate" hreflang="id" href="https://warashi.app/id/docs/command-line-and-ai/"><link rel="alternate" hreflang="ar" href="https://warashi.app/ar/docs/command-line-and-ai/"><!--/i18n-head-->
+</head>
+<body>
+<a class="skip" href="#main">Lompat ke konten</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="pill">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
+      <nav class="nav" aria-label="Utama"><a href="../../index.html#glance">Fitur</a><a href="../../docs/" aria-current="page">Bantuan</a><a href="../../guides/">Panduan</a><a href="../../faq/">Tanya Jawab</a><a href="../../../changelog/">Catatan perubahan</a></nav>
+      
+      <!--i18n-lang--><details class="lang"><summary aria-label="Bahasa"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><ellipse cx="8" cy="8" rx="2.8" ry="6.4"/><path d="M1.8 6h12.4M1.8 10h12.4"/></svg><span>ID</span></summary><div class="lang-menu"><a lang="en" hreflang="en" href="../../../docs/command-line-and-ai/">English</a><a lang="pl" hreflang="pl" href="../../../pl/docs/command-line-and-ai/">Polski</a><a lang="fr" hreflang="fr" href="../../../fr/docs/command-line-and-ai/">Français</a><a lang="es" hreflang="es" href="../../../es/docs/command-line-and-ai/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="../../../pt-br/docs/command-line-and-ai/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="../../../ja/docs/command-line-and-ai/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="../../../zh-hans/docs/command-line-and-ai/">简体中文</a><a lang="it" hreflang="it" href="../../../it/docs/command-line-and-ai/">Italiano</a><a lang="nl" hreflang="nl" href="../../../nl/docs/command-line-and-ai/">Nederlands</a><a lang="id" hreflang="id" href="./" aria-current="true">Bahasa Indonesia</a><a lang="ar" hreflang="ar" href="../../../ar/docs/command-line-and-ai/">العربية</a></div></details><!--/i18n-lang-->
+      <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">Unduh</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+    <div class="sheet" id="sheet"><div><nav aria-label="Utama"><a href="../../index.html#glance">Fitur</a><a href="../../docs/" aria-current="page">Bantuan</a><a href="../../guides/">Panduan</a><a href="../../faq/">Tanya Jawab</a><a href="../../../changelog/">Catatan perubahan</a></nav><!--i18n-lang--><div class="sheet-lang"><p>Bahasa</p><div><a lang="en" hreflang="en" href="../../../docs/command-line-and-ai/">English</a><a lang="pl" hreflang="pl" href="../../../pl/docs/command-line-and-ai/">Polski</a><a lang="fr" hreflang="fr" href="../../../fr/docs/command-line-and-ai/">Français</a><a lang="es" hreflang="es" href="../../../es/docs/command-line-and-ai/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="../../../pt-br/docs/command-line-and-ai/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="../../../ja/docs/command-line-and-ai/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="../../../zh-hans/docs/command-line-and-ai/">简体中文</a><a lang="it" hreflang="it" href="../../../it/docs/command-line-and-ai/">Italiano</a><a lang="nl" hreflang="nl" href="../../../nl/docs/command-line-and-ai/">Nederlands</a><a lang="id" hreflang="id" href="./" aria-current="true">Bahasa Indonesia</a><a lang="ar" hreflang="ar" href="../../../ar/docs/command-line-and-ai/">العربية</a></div></div><!--/i18n-lang--></div></div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap">
+  <div class="page-head"><div class="crumbs"><a href="../../docs/">Bantuan</a> / Command line &amp; app AI</div><h1>Baris perintah &amp; app AI</h1><p class="lead">Gunakan perintah warashi di Terminal, dan biarkan Claude, Cursor, dan app AI lain membaca riwayat Mac Anda lewat MCP.</p></div>
+  <div class="doc">
+    <details class="side" open><summary>Menu Bantuan</summary><nav aria-label="Bantuan"><h4>Mulai</h4><a href="../../docs/">Beranda Bantuan</a><a href="../../docs/install/">Unduh &amp; pasang</a><a href="../../docs/welcome-tour/">Tur sambutan</a><a href="../../docs/first-day/">Hari pertama Anda</a><h4>Selalu ada</h4><a href="../../docs/menu-bar/">Bar menu &amp; jendela bar menu</a><a href="../../docs/notch-and-island/">Takik &amp; pulau</a><a href="../../docs/customize/">Sesuaikan</a><h4>Jendela</h4><a href="../../docs/window/">Menemukan jalan Anda</a><a href="../../docs/power-flow/">Sekarang &amp; Aliran Daya</a><a href="../../docs/apps/">App</a><a href="../../docs/time-and-cost/">Waktu × Biaya</a><a href="../../docs/developer/">Pengembang</a><a href="../../docs/coding-agents/">Agen pemrograman</a><a href="../../docs/history/">Riwayat</a><a href="../../docs/flight-log/">Log Penerbangan</a><a href="../../docs/alerts/">Peringatan</a><a href="../../docs/checkup/">Pemeriksaan</a><a href="../../docs/battery/">Baterai &amp; batas pengisian</a><a href="../../docs/storage/">Penyimpanan</a><a href="../../docs/upgrade-advisor/">Penasihat Upgrade</a><a href="../../docs/tools/">Alat</a><a href="../../docs/breaks/">Istirahat</a><a href="../../docs/keep-awake/">Tetap Terjaga</a><a href="../../docs/soft-focus/">Fokus Lembut</a><a href="../../docs/speed-test/">Tes Kecepatan</a><a href="../../docs/weekly-summary/">Ringkasan mingguan</a><h4>Pengaturan & lainnya</h4><a href="../../docs/settings/">Pengaturan</a><a href="../../docs/system-processes/">Pembantu Sistem</a><a href="../../docs/updates/">Pembaruan</a><a href="../../docs/command-line-and-ai/" aria-current="page">Command line &amp; app AI</a><a href="../../docs/beta/">Beta &amp; lisensi</a><a href="../../docs/privacy-and-data/">Privasi &amp; data Anda</a><a href="../../docs/troubleshooting/">Pemecahan masalah</a><h4>Panduan</h4><a href="../../guides/keep-mac-awake-lid-closed/">Jaga Mac Anda tetap terjaga dengan layar tertutup</a><a href="../../guides/limit-macbook-charging-80-percent/">Hentikan MacBook mengisi di 80%</a><a href="../../guides/uninstall-apps-on-mac-completely/">Hapus app di Mac sepenuhnya</a><a href="../../guides/why-is-my-mac-slow/">Mengapa Mac saya lambat</a><a href="../../guides/how-much-ram-do-i-need/">Berapa banyak RAM yang saya butuhkan di Mac</a><a href="../../guides/whats-draining-my-macbook-battery/">Apa yang menguras baterai MacBook saya</a><a href="../../guides/whats-taking-up-space-on-my-mac/">Apa yang memakan ruang di Mac saya</a><a href="../../guides/test-internet-speed-on-mac/">Tes kecepatan internet Anda di Mac</a></nav></details>
+    <article class="prose">
+<p>Keduanya opsional dan hanya-baca: keduanya membaca apa yang sudah disimpan Warashi dan tidak dapat mengubah apa pun.</p>
+<h2>Perintah warashi</h2>
+<ol class="steps"><li><span class="step-title">Pasang</span><p>Pengaturan › Umum › Command Line dan AI › <b>Pasang…</b>. macOS meminta kata sandi Anda satu kali.</p></li><li><span class="step-title">Pakai di Terminal</span><p>Ketik <code>warashi</code> untuk melihat perintahnya.</p></li></ol>
+<div class="table"><table><tr><th>Perintah</th><th>Apa yang ditampilkannya</th></tr>
+<tr><td><code>warashi now</code></td><td>Pembacaan terbaru, berusia hingga sekitar semenit</td></tr>
+<tr><td><code>warashi apps --hours 3</code></td><td>App yang paling banyak memakai CPU</td></tr>
+<tr><td><code>warashi history cpu --hours 24</code></td><td>Satu metrik dari waktu ke waktu</td></tr>
+<tr><td><code>warashi explain 14:30</code></td><td>Apa yang terjadi pada suatu momen (juga <code>30m</code>, <code>2h</code>)</td></tr>
+<tr><td><code>warashi sleep --days 7</code></td><td>Tidur dan baterai habis</td></tr></table></div>
+<p>Tambahkan <code>--json</code> ke salah satunya untuk output yang bisa dibaca skrip Anda.</p>
+<h2>Sambungkan app AI</h2>
+<ol class="steps"><li><span class="step-title">Salin pengaturan</span><p>Pengaturan › Umum › Command Line dan AI › <b>Salin Penyiapan</b>.</p></li><li><span class="step-title">Tempel ke app AI Anda</span><p>Tambahkan ke pengaturan MCP Claude, Cursor, atau app lain yang mendukung MCP, lalu tanyakan sesuatu seperti “Mengapa Mac saya lambat jam 3 sore?”.</p></li></ol>
+<div class="tip"><b>Perlu diketahui:</b> Tidak ada yang dibagikan sampai Anda menambahkan Warashi ke app AI. App itu dan layanannya lalu menerima apa yang diminta: nama app dan riwayat penggunaan, tidak pernah catatan aktivitas atau path file. Hapus dari pengaturan app itu untuk menghentikannya.</div>
+<div class="help-box"><h3>Jika ada yang tidak beres</h3><ul><li><b><code>warashi</code> tidak ditemukan:</b> buka jendela Terminal baru, atau tekan Pasang… lagi jika Anda memindahkan Warashi.</li></ul><p style="margin-top:8px">Selengkapnya di <a href="../../docs/troubleshooting/">Pemecahan Masalah</a>, atau kirim email ke <a href="mailto:adam@warashi.app">adam@warashi.app</a>.</p></div>
+<div class="next"><a href="../../docs/updates/"><small>Sebelumnya</small>Pembaruan</a><a href="../../docs/beta/" style="text-align:right"><small>Berikutnya</small>Beta &amp; lisensi</a></div></article>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
+      <nav aria-label="Footer"><a href="../../docs/">Bantuan</a><a href="../../guides/">Panduan</a><a href="../../faq/">Tanya Jawab</a><a href="../../../changelog/">Catatan perubahan</a><a href="../../../press/">Pers</a><a href="../../../privacy/">Privasi</a><a href="../../../terms/">Ketentuan</a><a href="../../../refunds/">Pengembalian dana</a><a href="mailto:adam@warashi.app">Kontak</a></nav>
+    </div>
+    <p class="fine">© 2026 Adam Markocki. Dibuat dengan penuh perhatian di Polandia. Warashi tidak berafiliasi dengan Apple; Mac, macOS, dan Apple silicon adalah merek dagang Apple Inc.</p>
+  </div>
+</footer>
+<script src="../../../assets/js/site.js" defer></script>
+</body>
+</html>

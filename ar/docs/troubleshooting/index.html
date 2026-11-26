@@ -1,0 +1,129 @@
+<!doctype html>
+<html dir="rtl" lang="ar" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>استكشاف الأخطاء · المساعدة · Warashi</title>
+<meta name="description" content="حلول لمشكلات Warashi الشائعة: عنصر شريط القوائم المفقود، والقيم غير المتاحة، ومساعد النظام، والإشعارات، وحد الشحن، والتحديثات، وإلغاء التثبيت.">
+<link rel="canonical" href="https://warashi.app/ar/docs/troubleshooting/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Warashi">
+<meta property="og:title" content="استكشاف الأخطاء · المساعدة · Warashi">
+<meta property="og:description" content="حلول لمشكلات Warashi الشائعة: عنصر شريط القوائم المفقود، والقيم غير المتاحة، ومساعد النظام، والإشعارات، وحد الشحن، والتحديثات، وإلغاء التثبيت.">
+<meta property="og:url" content="https://warashi.app/ar/docs/troubleshooting/">
+<meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Warashi: الروح التي تعتني بجهاز Mac. أيقونة الروح بجانب نافذة Warashi ونافذة شريط القوائم.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="استكشاف الأخطاء · المساعدة · Warashi">
+<meta name="twitter:description" content="حلول لمشكلات Warashi الشائعة: عنصر شريط القوائم المفقود، والقيم غير المتاحة، ومساعد النظام، والإشعارات، وحد الشحن، والتحديثات، وإلغاء التثبيت.">
+<meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="Warashi: الروح التي تعتني بجهاز Mac. أيقونة الروح بجانب نافذة Warashi ونافذة شريط القوائم.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+// Website analytics: cookieless (nothing stored in the browser), EU servers, no person profiles, Do Not Track respected.
+posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
+  api_host: "https://eu.i.posthog.com", ui_host: "https://eu.posthog.com",
+  persistence: "memory", person_profiles: "identified_only", respect_dnt: true,
+  capture_pageview: true, capture_pageleave: true, disable_session_recording: true,
+});
+posthog.register({ surface: "website" });
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"المساعدة","item":"https://warashi.app/docs/"},{"@type":"ListItem","position":2,"name":"استكشاف الأخطاء","item":"https://warashi.app/docs/troubleshooting/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"لا أرى Warashi في شريط القوائم","acceptedAnswer":{"@type":"Answer","text":"افتح Warashi من التطبيقات. وإن كان قيد التشغيل، تُفتح نافذته."}},{"@type":"Question","name":"بعض الأرقام تظهر «غير متاح»","acceptedAnswer":{"@type":"Answer","text":"لا يختلق Warashi قيمة أبدًا. إذا لم يوفّر macOS قراءة على جهازك (مثل بعض درجات الحرارة، أو المروحة في أجهزة Mac التي لا مروحة فيها)، يقول Warashi ذلك بدل التخمين."}},{"@type":"Question","name":"أين ذهبت الصفحة؟","acceptedAnswer":{"@type":"Answer","text":"الصفحات الآن مجمّعة في ستة أماكن. اضغط ⌘K واكتب اسمها، أو راجع كيف تتنقل. باختصار: «الوقت × التكلفة» و«المطوّر» في التطبيقات؛ و«سجل الرحلة» و«التنبيهات» في السجل؛ و«الفحص» و«البطارية» و«التخزين» و«مستشار الترقية» في الصحة؛ و«اختبار السرعة» في الأدوات."}},{"@type":"Question","name":"حد الشحن غير متاح، أو يتوقف عند 80%","acceptedAnswer":{"@type":"Answer","text":"يحتاج حد الشحن إلى macOS 26.4 أو أحدث؛ وتحتاج الحدود الأقل من 80% إلى macOS 26.7 أو أحدث ومساعد النظام. انظر البطارية وحد الشحن."}},{"@type":"Question","name":"ما زالت سلة المهملات فيها أشياء بعد إفراغها","acceptedAnswer":{"@type":"Answer","text":"ما لا يستطيع حذفه إلا مسؤول يُسلَّم إلى Finder، الذي يطلب كلمة السر. إن لم تسمح لـ Warashi بالتحكم في Finder، اضغط فتح الأتمتة على بطاقة سلة المهملات (أو افتح إعدادات النظام › الخصوصية والأمان › الأتمتة)، وفعّل Finder تحت Warashi، ثم أفرغ مرة أخرى. وتبقى العناصر قيد الاستخدام حتى ينتهي التطبيق الذي يستخدمها. انظر التخزين."}},{"@type":"Question","name":"تطبيقان يُفتحان من النتوء","acceptedAnswer":{"@type":"Answer","text":"تطبيق آخر يستخدم النتوء أيضًا. يبقى نتوء Warashi في المقدمة؛ ولرؤية Warashi فقط، أطفئ النتوء في التطبيق الآخر، الذي تذكره الإعدادات › التخصيص › الظاهر دائمًا. انظر النتوء والجزيرة."}},{"@type":"Question","name":"عمليات النظام غير معروضة","acceptedAnswer":{"@type":"Answer","text":"تحتاج إلى المساعد الاختياري. اتبع مساعد النظام، وتأكد من السماح لـ Warashi في إعدادات النظام › عام › عناصر تسجيل الدخول › السماح في الخلفية."}},{"@type":"Question","name":"لم تأتِ استراحة","acceptedAnswer":{"@type":"Answer","text":"تنتظر الاستراحات أثناء المكالمة (كاميرا قيد التشغيل، أو تطبيق يسمع ويتكلم معًا؛ ولا يُعدّ الإملاء)، وأثناء بقاء الشاشة مضاءة بسبب فيديو أو عرض تقديمي (10 دقائق كحد أقصى)، أو بينما لعبة بملء الشاشة في المقدمة. كما أن الابتعاد عن Mac يعيد ضبط المؤقت. راجع الاستراحات."}},{"@type":"Question","name":"نام Mac رغم تشغيل إبقاء الجهاز مستيقظًا","acceptedAnswer":{"@type":"Answer","text":"يتوقف إبقاء الجهاز مستيقظًا حين تبلغ البطارية 10% وهي غير موصولة، أو حين ينتهي التطبيق المختار، أو حين يُنهى Warashi. وبالغطاء المغلق يحتاج أيضًا إلى الشاحن ومساعد النظام. ويذكر سجل الرحلة سبب انتهاء كل جلسة."}},{"@type":"Question","name":"توقف مساعد النظام بعد أن أعدت تثبيت Warashi","acceptedAnswer":{"@type":"Answer","text":"إن أزلت Warashi القديم قبل نسخ الجديد، نسي macOS موافقة المساعد وتذكّر مهمته القديمة، فيفشل المساعد في البدء حتى إعادة تشغيل Mac. أعد التشغيل، ثم افتح الإعدادات › النظام وأوقف إظهار عمليات النظام وشغّله إن بقي أحمر. ولتفادي ذلك: حدّث من الإعدادات › التحديثات، أو اسحب Warashi الجديد فوق القديم دون إزالته أولًا."}},{"@type":"Question","name":"شُحنت بطاريتي بعد الحد","acceptedAnswer":{"@type":"Answer","text":"قد يتجاوز تطبيق آخر يدير الشحن (مثل AlDente وBattery Toolkit) حد Warashi، مثلًا أثناء المعايرة. ينبّهك Warashi في صفحة البطارية حين يرصد واحدًا، ويدوّن سجل الرحلة كل مرة تجاوزت فيها البطارية حدك واسم التطبيق الذي كان يدير الشحن. اكتفِ بمدير شحن واحد، لا اثنين."}},{"@type":"Question","name":"لا تأتي الاستراحات أثناء المكالمات","acceptedAnswer":{"@type":"Answer","text":"هذا مقصود: الإعدادات › الاستراحات › الانتظار أثناء المكالمات والاجتماعات يؤجّل كل استراحة وتنبيه لطيف أثناء المكالمة: كاميرا قيد التشغيل، أو تطبيق يستمع ويتحدث معًا. الإملاء لا يُحتسب. أوقفه إن كنت تفضّل أن تُذكَّر على أي حال. وتتوقف الاستراحات أيضًا خارج ساعات عملك وأثناء وضع تركيز مثل «عدم الإزعاج»، إن فعّلت ذلك."}},{"@type":"Question","name":"يستخدم Warashi المعالج أثناء فتح نافذته","acceptedAnswer":{"@type":"Answer","text":"يرسم أرقامًا ومخططات وحلقات حية كل ثانية، ويقيس ذلك ويعرضه بصدق باسم Warashi · هذه النافذة في التطبيقات. أغلق النافذة فينزل إلى جزء من واحد بالمئة. وإن بقي مرتفعًا والنافذة مغلقة، فأرسل تقرير Mac من الأدوات بالبريد."}},{"@type":"Question","name":"لا تصلني إشعارات التنبيهات","acceptedAnswer":{"@type":"Answer","text":"الإعدادات › التنبيهات: يجب أن يكون مفتاح ذلك التنبيه قيد التشغيل."}},{"@type":"Question","name":"الفتح عند تسجيل الدخول لا يثبت","acceptedAnswer":{"@type":"Answer","text":"قد يحتاج macOS إلى موافقتك: افتح إعدادات النظام › عام › عناصر تسجيل الدخول واسمح لـ Warashi."}},{"@type":"Question","name":"الجزيرة تغطي شيئًا على شاشتي الخارجية","acceptedAnswer":{"@type":"Answer","text":"أوقف الإعدادات › التخصيص › الظاهر دائمًا › الجزيرة على الشاشات بلا نتوء."}},{"@type":"Question","name":"أريد التحديث الآن","acceptedAnswer":{"@type":"Answer","text":"الإعدادات › التحديثات › تحقق الآن. يمكنك أيضًا تنزيل أحدث إصدار من warashi.app وسحبه فوق القديم في التطبيقات؛ يبقى سجلّك."}},{"@type":"Question","name":"قرص لا يُخرَج","acceptedAnswer":{"@type":"Answer","text":"يرفض macOS ما دام شيء يستخدم القرص، ويقول Warashi أيّها. أغلق ما يستخدمه وحاول مرة أخرى."}},{"@type":"Question","name":"غيّرت نافذة شريط القوائم أو النتوء وأريدهما كما كانا","acceptedAnswer":{"@type":"Answer","text":"افتح الإعدادات › التخصيص، واختر التبويب، واضغط إعادة ضبط. راجع التخصيص."}},{"@type":"Question","name":"أمر warashi غير موجود","acceptedAnswer":{"@type":"Answer","text":"افتح نافذة Terminal جديدة. وإن لم يفد ذلك، فاضغط الإعدادات › عام › سطر الأوامر وتطبيقات الذكاء الاصطناعي › تثبيت… مرة أخرى."}},{"@type":"Question","name":"شاهد جولة الترحيب مرة أخرى","acceptedAnswer":{"@type":"Answer","text":"الإعدادات › عام › إظهار الترحيب مرة أخرى."}},{"@type":"Question","name":"إلغاء تثبيت Warashi","acceptedAnswer":{"@type":"Answer","text":"الإعدادات › النظام › أوقف إظهار عمليات النظام."}}]}</script>
+
+<!--i18n-head--><link rel="alternate" hreflang="en" href="https://warashi.app/docs/troubleshooting/"><link rel="alternate" hreflang="x-default" href="https://warashi.app/docs/troubleshooting/"><link rel="alternate" hreflang="pl" href="https://warashi.app/pl/docs/troubleshooting/"><link rel="alternate" hreflang="fr" href="https://warashi.app/fr/docs/troubleshooting/"><link rel="alternate" hreflang="es" href="https://warashi.app/es/docs/troubleshooting/"><link rel="alternate" hreflang="pt-BR" href="https://warashi.app/pt-br/docs/troubleshooting/"><link rel="alternate" hreflang="ja" href="https://warashi.app/ja/docs/troubleshooting/"><link rel="alternate" hreflang="zh-Hans" href="https://warashi.app/zh-hans/docs/troubleshooting/"><link rel="alternate" hreflang="it" href="https://warashi.app/it/docs/troubleshooting/"><link rel="alternate" hreflang="nl" href="https://warashi.app/nl/docs/troubleshooting/"><link rel="alternate" hreflang="id" href="https://warashi.app/id/docs/troubleshooting/"><link rel="alternate" hreflang="ar" href="https://warashi.app/ar/docs/troubleshooting/"><!--/i18n-head-->
+</head>
+<body>
+<a class="skip" href="#main">انتقل إلى المحتوى</a>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="pill">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
+      <nav class="nav" aria-label="الرئيسي"><a href="../../index.html#glance">الميزات</a><a href="../../docs/" aria-current="page">المساعدة</a><a href="../../guides/">الأدلة</a><a href="../../faq/">الأسئلة والأجوبة</a><a href="../../../changelog/">سجل التغييرات</a></nav>
+      
+      <!--i18n-lang--><details class="lang"><summary aria-label="اللغة"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><ellipse cx="8" cy="8" rx="2.8" ry="6.4"/><path d="M1.8 6h12.4M1.8 10h12.4"/></svg><span>AR</span></summary><div class="lang-menu"><a lang="en" hreflang="en" href="../../../docs/troubleshooting/">English</a><a lang="pl" hreflang="pl" href="../../../pl/docs/troubleshooting/">Polski</a><a lang="fr" hreflang="fr" href="../../../fr/docs/troubleshooting/">Français</a><a lang="es" hreflang="es" href="../../../es/docs/troubleshooting/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="../../../pt-br/docs/troubleshooting/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="../../../ja/docs/troubleshooting/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="../../../zh-hans/docs/troubleshooting/">简体中文</a><a lang="it" hreflang="it" href="../../../it/docs/troubleshooting/">Italiano</a><a lang="nl" hreflang="nl" href="../../../nl/docs/troubleshooting/">Nederlands</a><a lang="id" hreflang="id" href="../../../id/docs/troubleshooting/">Bahasa Indonesia</a><a lang="ar" hreflang="ar" href="./" aria-current="true">العربية</a></div></details><!--/i18n-lang-->
+      <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">تنزيل</a>
+      <button class="menu-toggle" aria-label="القائمة" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+    <div class="sheet" id="sheet"><div><nav aria-label="الرئيسي"><a href="../../index.html#glance">الميزات</a><a href="../../docs/" aria-current="page">المساعدة</a><a href="../../guides/">الأدلة</a><a href="../../faq/">الأسئلة والأجوبة</a><a href="../../../changelog/">سجل التغييرات</a></nav><!--i18n-lang--><div class="sheet-lang"><p>اللغة</p><div><a lang="en" hreflang="en" href="../../../docs/troubleshooting/">English</a><a lang="pl" hreflang="pl" href="../../../pl/docs/troubleshooting/">Polski</a><a lang="fr" hreflang="fr" href="../../../fr/docs/troubleshooting/">Français</a><a lang="es" hreflang="es" href="../../../es/docs/troubleshooting/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="../../../pt-br/docs/troubleshooting/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="../../../ja/docs/troubleshooting/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="../../../zh-hans/docs/troubleshooting/">简体中文</a><a lang="it" hreflang="it" href="../../../it/docs/troubleshooting/">Italiano</a><a lang="nl" hreflang="nl" href="../../../nl/docs/troubleshooting/">Nederlands</a><a lang="id" hreflang="id" href="../../../id/docs/troubleshooting/">Bahasa Indonesia</a><a lang="ar" hreflang="ar" href="./" aria-current="true">العربية</a></div></div><!--/i18n-lang--></div></div>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap">
+  <div class="page-head"><div class="crumbs"><a href="../../docs/">المساعدة</a> / استكشاف الأخطاء وإصلاحها</div><h1>استكشاف الأخطاء</h1><p class="lead">حلول لمشكلات Warashi الشائعة: عنصر شريط القوائم المفقود، والقيم غير المتاحة، ومساعد النظام، والإشعارات، وحد الشحن، والتحديثات، وإلغاء التثبيت.</p></div>
+  <div class="doc">
+    <details class="side" open><summary>قائمة المساعدة</summary><nav aria-label="المساعدة"><h4>ابدأ</h4><a href="../../docs/">الصفحة الرئيسية للمساعدة</a><a href="../../docs/install/">التنزيل والتثبيت</a><a href="../../docs/welcome-tour/">جولة الترحيب</a><a href="../../docs/first-day/">يومك الأول</a><h4>موجود دائمًا</h4><a href="../../docs/menu-bar/">شريط القوائم ونافذة شريط القوائم</a><a href="../../docs/notch-and-island/">النتوء والجزيرة</a><a href="../../docs/customize/">التخصيص</a><h4>النافذة</h4><a href="../../docs/window/">التنقل في Warashi</a><a href="../../docs/power-flow/">الآن وتدفق الطاقة</a><a href="../../docs/apps/">التطبيقات</a><a href="../../docs/time-and-cost/">الوقت × التكلفة</a><a href="../../docs/developer/">المطوّر</a><a href="../../docs/coding-agents/">وكلاء البرمجة</a><a href="../../docs/history/">السجل</a><a href="../../docs/flight-log/">سجل الرحلة</a><a href="../../docs/alerts/">التنبيهات</a><a href="../../docs/checkup/">الفحص</a><a href="../../docs/battery/">البطارية وحد الشحن</a><a href="../../docs/storage/">التخزين</a><a href="../../docs/upgrade-advisor/">مستشار الترقية</a><a href="../../docs/tools/">الأدوات</a><a href="../../docs/breaks/">الاستراحات</a><a href="../../docs/keep-awake/">إبقاء الجهاز مستيقظًا</a><a href="../../docs/soft-focus/">التركيز الناعم</a><a href="../../docs/speed-test/">اختبار السرعة</a><a href="../../docs/weekly-summary/">الملخص الأسبوعي</a><h4>الإعدادات والمزيد</h4><a href="../../docs/settings/">الإعدادات</a><a href="../../docs/system-processes/">مساعد النظام</a><a href="../../docs/updates/">التحديثات</a><a href="../../docs/command-line-and-ai/">سطر الأوامر وتطبيقات الذكاء الاصطناعي</a><a href="../../docs/beta/">الإصدار التجريبي والتراخيص</a><a href="../../docs/privacy-and-data/">الخصوصية وبياناتك</a><a href="../../docs/troubleshooting/" aria-current="page">استكشاف الأخطاء وإصلاحها</a><h4>الأدلة</h4><a href="../../guides/keep-mac-awake-lid-closed/">أبقِ الـ Mac مستيقظًا والغطاء مغلق</a><a href="../../guides/limit-macbook-charging-80-percent/">أوقف شحن MacBook عند 80%</a><a href="../../guides/uninstall-apps-on-mac-completely/">أزل التطبيقات من الـ Mac بالكامل</a><a href="../../guides/why-is-my-mac-slow/">لماذا الـ Mac بطيء</a><a href="../../guides/how-much-ram-do-i-need/">كم من ذاكرة الوصول العشوائي أحتاج في الـ Mac</a><a href="../../guides/whats-draining-my-macbook-battery/">ما الذي يستنزف بطارية MacBook</a><a href="../../guides/whats-taking-up-space-on-my-mac/">ما الذي يشغل المساحة على الـ Mac</a><a href="../../guides/test-internet-speed-on-mac/">اختبر سرعة إنترنتك على الـ Mac</a></nav></details>
+    <article class="prose">
+<p>اعثر على مشكلتك أدناه واتبع الخطوات. ما زالت عالقة؟ راسل <a href="mailto:adam@warashi.app">adam@warashi.app</a> مع طراز Mac وإصدار macOS: تنسخهما أداة <b>تقرير Mac</b> في الأدوات.</p>
+<h2 id="menu-bar">لا أرى Warashi في شريط القوائم</h2>
+<ol class="steps"><li><span class="step-title">تحقق من أنه يعمل</span><p>افتح Warashi من التطبيقات. وإن كان قيد التشغيل، تُفتح نافذته.</p></li><li><span class="step-title">أفسح مكانًا</span><p>على MacBook بنتوء، يُخفي شريط القوائم المزدحم عناصر خلف النتوء. أنهِ تطبيقًا أو اثنين لا تحتاج إليهما في شريط القوائم، أو اضغط <kbd>⌘</kbd> واسحب الروح إلى اليمين أكثر.</p></li><li><span class="step-title">استخدم النتوء بدلًا من ذلك</span><p>فعّل الإعدادات › التخصيص › الظاهر دائمًا › <b>لمحة بجانب النتوء</b>: الأرقام هناك لا تختفي أبدًا.</p></li></ol>
+<h2>بعض الأرقام تظهر «غير متاح»</h2>
+<p>لا يختلق Warashi قيمة أبدًا. إذا لم يوفّر macOS قراءة على جهازك (مثل بعض درجات الحرارة، أو المروحة في أجهزة Mac التي لا مروحة فيها)، يقول Warashi ذلك بدل التخمين.</p>
+<h2>أين ذهبت الصفحة؟</h2>
+<p>الصفحات الآن مجمّعة في ستة أماكن. اضغط <kbd>⌘K</kbd> واكتب اسمها، أو راجع <a href="../../docs/window/">كيف تتنقل</a>. باختصار: «الوقت × التكلفة» و«المطوّر» في التطبيقات؛ و«سجل الرحلة» و«التنبيهات» في السجل؛ و«الفحص» و«البطارية» و«التخزين» و«مستشار الترقية» في الصحة؛ و«اختبار السرعة» في الأدوات.</p>
+<h2>حد الشحن غير متاح، أو يتوقف عند 80%</h2>
+<p>يحتاج حد الشحن إلى macOS 26.4 أو أحدث؛ وتحتاج الحدود الأقل من 80% إلى macOS 26.7 أو أحدث و<a href="../../docs/system-processes/">مساعد النظام</a>. انظر <a href="../../docs/battery/">البطارية وحد الشحن</a>.</p>
+<h2>ما زالت سلة المهملات فيها أشياء بعد إفراغها</h2>
+<p>ما لا يستطيع حذفه إلا مسؤول يُسلَّم إلى Finder، الذي يطلب كلمة السر. إن لم تسمح لـ Warashi بالتحكم في Finder، اضغط <b>فتح الأتمتة</b> على بطاقة سلة المهملات (أو افتح إعدادات النظام › الخصوصية والأمان › الأتمتة)، وفعّل Finder تحت Warashi، ثم أفرغ مرة أخرى. وتبقى العناصر قيد الاستخدام حتى ينتهي التطبيق الذي يستخدمها. انظر <a href="../../docs/storage/">التخزين</a>.</p>
+<h2>تطبيقان يُفتحان من النتوء</h2>
+<p>تطبيق آخر يستخدم النتوء أيضًا. يبقى نتوء Warashi في المقدمة؛ ولرؤية Warashi فقط، أطفئ النتوء في التطبيق الآخر، الذي تذكره الإعدادات › التخصيص › الظاهر دائمًا. انظر <a href="../../docs/notch-and-island/">النتوء والجزيرة</a>.</p>
+<h2>عمليات النظام غير معروضة</h2>
+<p>تحتاج إلى المساعد الاختياري. اتبع <a href="../../docs/system-processes/">مساعد النظام</a>، وتأكد من السماح لـ Warashi في إعدادات النظام › عام › عناصر تسجيل الدخول › السماح في الخلفية.</p>
+<h2>لم تأتِ استراحة</h2>
+<p>تنتظر الاستراحات أثناء المكالمة (كاميرا قيد التشغيل، أو تطبيق يسمع ويتكلم معًا؛ ولا يُعدّ الإملاء)، وأثناء بقاء الشاشة مضاءة بسبب فيديو أو عرض تقديمي (10 دقائق كحد أقصى)، أو بينما لعبة بملء الشاشة في المقدمة. كما أن الابتعاد عن Mac يعيد ضبط المؤقت. راجع <a href="../../docs/breaks/">الاستراحات</a>.</p>
+<h2>نام Mac رغم تشغيل إبقاء الجهاز مستيقظًا</h2>
+<p>يتوقف إبقاء الجهاز مستيقظًا حين تبلغ البطارية 10% وهي غير موصولة، أو حين ينتهي التطبيق المختار، أو حين يُنهى Warashi. وبالغطاء المغلق يحتاج أيضًا إلى الشاحن و<a href="../../docs/system-processes/">مساعد النظام</a>. ويذكر سجل الرحلة سبب انتهاء كل جلسة.</p>
+<p>أمران يشبهان السكون وليسا كذلك: بعد فترة تنطفئ <b>الشاشة</b> وتُقفل (سكون الشاشة في macOS نفسه؛ ويواصل الـ Mac عمله في الخلفية)، وتحديث Warashi أو إعادة تثبيته يعيد تشغيل التطبيق، فتستمر جلسة إبقاء الجهاز مستيقظًا الجارية. إن عدت إلى شاشة تسجيل الدخول، فتحقق من سجل الرحلة: إدخال <b>سكون</b> يعني أن الـ Mac نام فعلًا؛ وغيابه يعني أن الشاشة وحدها نامت.</p>
+<h2>توقف مساعد النظام بعد أن أعدت تثبيت Warashi</h2>
+<p>إن أزلت Warashi القديم قبل نسخ الجديد، نسي macOS موافقة المساعد وتذكّر مهمته القديمة، فيفشل المساعد في البدء حتى <b>إعادة تشغيل Mac</b>. أعد التشغيل، ثم افتح الإعدادات › النظام وأوقف <b>إظهار عمليات النظام</b> وشغّله إن بقي أحمر. ولتفادي ذلك: حدّث من الإعدادات › التحديثات، أو اسحب Warashi الجديد فوق القديم دون إزالته أولًا.</p>
+<h2>شُحنت بطاريتي بعد الحد</h2>
+<p>قد يتجاوز تطبيق آخر يدير الشحن (مثل AlDente وBattery Toolkit) حد Warashi، مثلًا أثناء المعايرة. ينبّهك Warashi في صفحة البطارية حين يرصد واحدًا، ويدوّن سجل الرحلة كل مرة تجاوزت فيها البطارية حدك واسم التطبيق الذي كان يدير الشحن. اكتفِ بمدير شحن واحد، لا اثنين.</p>
+<h2>لا تأتي الاستراحات أثناء المكالمات</h2>
+<p>هذا مقصود: الإعدادات › الاستراحات › <b>الانتظار أثناء المكالمات والاجتماعات</b> يؤجّل كل استراحة وتنبيه لطيف أثناء المكالمة: كاميرا قيد التشغيل، أو تطبيق يستمع ويتحدث معًا. الإملاء لا يُحتسب. أوقفه إن كنت تفضّل أن تُذكَّر على أي حال. وتتوقف الاستراحات أيضًا خارج ساعات عملك وأثناء وضع تركيز مثل «عدم الإزعاج»، إن فعّلت ذلك.</p>
+<h2>يستخدم Warashi المعالج أثناء فتح نافذته</h2>
+<p>يرسم أرقامًا ومخططات وحلقات حية كل ثانية، ويقيس ذلك ويعرضه بصدق باسم <b>Warashi · هذه النافذة</b> في التطبيقات. أغلق النافذة فينزل إلى جزء من واحد بالمئة. وإن بقي مرتفعًا والنافذة مغلقة، فأرسل تقرير Mac من الأدوات بالبريد.</p>
+<h2>لا تصلني إشعارات التنبيهات</h2>
+<ol class="steps"><li><span class="step-title">تحقق من أن التنبيه مفعَّل</span><p>الإعدادات › التنبيهات: يجب أن يكون مفتاح ذلك التنبيه قيد التشغيل.</p></li><li><span class="step-title">السماح بالإشعارات</span><p>إعدادات النظام › الإشعارات › Warashi › فعّل <b>السماح بالإشعارات</b>.</p></li></ol>
+<h2>الفتح عند تسجيل الدخول لا يثبت</h2>
+<p>قد يحتاج macOS إلى موافقتك: افتح إعدادات النظام › عام › عناصر تسجيل الدخول واسمح لـ Warashi.</p>
+<h2>الجزيرة تغطي شيئًا على شاشتي الخارجية</h2>
+<p>أوقف الإعدادات › التخصيص › الظاهر دائمًا › <b>الجزيرة على الشاشات بلا نتوء</b>.</p>
+<h2>أريد التحديث الآن</h2>
+<p>الإعدادات › التحديثات › <b>تحقق الآن</b>. يمكنك أيضًا تنزيل أحدث إصدار من warashi.app وسحبه فوق القديم في التطبيقات؛ يبقى سجلّك.</p>
+<h2>قرص لا يُخرَج</h2>
+<p>يرفض macOS ما دام شيء يستخدم القرص، ويقول Warashi أيّها. أغلق ما يستخدمه وحاول مرة أخرى.</p>
+<h2>غيّرت نافذة شريط القوائم أو النتوء وأريدهما كما كانا</h2>
+<p>افتح الإعدادات › التخصيص، واختر التبويب، واضغط <b>إعادة ضبط</b>. راجع <a href="../../docs/customize/">التخصيص</a>.</p>
+<h2>الأمر <code>warashi</code> غير موجود</h2>
+<p>افتح نافذة Terminal جديدة. وإن لم يفد ذلك، فاضغط الإعدادات › عام › سطر الأوامر وتطبيقات الذكاء الاصطناعي › <b>تثبيت…</b> مرة أخرى.</p>
+<h2>شاهد جولة الترحيب مرة أخرى</h2>
+<p>الإعدادات › عام › <b>إظهار الترحيب مرة أخرى</b>.</p>
+<h2>إلغاء تثبيت Warashi</h2>
+<ol class="steps"><li><span class="step-title">أزل المساعد (إن كنت ثبّتّه)</span><p>الإعدادات › النظام › أوقف <b>إظهار عمليات النظام</b>.</p></li><li><span class="step-title">إنهاء Warashi</span><p>انقر الروح، ثم <b>⋯</b> › <b>إنهاء Warashi</b> في نافذة شريط القوائم.</p></li><li><span class="step-title">انقله إلى سلة المهملات</span><p>اسحب Warashi من التطبيقات إلى سلة المهملات.</p></li><li><span class="step-title">أزل سجلك (اختياري)</span><p>في Finder اختر انتقال › انتقال إلى المجلد…، وأدخل <code>~/Library/Application Support/Warashi</code> وانقل ذلك المجلد إلى سلة المهملات.</p></li></ol>
+<div class="next"><a href="../../docs/privacy-and-data/"><small>السابق</small>الخصوصية وبياناتك</a></div></article>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="../../index.html"><img src="../../../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
+      <nav aria-label="التذييل"><a href="../../docs/">المساعدة</a><a href="../../guides/">الأدلة</a><a href="../../faq/">الأسئلة والأجوبة</a><a href="../../../changelog/">سجل التغييرات</a><a href="../../../press/">الصحافة</a><a href="../../../privacy/">الخصوصية</a><a href="../../../terms/">الشروط</a><a href="../../../refunds/">المبالغ المستردة</a><a href="mailto:adam@warashi.app">التواصل</a></nav>
+    </div>
+    <p class="fine">© 2026 Adam Markocki. صُنع بعناية في بولندا. Warashi ليس تابعًا لشركة Apple؛ Mac وmacOS وApple silicon علامات تجارية لشركة Apple Inc.</p>
+  </div>
+</footer>
+<script src="../../../assets/js/site.js" defer></script>
+</body>
+</html>

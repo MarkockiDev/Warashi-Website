@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="nl" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Warashi: het geestje dat voor je Mac zorgt</title>
+<meta name="description" content="Warashi is het geestje dat voor je Mac zorgt: één rustige menubalk-app voor Apple silicon die hem in de gaten houdt, de batterij jong en de schijf leeg houdt, het zegt als er iets mis is en je eraan herinnert te rusten. Gratis bèta.">
+<link rel="canonical" href="https://warashi.app/nl/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Warashi">
+<meta property="og:title" content="Warashi: het geestje dat voor je Mac zorgt">
+<meta property="og:description" content="Warashi is het geestje dat voor je Mac zorgt: één rustige menubalk-app voor Apple silicon die hem in de gaten houdt, de batterij jong en de schijf leeg houdt, het zegt als er iets mis is en je eraan herinnert te rusten. Gratis bèta.">
+<meta property="og:url" content="https://warashi.app/nl/">
+<meta property="og:image" content="https://warashi.app/assets/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Warashi: het geestje dat voor je Mac zorgt. Het geestje-pictogram naast het Warashi-venster en het menubalkvenster.">
+<meta property="og:image" content="https://warashi.app/assets/img/screenshots/01-cover.jpg">
+<meta property="og:image:width" content="2880"><meta property="og:image:height" content="1800">
+<meta property="og:image" content="https://warashi.app/assets/img/screenshots/02-know.jpg">
+<meta property="og:image:width" content="2880"><meta property="og:image:height" content="1800">
+<meta property="og:image" content="https://warashi.app/assets/img/screenshots/03-care.jpg">
+<meta property="og:image:width" content="2880"><meta property="og:image:height" content="1800">
+<meta property="og:image" content="https://warashi.app/assets/img/screenshots/04-clean.jpg">
+<meta property="og:image:width" content="2880"><meta property="og:image:height" content="1800">
+<meta property="og:image" content="https://warashi.app/assets/img/screenshots/05-rest.jpg">
+<meta property="og:image:width" content="2880"><meta property="og:image:height" content="1800">
+<meta property="og:image" content="https://warashi.app/assets/img/screenshots/06-developers.jpg">
+<meta property="og:image:width" content="2880"><meta property="og:image:height" content="1800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Warashi: het geestje dat voor je Mac zorgt">
+<meta name="twitter:description" content="Warashi is het geestje dat voor je Mac zorgt: één rustige menubalk-app voor Apple silicon die hem in de gaten houdt, de batterij jong en de schijf leeg houdt, het zegt als er iets mis is en je eraan herinnert te rusten. Gratis bèta.">
+<meta name="twitter:image" content="https://warashi.app/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="Warashi: het geestje dat voor je Mac zorgt. Het geestje-pictogram naast het Warashi-venster en het menubalkvenster.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3EEE4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171614">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="1024x1024" href="../assets/img/app-icon-1024.png">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/bricolage.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/instrument-sans.woff2">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/home.css">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+// Website analytics: cookieless (nothing stored in the browser), EU servers, no person profiles, Do Not Track respected.
+posthog.init("phc_wbppbVusTEpwnbuC3pzygCZUmxrsKuwjPNsxihwFuBWW", {
+  api_host: "https://eu.i.posthog.com", ui_host: "https://eu.posthog.com",
+  persistence: "memory", person_profiles: "identified_only", respect_dnt: true,
+  capture_pageview: true, capture_pageleave: true, disable_session_recording: true,
+});
+posthog.register({ surface: "website" });
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Warashi","applicationCategory":"UtilitiesApplication","operatingSystem":"macOS 26 or later (Apple silicon)","description":"Warashi is het geestje dat voor je Mac zorgt: één rustige menubalk-app voor Apple silicon die hem in de gaten houdt, de batterij jong en de schijf leeg houdt, het zegt als er iets mis is en je eraan herinnert te rusten. Gratis bèta.","url":"https://warashi.app/","image":"https://warashi.app/assets/img/app-icon-1024.png","author":{"@type":"Person","name":"Adam Markocki","url":"https://markockiadam.com"},"softwareVersion":"0.3.65","dateModified":"2026-11-26","screenshot":["https://warashi.app/assets/img/screenshots/01-cover.jpg","https://warashi.app/assets/img/screenshots/02-know.jpg","https://warashi.app/assets/img/screenshots/03-care.jpg","https://warashi.app/assets/img/screenshots/04-clean.jpg","https://warashi.app/assets/img/screenshots/05-rest.jpg","https://warashi.app/assets/img/screenshots/06-developers.jpg"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Warashi","url":"https://warashi.app/"}</script>
+
+
+
+
+
+
+
+
+
+<!--i18n-head--><link rel="alternate" hreflang="en" href="https://warashi.app/"><link rel="alternate" hreflang="x-default" href="https://warashi.app/"><link rel="alternate" hreflang="pl" href="https://warashi.app/pl/"><link rel="alternate" hreflang="fr" href="https://warashi.app/fr/"><link rel="alternate" hreflang="es" href="https://warashi.app/es/"><link rel="alternate" hreflang="pt-BR" href="https://warashi.app/pt-br/"><link rel="alternate" hreflang="ja" href="https://warashi.app/ja/"><link rel="alternate" hreflang="zh-Hans" href="https://warashi.app/zh-hans/"><link rel="alternate" hreflang="it" href="https://warashi.app/it/"><link rel="alternate" hreflang="nl" href="https://warashi.app/nl/"><link rel="alternate" hreflang="id" href="https://warashi.app/id/"><link rel="alternate" hreflang="ar" href="https://warashi.app/ar/"><!--/i18n-head-->
+</head>
+<body class="home">
+<a class="skip" href="#main">Ga naar de inhoud</a>
+<header class="site-header">
+  <div class="pill">
+    <div class="row">
+      <a class="brand" href="index.html"><img src="../assets/img/app-icon.png" alt="" width="32" height="32">Warashi</a>
+      <nav class="nav" aria-label="Hoofd"><a href="index.html#know" aria-current="page">Functies</a><a href="docs/">Help</a><a href="guides/">Handleidingen</a><a href="faq/">Q&A</a><a href="../changelog/">Wijzigingslog</a></nav>
+      
+      <!--i18n-lang--><details class="lang"><summary aria-label="Taal"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><ellipse cx="8" cy="8" rx="2.8" ry="6.4"/><path d="M1.8 6h12.4M1.8 10h12.4"/></svg><span>NL</span></summary><div class="lang-menu"><a lang="en" hreflang="en" href="../">English</a><a lang="pl" hreflang="pl" href="../pl/">Polski</a><a lang="fr" hreflang="fr" href="../fr/">Français</a><a lang="es" hreflang="es" href="../es/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="../pt-br/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="../ja/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-hans/">简体中文</a><a lang="it" hreflang="it" href="../it/">Italiano</a><a lang="nl" hreflang="nl" href="./" aria-current="true">Nederlands</a><a lang="id" hreflang="id" href="../id/">Bahasa Indonesia</a><a lang="ar" hreflang="ar" href="../ar/">العربية</a></div></details><!--/i18n-lang-->
+      <a class="btn cta" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="header">Download</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+    <div class="sheet" id="sheet"><div><nav aria-label="Hoofd"><a href="index.html#know" aria-current="page">Functies</a><a href="docs/">Help</a><a href="guides/">Handleidingen</a><a href="faq/">Q&A</a><a href="../changelog/">Wijzigingslog</a></nav><!--i18n-lang--><div class="sheet-lang"><p>Taal</p><div><a lang="en" hreflang="en" href="../">English</a><a lang="pl" hreflang="pl" href="../pl/">Polski</a><a lang="fr" hreflang="fr" href="../fr/">Français</a><a lang="es" hreflang="es" href="../es/">Español</a><a lang="pt-BR" hreflang="pt-BR" href="../pt-br/">Português (Brasil)</a><a lang="ja" hreflang="ja" href="../ja/">日本語</a><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-hans/">简体中文</a><a lang="it" hreflang="it" href="../it/">Italiano</a><a lang="nl" hreflang="nl" href="./" aria-current="true">Nederlands</a><a lang="id" hreflang="id" href="../id/">Bahasa Indonesia</a><a lang="ar" hreflang="ar" href="../ar/">العربية</a></div></div><!--/i18n-lang--></div></div>
+  </div>
+</header>
+<main id="main">
+
+<section class="b-hero">
+  <div class="wrap">
+    <a class="b-news reveal" href="../changelog/"><b>Nieuw</b><span>Opruimen: wat veilig weg kan, in één keer weg</span></a>
+    <h1 class="reveal d1">Het <span class="b-spirit" role="img" aria-label="Het geestje van Warashi"></span> geestje dat voor je Mac zorgt.</h1>
+    <p class="lead reveal d2">Warashi houdt je Mac in de gaten, houdt de batterij jong en de schijf leeg, zegt het meteen als er iets mis is en herinnert je eraan te rusten. Eén rustige menubalk-app in plaats van elf.</p>
+    <div class="b-ctas reveal d3">
+      <a class="btn" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="hero">Download gratis voor Mac</a> <a class="btn quiet" href="#know">Bekijk alles wat het doet</a>
+    </div>
+    <p class="b-fine reveal d3">Apple silicon · macOS 26 of nieuwer · Gratis bèta · Geen account</p>
+  </div>
+
+  <div class="wrap">
+    <div class="bento b-overview" id="glance">
+      <figure class="tile shot-tile span-7 rows-3 reveal">
+        <span class="themed"><img class="t-light" src="../assets/img/app/now-light.webp" alt="De pagina Nu van Warashi: Niets heeft je nodig, CPU- en geheugenringen, en elke meting in één oogopslag" width="2160" height="1572" fetchpriority="high"><img class="t-dark" src="../assets/img/app/now-dark.webp" alt="" width="2160" height="1572"></span>
+      </figure>
+      <div class="tile span-5 b-battery reveal d1">
+        <div class="b-ring" style="--v:80"><i>80%</i></div>
+        <div><p class="eyebrow">Zorg · Batterij</p><p class="b-big">Vastgehouden op 80%.</p><p>Veroudert jaren langzamer dan een batterij die op 100% blijft.</p></div>
+      </div>
+      <div class="tile span-5 reveal d1">
+        <p class="eyebrow">Schoon · Opruimen</p>
+        <p class="b-big">7,2 GB veilig op te ruimen</p>
+        <div class="b-bar" aria-hidden="true"><span style="--w:38%;--c:var(--clay)"></span><span style="--w:22%;--c:var(--indigo)"></span><span style="--w:12%;--c:var(--ochre)"></span><span style="--w:28%;--c:var(--matcha)"></span></div>
+        <p class="b-legend"><span style="--c:var(--clay)">App-caches</span><span style="--c:var(--indigo)">Browsers</span><span style="--c:var(--ochre)">Logs</span><span style="--c:var(--matcha)">Ontwikkelaar</span></p>
+      </div>
+      <div class="tile span-3 tone-indigo reveal d2">
+        <p class="eyebrow">Rust · Pauzes</p><p class="b-big b-count">0:15</p><p>Kijk weg van het scherm.</p>
+      </div>
+      <div class="tile span-2 tone-matcha b-check reveal d2">
+        <p class="eyebrow">Controle</p><p class="b-big">Alles in orde.</p>
+      </div>
+      <div class="tile span-4 reveal">
+        <p class="eyebrow">Weten · Waarschuwingen</p>
+        <p class="b-app"><img src="../assets/img/app/icon-chrome.png" alt="" width="28" height="28">Google Chrome<em>9,8 GB</em></p>
+        <p>Het geheugen raakt op. Stop hem, of laat het maar.</p>
+      </div>
+      <div class="tile span-4 reveal d1">
+        <p class="eyebrow">Weten · Geschiedenis</p>
+        <p class="b-big b-mid">Waarom was het traag om 14:02?</p>
+        <svg class="b-spark" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 L25 46 L50 48 L75 30 L95 47 L120 44 L145 10 L165 42 L190 45 L215 34 L240 47 L270 38 L300 42 L300 60 L0 60 Z"/></svg>
+        <p>Xcode gebruikte het grootste deel van de processor.</p>
+      </div>
+      <div class="tile span-4 tone-ink b-term reveal d2">
+        <p class="eyebrow">Voor ontwikkelaars</p>
+        <pre><b>$ warashi agents</b>
+Claude Code  <i>working</i> · 62% left
+Codex        <i>done</i> · my-app</pre>
+      </div>
+    </div>
+
+    <a class="b-instead reveal" href="#compare">
+      <span class="b-instead-lead">Eén app in plaats van</span>
+      <span class="b-names"><s>iStat Menus</s><s>CleanMyMac</s><s>DaisyDisk</s><s>AlDente</s><s>Amphetamine</s><s>LookAway</s><s>HazeOver</s><s>CodexBar</s><s>en nog drie</s></span>
+      <span class="link-arrow">Vergelijk</span>
+    </a>
+  </div>
+</section>
+
+<section class="b-part" id="know">
+  <div class="wrap">
+    <header class="b-head">
+      <p class="b-chip reveal" style="--c:var(--ochre)">Weten</p>
+      <h2 class="reveal d1">Hij kent je Mac van binnen en van buiten.</h2>
+      <p class="lead reveal d2">Eén geestje en één getal in de menubalk, twee naast de inkeping, en elke vijf seconden een meting, een jaar bewaard. Als er iets gebeurt, weet Warashi al waarom.</p>
+    </header>
+    <div class="bento">
+      <figure class="tile shot-tile span-8 rows-3 reveal">
+        <span class="themed"><img class="t-light" src="../assets/img/app/moment-light.webp" alt="Geschiedenis: één moment in gewone woorden uitgelegd, met de apps die draaiden" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../assets/img/app/moment-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
+        <figcaption><b>Elk moment, uitgelegd.</b> Klik op een piek en Warashi vertelt wat er gaande was, met de app erachter.</figcaption>
+      </figure>
+      <figure class="tile tone-black b-notch span-4 rows-2 reveal d1">
+        <img src="../assets/img/help/notch-open-clean.webp" alt="De inkeping opende zich tot een klein live dashboard" width="1082" height="701" loading="lazy">
+        <figcaption><b>De inkeping, aan het werk gezet.</b> Houd de aanwijzer erboven voor een live dashboard; een klein eiland doet hetzelfde op andere beeldschermen.</figcaption>
+      </figure>
+      <div class="tile span-4 reveal d2">
+        <p class="eyebrow">Eén keer gemeld</p>
+        <p class="b-big b-mid">Een op hol geslagen app, krap geheugen, hitte, een schijf die volloopt.</p>
+        <p>Eén keer per probleem, met het bewijs en één ding om te doen.</p>
+      </div>
+      <div class="tile span-6 rows-2 b-log reveal">
+        <p class="eyebrow">Logboek · gisteren</p>
+        <ul>
+          <li><time>21:10</time>Muziek hield je Mac 55 min wakker</li>
+          <li><time>14:02</time>Je Mac was 6 min traag <small>Xcode gebruikte het grootste deel van de processor.</small></li>
+          <li><time>09:50</time>Het geheugen van Google Chrome groeit snel <small>Groeide het afgelopen uur met 1,35 GB.</small></li>
+          <li><time>02:41</time>Geladen tot 100%, boven je limiet van 80%</li>
+        </ul>
+      </div>
+      <figure class="tile shot-tile span-6 rows-2 reveal d1">
+        <span class="themed"><img class="t-light" src="../assets/img/app/timecost-light.webp" alt="Tijd × Kosten: tijd vooraan en energie per app" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../assets/img/app/timecost-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
+        <figcaption><b>Wat elke app echt kost.</b> Tijd op het scherm gekoppeld aan energie, per uur dat je hem gebruikt.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="b-part" id="care">
+  <div class="wrap">
+    <header class="b-head">
+      <p class="b-chip reveal" style="--c:var(--matcha)">Zorg</p>
+      <h2 class="reveal d1">Hij houdt je Mac jong.</h2>
+      <p class="lead reveal d2">Een batterij die op 80% wordt gehouden, gaat jaren langer mee. Een wekelijkse Controle vangt problemen op voordat ze je geld kosten. En als het tijd is voor een nieuwe Mac, weet Warashi precies wat je nodig hebt.</p>
+    </header>
+    <div class="bento">
+      <figure class="tile shot-tile span-7 rows-3 reveal">
+        <span class="themed"><img class="t-light" src="../assets/img/app/battery-light.webp" alt="Batterij: de laadlimiet, de conditie door de maanden heen en wat hem leegtrok" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../assets/img/app/battery-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
+        <figcaption><b>Een laadlimiet, goed gedaan.</b> Stop op het niveau dat je kiest, laad volledig op voor die ene dag dat het nodig is, ontlaad terwijl de Mac aan de lader hangt.</figcaption>
+      </figure>
+      <div class="tile span-5 b-price reveal d1">
+        <p class="b-big b-huge">$249</p>
+        <p>wat een versleten MacBook Pro-batterij bij Apple kost, buiten garantie. Een batterij die op 100% blijft en warm is, slijt het snelst.</p>
+      </div>
+      <figure class="tile shot-tile span-5 rows-2 reveal d2">
+        <span class="themed"><img class="t-light" src="../assets/img/app/checkup-light.webp" alt="Controle: één regel over hoe de Mac eraan toe is, met batterij, opslag, geheugen, warmte, beveiliging en back-up" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../assets/img/app/checkup-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
+        <figcaption><b>Is mijn Mac in goede doen?</b> Eén regel uit een week aan metingen, plus beveiliging en back-up.</figcaption>
+      </figure>
+      <figure class="tile shot-tile span-6 rows-2 reveal">
+        <span class="themed"><img class="t-light" src="../assets/img/app/flow-light.webp" alt="Energiestroom: van de lader en de batterij via de Mac naar de chip en de apparaten" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../assets/img/app/flow-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
+        <figcaption><b>Energiestroom.</b> Zie waar elke watt naartoe gaat, van de lader tot de chip.</figcaption>
+      </figure>
+      <div class="tile span-6 rows-2 tone-clay b-advisor reveal d1">
+        <p class="eyebrow">Upgradeadvies</p>
+        <p class="b-big b-mid">Heeft mijn volgende Mac 32 GB nodig?</p>
+        <p>Na 30 dagen van je echte gebruik zegt Warashi hoeveel geheugen en opslag je volgende Mac nodig heeft en of een snellere chip zou helpen. Met het bewijs, niet een gok bij de kassa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="b-part" id="clean">
+  <div class="wrap">
+    <header class="b-head">
+      <p class="b-chip reveal" style="--c:var(--clay)">Schoon</p>
+      <h2 class="reveal d1">Hij houdt je schijf opgeruimd.</h2>
+      <p class="lead reveal d2">Zie wat de schijf vult, wis in één keer wat vanzelf terugkomt, en verwijder apps met alles wat ze achterlieten. Alles gaat naar de Prullenmand, dus er gaat nooit per ongeluk iets verloren.</p>
+    </header>
+    <div class="bento">
+      <div class="tile span-5 rows-3 b-groups reveal">
+        <p class="eyebrow">Opruimen</p>
+        <p class="b-big b-mid">Alles wat weg kan, op volgorde van hoe voorzichtig je moet zijn.</p>
+        <ol>
+          <li style="--c:var(--matcha)"><b>Veilig op te ruimen</b><span>App- en browsercaches, logs, bouwgegevens van Xcode. Ze komen vanzelf terug.</span><em>7,2 GB</em></li>
+          <li style="--c:var(--ochre)"><b>Eerst kijken</b><span>Oude installatieprogramma's, tweede kopieën van downloads, kopieën van bijlagen van Mail.</span><em>1,4 GB</em></li>
+          <li style="--c:var(--beni)"><b>Voorzichtig mee omgaan</b><span>Back-ups van iPhone en iPad, die misschien de enige kopie zijn.</span><em>38 GB</em></li>
+        </ol>
+      </div>
+      <figure class="tile shot-tile span-7 rows-3 reveal d1">
+        <span class="themed"><img class="t-light" src="../assets/img/app/storage-light.webp" alt="Opslag: een ring van de hele schijf waarin je kunt stappen" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../assets/img/app/storage-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
+        <figcaption><b>Je hele schijf, in één ring.</b> Stap in elke map. Grote bestanden, oude Downloads en lokale AI-modellen hebben hun eigen lijsten.</figcaption>
+      </figure>
+      <div class="tile span-4 reveal">
+        <p class="eyebrow">Uninstaller</p>
+        <p class="b-big b-mid">Verwijder apps op de juiste manier.</p>
+        <p>Elke app met wat hij in je Bibliotheek achterliet, te beginnen met die je al maanden niet hebt geopend. Plus restanten van apps die je jaren geleden hebt verwijderd.</p>
+      </div>
+      <div class="tile span-4 reveal d1">
+        <p class="eyebrow">Nooit je bestanden</p>
+        <p class="b-big b-mid">Alleen namen, groottes en datums.</p>
+        <p>Warashi opent nooit een document. Volledige schijftoegang is optioneel.</p>
+      </div>
+      <div class="tile span-4 tone-matcha reveal d2">
+        <p class="eyebrow">Prullenmand</p>
+        <p class="b-big b-mid">Geleegd. 4,8 GB vrijgemaakt.</p>
+        <p>Een seintje als de Prullenmand groot wordt, en het echte getal als je hem leegt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="b-part" id="rest">
+  <div class="wrap">
+    <header class="b-head">
+      <p class="b-chip reveal" style="--c:var(--indigo)">Rust</p>
+      <h2 class="reveal d1">En het zorgt voor jou.</h2>
+      <p class="lead reveal d2">Zachte pauzes voor je ogen en je rug, een rustiger scherm als je je moet concentreren, en een Mac die precies zo lang wakker blijft als het werk nodig heeft.</p>
+    </header>
+    <div class="bento">
+      <figure class="tile shot-tile span-8 rows-3 reveal">
+        <span class="themed"><img class="t-light" src="../assets/img/app/break-light.webp" alt="Een pauze: het scherm wordt vaag en vraagt je weg te kijken" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/break-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+        <figcaption><b>Kijk weg. Zit rechtop. Ga dan verder.</b> 20-20-20, Pomodoro of je eigen ritme. Pauzes wachten op gesprekken, je werktijden en een Focus.</figcaption>
+      </figure>
+      <div class="tile span-4 tone-indigo reveal d1">
+        <p class="eyebrow">Wakker houden</p>
+        <p class="b-big b-mid">Een uur lang, tot het werk klaar is, of met het deksel dicht.</p>
+        <p>Voor een download, een build of een presentatie.</p>
+      </div>
+      <div class="tile span-4 reveal d2">
+        <p class="eyebrow">De kleine dingen</p>
+        <ul class="b-list"><li>Internet- en schijfsnelheid</li><li>Wifikwaliteit</li><li>Een zwart scherm om schoon te maken</li><li>Verberg bureaubladpictogrammen</li><li>Demp de microfoon</li><li>Werp alles uit</li></ul>
+      </div>
+      <figure class="tile shot-tile span-12 rows-3 b-wide reveal">
+        <span class="themed"><img class="t-light" src="../assets/img/app/softfocus-light.webp" alt="Zachte focus: het venster waarin je werkt blijft scherp, de rest wordt zacht wazig" width="2160" height="1400" loading="lazy"><img class="t-dark" src="../assets/img/app/softfocus-dark.webp" alt="" width="2160" height="1400" loading="lazy"></span>
+        <figcaption><b>Zachte focus.</b> Alles behalve het venster waarin je werkt, wordt zacht vaag. ⌃⌥⌘F, vanuit elke app. macOS doet het vervagen: Warashi ziet je scherm nooit.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="b-part b-dev" id="developers">
+  <div class="wrap">
+    <header class="b-head">
+      <p class="b-chip reveal" style="--c:var(--ink)">Voor ontwikkelaars</p>
+      <h2 class="reveal d1">Wat zit er op die poort? Wat kost die agent?</h2>
+      <p class="lead reveal d2">Claude Code, Codex en Cursor: wat elk doet, hoeveel van je limiet er over is, en een seintje in de inkeping als er een je nodig heeft. Dev-servers per project, Docker, lokale AI-modellen in het geheugen en de gigabytes die je gereedschap achterlaat.</p>
+    </header>
+    <div class="bento">
+      <figure class="tile shot-tile span-7 rows-3 reveal">
+        <span class="themed"><img class="t-light" src="../assets/img/app/developer-light.webp" alt="Ontwikkelaar: codeeragenten, poorten, Docker en lokale AI-modellen" width="2160" height="1572" loading="lazy"><img class="t-dark" src="../assets/img/app/developer-dark.webp" alt="" width="2160" height="1572" loading="lazy"></span>
+      </figure>
+      <div class="tile span-5 rows-3 tone-ink b-term reveal d1">
+        <p class="eyebrow">De opdracht warashi</p>
+        <pre><b>$ warashi explain 14:30</b>
+Memory ran short
+Swap rose from 1.2 GB to 8.6 GB.
+
+<b>$ warashi apps --hours 3</b>
+Xcode    CPU 37m 35s   <i>9.4 GB</i>
+Safari   CPU 26m 22s   <i>6.1 GB</i></pre>
+        <p>En een optionele MCP-verbinding met alleen-lezen toegang, zodat Claude, Cursor en andere AI-apps kunnen antwoorden vanuit de geschiedenis van je Mac. Er wordt niets gedeeld tenzij je het toevoegt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="compare">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="reveal">Eén stille app, waar eerst een la vol zat.</h2>
+      <p class="lead reveal d1">Om alles te krijgen wat Warashi doet, zou je elf apps installeren. Hier is die la, geprijsd op de eigen site van elke maker. Niets ten nadele van hen: ze zijn goed in hun ene ding.</p>
+    </div>
+    <div class="receipt reveal">
+      <div class="r-row r-head" aria-hidden="true"><span>Wat Warashi doet</span><span>Wat je anders zou kopen</span><span>Eerste jaar</span></div>
+      <ul>
+        <li class="r-row"><span class="r-what">Live waarden in de menubalk, met geschiedenis</span><span class="r-app">iStat Menus 7</span><span class="r-price">$11,99<small>eenmalig</small></span></li>
+        <li class="r-row"><span class="r-what">Opruimen, verwijderprogramma, restanten, malwarescan</span><span class="r-app">CleanMyMac</span><span class="r-price">$39,95<small>per jaar</small></span></li>
+        <li class="r-row"><span class="r-what">Een kaart van wat je schijf vult</span><span class="r-app">DaisyDisk</span><span class="r-price">$9,99<small>eenmalig</small></span></li>
+        <li class="r-row"><span class="r-what">Dubbele bestanden</span><span class="r-app">Gemini 2</span><span class="r-price">$19,99<small>per jaar</small></span></li>
+        <li class="r-row"><span class="r-what">Laadlimiet, volledig opladen, een schema</span><span class="r-app">AlDente Pro</span><span class="r-price">€11,49<small>per jaar</small></span></li>
+        <li class="r-row"><span class="r-what">Batterijgezondheid door de maanden heen</span><span class="r-app">coconutBattery Plus</span><span class="r-price">€9,95<small>eenmalig</small></span></li>
+        <li class="r-row"><span class="r-what">Pauzes en houdingsherinneringen</span><span class="r-app">LookAway</span><span class="r-price">$19<small>eenmalig</small></span></li>
+        <li class="r-row"><span class="r-what">Zachte focus: alles behalve je venster, gedimd</span><span class="r-app">HazeOver</span><span class="r-price">$4,99<small>eenmalig</small></span></li>
+        <li class="r-row"><span class="r-what">Wakker blijven, ook met gesloten scherm</span><span class="r-app">Amphetamine</span><span class="r-price">Gratis</span></li>
+        <li class="r-row"><span class="r-what">Limieten van Claude Code, Codex en Cursor</span><span class="r-app">CodexBar</span><span class="r-price">Gratis</span></li>
+        <li class="r-row"><span class="r-what">Opruimen van Xcode en simulators</span><span class="r-app">DevCleaner for Xcode</span><span class="r-price">Gratis</span></li>
+        <li class="r-row r-only"><span class="r-what">Elk moment van het afgelopen jaar uitgelegd en wat elke app aan energie kost</span><span class="r-app">Geen enkele app biedt dit</span><span class="r-price">–</span></li>
+      </ul>
+      <div class="r-row r-total"><span class="r-what">Elf apps</span><span class="r-app">Elf onderdelen in de menubalk, elf updaters</span><span class="r-price">≈ $130<small>daarna ≈ $73 per jaar</small></span></div>
+    </div>
+    <div class="compare-sum">
+      <div class="reveal"><p class="big">≈ $130<small>het eerste jaar, daarna ≈ $73 per jaar</small></p><p>Wat de elf samen kosten, voor één Mac. Drie ervan zijn abonnementen, en elk heeft zijn eigen instellingen, updates en menubalkonderdeel.</p></div>
+      <div class="us reveal d1"><p class="big">$0<small>zolang Warashi in bèta is</small></p><p>Alles hierboven, in één app. Warashi 1.0 wordt een eenmalige aankoop. Nooit een abonnement. Je geschiedenis en instellingen gaan mee.</p></div>
+    </div>
+    <p class="compare-note reveal">Prijzen van de eigen site van elke maker of de Mac App Store in november 2026, voor één Mac; prijzen in euro omgerekend tegen ongeveer $1,15. Ze verschillen per regio en aanbieding. Bij elk onderdeel kozen we de app die wij zouden nemen: sommige doen daar meer dan Warashi, en Warashi doet niet alles wat zij doen.</p>
+  </div>
+</section>
+
+<section class="chapter b-light-weight" id="weight">
+  <div class="wrap">
+    <div class="bento">
+      <div class="tile span-4 reveal"><p class="b-big b-huge"><span data-count="0.2">0.2</span><small>%</small></p><p>van één kern op de achtergrond. Helemaal niets terwijl je schermen slapen.</p></div>
+      <div class="tile span-4 reveal d1"><p class="b-big b-huge"><span data-count="60">60</span><small>MB</small></p><p>geheugen, doorgaans, met het venster gesloten. Native Swift, gebouwd voor Apple silicon.</p></div>
+      <div class="tile span-4 reveal d2"><p class="b-big b-huge">0<small> accounts</small></p><p>Downloaden, openen, klaar. Je geschiedenis verlaat je Mac nooit.</p></div>
+      <div class="tile span-12 b-private reveal">
+        <p class="eyebrow">Privé door ontwerp</p>
+        <ul><li>Geen account, geen cloud, geen telemetrie over je apps of bestanden.</li><li>Nooit schermopname, nooit toetsaanslagen, nooit bestandsinhoud.</li><li>Alleen anonieme gebruiksstatistieken, vermeld in de welkomstrondleiding. <a href="docs/privacy-and-data/">Precies wat wordt verstuurd</a></li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="film">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="reveal">Zie het in twee minuten.</h2>
+    </div>
+    <div class="films reveal">
+      <figure><video controls preload="none" playsinline poster="../assets/press/keynote-poster.jpg" src="../assets/press/warashi-keynote.mp4" aria-label="De Keynote: een rondleiding van twee minuten door Warashi"></video><figcaption>De Keynote · 2:14</figcaption></figure>
+      <figure><video controls preload="none" playsinline poster="../assets/press/day-poster.jpg" src="../assets/press/warashi-a-day.mp4" aria-label="Een dag met je Mac: één dag met Warashi"></video><figcaption>Een dag met je Mac · 1:10</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="faq">
+  <div class="wrap">
+    <div class="head"><h2 class="reveal">Goede vragen.</h2></div>
+    <div class="bento b-faq">
+      <div class="tile span-6 reveal"><h3>Wat is een warashi?</h3><p>In de Japanse folklore is een zashiki-warashi een klein huisgeestje. Een huis waarin hij woont, zou floreren. Het onze woont in je menubalk en zorgt voor je Mac.</p></div>
+      <div class="tile span-6 reveal d1"><h3>Op welke Macs draait het?</h3><p>Macs met Apple silicon (M1 en nieuwer) met macOS 26 of nieuwer.</p></div>
+      <div class="tile span-6 reveal"><h3>Is het gratis?</h3><p>Gratis tijdens de bèta. Warashi 1.0 wordt een eenmalige aankoop, zonder abonnement. Je geschiedenis en instellingen gaan mee.</p></div>
+      <div class="tile span-6 reveal d1"><h3>Kan ik AlDente of CleanMyMac houden?</h3><p>Dat kan, maar twee laadbeheerders gaan om de limiet vechten, dus houd er één. Warashi meldt het als het er nog een ziet draaien.</p></div>
+      <div class="tile span-6 reveal"><h3>Maakt het mijn Mac trager?</h3><p>Nee. Ongeveer 0,2% van één kern op de achtergrond en 60 MB geheugen, gemeten en getoond in Instellingen.</p></div>
+      <div class="tile span-6 reveal d1"><h3>Waarin verschilt het van Activiteitenweergave?</h3><p>Activiteitenweergave toont deze seconde. Warashi onthoudt wat er gebeurde terwijl je niet keek, zegt het als het ertoe doet en zorgt voor de batterij, de schijf en voor jou.</p></div>
+    </div>
+    <p class="reveal" style="margin-top:22px"><a class="link-arrow" href="faq/">Alle vragen</a></p>
+  </div>
+</section>
+
+<section class="chapter" id="maker">
+  <div class="wrap">
+    <div class="maker">
+      <img class="reveal" src="../assets/img/adam.webp" alt="Geïllustreerd portret van Adam, lachend met gekruiste armen, onder een geschilderde regenboog in een groen park" width="960" height="723" loading="lazy">
+      <div class="reveal d1">
+        <h2>Met zorg gemaakt door één persoon.</h2>
+        <p class="lead">Hoi, ik ben Adam, een onafhankelijke ontwikkelaar. Warashi is mijn eigen project: de app, het ontwerp en deze website. Ik wil dat het de soort Mac-app is die ik zelf graag zou gebruiken: rustig, eerlijk over zijn cijfers en licht voor je Mac. Heb je een idee, of klopt er iets niet, schrijf me dan.</p>
+        <p class="signature">Adam</p>
+        <p style="display:flex; flex-wrap:wrap; gap:10px 26px; margin:22px 0 0">
+          <a class="link-arrow" href="https://markockiadam.com" rel="me">markockiadam.com</a> <a class="link-arrow" href="mailto:adam@warashi.app">adam@warashi.app</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="finale lacquer">
+  <div class="wrap">
+    <img class="icon reveal" src="../assets/img/app-icon.png" alt="" width="120" height="120">
+    <h2 class="reveal d1">Laat een stil geestje<br>voor je Mac zorgen.</h2>
+    <p class="lead reveal d2">Gratis zolang Warashi in bèta is. Eén kleine download, geen account, en vanaf vanavond heeft je Mac iemand die voor hem zorgt.</p>
+    <div class="ctas reveal d3">
+      <a class="btn" href="https://github.com/MarkockiAdam/warashi-releases/releases/latest/download/Warashi.dmg" data-download="finale">Download gratis voor Mac</a> <a class="btn ghost" href="docs/">Lees de Help</a>
+    </div>
+    <div class="launch-badges">
+      <a class="ph-badge reveal d3" href="https://www.producthunt.com/products/warashi/reviews/new?utm_source=badge-product_review&amp;utm_medium=badge&amp;utm_source=badge-warashi" target="_blank" rel="noopener"><span class="themed"><img class="t-light" src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1366176&amp;theme=light" alt="Warashi op Product Hunt" width="250" height="54" loading="lazy"><img class="t-dark" src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1366176&amp;theme=dark" alt="" width="250" height="54" loading="lazy"></span></a>
+      <a class="macpip-badge" href="https://macpip.com/apps/warashi?ref=badge">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://macpip.com/badge/warashi.svg?theme=dark">
+          <img src="https://macpip.com/badge/warashi.svg" height="58" alt="Vermeld op MacPip">
+        </picture>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="brand" href="index.html"><img src="../assets/img/app-icon.png" alt="" width="26" height="26">Warashi</a>
+      <nav aria-label="Voettekst"><a href="docs/">Help</a><a href="guides/">Handleidingen</a><a href="faq/">Q&amp;A</a><a href="../changelog/">Wijzigingslog</a><a href="../press/">Pers</a><a href="../privacy/">Privacy</a><a href="../terms/">Voorwaarden</a><a href="../refunds/">Terugbetalingen</a><a href="mailto:adam@warashi.app">Contact</a></nav>
+    </div>
+    <p class="fine">© 2026 Adam Markocki. Met zorg gemaakt in Polen. Warashi is niet verbonden aan Apple; Mac, macOS en Apple silicon zijn handelsmerken van Apple Inc.</p>
+  </div>
+</footer>
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/home.js" defer></script>
+</body>
+</html>
