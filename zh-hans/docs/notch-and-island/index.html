@@ -72,7 +72,7 @@ posthog.register({ surface: "website" });
 <tr><td>提醒，例如<b>你的 Mac 温度偏高</b>或<b>Chrome 占用了大量 CPU</b></td><td><b>了解更多</b>会打开解释它的页面；占用大量 CPU 或内存的 App 可以当场退出，卡住的编译器也可以当场停止</td></tr>
 <tr><td>你的 Mac 内存不足</td><td>值得退出的 App，从大到小排列，每个都带有<b>退出</b>，另有<b>全部退出</b></td></tr>
 <tr><td>废纸篓越来越大</td><td><b>清倒废纸篓…</b>，会先清楚地问你一次</td></tr>
-<tr><td>智能体已完成或需要你</td><td><b>打开</b>它的 App。刘海会一直展开，直到你回到该 App</td></tr>
+<tr><td>智能体已完成或需要你</td><td>点按即可在 Claude 中打开该会话，或打开它所运行的 App。在你回到该 App 之前，刘海会一直展开</td></tr>
 <tr><td>接近限额的智能体</td><td>何时重置</td></tr></table></div>
 <p>每条通知都有一个小小的<b>×</b>，可将其关闭。没有刘海或小岛时，提醒会以通知的形式送达，内存卡片和废纸篓卡片则像以前一样从 Warashi 的菜单栏项目下方弹出。</p>
 <h2>可以显示的内容</h2>
@@ -87,13 +87,13 @@ posthog.register({ surface: "website" });
 <tr><td>充电中或放电</td><td>电池</td><td>停在哪里；放电时为<b>停止</b></td></tr>
 <tr><td>背景模糊</td><td>它的符号</td><td><b>关闭</b></td></tr></table></div>
 <h2>打开它</h2>
-<ol class="steps"><li><span class="step-title">将指针停在刘海上</span><p>将指针在刘海（或小岛所在位置）上停留片刻，它就会向下展开：每个时刻占一行并带有其控制项，下方还有一行显示你的 Mac 状态（CPU、内存、电池）。没有事情进行时，它会提供保持唤醒、休息和立即充满电。</p></li><li><span class="step-title">移开指针即可收起</span><p>移开指针，它就会收起。点按它，或点按角落里的<b>打开 Warashi</b>，即可打开窗口。</p></li></ol>
+<ol class="steps"><li><span class="step-title">将指针停在刘海上</span><p>将指针在刘海（或小岛所在位置）上停留片刻，它就会向下展开：每个时刻占一行并带有其控制项，下方还有一行显示你的 Mac 状态（CPU、内存、电池）。没有事情进行时，它会提供保持唤醒、休息和立即充满电。</p></li><li><span class="step-title">移开指针即可收起</span><p>移开指针即可收起。点按某条通知或某个代理即可前往；角落的<b>打开 Warashi</b>会打开窗口。</p></li></ol>
 <h2>选择外观</h2>
 <p>在“设置 › 自定 › 始终显示”中：<b>在刘海旁显示正在进行的事</b>和<b>无刘海显示器上的小岛</b>可分别将它们完全关闭。<b>无事时显示读数</b>会在安静的刘海旁显示你选择的两个数字，除非你另选，否则为 CPU 和内存。请参阅<a href="../../docs/customize/">自定</a>。</p>
 <h2>与其他刘海应用一起使用</h2>
 <p>其他应用也可能使用刘海，而且各自独立监视指针，所以指向刘海可能会同时打开两者。Warashi 的刘海保持在最上层并响应指针。“设置” › “自定” › “始终显示”会列出其他使用刘海的应用；若只想看到 Warashi，请在那个应用中关闭刘海功能。Warashi 从不更改其他应用。</p>
 <div class="tip"><b>补充说明：</b>不确定某条通知是什么意思？每条通知都有<b>了解更多</b>，会打开 Warashi 中解释它的页面，并显示你还能做的其他操作。</div>
-<div class="help-box"><h3>如果出现问题</h3><ul><li><b>小岛挡住了外接显示器上的内容：</b>在设置 › 自定 › 始终显示中关闭<b>无刘海显示器上的小岛</b>。</li><li><b>保持唤醒自己开启了：</b>把指针指向刘海即可查看原因。<b>智能体工作时</b>表示“设置 › 编程智能体”中的这条规则已开启。</li></ul><p style="margin-top:8px">更多内容见<a href="../../docs/troubleshooting/">疑难解答</a>，或发送电子邮件至 <a href="mailto:adam@warashi.app">adam@warashi.app</a>。</p></div>
+<div class="help-box"><h3>如果出现问题</h3><ul><li><b>小岛挡住了外接显示器上的内容：</b>在设置 › 自定 › 始终显示中关闭<b>无刘海显示器上的小岛</b>。</li><li><b>保持唤醒自己开启了：</b>把指针指向刘海即可查看原因。只有<b>自动</b>中的<b>接通电源时</b>或<b>连接显示器时</b>能在你不操作的情况下开启它。</li></ul><p style="margin-top:8px">更多内容见<a href="../../docs/troubleshooting/">疑难解答</a>，或发送电子邮件至 <a href="mailto:adam@warashi.app">adam@warashi.app</a>。</p></div>
 <div class="next"><a href="../../docs/menu-bar/"><small>上一页</small>菜单栏和菜单栏窗口</a><a href="../../docs/customize/" style="text-align:right"><small>下一页</small>自定</a></div></article>
   </div>
 </div>
